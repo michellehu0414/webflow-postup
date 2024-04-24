@@ -91,7 +91,7 @@ html {
   padding: 0;
   margin: 0;
   width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 * {
@@ -164,7 +164,7 @@ h5 {
 }
 
 h1 {
-  font-size: 1.938rem;
+  font-size: 1.538rem;  
   font-weight: 500;
   margin-bottom: 1rem;
 
@@ -2878,36 +2878,62 @@ textarea.w-select {
   align-items: center;
   justify-content: stretch;
   padding-top: 2rem;
-  height: 60vh;
+  height: 75vh;   
   border-bottom: 1px solid #e4ebf3;
-  background-color: rgba(52, 146, 127, 0.59);
+  background-color: #8cb4ac; 
 }
 
 .hero-wrapper {
   display: flex;
   flex-direction: column;
   width: 90vw;
+  gap: 2rem; 
   max-width: 1000px;
   height: 100%;
 }
 
 .postup-title {
   color: var(--black);
-  font-size: 3.815rem;
+  font-size: 3rem;  
   font-weight: 600;
   line-height: 100%;
 }
 
-.hero-image-wrapper {
+.hero-image-wrapper { 
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;   
   padding: auto;
   overflow: hidden;
+   margin: auto;  
 }
 
 .hero-gif {
-  max-width: 320px;
+  max-width: 160px; 
+  margin: 0;  
 }
+
+.hero-tagline {
+  align-self: center; 
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125rem;     
+  font-weight: 500;   
+  line-height: 135%;
+}
+
+.subtitle.tagline.middle {
+  text-align: center;
+}
+
+.disciplines {  
+  color: $medium-grey; 
+  font-size: 0.889rem;  
+  font-weight: 400; 
+  margin-top: 0.25rem;  
+  line-height: 110%;  
+  text-decoration: none;
+} 
 
 .container-3 {
   width: 100%;
@@ -3134,13 +3160,6 @@ textarea.w-select {
 }
 .paragraph.grey {
   color: var(--medium-light-grey);
-}
-.paragraph.disciplines {
-  color: var(--medium-light-grey);
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 150%;
-  text-decoration: none;
 }
 .paragraph._1-44rem {
   color: var(--off-black);
@@ -3604,24 +3623,13 @@ textarea.w-select {
   width: 100%;
   max-width: 1000px;
   margin-top: 0;
-}
+} 
 .subtitle {
-  font-size: 1.424rem;
+  font-size: 1.224rem;
   font-style: normal;
   line-height: 125%;
 }
-.subtitle.tagline {
-  align-self: center;
-  color: var(--black);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.602rem;
-  font-weight: 400;
-  line-height: 150%;
-}
-.subtitle.tagline.middle {
-  text-align: center;
-}
+
 .image-13 {
   aspect-ratio: auto;
   background-color: var(--transparent);
