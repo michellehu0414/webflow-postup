@@ -1,149 +1,457 @@
-.hero{color:blue}
-.hero-wrapper{color:blue}
-.postup-title{color:blue}
-.subtitle.tagline{color:blue}
-.hero-image-wrapper{color:blue}
-.hero-gif{color:blue}
-.container.border._40-vh{color:blue}
-.div-block-25.intro{color:blue}
-.flex.horizontal{color:blue}
-.div-block-188{color:blue}
-.w-layout-hflex.flex.vertical._16px{color:blue}
-.flex.vertical._4px{color:blue}
-.heading-3.black{color:blue}
-.paragraph.disciplines{color:blue}
-.flex.vertical._0px{color:blue}
-.flex.vertical._4px.auto{color:blue}
-.w-layout-hflex.flex-block-41{color:blue}
-.div-block-187{color:blue}
-.heading-3.black.middle{color:blue}
-.div-block-172{color:blue}
-.image-13{color:blue}
-.div-block-8{color:blue}
-.div-block-26{color:blue}
-.div-block-15{color:blue}
-.container.grey.padding-40px{color:blue}
-.subcontent.margin-0{color:blue}
-.paragraph{color:blue}
-.secondary-text{color:blue}
-.container.border{color:blue}
-.content{color:blue}
-.subcontent{color:blue}
-.postup-heading{color:blue}
-.heading-22{color:blue}
-.main-heading.blue{color:blue}
-.subcontent.first-child{color:blue}
-.image-121{color:blue}
-.w-layout-blockcontainer.section.no-border.w-container{color:blue}
-.postup-main-heading{color:blue}
-.image-224{color:blue}
-.flex.vertical._8px{color:blue}
-.h3-label{color:blue}
-.h3.postup{color:blue}
-.semibold-black{color:blue}
-.div-block-253{color:blue}
-.cards.horizontal{color:blue}
-.quote-caption-container{color:blue}
-.quotes-caption{color:blue}
-.w-layout-hflex.quote-container{color:blue}
-.w-embed{color:blue}
-.img-postup-quote-container{color:blue}
-.quote-block.user-interviews.horizontal{color:blue}
-.quote{color:blue}
-.w-layout-hflex.flex-block-69{color:blue}
-.img-quoteauthor-small.w-embed{color:blue}
-.img-postup-quote-container-big{color:blue}
-.quote.author.sans-serif{color:blue}
-.horizontal-divider.grey-solid{color:blue}
-.quote-container{color:blue}
-.cards.horizontal.border-0{color:blue}
-.div-block-181{color:blue}
-.w-layout-layout.quick-stack.wf-layout-layout{color:blue}
-.w-layout-cell{color:blue}
-.subcontent.full-background{color:blue}
-.w-layout-layout.quick-stack._90.wf-layout-layout{color:blue}
-.w-layout-cell.cell-2{color:blue}
-.image-217{color:blue}
-.div-block-263{color:blue}
-.list-3{color:blue}
-.list-item-2{color:blue}
-.paragraph.bluee{color:blue}
-.w-layout-cell.cell-3{color:blue}
-.w-layout-hflex.flex-block-76{color:blue}
-.div-block-269{color:blue}
-.html-embed-10.w-embed.w-script{color:blue}
-.accordion{color:blue}
-.accordion-item.accordion-label{color:blue}
-.accordion-header{color:blue}
-.accordion-label{color:blue}
-.accordion-icon{color:blue}
-.accordion-content{color:blue}
-.w-layout-hflex.flex-block-73{color:blue}
-.w-layout-hflex.flex-block-74{color:blue}
-.div-block-268{color:blue}
-.image-221{color:blue}
-.container-airbnb-strengths{color:blue}
-.div-block-266{color:blue}
-.image-220{color:blue}
-.image-100{color:blue}
-.subcontent.margin-bottom--16px{color:blue}
-.w-layout-layout.quick-stack._100.wf-layout-layout{color:blue}
-.tabs.iterations.w-tabs{color:blue}
-.tabs-menu._2-columns.w-tab-menu{color:blue}
-.tab-link-25.w-inline-block.w-tab-link.w--current{color:blue}
-.tab-link-tab-1{color:blue}
-.tab-link-25.w-inline-block.w-tab-link{color:blue}
-.tab-link-inactive{color:blue}
-.w-tab-content{color:blue}
-.tab-pane-tab-1.w-tab-pane.w--tab-active{color:blue}
-.subcontent.detail.margin-0{color:blue}
-.h3.label.postup.lowercase{color:blue}
-.div-block-201{color:blue}
-.image-195{color:blue}
-.tab-pane-tab-3.w-tab-pane{color:blue}
-.quote-block.user-interviews{color:blue}
-.quote._1-125-rem{color:blue}
-.italic-text-3{color:blue}
-.image-197{color:blue}
-.flex.vertical._32px{color:blue}
-.div-block-202{color:blue}
-.image-196{color:blue}
-.list.numerical{color:blue}
-.image-193{color:blue}
-.image-194{color:blue}
-.container.padding-40px.margin-bottom--16px{color:blue}
-.semibold{color:blue}
-.flex.horizontal._40-px{color:blue}
-.flex.vertical._24-px.align-top{color:blue}
-.image-125{color:blue}
-.subcontent.detail.margin-0._8-px{color:blue}
-.w-layout-hflex.flex-block-58{color:blue}
-.image-216{color:blue}
-.subcontent.margin-0._16px{color:blue}
-.h3.label.postup{color:blue}
-.heading-4{color:blue}
-.h5{color:blue}
-.h4{color:blue}
-.subcontent.detail{color:blue}
-.w-embed.w-script{color:blue}
-.carousel_container{color:blue}
-.item_arrow.item_prev{color:blue}
-.fa.fa-angle-left{color:blue}
-.carousel_items{color:blue}
-.carousel_item{color:blue}
-.item_arrows{color:blue}
-.item_arrow.item_next{color:blue}
-.fa.fa-angle-right{color:blue}
-.nav_dots{color:blue}
-.list._8px{color:blue}
-.list._8px.numbered{color:blue}
-.w-embed-youtubevideo{color:blue}
-.subcontent.last-child{color:blue}
-.flex.horizontal._64-px{color:blue}
-.image-127{color:blue}
-.link-4{color:blue}
-.link-3{color:blue}
-.link-2{color:blue}
-.html-embed-3.w-embed.w-iframe{color:blue}
-.iframe-container{color:blue}
-.container.margin-0{color:blue}
+.hero {
+  color: blue;
+}
+.hero-wrapper {
+  color: blue;
+}
+.postup-title {
+  color: blue;
+}
+.subtitle.tagline {
+  color: blue;
+}
+.hero-image-wrapper {
+  color: blue;
+}
+.hero-gif {
+  color: blue;
+}
+.container.border._40-vh {
+  color: blue;
+}
+.div-block-25.intro {
+  color: blue;
+}
+.flex.horizontal {
+  color: blue;
+}
+.div-block-188 {
+  color: blue;
+}
+.w-layout-hflex.flex.vertical._16px {
+  color: blue;
+}
+.flex.vertical._4px {
+  color: blue;
+}
+.heading-3.black {
+  color: blue;
+}
+.paragraph.disciplines {
+  color: blue;
+}
+.flex.vertical._0px {
+  color: blue;
+}
+.flex.vertical._4px.auto {
+  color: blue;
+}
+.w-layout-hflex.flex-block-41 {
+  color: blue;
+}
+.div-block-187 {
+  color: blue;
+}
+.heading-3.black.middle {
+  color: blue;
+}
+.div-block-172 {
+  color: blue;
+}
+.image-13 {
+  color: blue;
+}
+.div-block-8 {
+  color: blue;
+}
+.div-block-26 {
+  color: blue;
+}
+.div-block-15 {
+  color: blue;
+}
+.container.grey.padding-40px {
+  color: blue;
+}
+.subcontent.margin-0 {
+  color: blue;
+}
+.paragraph {
+  color: blue;
+}
+.secondary-text {
+  color: blue;
+}
+.container.border {
+  color: blue;
+}
+.content {
+  color: blue;
+}
+.subcontent {
+  color: blue;
+}
+.postup-heading {
+  color: blue;
+}
+.heading-22 {
+  color: blue;
+}
+.main-heading.blue {
+  color: blue;
+}
+.subcontent.first-child {
+  color: blue;
+}
+.image-121 {
+  color: blue;
+}
+.w-layout-blockcontainer.section.no-border.w-container {
+  color: blue;
+}
+.postup-main-heading {
+  color: blue;
+}
+.image-224 {
+  color: blue;
+}
+.flex.vertical._8px {
+  color: blue;
+}
+.h3-label {
+  color: blue;
+}
+.h3.postup {
+  color: blue;
+}
+.semibold-black {
+  color: blue;
+}
+.div-block-253 {
+  color: blue;
+}
+.cards.horizontal {
+  color: blue;
+}
+.quote-caption-container {
+  color: blue;
+}
+.quotes-caption {
+  color: blue;
+}
+.w-layout-hflex.quote-container {
+  color: blue;
+}
+.w-embed {
+  color: blue;
+}
+.img-postup-quote-container {
+  color: blue;
+}
+.quote-block.user-interviews.horizontal {
+  color: blue;
+}
+.quote {
+  color: blue;
+}
+.w-layout-hflex.flex-block-69 {
+  color: blue;
+}
+.img-quoteauthor-small.w-embed {
+  color: blue;
+}
+.img-postup-quote-container-big {
+  color: blue;
+}
+.quote.author.sans-serif {
+  color: blue;
+}
+.horizontal-divider.grey-solid {
+  color: blue;
+}
+.quote-container {
+  color: blue;
+}
+.cards.horizontal.border-0 {
+  color: blue;
+}
+.div-block-181 {
+  color: blue;
+}
+.w-layout-layout.quick-stack.wf-layout-layout {
+  color: blue;
+}
+.w-layout-cell {
+  color: blue;
+}
+.subcontent.full-background {
+  color: blue;
+}
+.w-layout-layout.quick-stack._90.wf-layout-layout {
+  color: blue;
+}
+.w-layout-cell.cell-2 {
+  color: blue;
+}
+.image-217 {
+  color: blue;
+}
+.div-block-263 {
+  color: blue;
+}
+.list-3 {
+  color: blue;
+}
+.list-item-2 {
+  color: blue;
+}
+.paragraph.bluee {
+  color: blue;
+}
+.w-layout-cell.cell-3 {
+  color: blue;
+}
+.w-layout-hflex.flex-block-76 {
+  color: blue;
+}
+.div-block-269 {
+  color: blue;
+}
+.html-embed-10.w-embed.w-script {
+  color: blue;
+}
+.accordion {
+  color: blue;
+}
+.accordion-item.accordion-label {
+  color: blue;
+}
+.accordion-header {
+  color: blue;
+}
+.accordion-label {
+  color: blue;
+}
+.accordion-icon {
+  color: blue;
+}
+.accordion-content {
+  color: blue;
+}
+.w-layout-hflex.flex-block-73 {
+  color: blue;
+}
+.w-layout-hflex.flex-block-74 {
+  color: blue;
+}
+.div-block-268 {
+  color: blue;
+}
+.image-221 {
+  color: blue;
+}
+.container-airbnb-strengths {
+  color: blue;
+}
+.div-block-266 {
+  color: blue;
+}
+.image-220 {
+  color: blue;
+}
+.image-100 {
+  color: blue;
+}
+.subcontent.margin-bottom--16px {
+  color: blue;
+}
+.w-layout-layout.quick-stack._100.wf-layout-layout {
+  color: blue;
+}
+.tabs.iterations.w-tabs {
+  color: blue;
+}
+.tabs-menu._2-columns.w-tab-menu {
+  color: blue;
+}
+.tab-link-25.w-inline-block.w-tab-link.w--current {
+  color: blue;
+}
+.tab-link-tab-1 {
+  color: blue;
+}
+.tab-link-25.w-inline-block.w-tab-link {
+  color: blue;
+}
+.tab-link-inactive {
+  color: blue;
+}
+.w-tab-content {
+  color: blue;
+}
+.tab-pane-tab-1.w-tab-pane.w--tab-active {
+  color: blue;
+}
+.subcontent.detail.margin-0 {
+  color: blue;
+}
+.h3.label.postup.lowercase {
+  color: blue;
+}
+.div-block-201 {
+  color: blue;
+}
+.image-195 {
+  color: blue;
+}
+.tab-pane-tab-3.w-tab-pane {
+  color: blue;
+}
+.quote-block.user-interviews {
+  color: blue;
+}
+.quote._1-125-rem {
+  color: blue;
+}
+.italic-text-3 {
+  color: blue;
+}
+.image-197 {
+  color: blue;
+}
+.flex.vertical._32px {
+  color: blue;
+}
+.div-block-202 {
+  color: blue;
+}
+.image-196 {
+  color: blue;
+}
+.list.numerical {
+  color: blue;
+}
+.image-193 {
+  color: blue;
+}
+.image-194 {
+  color: blue;
+}
+.container.padding-40px.margin-bottom--16px {
+  color: blue;
+}
+.semibold {
+  color: blue;
+}
+.flex.horizontal._40-px {
+  color: blue;
+}
+.flex.vertical._24-px.align-top {
+  color: blue;
+}
+.image-125 {
+  color: blue;
+}
+.subcontent.detail.margin-0._8-px {
+  color: blue;
+}
+.w-layout-hflex.flex-block-58 {
+  color: blue;
+}
+.image-216 {
+  color: blue;
+}
+.subcontent.margin-0._16px {
+  color: blue;
+}
+.h3.label.postup {
+  color: blue;
+}
+.heading-4 {
+  color: blue;
+}
+.h5 {
+  color: blue;
+}
+.h4 {
+  color: blue;
+}
+.subcontent.detail {
+  color: blue;
+}
+.w-embed.w-script {
+  color: blue;
+}
+.carousel_container {
+  color: blue;
+}
+.item_arrow.item_prev {
+  color: blue;
+}
+.fa.fa-angle-left {
+  color: blue;
+}
+.carousel_items {
+  color: blue;
+}
+.carousel_item {
+  color: blue;
+}
+.item_arrows {
+  color: blue;
+}
+.item_arrow.item_next {
+  color: blue;
+}
+.fa.fa-angle-right {
+  color: blue;
+}
+.nav_dots {
+  color: blue;
+}
+.list._8px {
+  color: blue;
+}
+.list._8px.numbered {
+  color: blue;
+}
+.w-embed-youtubevideo {
+  color: blue;
+}
+.subcontent.last-child {
+  color: blue;
+}
+.flex.horizontal._64-px {
+  color: blue;
+}
+.image-127 {
+  color: blue;
+}
+.link-4 {
+  color: blue;
+}
+.link-3 {
+  color: blue;
+}
+.link-2 {
+  color: blue;
+}
+.html-embed-3.w-embed.w-iframe {
+  color: blue;
+}
+.iframe-container {
+  color: blue;
+}
+.container.margin-0 {
+  color: blue;
+}
+
+.project-title {
+    color: var(--black);
+    margin-bottom: 0;
+    font-family: Inter, sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 100%;
+  }
