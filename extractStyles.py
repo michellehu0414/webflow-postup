@@ -26,4 +26,4 @@ def extract_and_remove_styles(html_file_path, css_file_path):
         file.write(str(soup))
 
 # Example usage
-extract_and_remove_styles('postup-page.html', 'postup-styles.css')
+extract_and_remove_styles('tastebuds-page.html', 'tastebuds-styles.css')
