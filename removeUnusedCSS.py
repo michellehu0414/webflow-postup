@@ -1,20 +1,26 @@
 import cssutils
 import re
 from bs4 import BeautifulSoup
-import logging  # Add this line to import the logging module
+import logging
 
-def remove_unused_css(html_file_path, css_file_path, output_css_file_path=None):
-    # Read the HTML file
-    with open(html_file_path, 'r', encoding='utf-8') as file:
-        html_content = file.read()
+def remove_unused_css(html_files, css_file_path, output_css_file_path=None):
+    # Combined set of used classes and IDs from both HTML files
+    used_classes = set()
+    used_ids = set()
 
-    # Parse the HTML to find all classes and IDs
-    soup = BeautifulSoup(html_content, 'html.parser')
-    used_classes = {cls for tag in soup.find_all(class_=True) for cls in tag['class']}
-    used_ids = {tag['id'] for tag in soup.find_all(id=True)}
+    # Iterate through HTML files to find all used classes and IDs
+    for html_file_path in html_files:
+        # Read the HTML file
+        with open(html_file_path, 'r', encoding='utf-8') as file:
+            html_content = file.read()
+
+        # Parse the HTML to find all classes and IDs
+        soup = BeautifulSoup(html_content, 'html.parser')
+        used_classes.update({cls for tag in soup.find_all(class_=True) for cls in tag['class']})
+        used_ids.update({tag['id'] for tag in soup.find_all(id=True)})
 
     # Parse the CSS file
-    css_parser = cssutils.CSSParser(loglevel=logging.CRITICAL)  # Suppress cssutils warnings
+    css_parser = cssutils.CSSParser(loglevel=logging.CRITICAL)
     stylesheet = css_parser.parseFile(css_file_path)
     
     # Check CSS rules and keep those with used classes or IDs
@@ -38,5 +44,6 @@ def remove_unused_css(html_file_path, css_file_path, output_css_file_path=None):
     with open(output_css_file_path, 'w', encoding='utf-8') as file:
         file.write(output_css)
 
-# Example usage
-remove_unused_css('postup-page-v3.html', 'postup-styles.css', 'postup-styles-streamlined.css')
+# Example usage with two HTML files
+html_files = ['postup-casestudy.html', 'tastebuds-casestudy.html']
+remove_unused_css(html_files, 'flex.css', 'flex.css')

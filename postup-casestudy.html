@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Design Case Study: PostUp by Michelle Hu</title>
     <meta content="Case Study: TasteBuds 2" property="og:title">
-    <meta content="Case Study: TasteBuds 2" property="twitter:title">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Case Study: TasteBuds 2" property="twitter:title"> 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link
       crossorigin="anonymous"
@@ -16,11 +14,10 @@
       rel="preconnect"
    >
     <!-- <link href="public/css/postup-styles.css" rel="stylesheet">  -->
-    <link href="/public/css/globals.css" rel="stylesheet" />
     <link href="/public/css/styles.css" rel="stylesheet" />
+    <link href="/public/css/main.css" rel="stylesheet" />
     <link href="public/css/fonts.css" rel="stylesheet" />
     <link href="public/css/swiper-bundle.mini.css" rel="stylesheet">
-    <link href="public/css/w3.css" rel="stylesheet">
     <link href="public/css/www-player.css" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -153,9 +150,10 @@
               </div>
             </div> -->
           </div>
+          <button id="scrollButton" class="scroll-arrow" aria-label="Scroll down"><img src="/public/svg/ic-arrowDown.svg" alt="Arrow pointing down, indicating to scroll down" ></button>
         </div>
       </section>
-      <section class="container grey padding-40px">
+      <section id="section-intro" class="container grey padding-40px">
         <div class="subcontent margin-0">
           <p class="paragraph">
             PostUp is a new startup that allow freelancers and remote workers
@@ -174,7 +172,7 @@
           </h2>
         </div>
       </section>
-      <aside class="container border" id="The-problem">
+      <section class="container border" id="The-problem">
         <div class="content">
           <div class="subcontent">
             <div class="postup-heading">
@@ -215,8 +213,8 @@
             </p>
           </div>
         </div>
-      </aside>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="postup-main-heading">
           <div class="postup-heading">
             <h2 class="heading-22">monday</h2>
@@ -543,8 +541,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent">
           <div class="postup-main-heading">
             <div class="postup-heading">
@@ -908,8 +906,8 @@
             ></div>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent">
           <div class="postup-main-heading">
             <div class="postup-heading">
@@ -1262,8 +1260,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent">
           <div class="postup-main-heading">
             <div class="postup-heading">
@@ -1616,8 +1614,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent">
           <div class="postup-main-heading">
             <div class="postup-heading">
@@ -1976,8 +1974,8 @@
             ></div>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent first-child">
           <div class="postup-heading">
             <h2 class="heading-22">design evolution</h2>
@@ -2043,8 +2041,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent first-child">
           <div class="postup-main-heading">
             <div class="postup-heading">
@@ -2309,8 +2307,8 @@
             the app's value proposition. <br>
           </p>
         </div>
-      </div>
-      <div class="container border">
+      </section>
+      <section class="container border">
         <div class="subcontent first-child">
           <div class="postup-heading">
             <h2 class="main-heading blue">Reflection</h2>
@@ -2465,8 +2463,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </main>
       <script src="/public/js/scrollable.js"></script>
+      <script src="/public/js/heroScrollDown.js"></script> 
       <script>
         function toggleAccordion(sectionNumber) {
           var content = document.getElementById(
@@ -2706,6 +2706,5 @@
               (n.className += t + "touch");
         })(window, document);
       </script>
-    </body>
   </body>
 </html>
