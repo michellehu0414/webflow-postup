@@ -1,0 +1,84 @@
+@import "../abstracts/all-abstracts";
+
+body {
+    font-size: 16px;
+}  
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.125rem;
+  color: $dark-grey;
+  margin-bottom: 1rem;
+  line-height: 145%;
+}
+
+h2 {
+  color: $black;
+  flex: 1;
+  font-size: 2.986rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: $primary-color;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 2.488rem;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.noto-serif {
+  color: $black;
+  font-family: "Noto Serif", serif;
+  font-size: 1.125rem;
+  font-weight: 350;
+  line-height: 160%; // 28.8px
+}
+
+.secondary-text {
+  color: $black;
+  font-size: 1.665rem;
+  font-weight: 500;
+  line-height: 125%;
+  margin-bottom: 2rem;
+  letter-spacing: 0rem;
+}
+
+.fw-medium {
+    color: $black;
+    font-weight: 500;
+}

@@ -1,0 +1,25 @@
+@import "../utilities/all-utilities";
+
+$primary-color: #076261;
+
+:root {
+  --primary-color: #076261;
+}
+
+.interview-quotes.column-grid {
+  @include dynamic-grid(
+    "columns",
+    "1fr 2fr 1fr 3fr",
+    10px,
+    20px
+  ); // Four columns with different fr values
+}
+
+.interview-quotes.row-grid {
+  @include dynamic-grid(
+    "rows",
+    "repeat(3, auto)",
+    0,
+    0
+  ); // Three rows with different fr values
+}
