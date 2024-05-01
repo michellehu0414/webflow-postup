@@ -1,0 +1,30 @@
+.caption-container {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--light-grey);
+  border-radius: 10px;
+  display: flex;
+  padding: 16px;
+  margin-bottom: $content-mb;
+  margin: auto;
+
+  ul.user-flow {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    list-style-type: decimal;
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+    gap: 0.5rem;
+          text-align: left;
+    
+    li {
+      color: var(--off-black);
+      font-size: 1.2rem;
+      line-height: 150%;
+      text-align: left;
+    }
+  }
+
+}

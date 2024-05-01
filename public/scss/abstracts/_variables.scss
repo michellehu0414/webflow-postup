@@ -22,9 +22,37 @@ $main-font: "Inter";
 $background-gray: rgba(219, 219, 219, 0.5);
 $primary-bg: #ffdc93;
 $primary-color: #076261;
+$content-mb: 2rem;
 
 // Tools app shadow
 $fixed-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 
   1px 1px 2px rgba(0, 0, 0, 0.50), inset -1px -1px 3px rgba(0, 0, 0, 0.05),
   inset 1px 1px 2px rgba(255, 255, 255, 0.05); 
 $border-style: 1px solid #e4ebf3;
+
+.iconSize {
+  &-xs {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-sm {
+    width: 32px;
+    height: 32px;
+  }
+
+  &-med {
+    width: 40px;
+    height: 40px;
+  }
+
+  &-lg {
+    width: 64px;
+    height: 64px;
+  }
+
+  &-xl {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,20 @@
+hr {
+  &.dashed-blue {
+    align-self: stretch;
+    border-top: 1px dashed var(--medium-light-blue);
+    flex: 0 auto;
+    height: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  &.solid-black {
+    border-top-color: var(--light-grey);
+    border-top-style: solid;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &.solid-grey {
+    border-top: 0.5px solid var(--light-grey);
+  }
+}
