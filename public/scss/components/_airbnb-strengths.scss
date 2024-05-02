@@ -1,0 +1,41 @@
+.airbnb {
+  align-self: center;
+  max-width: none;
+  width: 84.5px;
+  padding-bottom: 1rem;
+}
+
+.airbnb-strengths-container {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  height: fit-content;
+  align-items: center;
+  width: fit-content;
+  gap: 2rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 10px;
+  margin-bottom: $content-mb;
+  margin: auto;
+  justify-content: center;
+
+  
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+  }
+}

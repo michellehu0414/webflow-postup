@@ -1,11 +1,43 @@
 .content-grid {
+  display: grid;
+  grid-template-rows: auto;
+  width: 90vw;
+  max-width: $content-max-width;
+  margin: auto; /* Center the container */
+
+  aside {
+    p {
+      font-size: 1rem;
+      color: #00bdd6;
+      font-family: Noto Serif, sans-serif;
+    }
+  }
+
+  @include breakpoint(med) {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr auto; /* Content and side notes */
     width: 90vw;
     max-width: $content-max-width;
     margin: auto; /* Center the container */
-  
+
+    > div:first-child {
+      grid-column: 1 / 2; /* Content occupies the first column */
+      width: 90vw;
+      max-width: $content-max-width;
+      text-align: left;
+    }
+
+    > p:first-child {
+      grid-column: 1 / 2; /* Content occupies the first column */
+      width: 90vw;
+      max-width: $content-max-width;
+    }
+
     aside {
+      grid-column: 2 / 3; /* Side notes in the second column */
+      min-width: 15vw;
+      max-width: 320px;
+      padding-left: 1.5rem;
 
       p {
         font-size: 1rem;
@@ -13,36 +45,55 @@
         font-family: Noto Serif, sans-serif;
       }
     }
+  }
+}
 
-    @include breakpoint(med) {
-        display: grid;
-        grid-template-columns: 1fr auto; /* Content and side notes */
-        width: 90vw;
-        max-width: $content-max-width;
-        margin: auto; /* Center the container */
-      
-        > div:first-child {
-          grid-column: 1 / 2; /* Content occupies the first column */
-          width: 90vw;
-          max-width: $content-max-width;
-        }
-        > p:first-child {
-          grid-column: 1 / 2; /* Content occupies the first column */
-          width: 90vw;
-          max-width: $content-max-width;
-        }
-      
-        aside {
-          grid-column: 2 / 3; /* Side notes in the second column */
-          min-width: 15vw;
-          max-width: 320px;
-          padding-left: 1.5rem;
-      
-          p {
-            font-size: 1rem;
-            color: #00bdd6;
-            font-family: Noto Serif, sans-serif;
-          }
-        }
+.content-grid.large {
+  display: grid;
+  grid-template-rows: auto;
+  width: 90vw;
+  max-width: 1000px;
+  margin: auto; /* Center the container */
+
+  aside {
+    p {
+      font-size: 1rem;
+      color: #00bdd6;
+      font-family: Noto Serif, sans-serif;
+      text-align: left;
     }
+  }
+
+  @include breakpoint(med) {
+
+    > div:first-child {
+      grid-column: 1 / 2; /* Content occupies the first column */
+      width: 90vw;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    > p:first-child {
+      grid-column: 1 / 2; /* Content occupies the first column */
+      width: 90vw;
+      max-width: 800px;
+    }
+
+    aside {
+      grid-column: 2 / 3; /* Side notes in the second column */
+      min-width: 20vw;
+      max-width: 320px;
+      padding-left: 1.5rem;
+
+      p {
+        font-size: 1rem;
+        color: #00bdd6;
+        font-family: Noto Serif, sans-serif;
+      }
+    }
+  }
+}
+
+.img-wrapper {
+  padding: 2rem 0;
 }

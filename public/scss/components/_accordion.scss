@@ -1,0 +1,67 @@
+.accordion {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 16px;
+    border: 0;
+    color: $white; // This ensures all text inside the accordion has a default white color
+  
+    .accordionHeader {
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 0;
+      background-color: #1f1f1f;
+  
+      p {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 130%;
+        text-align: left;
+        margin: 0;
+        flex: 1;
+        color: white; 
+      }
+  
+      .ic-arrowDown--lined {
+        content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+        display: flex;
+      }
+  
+      .accordion-icon {
+        transition: transform 0.4s;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 1rem;
+  
+        &.active {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  
+    .accordionContent {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      padding: 0 16px; // Optional padding to match header
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: white; // Make sure this is not being overridden elsewhere
+        text-align: left;
+      }
+    }
+  }
+  
+  .accordion:first-child {
+    border-top: 1.5px solid #000;
+  }
+  
+  .ic-arrowDown--lined {
+    content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+  }
+  

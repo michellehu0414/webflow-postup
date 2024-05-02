@@ -73,7 +73,7 @@ h5 {
   font-size: 1.665rem;
   font-weight: 500;
   line-height: 125%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 0rem;
 }
 
@@ -87,4 +87,22 @@ p {
     color: #00bdd6;
     font-family: Noto Serif, sans-serif;
   }
+}
+
+.subheading {
+  font-weight: 600;
+    letter-spacing: 0;
+    line-height: 130%;
+    color: var(--black);
+    font-size: 1.266rem;
+    text-transform: uppercase;
+}
+
+.secondary-text.small {
+  color: $black;
+  font-size: 1.424rem;
+  font-weight: 500;
+  line-height: 115%;
+  margin-bottom: 1rem;
+  letter-spacing: 0rem;
 }

@@ -2,4 +2,8 @@
 @import 'flex-items';
 @import 'grid';
 @import 'spacing';
-@import 'colors'; 
+@import 'colors';
+
+.hide {
+    display: none;
+}

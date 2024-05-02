@@ -1109,80 +1109,6 @@ label {
   width: 100%;
 }
 
-.tabs {
-  min-width: 100%;
-}
-
-.tabs.iterations {
-  border-radius: 8px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.container-tab {
-  background-color: transparent;
-  border-bottom: 0 solid #000;
-  border-bottom-right-radius: 0;
-  border-right: 0 solid #000;
-  border-top: 0 solid #000;
-  margin-right: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  text-align: center;
-  width: 50%;
-}
-
-.container-tab.w--current {
-  background-color: var(--blue-accent);
-  border-bottom: 0 solid var(--blue-accent);
-  border-radius: 8px;
-  border-top-color: var(--blue-accent);
-  color: var(--white);
-  margin-right: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  text-align: center;
-  width: 50%;
-}
-
-.container-tab._50 {
-  color: var(--black);
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.container-tab._50.w--current {
-  color: var(--white);
-}
-
-.container-tab._33 {
-  width: 33.3%;
-}
-
-.container-tab._33.w--current {
-  color: var(--white);
-}
-
-.tab-pane-tab-3 {
-  padding: 40px 0 0;
-}
-
-.tabs-menu {
-  background-color: #e6e6e6;
-  border-bottom: 0 solid var(--blue-accent);
-  border-radius: 8px;
-  padding-bottom: 0;
-}
-
-.tabs-menu._2-columns {
-  background-color: #e6e6e6;
-  border-bottom-width: 0;
-  border-radius: 8px;
-  height: 40px;
-  overflow: hidden;
-}
-
 .container-grid {
   border-bottom: 1px dashed #000;
   display: grid;
@@ -1566,12 +1492,6 @@ label {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   justify-content: space-between;
-}
-
-.img-100,
-.image-100 {
-  max-width: none;
-  width: 100%;
 }
 
 .screenshots-container {
@@ -2263,10 +2183,6 @@ label {
   grid-row-gap: 40px;
 }
 
-.image-216 {
-  max-width: 30%;
-}
-
 .flex-block-58 {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
@@ -2502,12 +2418,6 @@ label {
   align-self: stretch;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-}
-
-.div-block-268 {
-  align-items: flex-end;
-  display: flex;
-  height: 72px;
 }
 
 .flex-block-75 {
@@ -3003,28 +2913,8 @@ sub {
   bottom: -0.25em;
 }
 
-img {
-  border: 0;
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-img {
-  max-width: 1000px;
-  width: 100%;
-}
-
 svg:not(:root) {
   overflow: hidden;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
 }
 
 pre {
@@ -3178,10 +3068,6 @@ html.w-mod-touch * {
 
 .w-clearfix:after {
   clear: both;
-}
-
-.w-hidden {
-  display: none;
 }
 
 .w-button {

@@ -323,24 +323,52 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   max-width: $content-max-width;
   width: 90%;
   margin: auto;
+  align-items: center;
 
   &.medium {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  &.normal {
-    max-width: 45re;
-    width: 90%;
+    max-width: 1000px;
   }
 
   &.large {
-    margin: auto;
-    width: 90%;
     max-width: 1200px;
+  }
+
+  &.xl {
+    max-width: 1400px;
+  }
+}
+
+header {
+  display: block;
+  max-width: $content-max-width;
+  width: 90%;
+
+  img {
+    max-width: 32rem;
+    width: 100%;
+  }
+}
+
+.full-width {
+  background-color: $lightest-grey;
+  margin: 2rem 0;
+  text-align: center;
+  width: 100vw;
+  padding: 4rem 0;
+
+  .img-user-journey {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  &.transparent {
+    background-color: transparent;
   }
 }
 
@@ -357,28 +385,11 @@ section.container {
     flex-direction: column;
     justify-items: flex-start;
     align-items: flex-start;
-    gap: 2.5rem;
-    max-width: 40rem;
+    gap: 2rem;
+    max-width: $content-max-width;
     width: 90%;
     margin: auto;
 
-    header {
-      display: block;
-      margin-bottom: 1.5rem;
-      max-width: 40rem;
-      width: 90%;
-
-      img {
-        max-width: 32rem;
-        width: 100%;
-      }
-    }
-  }
-
-  header {
-    max-width: 45rem;
-    width: 90%;
-    margin-bottom: 1.5rem;
   }
   
   .subsection {
@@ -389,23 +400,8 @@ section.container {
     margin: auto;
     padding: 0;
     width: 100vw;
+    gap: 2rem;
 
-    .full-width {
-      background-color: $lightest-grey;
-      margin: 2rem 0;
-      text-align: center;
-      width: 100vw;
-      padding: 2rem;
-
-      .img-user-journey {
-        width: 90%;
-        max-width: 1000px;
-      }
-
-      &.transparent {
-        background-color: transparent;
-      }
-    }
 
     // Nested states and modifiers
     &.detail {
@@ -526,11 +522,6 @@ section.container {
   }
 }
 
-.img-width-1200 {
-  width: 90%;
-  max-width: 1200px;
-}
-
 .subheader {
   color: $medium-grey;
   font-size: 1.125rem;
@@ -552,6 +543,23 @@ section.container {
 }
 
 .content.container {
-  max-width: 40rem;
+  max-width: $content-max-width;
   width: 90%;
+}
+
+.prototype-walkthrough {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    gap: 2.5rem;
+    align-items: center;
+
+    div {
+      display: block;
+    }
+  }
+}
+
+img {
+  width: 100%;
 }
