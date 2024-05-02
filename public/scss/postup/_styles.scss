@@ -7,9 +7,8 @@ $primary-color: #076261;
 }
 
 .interview-quotes {
-  max-width: 40rem;
+  max-width: 45rem;
   width: 90%;
-  max-width: 40rem;
   margin: auto;
 
   .grid-container {
@@ -87,12 +86,13 @@ $primary-color: #076261;
         }
       }
       @include breakpoint(med) {
-        .desktop-only {
+        img.desktop-only {
           display: flex;
-          width: 2rem;
-          height: 2rem;
-          border-radius: 50px;
+          width: 32px;
+          height: 32px;
+          border-radius: 25px;
           margin-right: 1rem;
+          overflow: hidden;
         }
       }
     }
@@ -122,13 +122,6 @@ $primary-color: #076261;
     padding-bottom: 8px;
     padding-top: 8px;
   }
-}
-.container-airbnb-strengths {
-  display: flex;
-  flex: 1;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-  justify-content: flex-start;
 }
 
 .interview-quotes {

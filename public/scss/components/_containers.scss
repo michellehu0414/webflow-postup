@@ -323,7 +323,7 @@
 }
 
 .content {
-  max-width: 40rem;
+  max-width: $content-max-width;
   width: 90%;
   margin: auto;
 
@@ -333,7 +333,7 @@
   }
 
   &.normal {
-    max-width: 40rem;
+    max-width: 45re;
     width: 90%;
   }
 
@@ -376,7 +376,7 @@ section.container {
   }
 
   header {
-    max-width: 40rem;
+    max-width: 45rem;
     width: 90%;
     margin-bottom: 1.5rem;
   }

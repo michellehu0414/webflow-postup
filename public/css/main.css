@@ -1,3 +1,7 @@
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -19,6 +23,10 @@
   height: 80px;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -62,7 +70,7 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #565656;
   margin-bottom: 1rem;
   line-height: 145%;
@@ -127,6 +135,10 @@ p.notes {
   font-family: Noto Serif, sans-serif;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -388,6 +400,10 @@ template {
 }
 
 /* Hero section */
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -409,6 +425,10 @@ template {
   height: 80px;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -452,7 +472,7 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #565656;
   margin-bottom: 1rem;
   line-height: 145%;
@@ -517,6 +537,10 @@ p.notes {
   font-family: Noto Serif, sans-serif;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -845,6 +869,10 @@ header.hero#postup-heroBG {
   width: 10 0vw;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -1145,7 +1173,7 @@ header.hero#postup-heroBG {
 }
 
 .content {
-  max-width: 40rem;
+  max-width: 45rem;
   width: 90%;
   margin: auto;
 }
@@ -1154,7 +1182,7 @@ header.hero#postup-heroBG {
   margin: auto;
 }
 .content.normal {
-  max-width: 40rem;
+  max-width: 45re;
   width: 90%;
 }
 .content.large {
@@ -1192,7 +1220,7 @@ section.container .wrapper header img {
   width: 100%;
 }
 section.container header {
-  max-width: 40rem;
+  max-width: 45rem;
   width: 90%;
   margin-bottom: 1.5rem;
 }
@@ -1348,6 +1376,10 @@ section.container.border {
   width: 90%;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -1401,7 +1433,7 @@ section.container.border {
   display: grid;
   grid-template-rows: auto;
   width: 90vw;
-  max-width: 40rem;
+  max-width: 45rem;
   margin: auto; /* Center the container */
 }
 .content-grid aside p {
@@ -1414,18 +1446,18 @@ section.container.border {
     display: grid;
     grid-template-columns: 1fr auto; /* Content and side notes */
     width: 90vw;
-    max-width: 40rem;
+    max-width: 45rem;
     margin: auto; /* Center the container */
   }
   .content-grid > div:first-child {
     grid-column: 1/2; /* Content occupies the first column */
     width: 90vw;
-    max-width: 40rem;
+    max-width: 45rem;
   }
   .content-grid > p:first-child {
     grid-column: 1/2; /* Content occupies the first column */
     width: 90vw;
-    max-width: 40rem;
+    max-width: 45rem;
   }
   .content-grid aside {
     grid-column: 2/3; /* Side notes in the second column */
@@ -1705,6 +1737,10 @@ hr.solid-grey {
   gap: 5rem;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -2105,6 +2141,10 @@ hr.solid-grey {
   gap: 5rem;
 }
 
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
 .iconSize-xs {
   width: 24px;
   height: 24px;
@@ -2203,9 +2243,8 @@ hr.solid-grey {
 }
 
 .interview-quotes {
-  max-width: 40rem;
+  max-width: 45rem;
   width: 90%;
-  max-width: 40rem;
   margin: auto;
 }
 .interview-quotes .grid-container {
@@ -2278,12 +2317,13 @@ hr.solid-grey {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  .interview-quotes .grid-container .quote-container .desktop-only {
+  .interview-quotes .grid-container .quote-container img.desktop-only {
     display: flex;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    border-radius: 25px;
     margin-right: 1rem;
+    overflow: hidden;
   }
 }
 .interview-quotes .quote-block.user-interviews._70 {
@@ -2309,14 +2349,6 @@ hr.solid-grey {
   max-width: 350px;
   padding-bottom: 8px;
   padding-top: 8px;
-}
-
-.container-airbnb-strengths {
-  display: flex;
-  flex: 1;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-  justify-content: flex-start;
 }
 
 .interview-quotes {

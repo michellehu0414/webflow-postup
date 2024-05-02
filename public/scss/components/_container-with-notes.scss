@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: auto;
     width: 90vw;
-    max-width: 40rem;
+    max-width: $content-max-width;
     margin: auto; /* Center the container */
   
     aside {
@@ -18,18 +18,18 @@
         display: grid;
         grid-template-columns: 1fr auto; /* Content and side notes */
         width: 90vw;
-        max-width: 40rem;
+        max-width: $content-max-width;
         margin: auto; /* Center the container */
       
         > div:first-child {
           grid-column: 1 / 2; /* Content occupies the first column */
           width: 90vw;
-          max-width: 40rem;
+          max-width: $content-max-width;
         }
         > p:first-child {
           grid-column: 1 / 2; /* Content occupies the first column */
           width: 90vw;
-          max-width: 40rem;
+          max-width: $content-max-width;
         }
       
         aside {
