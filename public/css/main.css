@@ -1215,7 +1215,7 @@ header.hero#postup-heroBG {
   max-width: 45rem;
   width: 90%;
   margin: auto;
-  align-items: center;
+  align-items: left;
 }
 .content.medium {
   max-width: 1000px;
@@ -1238,6 +1238,9 @@ header img {
 }
 
 .full-width {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   background-color: #f9f9f9;
   margin: 2rem 0;
   text-align: center;
@@ -2654,6 +2657,10 @@ hr.solid-grey {
 
 .cards.site-map.first-child {
   padding-left: 0;
+}
+
+.postup-full-storyboard {
+  margin-bottom: 2rem;
 }
 
 .tabs {

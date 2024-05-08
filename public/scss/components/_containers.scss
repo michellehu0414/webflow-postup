@@ -329,7 +329,7 @@
   max-width: $content-max-width;
   width: 90%;
   margin: auto;
-  align-items: center;
+  align-items: left;
 
   &.medium {
     max-width: 1000px;
@@ -356,11 +356,15 @@ header {
 }
 
 .full-width {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   background-color: $lightest-grey;
   margin: 2rem 0;
   text-align: center;
   width: 100vw;
   padding: 4rem 0;
+
 
   .img-user-journey {
     width: 90%;
