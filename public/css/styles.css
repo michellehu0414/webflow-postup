@@ -124,6 +124,73 @@
     display: none;
   }
 }
+.pure-black {
+  color: #000;
+}
+
+.black {
+  color: #1e1e1e;
+}
+
+.off-black {
+  color: #4a4a4a;
+}
+
+.dark-grey {
+  color: #565656;
+}
+
+.medium-grey {
+  color: #757575;
+}
+
+.medium-light-grey {
+  color: #dbdbdb;
+}
+
+.light-grey {
+  color: #f0f0f0;
+}
+
+.lightest-grey {
+  color: #f9f9f9;
+}
+
+.sub-grey {
+  color: #cfcfcf;
+}
+
+.emphasis-blue {
+  color: #4479df;
+}
+
+.invalid-red {
+  color: #dc1d25;
+}
+
+.light-blue {
+  color: #e7ecff;
+}
+
+.emphasis {
+  color: #e2583e;
+}
+
+.primary-bg {
+  color: #ffdc93;
+}
+
+.primary-color {
+  color: #076261;
+}
+
+.bg-light-blue {
+  background-color: #e7ecff;
+}
+.bg-lightest-grey {
+  background-color: #f9f9f9;
+}
+
 .iconSize-xxs {
   width: 20px;
   height: 20px;
