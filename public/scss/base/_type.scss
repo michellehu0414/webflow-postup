@@ -9,6 +9,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 h1,
@@ -23,9 +24,10 @@ h6 {
 
 p {
   font-size: 1rem;
+  font-weight: 400;
   color: $dark-grey;
-  margin-bottom: 1rem;
   line-height: 145%;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -35,8 +37,7 @@ h2 {
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
-  margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -46,13 +47,16 @@ h3 {
   font-size: 2.488rem;
   font-weight: 600;
   line-height: 130%;
+  margin-bottom: 1.25rem;
 }
 
 h4 {
-  color: var(--black);
-  font-size: 1.125rem;
   font-weight: 500;
-  line-height: 150%;
+  letter-spacing: 0;
+  line-height: 130%;
+  color: var(--black);
+  font-size: 1.266rem;
+  margin-bottom: 1rem;
 }
 
 h5 {
@@ -90,7 +94,7 @@ p {
 }
 
 .subheading {
-  font-weight: 600;
+  font-weight: 500;
     letter-spacing: 0;
     line-height: 130%;
     color: var(--black);
