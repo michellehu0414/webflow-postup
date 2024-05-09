@@ -41,6 +41,14 @@
   flex-direction: row;
 }
 
+@mixin flex-row($justify: flex-start, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
 .flex-block {
   align-items: center;
 }
