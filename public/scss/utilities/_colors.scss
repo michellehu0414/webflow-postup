@@ -48,6 +48,18 @@
 .emphasis {
   color: $emphasis;
 }
-.bg-lightest-grey {
-  background-color: $lightest-grey;
+
+// Background colors
+
+.bg- {
+  &light-blue {
+    background-color: var(--light-blue);
+  }
+
+  &light-grey {
+    background-color: $light-grey;
+  }
+  &lightest-grey {
+    background-color: $lightest-grey;
+  }
 }
