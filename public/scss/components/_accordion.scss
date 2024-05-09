@@ -1,23 +1,23 @@
 .accordion {
     background-color: #1f1f1f;
     border-radius: 10px;
-    padding: 16px;
+    padding: 1rem 1.25rem;
     border: 0;
     color: white; // This ensures all text inside the accordion has a default white color
   
     .accordionHeader {
-      border-radius: 10px;
-      cursor: pointer;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
       padding-bottom: 0;
+      border-radius: 10px;
+      cursor: pointer;
       background-color: #1f1f1f;
   
       p {
         display: flex;
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 1.25rem;
         line-height: 130%;
         text-align: left;
         margin: 0;
@@ -27,14 +27,13 @@
   
       .ic-arrowDown--lined {
         content: url(/assets/svg/ic-arrowDown_lined--black.svg);
-        display: flex;
+        padding: 0;
       }
   
       .accordion-icon {
         transition: transform 0.4s;
         width: 1.5rem;
         height: 1.5rem;
-        margin-left: 1rem;
   
         &.active {
           transform: rotate(-180deg);

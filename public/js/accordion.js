@@ -11,4 +11,14 @@ document.querySelectorAll('.accordion .accordionHeader').forEach(header => {
       }
     });
   });
-  
+  function toggleAccordion(sectionNumber) {
+    var content = document.getElementById("section" + sectionNumber);
+    var icon = document.getElementById("icon");
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      icon.classList.remove("rotate");
+    } else {
+      content.style.display = "block";
+      icon.classList.add("rotate");
+    }
+  }
