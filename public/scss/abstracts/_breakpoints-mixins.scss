@@ -38,3 +38,97 @@ $breakpoints: (
     height: 64px;
   }
 }
+
+$breakpoints: (
+  mobile-sm: 320px,
+  mobile-med: 375px,
+  mobile-lg: 425px,
+  sm: 576px,
+  med: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Classes for showing content at different breakpoints
+.show-mobile-sm { display: none; }
+.show-mobile-med { display: none; }
+.show-mobile-lg { display: none; }
+.show-sm { display: none; }
+.show-med { display: none; }
+.show-lg { display: none; }
+.show-xl { display: none; }
+
+@include breakpoint(mobile-sm) {
+  .show-mobile-sm { display: block; }
+}
+
+@include breakpoint(mobile-med) {
+  .show-mobile-med { display: block; }
+}
+
+@include breakpoint(mobile-lg) {
+  .show-mobile-lg { display: block; }
+}
+
+@include breakpoint(sm) {
+  .show-sm { display: block; }
+}
+
+@include breakpoint(med) {
+  .show-med { display: block; }
+}
+
+@include breakpoint(lg) {
+  .show-lg { display: block; }
+}
+
+@include breakpoint(xl) {
+  .show-xl { display: block; }
+}
+
+// Classes for hiding content at different breakpoints
+.hide-mobile-sm { display: block; }
+.hide-mobile-med { display: block; }
+.hide-mobile-lg { display: block; }
+.hide-sm { display: block; }
+.hide-med { display: block; }
+.hide-lg { display: block; }
+.hide-xl { display: block; }
+
+@include breakpoint(mobile-sm) {
+  .hide-mobile-sm { display: none; }
+}
+
+@include breakpoint(mobile-med) {
+  .hide-mobile-med { display: none; }
+}
+
+@include breakpoint(mobile-lg) {
+  .hide-mobile-lg { display: none; }
+}
+
+@include breakpoint(sm) {
+  .hide-sm { display: none; }
+}
+
+@include breakpoint(med) {
+  .hide-med { display: none; }
+}
+
+@include breakpoint(lg) {
+  .hide-lg { display: none; }
+}
+
+@include breakpoint(xl) {
+  .hide-xl { display: none; }
+}
