@@ -325,7 +325,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: $content-max-width;
   width: 90%;
   margin: auto;
@@ -348,6 +348,7 @@ header {
   display: block;
   max-width: $content-max-width;
   width: 90%;
+  margin: auto;
 
   img {
     max-width: 32rem;
@@ -361,7 +362,6 @@ header {
   gap: 1.5rem;
   background-color: $lightest-grey;
   margin: 2rem 0;
-  text-align: center;
   width: 100vw;
   padding: 4rem 0;
 
@@ -400,7 +400,6 @@ section.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: auto;
     padding: 0;
     width: 100vw;
