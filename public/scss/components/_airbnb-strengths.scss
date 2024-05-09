@@ -8,15 +8,14 @@
 .airbnb-strengths-container {
   display: flex;
   flex-direction: row;
-  padding: 16px;
+  padding: 2rem 2rem;
   height: fit-content;
   align-items: center;
   width: fit-content;
-  gap: 2rem;
+  gap: 3rem;
   border: 1px solid var(--light-grey);
   border-radius: 10px;
   margin-bottom: $content-mb;
-  margin: auto;
   justify-content: center;
 
   
@@ -25,7 +24,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 1rem;
+    row-gap: 1rem;
+    column-gap: 2.5rem;
 
     div {
         display: flex;
