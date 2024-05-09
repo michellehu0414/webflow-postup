@@ -1,17 +1,5 @@
 @import "../abstracts/all-abstracts";
 
-header {
-  display: block;
-  max-width: $content-max-width;
-  width: 90%;
-  margin: auto;
-
-  img {
-    max-width: 32rem;
-    width: 100%;
-  }
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -53,6 +41,7 @@ header {
   .img-user-journey {
     width: 90%;
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   &.transparent {

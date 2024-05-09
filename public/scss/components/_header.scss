@@ -1,0 +1,13 @@
+@import "../abstracts/all-abstracts";
+
+header {
+    display: block;
+    max-width: $content-max-width;
+    width: 90%;
+    margin: auto;
+  
+    img {
+      max-width: 32rem;
+      width: 100%;
+    }
+  }

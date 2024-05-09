@@ -8161,11 +8161,6 @@ html {
   transform: rotate(-180deg);
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .nav_dot {
   background-color: #1e1e1e;
   border-radius: 50%;

@@ -61,6 +61,11 @@ blockquote {
   padding: 10px 20px;
 }
 
+ul {
+  list-style-type: disc;
+  padding: 0;
+}
+
 hr {
   box-sizing: content-box; // Resets box-sizing to default CSS values
   height: 0;
