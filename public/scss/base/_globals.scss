@@ -61,22 +61,6 @@ blockquote {
   padding: 10px 20px;
 }
 
-.container-section {
-  color: var(--blue-accent);
-  border-bottom: 1px solid #dbdbdb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 72px;
-  padding-bottom: 72px;
-}
-
-.section-content-responsive {
-  display: block;
-  width: 90vw;
-  margin: auto;
-}
-
 hr {
   box-sizing: content-box; // Resets box-sizing to default CSS values
   height: 0;
