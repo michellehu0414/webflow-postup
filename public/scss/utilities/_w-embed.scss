@@ -1,0 +1,10 @@
+.w-embed:before,
+.w-embed:after {
+  content: " ";
+  display: table;
+  grid-area: 1/1/2/2;
+  width: $content-max-width;
+}
+.w-embed:after {
+  clear: both;
+}
