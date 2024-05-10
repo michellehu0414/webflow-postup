@@ -256,20 +256,6 @@ label {
   display: flex;
   flex-direction: column;
 }
-.w-embed-youtubevideo {
-  background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/youtube-placeholder.2b05e7d68d.svg);
-  background-position: 50%;
-  background-size: cover;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 100%;
-}
-.w-embed-youtubevideo:empty {
-  min-height: 75px;
-  padding-bottom: 56.25%;
-}
 .w-layout-layout {
   grid-auto-columns: 1fr;
   grid-column-gap: 20px;
@@ -2283,57 +2269,6 @@ label {
 }
 #w-node-_677aa988-3ad8-1487-6755-5b6074567c7b-d50b0337 {
   grid-column: span 2 / span 2;
-}
-
-.accordion-label {
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.accordion-item {
-  background-color: #1f1f1f;
-  border-radius: 10px;
-  padding: 16px;
-}
-.accordion-header {
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0;
-}
-.accordion-content {
-  display: none;
-  margin-bottom: -8px;
-  margin-top: 8px;
-}
-.accordion-icon {
-  color: #fff;
-  font-family: "Material Symbols Outlined";
-  font-size: 1.2em;
-  font-variation-settings: "opsz" 24, "wght" 400, "FILL" 0, "GRAD" 0;
-  transition: transform 0.3s ease;
-}
-.carousel_container {
-  flex-direction: row;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $content-max-width;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.carousel_items {
-  cursor: default;
-  width: 100%;
-  position: relative;
-}
-.carousel_item {
-  border: 0 solid #c00;
-  float: left;
-  max-width: $content-max-width
 }
 .item_arrows {
   border: 0 solid green;
