@@ -256,6 +256,7 @@ label {
   display: flex;
   flex-direction: column;
 }
+
 .w-layout-layout {
   grid-auto-columns: 1fr;
   grid-column-gap: 20px;
@@ -1554,12 +1555,7 @@ label {
   flex: 0 auto;
   text-align: center;
 }
-.link-2,
-.link-3,
-.link-4 {
-  color: var(--blue-accent);
-  font-weight: 500;
-}
+
 .image-127 {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   max-width: 30%;
