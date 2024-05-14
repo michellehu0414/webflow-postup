@@ -1,10 +1,36 @@
+.content,
+.subsection,
+.section-container
+.container-full-width {
+:first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.subsection,
+.section-container,
+.container-full-width {
+  .content:first-child {
+    margin-top: 0;
+  }
+}
+
 .content {
-  display: flex;
-  flex-direction: column;
+  display: block;
   max-width: $content-max-width;
-  width: 90%;
+  width: 90vw;
   margin: auto;
   align-items: left;
+  margin-top: 1.5rem;
+
+  img,
+  figure {
+    margin-bottom: 2.5rem;
+  }
 
   &.medium {
     max-width: 1000px;
@@ -27,12 +53,22 @@
   display: flex;
 }
 
+.text-block {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  margin: 1.625rem 0;
+}
+
 .container-full-width {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   background-color: $lightest-grey;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   width: 100vw;
   padding: 4rem 0;
 
@@ -50,23 +86,26 @@
 header {
   display: block;
   max-width: $content-max-width;
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
+  padding: 0;
+}
 
-  .subheader {
-    color: $medium-grey;
-    font-size: 1.125rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 125%;
-    text-transform: uppercase;
-    margin: 0;
-  }
+.subheader {
+  color: $medium-grey;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 125%;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
 
-  img {
-    max-width: 32rem;
-    width: 100%;
-  }
+.img-sprint-schedule {
+  max-width: 32rem;
+  width: 100%;
+  margin: 0;
 }
 
 .section-container {
@@ -84,14 +123,12 @@ header {
     display: block;
     margin: auto;
     padding: 0;
-    width: 100vw;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     .header-h3 {
       margin: 0 auto;
+      margin-bottom: 1.5rem;
     }
-    
   }
 
   .subsection:last-child {

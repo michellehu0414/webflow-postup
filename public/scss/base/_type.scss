@@ -10,23 +10,21 @@ h6 {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: inherit;
-  margin-bottom: 0.5rem; /* Set a uniform bottom margin for simplicity */
+  margin-top: 0;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: $dark-grey;
   line-height: 145%;
-  margin-top: 1rem; /* Top margin for paragraphs */
-  margin-bottom: 2rem; /* Larger bottom margin for clear separation */
+  margin-bottom: 1.125rem;
 }
 
 /* Specific heading styles with colors and sizes */
 h1 {
   font-size: 3.25rem; /* Example size, adjust as necessary */
   color: $black; /* Assuming a color variable, adjust as needed */
-  margin-top: 4.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -37,8 +35,7 @@ h2 {
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -48,8 +45,7 @@ h3 {
   font-size: 2.488rem;
   font-weight: 600;
   line-height: 130%; /* Slightly adjusted for better readability */
-  margin-top: 3.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h4 {
@@ -90,9 +86,8 @@ h6 {
   color: $black;
   font-size: 1.665rem;
   font-weight: 500;
-  line-height: 130%;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0rem;
+  line-height: 135%;
+  margin-bottom: 1.75rem;
 }
 
 .fw-medium {
@@ -100,11 +95,9 @@ h6 {
   font-weight: 500;
 }
 
-p {
-  &.notes {
-    color: #00bdd6;
-    font-family: Noto Serif, sans-serif;
-  }
+.notes {
+  color: #00bdd6;
+  font-family: Noto Serif, sans-serif;
 }
 
 .subheading {

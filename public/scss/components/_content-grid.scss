@@ -14,8 +14,9 @@
   }
 
   aside {
+    margin-top: 1.125rem;
+
     p {
-      font-size: 1rem;
       color: #00bdd6;
       font-family: Noto Serif, sans-serif;
     }
@@ -54,6 +55,7 @@
       }
     }
   }
+
   &.large {
     display: grid;
     grid-template-rows: auto;
