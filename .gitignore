@@ -1,1 +1,8 @@
 node_modules
+.DS_Store
+public/css/main-postup.css
+public/css/main-postup.css.map
+public/css/main.css
+public/css/main.css.map
+public/css/styles.css
+public/css/styles.css.map
