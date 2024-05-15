@@ -13,6 +13,15 @@ h6 {
   margin-top: 0;
 }
 
+.paragraph {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: $dark-grey;
+  line-height: 145%;
+  margin-bottom: 1.125rem;
+  font-family: "Inter", sans-serif;
+}
+
 p {
   font-size: 1.125rem;
   font-weight: 400;
@@ -80,6 +89,21 @@ h6 {
   font-size: 1.125rem;
   font-weight: 350;
   line-height: 160%; // 28.8px
+}
+
+.quote-text {
+    font-family: "Noto Serif", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 160%;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    overflow-wrap: normal;
+    width: 100%;
+    text-align: left;
+    color: $medium-grey;
 }
 
 .secondary-text {

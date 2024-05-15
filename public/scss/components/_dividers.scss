@@ -8,13 +8,18 @@ hr {
     margin-right: 0;
     width: 100%;
   }
+
   &.solid-black {
-    border-top-color: var(--light-grey);
+    border-top-color: $black;
     border-top-style: solid;
     margin-left: 0;
     margin-right: 0;
   }
+  
   &.solid-grey {
     border-top: 0.5px solid var(--light-grey);
+  }
+  &.solid-med-light-grey {
+    border-top: 0.5px solid $medium-light-grey;
   }
 }

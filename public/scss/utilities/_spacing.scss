@@ -1,75 +1,115 @@
 // Margin bottom
 .mb {
-    &-0 {
-        margin-bottom: 0rem;
-    }
-    &-8 {
-        margin-bottom: 0.5rem;
-    }
-    &-16 {
-        margin-bottom: 1rem;
-    }
-    &-24 {
-        margin-bottom: 1.5rem;
-    }
-    &-32 {
-        margin-bottom: 2rem;
-    }
-    &-40 {
-        margin-bottom: 2.5rem;
-    }
-    &-64 {
-        margin-bottom: 4rem;
-    }
-    &-80 {
-        margin-bottom: 5rem;
-    }
+  &-0 {
+    margin-bottom: 0rem;
+  }
+  &-8 {
+    margin-bottom: 0.5rem;
+  }
+  &-16 {
+    margin-bottom: 1rem;
+  }
+  &-24 {
+    margin-bottom: 1.5rem;
+  }
+  &-32 {
+    margin-bottom: 2rem;
+  }
+  &-40 {
+    margin-bottom: 2.5rem;
+  }
+  &-64 {
+    margin-bottom: 4rem;
+  }
+  &-80 {
+    margin-bottom: 5rem;
+  }
 }
 
 // Margin
 .margin-0 {
-    margin: 0;
+  margin: 0;
 }
 
 .margin-auto {
-    margin: auto;
+  margin: auto;
 }
 
+// Margin vertical
 .mv-24 {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
+}
+
+.mv-32 {
+  margin: 2rem 0;
+}
+
+.mv-40 {
+  margin: 2.5rem 0;
+}
+
+.mv-48 {
+  margin: 3rem 0;
+}
+
+.mv-56 {
+  margin: 3.5rem 0;
+}
+
+.mv-64 {
+  margin: 4rem 0;
 }
 
 // Margin-top
 .mt-0 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-.pb-0 {
+.pt {
+  &-32 {
+    padding-top: 2rem;
+  }
+}
+
+.pb {
+  &-0 {
     padding-bottom: 0;
-}
+  }
 
+  &-16 {
+    padding-bottom: 1rem;
+  }
+
+  &-32 {
+    padding-bottom: 2rem;
+  }
+
+  &-48 {
+    padding-bottom: 3rem;
+  }
+}
 
 // Gap
 .gap {
-    &-8 {
-        gap: 0.5rem;
-    }
-    &-16 {
-        gap: 1rem;
-    }
-    &-24 {
-        gap: 1.5rem;
-    }
-    &-32 {
-        gap: 2rem;
-    }
-    &-40 {
-        gap: 2.5rem;
-    }
-    &-64 {
-        gap: 4rem;
-    }
-    &-80 {
-        gap: 5rem;
-    }
+  &-8 {
+    gap: 0.5rem;
+  }
+  &-16 {
+    gap: 1rem;
+  }
+  &-24 {
+    gap: 1.5rem;
+  }
+  &-32 {
+    gap: 2rem;
+  }
+  &-40 {
+    gap: 2.5rem;
+  }
+  &-64 {
+    gap: 4rem;
+  }
+  &-80 {
+    gap: 5rem;
+  }
 }
