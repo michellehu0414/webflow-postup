@@ -362,7 +362,6 @@ h6 {
   line-height: 130%;
   color: var(--black);
   font-size: 1.266rem;
-  text-transform: uppercase;
 }
 
 .secondary-text.small {
@@ -1254,6 +1253,15 @@ hr.solid-med-light-grey {
 
 .mt-0 {
   margin-top: 0;
+}
+.mt-24 {
+  margin-top: 1.5rem;
+}
+.mt-32 {
+  margin-top: 2rem;
+}
+.mt-40 {
+  margin-top: 2.5rem;
 }
 
 .pt-32 {
@@ -2747,44 +2755,6 @@ label {
   flex: 0 auto;
   grid-column-gap: 80px;
   justify-content: space-between;
-}
-
-.tab-link-tab-1 {
-  background-color: transparent;
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.tab-pane-tab-1 {
-  padding-top: 40px;
-}
-
-.tab-link-30 {
-  background-color: transparent;
-  border-radius: 0 8px 8px 0;
-  min-width: 33.3%;
-  text-align: center;
-  width: auto;
-}
-
-.tab-link-30.w--current {
-  background-color: var(--blue-accent);
-  border-radius: 8px;
-  color: var(--white);
-  text-align: center;
-  width: 33.3%;
-}
-
-.tab-link-30._50 {
-  min-width: 0%;
-  width: 50%;
-}
-
-.tab-link-inactive {
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .list-2 {
