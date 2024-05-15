@@ -2,20 +2,19 @@
   align-self: center;
   max-width: none;
   width: 84.5px;
-  padding-bottom: 1rem;
 }
 
 .airbnb-strengths-container {
   display: flex;
   flex-direction: row;
-  padding: 2rem 2rem;
   height: fit-content;
   align-items: center;
   width: fit-content;
+  max-width: $content-max-width;
   gap: 3rem;
+  padding: 2rem;
   border: 1px solid var(--light-grey);
   border-radius: 10px;
-  margin-bottom: $content-mb;
   justify-content: center;
 
   
@@ -26,15 +25,20 @@
     grid-template-rows: repeat(3, auto);
     row-gap: 1rem;
     column-gap: 2.5rem;
+    margin: 0;
 
     div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
 
         p {
-            margin-bottom: 0;
+            margin: 0;
+        }
+
+        img {
+          margin: 0;
         }
     }
   }

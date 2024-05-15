@@ -2035,20 +2035,19 @@ header h3 {
   align-self: center;
   max-width: none;
   width: 84.5px;
-  padding-bottom: 1rem;
 }
 
 .airbnb-strengths-container {
   display: flex;
   flex-direction: row;
-  padding: 2rem 2rem;
   height: fit-content;
   align-items: center;
   width: fit-content;
+  max-width: 45rem;
   gap: 3rem;
+  padding: 2rem;
   border: 1px solid var(--light-grey);
   border-radius: 10px;
-  margin-bottom: 2rem;
   justify-content: center;
 }
 .airbnb-strengths-container .content {
@@ -2057,15 +2056,19 @@ header h3 {
   grid-template-rows: repeat(3, auto);
   row-gap: 1rem;
   column-gap: 2.5rem;
+  margin: 0;
 }
 .airbnb-strengths-container .content div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .airbnb-strengths-container .content div p {
-  margin-bottom: 0;
+  margin: 0;
+}
+.airbnb-strengths-container .content div img {
+  margin: 0;
 }
 
 .cards {
