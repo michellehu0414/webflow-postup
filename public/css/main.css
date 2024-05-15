@@ -91,7 +91,7 @@
   display: block;
 }
 
-.hide-med {
+.hide-med, blockquote .interviewee .img-interviewee {
   display: block;
 }
 
@@ -124,7 +124,7 @@
   }
 }
 @media (min-width: 768px) {
-  .hide-med {
+  .hide-med, blockquote .interviewee .img-interviewee {
     display: none;
   }
 }
@@ -245,7 +245,7 @@ h6 {
   margin-top: 0;
 }
 
-.paragraph {
+.paragraph, blockquote .blockquote-content p span {
   font-size: 1.125rem;
   font-weight: 400;
   color: #565656;
@@ -323,7 +323,7 @@ h6 {
   line-height: 160%;
 }
 
-.quote-text {
+.quote-text, blockquote .blockquote-content p {
   font-family: "Noto Serif", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
@@ -354,14 +354,6 @@ h6 {
 .notes {
   color: #00bdd6;
   font-family: Noto Serif, sans-serif;
-}
-
-.subheading {
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 130%;
-  color: var(--black);
-  font-size: 1.266rem;
 }
 
 .secondary-text.small {
@@ -1002,6 +994,41 @@ hr.solid-med-light-grey {
   max-width: 45rem;
 }
 
+blockquote {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-end;
+  height: 100%;
+}
+blockquote .blockquote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  padding: 0 1.5rem;
+  padding-right: 0;
+  align-items: flex-start;
+  align-self: auto;
+  background-color: #fafafa;
+  border-left: 6px solid #dbdbdb;
+}
+blockquote .blockquote-content p {
+  margin: 0 0 0.5rem 0;
+}
+blockquote .interviewee {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+blockquote .interviewee p {
+  color: #757575;
+  font-family: Inter, sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
 .section-overview {
   display: flex;
   flex-direction: column;
@@ -1342,9 +1369,6 @@ img {
   margin: 2.5rem 0;
   width: 100vw;
   padding: 4rem 0;
-}
-.container-full-width.pv-32 {
-  padding: 2rem 0;
 }
 .container-full-width .content-wrapper div {
   margin: auto;
@@ -1689,6 +1713,13 @@ header h3 {
 }
 .pb-48 {
   padding-bottom: 3rem;
+}
+
+.pv-16 {
+  padding: 1rem 0;
+}
+.pv-32 {
+  padding: 2rem 0;
 }
 
 .gap-8 {

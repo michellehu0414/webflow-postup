@@ -103,6 +103,15 @@
   }
 }
 
+.pv {
+  &-16 {
+    padding: 1rem 0;
+  }
+  &-32 {
+    padding: 2rem 0;
+  }
+}
+
 // Gap
 .gap {
   &-8 {

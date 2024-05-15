@@ -91,7 +91,7 @@
   display: block;
 }
 
-.hide-med {
+.hide-med, blockquote .interviewee .img-interviewee {
   display: block;
 }
 
@@ -124,7 +124,7 @@
   }
 }
 @media (min-width: 768px) {
-  .hide-med {
+  .hide-med, blockquote .interviewee .img-interviewee {
     display: none;
   }
 }
@@ -245,7 +245,7 @@ h6 {
   margin-top: 0;
 }
 
-.paragraph {
+.paragraph, blockquote .blockquote-content p span {
   font-size: 1.125rem;
   font-weight: 400;
   color: #565656;
@@ -323,7 +323,7 @@ h6 {
   line-height: 160%;
 }
 
-.quote-text {
+.quote-text, blockquote .blockquote-content p {
   font-family: "Noto Serif", sans-serif;
   font-size: 1.25rem;
   font-style: normal;
@@ -354,14 +354,6 @@ h6 {
 .notes {
   color: #00bdd6;
   font-family: Noto Serif, sans-serif;
-}
-
-.subheading {
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 130%;
-  color: var(--black);
-  font-size: 1.266rem;
 }
 
 .secondary-text.small {
@@ -1002,6 +994,41 @@ hr.solid-med-light-grey {
   max-width: 45rem;
 }
 
+blockquote {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-end;
+  height: 100%;
+}
+blockquote .blockquote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  padding: 0 1.5rem;
+  padding-right: 0;
+  align-items: flex-start;
+  align-self: auto;
+  background-color: #fafafa;
+  border-left: 6px solid #dbdbdb;
+}
+blockquote .blockquote-content p {
+  margin: 0 0 0.5rem 0;
+}
+blockquote .interviewee {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+blockquote .interviewee p {
+  color: #757575;
+  font-family: Inter, sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
 .flex {
   flex-flow: wrap;
   flex: 1;
@@ -1279,6 +1306,13 @@ hr.solid-med-light-grey {
 }
 .pb-48 {
   padding-bottom: 3rem;
+}
+
+.pv-16 {
+  padding: 1rem 0;
+}
+.pv-32 {
+  padding: 2rem 0;
 }
 
 .gap-8 {
@@ -1661,10 +1695,6 @@ label {
 .w-tab-pane {
   display: none;
   position: relative;
-}
-
-.w--tab-active {
-  display: block;
 }
 
 .wf-layout-layout {
@@ -5880,7 +5910,7 @@ textarea.w-select {
   padding-bottom: 8px;
 }
 
-.paragraph {
+.paragraph, blockquote .blockquote-content p span {
   align-self: stretch;
   color: var(--off-black);
   flex: 0 auto;
@@ -5899,13 +5929,13 @@ textarea.w-select {
   word-break: normal;
 }
 
-.paragraph.dates {
+.paragraph.dates, blockquote .blockquote-content p span.dates {
   color: #757575;
   line-height: 130%;
   margin-top: 0;
 }
 
-.paragraph._1-rem {
+.paragraph._1-rem, blockquote .blockquote-content p span._1-rem {
   color: var(--green);
   font-family: Noto Serif, sans-serif;
   font-size: 1.2rem;
@@ -5913,57 +5943,57 @@ textarea.w-select {
   margin-bottom: 0;
 }
 
-.paragraph._1-rem.black {
+.paragraph._1-rem.black, blockquote .blockquote-content p span._1-rem.black {
   color: #1e1e1e;
   margin-bottom: 8px;
 }
 
-.paragraph.last-bulletpoint {
+.paragraph.last-bulletpoint, blockquote .blockquote-content p span.last-bulletpoint {
   margin-bottom: 0;
 }
 
-.paragraph.list-item {
+.paragraph.list-item, blockquote .blockquote-content p span.list-item {
   font-size: 1.266rem;
   font-weight: 400;
   line-height: 125%;
   margin-bottom: 0;
 }
 
-.paragraph.diner-trends {
+.paragraph.diner-trends, blockquote .blockquote-content p span.diner-trends {
   color: var(--off-black);
   font-size: 1rem;
   margin-bottom: 0;
 }
 
-.paragraph.margin-0 {
+.paragraph.margin-0, blockquote .blockquote-content p span.margin-0 {
   font-weight: 500;
   height: auto;
   margin-bottom: 0;
 }
 
-.paragraph.margin-0.normal {
+.paragraph.margin-0.normal, blockquote .blockquote-content p span.margin-0.normal {
   font-weight: 400;
 }
 
-.paragraph.margin-bottom-0 {
+.paragraph.margin-bottom-0, blockquote .blockquote-content p span.margin-bottom-0 {
   color: var(--off-black);
   margin-bottom: 0;
 }
 
-.paragraph.margin-bottom-0.height-24px {
+.paragraph.margin-bottom-0.height-24px, blockquote .blockquote-content p span.margin-bottom-0.height-24px {
   color: var(--off-black);
   font-size: 1.266rem;
 }
 
-.paragraph.margin-bottom-0.margin-top-16px {
+.paragraph.margin-bottom-0.margin-top-16px, blockquote .blockquote-content p span.margin-bottom-0.margin-top-16px {
   margin-top: 16px;
 }
 
-.paragraph.light {
+.paragraph.light, blockquote .blockquote-content p span.light {
   color: var(--medium-light-grey);
 }
 
-.paragraph.blue {
+.paragraph.blue, blockquote .blockquote-content p span.blue {
   aspect-ratio: auto;
   color: var(--blue-accent);
   display: block;
@@ -5971,31 +6001,31 @@ textarea.w-select {
   object-fit: fill;
 }
 
-.paragraph._1-125-rem {
+.paragraph._1-125-rem, blockquote .blockquote-content p span._1-125-rem {
   color: var(--medium-light-grey);
   font-size: 1.125rem;
   font-weight: 400;
 }
 
-.paragraph._1-125-rem.margin-0 {
+.paragraph._1-125-rem.margin-0, blockquote .blockquote-content p span._1-125-rem.margin-0 {
   font-weight: 400;
 }
 
-.paragraph._1-125-rem.margin-0.line-height-100 {
+.paragraph._1-125-rem.margin-0.line-height-100, blockquote .blockquote-content p span._1-125-rem.margin-0.line-height-100 {
   line-height: 100%;
 }
 
-.paragraph._1-125-rem.blue {
+.paragraph._1-125-rem.blue, blockquote .blockquote-content p span._1-125-rem.blue {
   line-height: 150%;
 }
 
-.paragraph.margin-bottom-8px {
+.paragraph.margin-bottom-8px, blockquote .blockquote-content p span.margin-bottom-8px {
   align-self: stretch;
   flex: 0 auto;
   margin-bottom: 8px;
 }
 
-.paragraph.route-features {
+.paragraph.route-features, blockquote .blockquote-content p span.route-features {
   color: var(--off-black);
   flex: 0 auto;
   font-size: 1.125rem;
@@ -6003,53 +6033,53 @@ textarea.w-select {
   margin-bottom: 0;
 }
 
-.paragraph.small {
+.paragraph.small, blockquote .blockquote-content p span.small {
   font-size: 1rem;
 }
 
-.paragraph.medium._24px {
+.paragraph.medium._24px, blockquote .blockquote-content p span.medium._24px {
   line-height: 24px;
 }
 
-.paragraph.medium._24px.blue {
+.paragraph.medium._24px.blue, blockquote .blockquote-content p span.medium._24px.blue {
   align-self: flex-start;
 }
 
-.paragraph.text-align-center {
+.paragraph.text-align-center, blockquote .blockquote-content p span.text-align-center {
   align-self: center;
   text-align: left;
 }
 
-.paragraph._0889 {
+.paragraph._0889, blockquote .blockquote-content p span._0889 {
   font-size: 0.889rem;
 }
 
-.paragraph._0-79-rem {
+.paragraph._0-79-rem, blockquote .blockquote-content p span._0-79-rem {
   font-size: 0.79rem;
 }
 
-.paragraph.black {
+.paragraph.black, blockquote .blockquote-content p span.black {
   color: var(--black);
 }
 
-.paragraph.grey {
+.paragraph.grey, blockquote .blockquote-content p span.grey {
   color: var(--medium-light-grey);
 }
 
-.paragraph._1-44rem {
+.paragraph._1-44rem, blockquote .blockquote-content p span._1-44rem {
   color: var(--off-black);
   font-size: 1.44rem;
 }
 
-.paragraph._1-44rem.black {
+.paragraph._1-44rem.black, blockquote .blockquote-content p span._1-44rem.black {
   color: var(--black);
 }
 
-.paragraph._125 {
+.paragraph._125, blockquote .blockquote-content p span._125 {
   line-height: 125%;
 }
 
-.paragraph.bluee {
+.paragraph.bluee, blockquote .blockquote-content p span.bluee {
   color: #00bdd6;
   font-family: Noto Serif, sans-serif;
   font-size: 1.125rem;
