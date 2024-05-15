@@ -1,66 +1,58 @@
 .accordion {
-    background-color: #1f1f1f;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  border: 0;
+  color: white; // This ensures all text inside the accordion has a default white color
+  margin-top: 0.5rem;
+
+  .accordionHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0;
     border-radius: 10px;
-    padding: 1rem 1.25rem;
-    border: 0;
-    color: white; // This ensures all text inside the accordion has a default white color
-  
-    .accordionHeader {
+    cursor: pointer;
+    background-color: #1f1f1f;
+
+    p {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-      padding-bottom: 0;
-      border-radius: 10px;
-      cursor: pointer;
-      background-color: #1f1f1f;
-  
-      p {
-        display: flex;
-        font-size: 1.25rem;
-        line-height: 130%;
-        text-align: left;
-        margin: 0;
-        flex: 1;
-        color: white; 
-      }
-  
-      .ic-arrowDown--lined {
-        content: url(/assets/svg/ic-arrowDown_lined--black.svg);
-        padding: 0;
-      }
-  
-      .accordion-icon {
-        transition: transform 0.4s;
-        width: 1.5rem;
-        height: 1.5rem;
-  
-        &.active {
-          transform: rotate(-180deg);
-        }
-      }
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: left;
+      margin: 0;
+      flex: 1;
+      color: white; 
     }
-  
-    .accordionContent {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      padding: 0 16px; // Optional padding to match header
-  
-      p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        color: white; // Make sure this is not being overridden elsewhere
-        text-align: left;
-      }
+
+    .accordion-icon {
+      transition: transform 0.4s;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: auto;
     }
   }
-  
-  .accordion:first-child {
-    border-top: 1.5px solid #000;
+
+  .accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: white; // Make sure this is not being overridden elsewhere
+      text-align: left;
+    }
   }
-  
-  .ic-arrowDown--lined {
-    content: url(/assets/svg/ic-arrowDown_lined--black.svg);
-  }
-  
+}
+
+.ic-arrowDown--lined {
+  content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

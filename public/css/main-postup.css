@@ -934,6 +934,7 @@ hr.solid-med-light-grey {
   padding: 1rem 1.25rem;
   border: 0;
   color: white;
+  margin-top: 0.5rem;
 }
 .accordion .accordionHeader {
   display: flex;
@@ -948,43 +949,37 @@ hr.solid-med-light-grey {
 .accordion .accordionHeader p {
   display: flex;
   font-size: 1.25rem;
+  font-weight: 500;
   line-height: 130%;
   text-align: left;
   margin: 0;
   flex: 1;
   color: white;
 }
-.accordion .accordionHeader .ic-arrowDown--lined {
-  content: url(/assets/svg/ic-arrowDown_lined--black.svg);
-  padding: 0;
-}
 .accordion .accordionHeader .accordion-icon {
   transition: transform 0.4s;
   width: 1.5rem;
   height: 1.5rem;
-}
-.accordion .accordionHeader .accordion-icon.active {
-  transform: rotate(-180deg);
+  margin: auto;
 }
 .accordion .accordionContent {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  padding: 0 16px;
 }
 .accordion .accordionContent p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   color: white;
   text-align: left;
 }
 
-.accordion:first-child {
-  border-top: 1.5px solid #000;
-}
-
 .ic-arrowDown--lined {
   content: url(/assets/svg/ic-arrowDown_lined--black.svg);
+}
+
+.rotate {
+  transform: rotate(-180deg);
 }
 
 .carousel-container {
