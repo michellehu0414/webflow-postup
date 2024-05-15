@@ -20,6 +20,19 @@ $breakpoints: (
   }
 }
 
+.mobile-only {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 1rem;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @include breakpoint(med) {
+    display: none;
+  }
+}
+
 @mixin iconSize($size) {
   @if $size == "xs" {
     width: 24px;
@@ -36,26 +49,6 @@ $breakpoints: (
   } @else if $size == "xl" {
     width: 64px;
     height: 64px;
-  }
-}
-
-$breakpoints: (
-  mobile-sm: 320px,
-  mobile-med: 375px,
-  mobile-lg: 425px,
-  sm: 576px,
-  med: 768px,
-  lg: 992px,
-  xl: 1200px,
-);
-
-@mixin breakpoint($name) {
-  @if map-has-key($breakpoints, $name) {
-    @media (min-width: map-get($breakpoints, $name)) {
-      @content;
-    }
-  } @else {
-    @error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
   }
 }
 

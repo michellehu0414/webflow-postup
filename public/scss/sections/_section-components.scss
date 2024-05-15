@@ -29,7 +29,7 @@
 
   img,
   figure {
-    margin-bottom: 2.5rem;
+    margin: 2rem 0;
   }
 
   &.medium {
@@ -72,6 +72,10 @@ img {
   width: 100vw;
   padding: 4rem 0;
 
+  &.pv-32 {
+    padding: 2rem 0;
+  }
+
   .content-wrapper {
     div {
       margin: auto;
@@ -89,6 +93,14 @@ header {
   width: 90vw;
   margin: 0 auto;
   padding: 0;
+
+  span {
+    @extend .subheader;
+  }
+
+  h3 {
+    color: $primary-color;
+  }
 }
 
 .subheader {
@@ -100,6 +112,7 @@ header {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  height: fit-content;
 }
 
 .img-sprint-schedule {
