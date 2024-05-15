@@ -1167,38 +1167,6 @@ label {
   grid-column-gap: 80px;
   justify-content: space-between;
 }
-.tab-link-tab-1 {
-  background-color: transparent;
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.tab-pane-tab-1 {
-  padding-top: 40px;
-}
-.tab-link-30 {
-  background-color: transparent;
-  border-radius: 0 8px 8px 0;
-  min-width: 33.3%;
-  text-align: center;
-  width: auto;
-}
-.tab-link-30.w--current {
-  background-color: var(--blue-accent);
-  border-radius: 8px;
-  color: var(--white);
-  text-align: center;
-  width: 33.3%;
-}
-.tab-link-30._50 {
-  min-width: 0%;
-  width: 50%;
-}
-.tab-link-inactive {
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 .list-2 {
   color: var(--off-black);
   display: flex;
