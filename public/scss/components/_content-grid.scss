@@ -4,14 +4,13 @@
   width: 90vw;
   max-width: $content-max-width;
   margin: auto; /* Center the container */
+  margin-bottom: 1.25rem;
 
   .img-wrapper {
     padding: 2rem 0;
   }
 
   aside {
-    margin-top: 1.125rem;
-
     color: #00bdd6;
     font-family: Noto Serif, sans-serif;
   }
@@ -21,7 +20,6 @@
     grid-template-columns: 1fr auto; /* Content and side notes */
     width: 90vw;
     max-width: $content-max-width;
-    margin: auto; /* Center the container */
 
     > div:first-child {
       grid-column: 1 / 2; /* Content occupies the first column */

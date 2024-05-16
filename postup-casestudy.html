@@ -440,7 +440,7 @@
               </div>
             </div>
           </div>
-          <div class="content-grid">
+          <div class="content-grid monday-last-container">
             <p>
               I contemplated taking Nina straight to results based on the chosen
               task, but I considered potential variations in preferences. At
@@ -675,7 +675,7 @@
           </div>
         </section>
       </section>
-      <section id="wednesday" class="section-container pb-0">
+      <section id="wednesday" class="section-container border">
         <header>
           <h2>
             <span>wednesday</span>
@@ -706,7 +706,7 @@
             highlights:
           </p>
         </div>
-        <div class="container-full-width pv-32">
+        <div class="container-full-width pv-40">
           <div
             class="tabs-container"
             data-current="Tab 1"
@@ -868,38 +868,42 @@
             loading="lazy"
             src="/public/images/postup/postup-storyboard-full.png"
           />
-          <p>
-            This storyboard follows Nina as she explores the app to discover
-            a remote workspace in a new city. This comic style allowed me to
-            immerse myself in a remote worker's perspective, fostering a
-            deeper understanding of their needs and emotions.<br />
-          </p>
-          <p>
-            Continuously asking questions like "How might Nina react here?"
-            and "What actions would Nina take next?" enabled me to identify
-            crucial touchpoints and refine user stories and flows!<br />
-          </p>
-            <div class="content-grid">
-              <div>
-                <p class="secondary-text mt-16">
-                  I intentionally placed Nina in an unfamiliar city to help me
-                  empathize with diverse user behaviors and possibilities.
-                </p>
-                <p>
-                  With limited access to resources while traveling or on the go,
-                  remote workers in a new city potentially have greater needs
-                  compared to someone working in a familiar city. Therefore, I
-                  aimed to meet these needs to develop an adaptable and inclusive
-                  solution that accommodates diverse scenarios
-                </p>
-              </div>
-              <aside>
-                At this point, my vision for the user journey ended with the
-                remote worker deciding on a workspace to visit. Eventually, I
-                realized that the user journey technically ends with settling
-                down at a workspace.
-              </aside>
+          <div class="content-grid">
+            <div>
+              <p>
+                This storyboard follows Nina's journey using PostUp in a new
+                city. This was my first time designing a storyboard for UX
+                design, as I've only developed storyboards for filmmaking! Using
+                my past storyboarding experience for short films, I used a
+                comic-style approach, which was incredibly helpful.
+              </p>
+              <p>
+                Illustrating Nina's journey with this technique allowed me to
+                better immerse myself in her perspective and gain a better
+                understanding of her needs and emotions. Continuously asking
+                questions like "How might Nina react here?" and "What actions
+                might Nina take next?" helped me to identify important
+                touchpoints. By the end of the process, I was able to develop
+                and refine both user stories and flows in one sitting.
+              </p>
             </div>
+            <aside>
+              This was a great experience! The visual aspect really deepened my
+              empathy for users, and it made it much more efficient and
+              enjoyable.
+            </aside>
+          </div>
+          <p class="secondary-text mt-16">
+            I intentionally placed Nina in an unfamiliar city to help me
+            empathize with diverse user behaviors and possibilities.
+          </p>
+          <p>
+            With limited access to resources while traveling or on the go,
+            remote workers in a new city potentially have greater needs compared
+            to someone working in a familiar city. Therefore, I aimed to meet
+            these needs to develop an adaptable and inclusive solution that
+            accommodates diverse scenarios
+          </p>
         </div>
       </section>
       <section id="thursday" class="section-container border">
@@ -925,12 +929,15 @@
             </h3>
           </header>
           <div class="content">
-            <div>
-              <p class="secondary-text">
-                Reflecting on my oversight the night before with the user
-                journey, I realized it was because I wasn't well prepared.
-              </p>
-            </div>
+            <p>
+              By the end of Day 3, my vision for Nina's journey ended with
+              selecting a workspace. On this day, I realized that the journey
+              technically ends with settling down at the workspace.
+            </p>
+            <p class="secondary-text">
+              Reflecting on my oversight, I realized this mistake happened
+              because I wasn't well prepared.
+            </p>
             <div class="content-grid">
               <div class="design-checklist">
                 <div>
@@ -960,18 +967,86 @@
                 <p>This ended up helping a lot with the design process! 🥳</p>
               </aside>
             </div>
-            <p>
-              While this was very helpful as I tackled the screens, sadly, the
-              dilemma I experienced on day 3 did not get fully resolved. I
-              encountered a similar issue while trying to anticipate different
-              user behaviors and potential alternate routes. Realizing I lacked
-              sufficient time to cover them all, I decided against prototyping
-              alternate routes and planned to rely on testing to reveal them.
+          </div>
+        </section>
+        <section class="subsection">
+          <div class="container-full-width prototypes">
+            <header>
+              <h3>
+                <span>prototype</span>
+                <br />
+                Design solutions
+              </h3>
+            </header>
+            <p class="prototype-heading">
+              Making essential details accessible.
             </p>
+            <div class="prototype-walkthrough">
+              <div>
+                <div class="grid-container">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/public/images/postup/postup-prototype-v1-discover.gif"
+                  />
+                  <div>
+                    <div>
+                      <p>Comprehensive search results</p>
+                      <p>
+                        Search results display an overview of information
+                        prioritized by remote workers, including walk time,
+                        suitable work, amenities, and seating availability at
+                        PostUp partners.
+                      </p>
+                    </div>
+                    <div>
+                      <p>Intuitive commute experience</p>
+                      <p>
+                        On default, mode of commute time is based on the user's
+                        location, but can be modified. In areas with low
+                        walkability scores, car commute time is shown, while
+                        walk time is shown in high walkability areas. Google
+                        Maps integration would facilitate this engineering.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prototype-walkthrough">
+              <div class="grid-container">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/public/images/postup/postup-prototype-v1-listing.gif"
+                />
+                <div>
+                  <div>
+                    <p>Listing page</p>
+                    <p>
+                      Each listing provides more details on the work
+                      environment. This above-the-fold design displays the most
+                      pertinent info at first glance. The listing also focuses
+                      on photos of the interior rather than food.<br />
+                    </p>
+                  </div>
+                  <div>
+                    <p>Work environment details</p>
+                    <p>
+                      To minimize clutter to prevent information overload,
+                      I opted for minimal copy to convey the work environment
+                      details. To address any confusion, remote workers may tap
+                      on the "info icon" to view more details, inspired by
+                      clothing size charts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="container-full-width">
             <div class="content xl">
-              <h3 class="mb-16">Solution</h3>
+              <h3 class="wireframes-heading">All wireframes</h3>
               <div>
                 <img
                   class="img-full-width"
@@ -982,199 +1057,75 @@
               </div>
             </div>
           </div>
-          <div class="content prototype-walkthrough">
-            <p class="secondary-text small">
-              Displaying essential information as soon as possible to help
-              remote workers expedite decision-making.
-            </p>
-            <div>
-              <img
-                alt=""
-                loading="lazy"
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/659911aa7eb3fc71acb07ab1_Frame%20812.png"
-              />
-              <div>
-                <p class="subheading">Search Results</p>
-                <p>
-                  Search results display an overview of essential information
-                  prioritized by remote workers. It displays the walk time
-                  (since user research frequently mentioned being in an urban
-                  setting), the type(s) of suitable work (quiet work, meetings,
-                  or calls), and a summary of amenities and seating availability
-                  at PostUp partners.<br />
-                </p>
-              </div>
-              <div>
-                <p class="subheading">Walk time</p>
-                <p>
-                  To make the commute experience more intuitive, I designed the
-                  search results to automatically display commute time by car if
-                  the remote worker is in an area with poor walkability. The
-                  engineering necessary would rely on Google Maps integration.
-                  For more user control and freedom, this feature can be
-                  adjusted by remote workers in search filters.
-                </p>
-              </div>
-            </div>
-            <div class="flex-row">
-              <img
-                alt=""
-                loading="lazy"
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/659911a9d93130459571d9e5_Frame%20806.png"
-              />
-              <div>
-                <p class="subheading">Listing page</p>
-                <p>
-                  Each listing provides more in-depth information on the work
-                  environment. I prioritized centralizing critical info and
-                  enhancing scannability. This above-the-fold design displays
-                  the most pertinent info at first glance. The listing also
-                  focuses on photos of the interior.<br />
-                </p>
-              </div>
-              <div>
-                <p class="subheading">work environment details</p>
-                <p>
-                  To minimize clutter to prevent information overload, I opted
-                  for minimal copy to convey the work environment details. To
-                  address any confusion, remote workers may tap on the "info
-                  icon" to view more details, inspired by clothing size
-                  charts.<br />
-                </p>
-              </div>
-            </div>
-          </div>
         </section>
         <section class="subsection">
           <header>
-            <h3>Storyboard Revisions</h3>
-          </header>
-          <section class="content">
-            <p>
-              My prototype made a few changes to the designs depicted in my
-              storyboard:<br />
-            </p>
-            <div class="subsection margin-0">
-              <h3 class="subheading">streamlining the listing page</h3>
-              <div class="content">
-                <p>
-                  Previously, my storyboard segmented the listing page into two
-                  sections—details and reviews, which users can seamlessly
-                  navigate with a pagination bar. This design aimed to
-                  facilitate an intuitive and organized experience for remote
-                  workers to navigate between the pages. However, when I was
-                  designing the screen, I found that implementing the pagination
-                  bar would sacrifice space for work environment details above
-                  the fold. <br />To determine the more effective design
-                  approach, I revisited my research for more insights into user
-                  behaviors. I discovered that remote workers (1) primarily
-                  explore reviews to learn about workspace amenities and (2)
-                  rely on reviews due to mistrust shaped by past experiences
-                  with inaccurate or unavailable information. This reinforced my
-                  understanding on the criticality of accuracy and accessibility
-                  of essential information. To draw more inspiration,
-                  I also revisited my lightning demos of Airbnb's listing page,
-                  which adopts a single-page design that places guest reviews in
-                  the middle. <br />With these new insights, I reassessed my
-                  design priorities and speculated that accurate information on
-                  the work environment might reduce the need for remote workers
-                  to evaluate the reviews. Therefore, I decided to forfeit the
-                  pagination bar and opt for a single-page design.<br />
-                </p>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section class="subsection">
-          <header>
-            <h3>Pending Features</h3>
+            <h3>Additional Revisions</h3>
           </header>
           <div class="content">
+            <p>Changes since the storyboard:<br /></p>
+            <h4>
+              Prioritizing convenience and accessibility of workspace details
+            </h4>
             <p>
-              Given the time constraints, I didn't have time to design the few
-              features that could potentially be helpful. Moreover, I wanted to
-              avoid unnecessary features to adhere to MVP design principles, so
-              I decided to prioritize designs with overwhelming evidence and
-              exclude any functionalities with low data points. In my
-              experience, users are more likely to notice and express what's
-              missing, and less likely to validate unnecessary features unless
-              they contribute to negative usability experiences such as
-              information overload. Therefore, I planned to rely on usability
-              testing to assess the necessity for the following features:<br />
-            </p>
-            <h3 class="subheading">displaying seating availability</h3>
-            <p>
-              The participant interviewed during user research mentioned that
-              information on seating availability would aid her search process.
-              However, this was not presented in the user persona and the
-              interviewed participant was the only user who expressed this
-              desire.<br />
-            </p>
-            <h3 class="subheading">Implementing a reservation system</h3>
-            <p>
-              While a need for a reservation tool was not explicitly stated in
-              user research, I speculated it would be helpful to address the
-              similar need for displaying seating availability. Moreover, my
-              exclusion is due to the lack of reservations for spaces like
-              coffee shops and libraries.<br />
-            </p>
-            <h3 class="subheading">
-              prototyping the search bar on the discover page
-            </h3>
-            <p>
-              Usually, I prototype various routes for users to complete their
-              user journey. However, given the time constraints, I decided to
-              prototype only one route and rely on testing to reveal the primary
-              and alternative routes. I speculated that the alternative primary
-              route would search via the search bar placed at the top of the
-              Discover page. My prototype at this point only designed the route
-              for participants to search for options via "search by task"
-              located only on the Search page. While I designed this route to
-              optimize the user flow, I speculated that its location outside of
-              the Discover page compromised its accessibility, making it less
-              likely the primary route.<br />
-            </p>
-            <h3 class="subheading">displaying popular times</h3>
-            <p>
-              While the need for information on the trend in popular times of a
-              workspace was not explicitly expressed in user research,
-              I speculated the need due to its presence in competitive products.
-              I anticipated it being a user expectation shaped by competitor
-              products like Google Maps. Moreover, given remote workers'
-              preference for less crowded spaces, I believed in its potential to
-              cater to enhance the user flow.<br />
+              My initial design divided the listing page into two sections:
+              'Details' and 'Reviews', navigable via a pagination bar for an
+              intuitive experience. However, while prototyping I realized the
+              pagination bar would sacrifice space for work environment details
+              above the fold. I revisited user research and found remote workers
+              mainly explore reviews in existing tools for workspace details due
+              to mistrust of unreliable info. Recognizing the importance of
+              accurate and accessible data, I adopted a single-page design that
+              synthesizes workspace details submitted by other PostUp members.
             </p>
           </div>
-          <section class="subsection">
-            <header>
-              <h3>
-                <span>pre-design</span>
-                <br />
-                Design checklist
-              </h3>
+          <div class="content">
+            <header class="mb-16">
+              <h4>Stashed Features</h4>
             </header>
-
-            <div class="content">
-              <p class="secondary-text">
-                Before I began designing the screens, I created a new map and a
-                list of features on paper.<br />
-              </p>
-              <p>
-                Given the hurdle I experienced the night prior and the time
-                constraints, I wanted to make sure I was well prepared to
-                efficiently design my prototype.<br />
-              </p>
-              <p>
-                This was very helpful as I tackled the screens. However,
-                unfortunately, the dilemma I experienced on day 3 did not get
-                fully resolved. I encountered a similar issue while trying to
-                anticipate different user behaviors and potential alternate
-                routes. Realizing I lacked sufficient time to cover them all, I
-                decided against prototyping alternate routes and planned to rely
-                on testing to reveal them.<br />
-              </p>
-            </div>
-          </section>
+            <p>
+              Due to time constraints, I couldn't design all potentially helpful
+              features. With MVP design, I prioritized on solutions supported by
+              strong evidence, excluding features with limited data. I felt
+              comfortable doing this because I've learned that users often
+              notice "missing" features and overlook unnecessary additions.
+              Therefore, I planned to evaluate the need for the following
+              features during testing and follow-up discussions:
+            </p>
+            <h5>Seating availability</h5>
+            <p>
+              Real-time seating availability was mentioned in user research, but
+              only by one interviewee, lacking substantial data.
+            </p>
+            <h5>Reservation system</h5>
+            <p>
+              While seating reservation was not explicitly mentioned during user
+              interviews, I speculated it would be helpful. However, due to the
+              lack of seating reservation services across most coffee shops and
+              libraries, I held off on implementing this feature.
+            </p>
+            <h5>Search bar in 'Discover' page</h5>
+            <p>
+              I didn't have enough time to prototype this alternative route, so
+              I decided to prototype only one primary route and rely on testing
+              to reveal alternative routes. My prototyped route at this point
+              was navigating to the 'Search' page. However, I speculated that
+              its location outside of home page ('Discover') compromised its
+              visibility, thus accessibiilty. Scrolling through the map and
+              searching via the search bar is the primary method across
+              competitive products and is very straightforward, so I wanted to
+              prioritze this route for testing.
+            </p>
+            <h5>Popular times</h5>
+            <p>
+              Displaying popular time was another solution I brainstormed.
+              Similar to other pending features, it was not prototyped because
+              no interviewees expressed a desire for it. However, I speculated
+              the need due to its presence in competitor products such as Google
+              Maps, which I thought could be a user expectation. I speculated
+              this would help further streamline the user flow.
+            </p>
+          </div>
         </section>
       </section>
       <section id="design-evolution" class="section-container">
@@ -1233,7 +1184,21 @@
                     <i class="fa fa-angle-right"></i>
                   </div>
                 </div>
-                <div class="nav_dots"></div>
+                <div class="nav_dots" style="width: 150px">
+                  <div
+                    class="nav_dot"
+                    id="dot_0"
+                    style="
+                      background-color: rgb(7, 98, 97);
+                      transform: scale(1.5, 1.5);
+                    "
+                  ></div>
+                  <div class="nav_dot" id="dot_1"></div>
+                  <div class="nav_dot" id="dot_2"></div>
+                  <div class="nav_dot" id="dot_3"></div>
+                  <div class="nav_dot" id="dot_4"></div>
+                  <div class="nav_dot" id="dot_5"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -1253,6 +1218,14 @@
           />
         </header>
         <div class="content">
+          <p>
+            While this was very helpful as I tackled the screens, sadly, the
+            dilemma I experienced on day 3 did not get fully resolved. I
+            encountered a similar issue while trying to anticipate different
+            user behaviors and potential alternate routes. Realizing I lacked
+            sufficient time to cover them all, I decided against prototyping
+            alternate routes and planned to rely on testing to reveal them.
+          </p>
           <p>
             The usability testing I conducted with my first high-fidelity
             prototype consisted of 5 users.<br />

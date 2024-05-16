@@ -2131,49 +2131,7 @@ label {
 #w-node-_677aa988-3ad8-1487-6755-5b6074567c7b-d50b0337 {
   grid-column: span 2 / span 2;
 }
-.item_arrows {
-  border: 0 solid green;
-  height: 1px;
-  position: absolute;
-  top: 200px;
-  width: $content-max-width;
-  z-index: 5000;
-}
-.item_arrow {
-  float: left;
-  height: 65px;
-  margin-bottom: 1px;
-  position: absolute;
-  width: 45px;
-}
-.nav_dot:hover .item_arrow:hover {
-  cursor: pointer;
-}
-.item_next {
-  background-color: #2d96cd;
-  left: 1000px;
-  top: 0;
-}
-.item_prev {
-  background-color: #000;
-  display: none;
-  left: 1000px;
-  top: 66px;
-}
-.fa {
-  color: #1e1e1e;
-  font-size: 3em;
-  margin-left: 14px;
-  margin-top: 10px;
-}
-.nav_dots {
-  background-color: #1e1e1e;
-  bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 50001;
-}
+
 .iframe-container {
   margin: auto;
   max-width: 1000px;
@@ -6604,21 +6562,7 @@ textarea.w-select {
 .rotate {
   transform: rotate(-180deg);
 }
-.nav_dot {
-  background-color: #1e1e1e;
-  border-radius: 50%;
-  float: left;
-  height: 8px;
-  margin-left: 8px;
-  transition: background-color 0.3s ease;
-  width: 8px;
-}
-.grab {
-  cursor: -moz-grab;
-}
-.grabbing {
-  cursor: -moz-grabbing;
-}
+
 .w-richtext[contenteditable="true"]:before,
 .w-richtext[contenteditable="true"]:after {
   white-space: initial;
