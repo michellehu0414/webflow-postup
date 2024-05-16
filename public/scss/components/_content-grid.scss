@@ -4,22 +4,16 @@
   width: 90vw;
   max-width: $content-max-width;
   margin: auto; /* Center the container */
+
   .img-wrapper {
     padding: 2rem 0;
-  }
-
-  p {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
   }
 
   aside {
     margin-top: 1.125rem;
 
-    p {
-      color: #00bdd6;
-      font-family: Noto Serif, sans-serif;
-    }
+    color: #00bdd6;
+    font-family: Noto Serif, sans-serif;
   }
 
   @include breakpoint(xl) {

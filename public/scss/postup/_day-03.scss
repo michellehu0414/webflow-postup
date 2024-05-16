@@ -9,5 +9,8 @@
   width: 90vw;
   margin: auto;
   align-items: left;
-  margin-top: 1.5rem;
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }

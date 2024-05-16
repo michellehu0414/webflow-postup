@@ -259,7 +259,7 @@ p {
   font-weight: 400;
   color: #565656;
   line-height: 145%;
-  margin-bottom: 1.125rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Specific heading styles with colors and sizes */
@@ -343,7 +343,7 @@ h6 {
   font-size: 1.665rem;
   font-weight: 500;
   line-height: 135%;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .fw-medium, .caption-container ul.user-flow li span {
@@ -817,14 +817,8 @@ header.hero#postup-heroBG {
 .content-grid .img-wrapper {
   padding: 2rem 0;
 }
-.content-grid p {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
 .content-grid aside {
   margin-top: 1.125rem;
-}
-.content-grid aside p {
   color: #00bdd6;
   font-family: Noto Serif, sans-serif;
 }
@@ -1404,6 +1398,7 @@ header h3 {
   max-width: 32rem;
   width: 100%;
   margin: 0;
+  margin-bottom: 2rem;
 }
 
 .section-container {
@@ -1661,6 +1656,14 @@ header h3 {
   margin: auto;
 }
 
+.mv-8 {
+  margin: 0.5rem 0;
+}
+
+.mv-16 {
+  margin: 1rem 0;
+}
+
 .mv-24 {
   margin: 1.5rem 0;
 }
@@ -1687,6 +1690,12 @@ header h3 {
 
 .mt-0 {
   margin-top: 0;
+}
+.mt-8 {
+  margin-top: 0.5rem;
+}
+.mt-16 {
+  margin-top: 1rem;
 }
 .mt-24 {
   margin-top: 1.5rem;
