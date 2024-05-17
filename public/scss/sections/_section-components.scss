@@ -19,10 +19,14 @@
   &.border {
     border-bottom: 1px solid $light-grey;
   }
+
+  &.equal-padding {
+    padding: 4rem 0;
+  }
 }
 
 .section-container {
-  img,
+  > img,
   figure {
     margin: 2rem auto;
   }
@@ -42,7 +46,7 @@ main {
   align-items: left;
   margin-top: 1.5rem;
 
-  figure > img {
+  > figure > img {
     margin: 0;
   }
 

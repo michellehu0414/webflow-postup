@@ -343,6 +343,15 @@ h6 {
   color: #757575;
 }
 
+.subheading {
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 130%;
+  color: #1e1e1e;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
 .secondary-text {
   color: #1e1e1e;
   font-size: 1.665rem;

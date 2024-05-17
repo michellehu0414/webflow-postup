@@ -343,6 +343,15 @@ h6 {
   color: #757575;
 }
 
+.subheading {
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 130%;
+  color: #1e1e1e;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
 .secondary-text {
   color: #1e1e1e;
   font-size: 1.665rem;
@@ -1384,6 +1393,63 @@ blockquote .interviewee p {
   }
 }
 
+#the-constraints .subheading {
+  margin-bottom: 0;
+}
+#the-constraints ul {
+  margin: 0.5rem 0;
+  list-style: disc outside none;
+}
+#the-constraints li {
+  line-height: 150%;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .constraint-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    padding: 1.5rem;
+    padding-left: 2.5rem;
+    background-color: #f9f9f9;
+  }
+  .constraint-grid-container ul {
+    margin-bottom: 0;
+  }
+  .constraint-grid-container ul li:last-child {
+    margin-bottom: 0;
+  }
+  .constraint-grid-container img {
+    margin-right: auto;
+    width: 3.5rem;
+    opacity: 0.6;
+  }
+}
+
+.constraints-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.constraints-flex-container .constraint-grid-container {
+  width: 100%;
+}
+.constraints-flex-container > div:last-child {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.resource-constraints-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
 .section-container {
   display: flex;
   flex-direction: column;
@@ -1403,8 +1469,11 @@ blockquote .interviewee p {
 .section-container.border {
   border-bottom: 1px solid #f0f0f0;
 }
+.section-container.equal-padding {
+  padding: 4rem 0;
+}
 
-.section-container img,
+.section-container > img,
 .section-container figure {
   margin: 2rem auto;
 }
@@ -1421,7 +1490,7 @@ main div > img:only-child {
   align-items: left;
   margin-top: 1.5rem;
 }
-.content figure > img {
+.content > figure > img {
   margin: 0;
 }
 .content.medium {
@@ -2497,7 +2566,7 @@ li {
   padding-bottom: 1rem;
 }
 
-.tab-subheading {
+.subheading {
   font-weight: 500;
   letter-spacing: 0;
   line-height: 130%;
