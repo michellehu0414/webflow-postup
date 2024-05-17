@@ -357,7 +357,8 @@ h6 {
 
 .notes {
   color: #00bdd6;
-  font-family: Noto Serif, sans-serif;
+  font-size: 1.125rem;
+  font-family: "Noto Serif", sans-serif;
 }
 
 .secondary-text.small {
@@ -822,11 +823,11 @@ header.hero#postup-heroBG {
 .content-grid .img-wrapper {
   padding: 2rem 0;
 }
-.content-grid aside {
-  margin-top: 1rem;
+.content-grid aside p {
   font-size: 1.125rem;
   color: #00bdd6;
   font-family: "Noto Serif", sans-serif;
+  margin: 0;
 }
 @media (min-width: 1200px) {
   .content-grid {
@@ -849,8 +850,8 @@ header.hero#postup-heroBG {
   .content-grid aside {
     grid-column: 2/3; /* Side notes in the second column */
     min-width: 15vw;
-    max-width: 320px;
-    padding-left: 1.5rem;
+    max-width: 100%;
+    margin-left: 1.5rem;
   }
 }
 .content-grid.large {
@@ -885,9 +886,7 @@ header.hero#postup-heroBG {
     padding-left: 1.5rem;
   }
   .content-grid.large aside p {
-    font-size: 1rem;
-    color: #00bdd6;
-    font-family: Noto Serif, sans-serif;
+    margin-top: 1rem;
   }
 }
 

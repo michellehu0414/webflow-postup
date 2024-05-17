@@ -11,10 +11,12 @@
   }
 
   aside {
-    margin-top: 1rem;
-    font-size: 1.125rem;
-    color: #00bdd6;
-    font-family: 'Noto Serif', sans-serif;
+    p {
+      font-size: 1.125rem;
+      color: #00bdd6;
+      font-family: 'Noto Serif', sans-serif;
+      margin: 0;
+    }
   }
 
   @include breakpoint(xl) {
@@ -39,8 +41,8 @@
     aside {
       grid-column: 2 / 3; /* Side notes in the second column */
       min-width: 15vw;
-      max-width: 320px;
-      padding-left: 1.5rem;
+      max-width: 100%;
+      margin-left: 1.5rem;
     }
   }
 
@@ -81,9 +83,7 @@
         padding-left: 1.5rem;
 
         p {
-          font-size: 1rem;
-          color: #00bdd6;
-          font-family: Noto Serif, sans-serif;
+          margin-top: 1rem;
         }
       }
     }
