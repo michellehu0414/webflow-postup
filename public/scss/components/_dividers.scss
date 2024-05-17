@@ -1,25 +1,20 @@
 hr {
+  box-sizing: content-box;
+  height: 0.5px;
+  background-color: $medium-light-grey;
+  overflow: visible;
+  border: none;
+
   &.dashed-blue {
-    align-self: stretch;
-    border-top: 1px dashed var(--medium-light-blue);
-    flex: 0 auto;
-    height: 1px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
+    border-style: dashed;
+    background-color: $light-blue;
   }
 
   &.solid-black {
-    border-top-color: $black;
-    border-top-style: solid;
-    margin-left: 0;
-    margin-right: 0;
+    background-color: $black;
   }
   
   &.solid-grey {
-    border-top: 0.5px solid var(--light-grey);
-  }
-  &.solid-med-light-grey {
-    border-top: 0.5px solid $medium-light-grey;
+    background-color: $light-grey;
   }
 }

@@ -57,9 +57,10 @@ ul {
 }
 
 hr {
-  box-sizing: content-box; // Resets box-sizing to default CSS values
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border: none;
 }
 
 pre {

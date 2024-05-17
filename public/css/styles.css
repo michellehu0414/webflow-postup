@@ -433,6 +433,7 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border: none;
 }
 
 pre {
@@ -890,26 +891,22 @@ header.hero#postup-heroBG {
   }
 }
 
+hr {
+  box-sizing: content-box;
+  height: 0.5px;
+  background-color: #dbdbdb;
+  overflow: visible;
+  border: none;
+}
 hr.dashed-blue {
-  align-self: stretch;
-  border-top: 1px dashed var(--medium-light-blue);
-  flex: 0 auto;
-  height: 1px;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  border-style: dashed;
+  background-color: #e7ecff;
 }
 hr.solid-black {
-  border-top-color: #1e1e1e;
-  border-top-style: solid;
-  margin-left: 0;
-  margin-right: 0;
+  background-color: #1e1e1e;
 }
 hr.solid-grey {
-  border-top: 0.5px solid var(--light-grey);
-}
-hr.solid-med-light-grey {
-  border-top: 0.5px solid #dbdbdb;
+  background-color: #f0f0f0;
 }
 
 .accordion {
@@ -2276,66 +2273,6 @@ label {
   flex: 0 auto;
   font-size: 1.6022rem;
   line-height: 150%;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  line-height: 150%;
-  list-style-type: decimal;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 24px;
-}
-
-.list.margin-bottom {
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-  list-style-type: decimal;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 24px;
-}
-
-.list.margin-bottom._0 {
-  align-items: flex-start;
-  align-self: auto;
-  display: flex;
-  flex: 0 auto;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  padding-left: 24px;
-}
-
-.list.numerical {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  list-style-type: decimal;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 21px;
-}
-
-.list._8px {
-  align-items: flex-start;
-  align-self: flex-start;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  list-style-type: disc;
-  padding-left: 18px;
-  text-align: left;
-}
-
-.list._8px.numbered {
-  list-style-type: decimal;
-  padding-left: 24px;
-}
-
-.list._24px {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
 }
 
 .div-margin-center.paragraphs-2 {

@@ -433,6 +433,7 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border: none;
 }
 
 pre {
@@ -890,26 +891,22 @@ header.hero#postup-heroBG {
   }
 }
 
+hr {
+  box-sizing: content-box;
+  height: 0.5px;
+  background-color: #dbdbdb;
+  overflow: visible;
+  border: none;
+}
 hr.dashed-blue {
-  align-self: stretch;
-  border-top: 1px dashed var(--medium-light-blue);
-  flex: 0 auto;
-  height: 1px;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  border-style: dashed;
+  background-color: #e7ecff;
 }
 hr.solid-black {
-  border-top-color: #1e1e1e;
-  border-top-style: solid;
-  margin-left: 0;
-  margin-right: 0;
+  background-color: #1e1e1e;
 }
 hr.solid-grey {
-  border-top: 0.5px solid var(--light-grey);
-}
-hr.solid-med-light-grey {
-  border-top: 0.5px solid #dbdbdb;
+  background-color: #f0f0f0;
 }
 
 .accordion {
@@ -1925,24 +1922,30 @@ header h3 {
 }
 
 .interview-quotes-wrapper {
-  max-width: 55rem;
+  max-width: 62rem;
   width: 90vw;
   margin: auto;
 }
-.interview-quotes-wrapper .interview-quote-grid:first-child {
-  padding-top: 0;
+.interview-quotes-wrapper .grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  margin: auto;
 }
-.interview-quotes-wrapper .interview-quote-grid:last-child {
-  padding-bottom: 0;
+.interview-quotes-wrapper .grid-container .img-quotation-mark {
+  margin: 0;
 }
-.interview-quotes-wrapper .interview-quote-grid {
+.interview-quotes-wrapper .grid-container .quote-grid-item {
   display: grid;
   grid-template-columns: 3fr 2.5rem 7fr;
   column-gap: 1.25rem;
   align-items: center;
   padding: 2rem 0;
 }
-.interview-quotes-wrapper .interview-quote-grid > div:first-child p {
+.interview-quotes-wrapper .grid-container .quote-grid-item:nth-child(n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item > div:first-child p {
   color: #4a4a4a;
   font-size: 1.5rem;
   font-weight: 500;
@@ -1951,11 +1954,28 @@ header h3 {
   margin-top: 0;
   text-align: left;
 }
-.interview-quotes-wrapper .interview-quote-grid .img-interviewee {
+.interview-quotes-wrapper .grid-container .quote-grid-item .img-interviewee {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 25px;
   margin: auto 0 0 0;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item.andy {
+  order: 1;
+  padding-top: 0;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item.claire {
+  order: 2;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item.james {
+  order: 3;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item.beth {
+  order: 4;
+}
+.interview-quotes-wrapper .grid-container .quote-grid-item.adam {
+  order: 5;
+  padding-bottom: 0;
 }
 
 .img-user-journey {
