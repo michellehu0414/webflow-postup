@@ -823,8 +823,10 @@ header.hero#postup-heroBG {
   padding: 2rem 0;
 }
 .content-grid aside {
+  margin-top: 1rem;
+  font-size: 1.125rem;
   color: #00bdd6;
-  font-family: Noto Serif, sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 @media (min-width: 1200px) {
   .content-grid {
@@ -849,11 +851,6 @@ header.hero#postup-heroBG {
     min-width: 15vw;
     max-width: 320px;
     padding-left: 1.5rem;
-  }
-  .content-grid aside p {
-    font-size: 1rem;
-    color: #00bdd6;
-    font-family: Noto Serif, sans-serif;
   }
 }
 .content-grid.large {
