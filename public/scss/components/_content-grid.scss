@@ -6,6 +6,18 @@
   margin: auto; /* Center the container */
   margin-bottom: 1.25rem;
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  > p {
+    margin-top: 0;
+  }
+
+  > div > :first-child {
+    margin-top: 0;
+  }
+
   .img-wrapper {
     padding: 2rem 0;
   }

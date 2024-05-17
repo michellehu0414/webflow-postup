@@ -648,59 +648,7 @@ label {
   font-size: 1.6022rem;
   line-height: 150%;
 }
-.list {
-  display: flex;
-  flex-direction: column;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  line-height: 150%;
-  list-style-type: decimal;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 24px;
-}
-.list.margin-bottom {
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-  list-style-type: decimal;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 24px;
-}
-.list.margin-bottom._0 {
-  align-items: flex-start;
-  align-self: auto;
-  display: flex;
-  flex: 0 auto;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  padding-left: 24px;
-}
-.list.numerical {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  list-style-type: decimal;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 21px;
-}
-.list._8px {
-  align-items: flex-start;
-  align-self: flex-start;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  list-style-type: disc;
-  padding-left: 18px;
-  text-align: left;
-}
-.list._8px.numbered {
-  list-style-type: decimal;
-  padding-left: 24px;
-}
-.list._24px {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-}
+
 .div-margin-center.paragraphs-2 {
   display: flex;
   flex-direction: column;

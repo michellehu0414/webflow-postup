@@ -383,7 +383,6 @@ html {
 *,
 *::before,
 *::after {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -424,11 +423,6 @@ summary {
   display: block;
 }
 
-ul {
-  list-style-type: disc;
-  padding: 0;
-}
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -442,9 +436,12 @@ pre {
 }
 
 a {
+  font-size: 1.125rem;
   background-color: transparent;
   text-decoration: none;
   color: #0281E3;
+  margin-bottom: 1rem;
+  margin-top: 1.25rem;
 }
 
 abbr[title] {
@@ -491,6 +488,8 @@ sup {
 
 img {
   border-style: none;
+  width: 100%;
+  margin: 0;
 }
 
 /* Forms
@@ -677,10 +676,6 @@ template {
   display: none;
 }
 
-.img-full-width {
-  width: 100%;
-}
-
 .img-width-1200 {
   width: 90%;
   max-width: 1200px;
@@ -820,6 +815,15 @@ header.hero#postup-heroBG {
   max-width: 45rem;
   margin: auto; /* Center the container */
   margin-bottom: 1.25rem;
+}
+.content-grid p:last-child {
+  margin-bottom: 0;
+}
+.content-grid > p {
+  margin-top: 0;
+}
+.content-grid > div > :first-child {
+  margin-top: 0;
 }
 .content-grid .img-wrapper {
   padding: 2rem 0;
@@ -1507,6 +1511,58 @@ blockquote .interviewee p {
 
 .w-embed:after {
   clear: both;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+li {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  line-height: 150%;
+  list-style-type: decimal;
+  margin: 0;
+  padding-left: 24px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.list.margin-bottom {
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+.list.margin-bottom._0 {
+  align-items: flex-start;
+  align-self: auto;
+  flex: 0 auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.list.numerical {
+  padding-left: 21px;
+  padding-bottom: 0;
+}
+.list._8px {
+  align-items: flex-start;
+  align-self: flex-start;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  list-style-type: disc;
+  padding-left: 18px;
+  text-align: left;
+}
+.list._8px.numbered {
+  list-style-type: decimal;
+  padding-left: 24px;
+}
+.list._24px {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
 }
 
 .hide {

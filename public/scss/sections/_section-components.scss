@@ -1,21 +1,36 @@
-.content,
-.subsection,
-.section-container
-.container-full-width {
-:first-child {
-    margin-top: 0;
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 calc(6.12rem - 5px) 0;
+  width: 100%;
+
+  .subsection {
+    display: block;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 4rem;
   }
 
-  :last-child {
-    margin-bottom: 0;
+  &.lightest-grey {
+    background-color: $lightest-grey;
+  }
+
+  &.border {
+    border-bottom: 1px solid $light-grey;
   }
 }
 
-.subsection,
-.section-container,
-.container-full-width {
-  .content:first-child {
-    margin-top: 0;
+.section-container {
+  img,
+  figure {
+    margin: 2rem auto;
+  }
+}
+
+main {
+  div > img:only-child {
+    margin: 0;
   }
 }
 
@@ -27,9 +42,8 @@
   align-items: left;
   margin-top: 1.5rem;
 
-  img,
-  figure {
-    margin: 2rem 0;
+  figure > img {
+    margin: 0;
   }
 
   &.medium {
@@ -45,30 +59,12 @@
   }
 }
 
-.block-container {
-  display: block;
-}
-
-.flex-container {
-  display: flex;
-}
-
-.text-block {
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-img {
-  margin: 1.625rem 0;
-}
-
 .container-full-width {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   background-color: $lightest-grey;
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 4rem 0;
   width: 100vw;
   padding: 4rem 0;
 
@@ -83,6 +79,7 @@ img {
   }
 }
 
+// Header
 header {
   display: block;
   max-width: $content-max-width;
@@ -117,38 +114,34 @@ header {
   margin-bottom: 2rem;
 }
 
-.section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0 calc(6.12rem - 5px) 0;
-  width: 100%;
+// Extra classes
 
-  .header-h2 {
-    margin-bottom: 2rem;
-  }
-
-  .subsection {
-    display: block;
-    margin: auto;
-    padding: 0;
+.subsection,
+.section-container,
+.container-full-width {
+  .content {
     margin-bottom: 4rem;
 
-    .header-h3 {
-      margin: 0 auto;
-      margin-bottom: 1.5rem;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+}
 
-  .subsection:last-child {
+.content,
+.subsection,
+.section-container,
+.container-full-width {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child,
+  > :only-child {
     margin-bottom: 0;
-  }
-
-  &.lightest-grey {
-    background-color: $lightest-grey;
-  }
-
-  &.border {
-    border-bottom: 1px solid $light-grey;
   }
 }

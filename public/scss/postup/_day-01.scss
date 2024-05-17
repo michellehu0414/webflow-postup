@@ -1,17 +1,23 @@
+.list-research-materials {
+  margin-bottom: 1.5rem;
+}
+
+
 .interview-quotes-wrapper {
   max-width: 62rem;
   width: 90vw;
   margin: auto;
+
+  > .img-quotation-mark {
+    margin: 0;
+    max-width: 5rem;
+  }
 
   .grid-container {
     display: grid;
     grid-template-rows: auto;
     width: 100%;
     margin: auto;
-
-    .img-quotation-mark {
-      margin: 0;
-    }
 
     .quote-grid-item {
       display: grid;
