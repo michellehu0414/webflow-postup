@@ -260,6 +260,7 @@ p {
   color: #565656;
   line-height: 145%;
   margin-bottom: 1.25rem;
+  margin-top: 0;
 }
 
 /* Specific heading styles with colors and sizes */
@@ -347,7 +348,8 @@ h6 {
   font-size: 1.665rem;
   font-weight: 500;
   line-height: 135%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .fw-medium, .caption-container ul.user-flow li span {
@@ -1480,7 +1482,7 @@ header h3 {
 .subsection .content,
 .section-container .content,
 .container-full-width .content {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .subsection .content:first-child,
 .section-container .content:first-child,
