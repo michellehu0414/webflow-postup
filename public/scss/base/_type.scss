@@ -135,6 +135,14 @@ h6 {
   font-weight: 500;
 }
 
+// Sets text in <span> fw-medium
+.span-fw-medium {
+  span {
+    color: $black;
+    font-weight: 500;;
+  }
+}
+
 .notes {
   color: #00bdd6;
   font-size: 1.125rem;
