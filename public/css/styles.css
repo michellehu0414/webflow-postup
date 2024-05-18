@@ -1125,11 +1125,11 @@ blockquote .interviewee p {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
-  background-color: #f9f9f9;
   margin-bottom: 6rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   height: fit-content;
   overflow: hidden;
+  padding: 3rem;
 }
 
 .flex {
@@ -1327,6 +1327,21 @@ blockquote .interviewee p {
 .items-center {
   align-items: center;
   justify-content: center;
+}
+
+.ic-arrow_jump-to-section {
+  vertical-align: baseline;
+  transform: rotate(90deg) translateX(5px);
+}
+
+.btn-scrollToSection {
+  font-size: 1.125rem;
+  background-color: transparent;
+  text-decoration: none;
+  color: #0281E3;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .mb-0 {
@@ -1603,6 +1618,10 @@ li {
 
 .hide {
   display: none;
+}
+
+.icon-inline {
+  top: 0.5rem;
 }
 
 .w-inline-block {

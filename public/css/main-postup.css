@@ -1125,11 +1125,11 @@ blockquote .interviewee p {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
-  background-color: #f9f9f9;
   margin-bottom: 6rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   height: fit-content;
   overflow: hidden;
+  padding: 3rem;
 }
 
 .section-overview {
@@ -1139,6 +1139,7 @@ blockquote .interviewee p {
   width: 100%;
   background: #fff;
   padding: 2rem 0;
+  border-bottom: 1.25px solid #f0f0f0;
 }
 .section-overview .content-wrapper {
   display: flex;
@@ -1409,6 +1410,25 @@ blockquote .interviewee p {
   }
 }
 
+#the-constraints {
+  background-color: #f9f9f9;
+}
+#the-constraints > .card {
+  background-color: white;
+}
+
+.constraints-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+.constraints-content-container .subheading {
+  font-size: 1.5rem;
+}
+
 .constraint-grid-container .subheading {
   margin-bottom: 0;
 }
@@ -1416,26 +1436,43 @@ blockquote .interviewee p {
   .constraint-grid-container {
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: start;
+    align-items: start;
     gap: 1.5rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
     width: fit-content;
+    text-align: left;
   }
   .constraint-grid-container ul {
     margin-bottom: 0;
     margin-top: 0.5rem;
+    list-style-type: none;
   }
   .constraint-grid-container ul li {
     line-height: 160%;
+    margin-bottom: 0.25rem;
   }
   .constraint-grid-container ul li:last-child {
     margin-bottom: 0;
   }
   .constraint-grid-container img {
-    margin-right: auto;
+    margin: auto 0;
+  }
+  .constraint-grid-container .svg-wrapper {
+    display: flex;
     width: 3.5rem;
-    opacity: 0.7;
+    height: 3.5rem;
+  }
+  .constraint-grid-container .svg-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3.5rem;
+  }
+  .constraint-grid-container .svg-time {
+    height: 2.98375rem;
+    width: fit-content;
+    margin: auto 0;
   }
 }
 
@@ -1464,11 +1501,12 @@ blockquote .interviewee p {
 .section-container.lightest-grey {
   background-color: #f9f9f9;
 }
-.section-container.border {
-  border-bottom: 1px solid #f0f0f0;
-}
 .section-container.equal-padding {
   padding: 4rem 0;
+}
+
+.border {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .section-container > img,
@@ -1776,6 +1814,21 @@ header h3 {
   justify-content: center;
 }
 
+.ic-arrow_jump-to-section {
+  vertical-align: baseline;
+  transform: rotate(90deg) translateX(5px);
+}
+
+.btn-scrollToSection {
+  font-size: 1.125rem;
+  background-color: transparent;
+  text-decoration: none;
+  color: #0281E3;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .mb-0 {
   margin-bottom: 0rem;
 }
@@ -2051,6 +2104,10 @@ li {
 
 .hide {
   display: none;
+}
+
+.icon-inline {
+  top: 0.5rem;
 }
 
 .list-research-materials {

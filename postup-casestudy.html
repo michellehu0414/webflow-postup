@@ -13,8 +13,10 @@
       href="https://fonts.gstatic.com"
       rel="preconnect"
     />
-    <!-- <link href="public/css/postup-styles.css" rel="stylesheet">  -->
-    <!-- <link href="public/css/styles.css" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link href="public/css/main-postup.css" rel="stylesheet" />
     <link href="public/css/fonts.css" rel="stylesheet" />
     <link href="public/css/swiper-bundle.mini.css" rel="stylesheet" />
@@ -161,10 +163,7 @@
           </button>
         </div>
       </section>
-      <section
-        id="the-problem"
-        class="section-container equal-padding lightest-grey"
-      >
+      <section id="the-problem" class="section-container equal-padding">
         <div class="content">
           <header>
             <h2>The challenge</h2>
@@ -207,64 +206,76 @@
             current solutions.
           </p>
         </div>
-        <div class="card flex-row items-center padding-40">
-          <div class="constraint-grid-container">
-            <img src="/public/svg/constraint-research.svg" alt="" />
-            <div>
-              <p class="subheading">Resource</p>
-              <ul class="resource-constraints-grid">
-                <li>Limited research materials</li>
-                <li>No access to PostUp personnel</li>
-                <li>No access to current customers</li>
-              </ul>
+        <div class="card">
+          <div class="constraints-content-container">
+            <div class="constraint-grid-container">
+              <div class="svg-wrapper">
+                <!-- <img src="/public/svg/constraint-research.svg" alt="" /> -->
+                <img src="/public/svg/ic-paper-folder.svg" alt="" />
+              </div>
+              <div>
+                <p class="subheading">Resource</p>
+                <ul class="resource-constraints-grid">
+                  <li>Limited research materials</li>
+                  <li>No access to PostUp personnel</li>
+                  <li>No access to current customers</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="constraint-grid-container">
-            <img
-              src="/public/svg/constraint-business.svg"
-              alt=""
-            />
-            <div>
-              <p class="subheading">Product and business</p>
-              <ul>
-                <li>Mobile-app solution</li>
-                <li>$5.99 monthly subscription fee</li>
-                <li>Feature existing places only</li>
-              </ul>
+            <div class="constraint-grid-container">
+              <div class="svg-wrapper">
+                <img src="/public/svg/constraint-business.svg" alt="" />
+              </div>
+              <div>
+                <p class="subheading">Product and business</p>
+                <ul>
+                  <li>Mobile-app solution</li>
+                  <li>$5.99 monthly subscription fee</li>
+                  <li>Feature existing places only</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="constraint-grid-container">
-            <img class="" src="/public/svg/constraint-time.svg" alt="" />
-            <div>
-              <p class="subheading">Time</p>
-              <ul>
-                <li>Tight 5 day deadline</li>
-                <li>Limited iterations and testing</li>
-              </ul>
+            <div class="constraint-grid-container">
+              <div class="svg-time-wrapper">
+                <img
+                  class="svg-time"
+                  src="/public/svg/constraint-time--flat.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="subheading">Time</p>
+                <ul>
+                  <li>Tight 5 day deadline</li>
+                  <li>Limited iterations and testing</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        id="the-solution"
-        class="section-container equal-padding lightest-grey"
-      >
+      <section id="the-solution" class="section-container equal-padding border">
         <div class="content">
           <header>
             <h2>The solution</h2>
           </header>
           <p>
-            The PostUp mobile-app allows remote workers to locate nearby public
-            spaces. Users may search locations by remote task, such as quiet
-            work, meetings, and calls. Each public space has a comprehensive
-            profile that displays details on essential work environments
-            prioritized by remote workers, such as WiFi speed, restroom
-            availability, noise-levels, table sizes, and more. Users have
-            exclusive access reserve seating at partner locations that reserve
-            seating for PostUp members and can see real-time updates on
-            availability seating. All workspace details are generated by reviews
-            posted by members.
+            The final solution redefines remote work in public spaces by
+            seamlessly connecting workers with suitable locations anywhere,
+            assessed by amenities such as WiFi speed, outlet availability, noise
+            levels, and more. Through its business partnership program,
+            subscribers enjoy exclusive benefits at PostUp partner locations,
+            including real-time seating updates, reservation systems, and
+            promotions—enriching the remote work journey for subscribers and
+            local businesses alike.
           </p>
+          <button id="scrollToSolution" class="btn-scrollToSection">
+            Jump to final prototype<span
+              class="material-symbols-outlined ic-arrow_jump-to-section"
+            >
+              arrow_outward
+            </span>
+          </button>
         </div>
       </section>
       <section id="research-process" class="section-container border">
@@ -351,12 +362,6 @@
             >
             <!-- <figure><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRLCJ8obtYNTqtAqzyjYr_HeKMuBp9KXG1DhkwID1ygUewf-UmbSdya7sfX5AfC66ktYhe1HVMoCemq/embed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" style="aspect-ratio: 16 / 9.5" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></figure> -->
           </div>
-          <div class="content">
-            <header>
-              <h4>Current solutions</h4>
-            </header>
-          </div>
-
           <div class="content">
             <header>
               <h3>
@@ -1508,6 +1513,152 @@
         <section class="subsection">
           <header>
             <h3>Business and Monetization Strategy</h3>
+          </header>
+          <div class="content">
+            <p>
+              Based on the usability testing results, I brainstormed potential
+              strategies aligned with the startup's requirement for a $5.99
+              monthly user subscription fee to increase business revenue
+              streams. My focus involves brainstorming new features that drive
+              spaner engagement with businesses featured on PostUp, thus
+              amplifying revenue generation. Considering the growing trend
+              toward remote work, I see a promising opportunity for a mutually
+              beneficial collaboration between PostUp and local businesses. This
+              collaboration could incentivize businesses to enhance their
+              amenities, catering to remote workers and in turn enriching the
+              overall user experience for Postup subscribers. Therefore, I
+              propose an
+              <span class="semibold"
+                >additional subscription and referral model that invites
+                businesses to become a “PostUp Partner”</span
+              >
+              to access
+              <span class="semibold">premium in-app business features</span>
+              below:
+            </p>
+            <img
+              alt=""
+              loading="lazy"
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/658e3081ef485db1d6ea48d5_IMG_0647.jpg"
+            />
+          </div>
+        </section>
+        <section class="subsection margin-0">
+          <div class="business-monetization-details content">
+            <header>
+              <h4>Exclusive promotions</h4>
+            </header>
+            <p>
+              Partners can offer in-app promotions exclusive to PostUp users,
+              encouraging user engagement and customer acquisition. Users may
+              filter their search results for locations with ongoing promotions.
+            </p>
+            <div class="reservation-system">
+              <div>
+                <h4>Reservation System</h4>
+                <p>
+                  PostUp Partners can access the app's table reservation
+                  feature, enhancing user convenience and potentially attracting
+                  more customers. Users may filter their search results for
+                  locations that offer reservations.<br />
+                </p>
+              </div>
+              <div>
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/658ea13bb994d56d53d72571_Current%20Availability.png"
+                />
+              </div>
+            </div>
+            <header>
+              <h4>Rewards System</h4>
+            </header>
+            <p>
+              The app incorporates two reward avenues: points and stamps. Users
+              earn points via in-person purchases using a unique QR code and
+              collect stamps by visiting partner locations. These accumulated
+              points and stamps can be redeemed for rewards sponsored by PostUp.
+              Users may filter search results for official partner locations to
+              benefit from the rewards system.<br />
+            </p>
+            <header>
+              <h4>Data Analytics</h4>
+            </header>
+            <p>
+              PostUp can offer valuable insights derived from user behavior,
+              like traffic trends and user preferences, enabling partners to
+              better understand their customer base. Partners may subscribe to
+              access this data, enhancing their in-store strategies and
+              improving user satisfaction.
+            </p>
+            <header>
+              <h4>Overcommercialization issue</h4>
+            </header>
+            <div>
+              <p>
+                In the current landscape of product design, there's a noticeable
+                shift towards excessive commercialization, resulting in
+                information overload that ultimately undermines the user
+                experience. This design sprint has emphasized the importance of
+                designing with both business and user needs in mind, ensuring
+                that while maximizing business revenues, user-centricity remain
+                at the core.
+              </p>
+              <p>
+                In the current landscape of product design, there's a noticeable
+                shift towards excessive commercialization, resulting in
+                information overload that ultimately undermines the user
+                experience. This design sprint has emphasized the importance of
+                designing with both business and user needs in mind, ensuring
+                that while maximizing business revenues, user-centricity remain
+                at the core.
+              </p>
+            </div>
+            <header><h4>Conclusion</h4></header>
+            <p>
+              Overall, my strategies aim to increase client acquisition, boost
+              conversion, drive app engagement, attract business partnerships,
+              and establish a sustainable revenue model while enhancing the
+              overall remote working experience throughout their user journey.
+              In sum, these strategies offer additional revenue streams for
+              PostUp while boosting the app's value proposition. <br />
+            </p>
+          </div>
+        </section>
+      </section>
+      <section id="final-solution" class="section-container border">
+        <header>
+          <h2>
+            <span>solution</span>
+            <br />Final prototype
+          </h2>
+        </header>
+        <section class="subsection">
+          <header>
+            <h3>Iteration recommendations</h3>
+          </header>
+          <div class="content">
+            <p>
+              I believe that the prototype can be improved by further optimizing
+              the user experience by reducing touchpoints.<br />
+            </p>
+            <ul class="list _8px numbered">
+              <li>Remove the search page and add a reservations page</li>
+              <li>Remove searching by type of work</li>
+              <li>Implement filters directly on Discover page</li>
+              <li>Add respective star rating to map icons for more context</li>
+              <li>Information on lighting</li>
+              <li>
+                Replace standardized details on work environment with explicit
+                details
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="subsection">
+          <header>
+            <h3>Business monetization strategy</h3>
           </header>
           <div class="content">
             <p>

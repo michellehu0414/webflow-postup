@@ -1,5 +1,3 @@
-
-
 // .resource-constraints-grid {
 //   display: grid;
 //   grid-template-columns: repeat(2, 1fr);
@@ -11,6 +9,32 @@
 //   }
 // }
 
+#the-constraints {
+  background-color: $lightest-grey;
+
+  > .card {
+    background-color: white;
+  }
+}
+
+.constraints-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0 auto;
+
+  .subheading {
+    font-size: 1.5rem;
+  }
+
+  // > :first-child,
+  // > :nth-child(2) {
+  //   border-right: 2px solid $medium-grey;
+  // }
+}
+
 .constraint-grid-container {
   .subheading {
     margin-bottom: 0;
@@ -19,29 +43,49 @@
   @include breakpoint(med) {
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: start;
+    align-items: start;
     gap: 1.5rem;
-    padding: 2rem;
-    background-color: $lightest-grey;
     width: fit-content;
+    text-align: left;
 
     ul {
       margin-bottom: 0;
       margin-top: 0.5rem;
-      
+      list-style-type: none;
+
       li {
         line-height: 160%;
+        margin-bottom: 0.25rem;
       }
 
       li:last-child {
         margin-bottom: 0;
       }
     }
-    
+
     img {
-      margin-right: auto;
+      margin: auto 0;
+    }
+
+    .svg-wrapper {
+      display: flex;
       width: 3.5rem;
-      opacity: 0.7;
+      height: 3.5rem;
+    }
+
+    .svg-time-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 3.5rem;
+    }
+
+    .svg-time {
+      height: 2.98375rem;
+      width: fit-content;
+       margin: auto 0;
     }
   }
   // @include breakpoint(med) {
@@ -81,4 +125,3 @@
   //   gap: 0.5rem;
   // }
 }
-
