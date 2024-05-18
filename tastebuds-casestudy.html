@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html
-  class="w-mod-js w-mod-ix wf-inter-n4-active wf-notoserif-n3-active wf-notoserif-n4-active wf-notoserif-n5-active wf-notoserif-n6-active wf-notoserif-n7-active wf-notoserif-n8-active wf-inter-n5-active wf-inter-n3-active wf-inter-n7-active wf-inter-n6-active wf-inter-n8-active wf-notoserif-i5-active wf-notoserif-i8-active wf-notoserif-i4-active wf-notoserif-i1-active wf-notoserif-i7-active wf-notoserif-i6-active wf-notoserif-i2-active wf-notoserif-i3-active wf-active"
-  data-wf-domain="michelle-portfolio-fc56f5.webflow.io"
-  data-wf-page="656edeeb136944a06d157316"
-  data-wf-site="651649456fb9882d90cce3aa"
-  lang="en"
->
+<html lang="en">
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Study: TasteBuds</title>
-    <meta content="Case Study: TasteBuds 2" property="og:title" />
-    <meta content="Case Study: TasteBuds 2" property="twitter:title" />
     <link href="https://fonts.googleapis.com/" rel="preconnect" />
     <link
-      crossorigin="anonymous" 
+      crossorigin="anonymous"
       href="https://fonts.gstatic.com/"
       rel="preconnect"
     />
@@ -25,18 +17,24 @@
     />
     <link
       href="https://assets-global.website-files.com/img/webclip.png"
-      rel="apple-touch-icon" 
+      rel="apple-touch-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
     />
     <!-- <link href="/tastebuds/tastebuds-styles.css" rel="stylesheet" />
-    <link href="/public/css/postup-styles.css" rel="stylesheet" /> --> 
+    <link href="/public/css/postup-styles.css" rel="stylesheet" /> -->
     <link href="/public/css/main.css" rel="stylesheet" />
-    <link href="/public/css/styles.css" rel="stylesheet" />
+    <link href="/public/css/tastebuds-styles-new.css" rel="stylesheet" />
     <link href="public/css/fonts.css" rel="stylesheet" />
     <link href="public/css/swiper-bundle.mini.css" rel="stylesheet" />
-    
+
     <link href="public/css/www-player.css" rel="stylesheet" />
   </head>
-  <body class="body-2">
+  <body>
     <header id="tastebuds-heroBG" class="hero">
       <div class="wrapper">
         <!-- Hero v.1 Title and image is in a row -->
@@ -62,7 +60,8 @@
           <header>
             <h1 class="project-title">TasteBuds</h1>
             <p class="project-tagline">
-              Empowering diners to discover dining options with tastebuds they trust.
+              Empowering diners to discover dining options with tastebuds they
+              trust.
             </p>
             <div class="tags-wrapper scrollable">
               <div class="project-tag postup">usability testing</div>
@@ -162,38 +161,196 @@
               </div>
             </div> -->
           </div>
-          <button id="scrollButton" class="scroll-arrow" aria-label="Scroll down"><img src="/public/svg/ic-arrowDown.svg" alt="Arrow pointing down, indicating to scroll down" ></button>
+          <button
+            id="scrollButton"
+            class="scroll-arrow"
+            aria-label="Scroll down"
+          >
+            <img
+              src="/public/svg/ic-arrowDown.svg"
+              alt="Arrow pointing down, indicating to scroll down"
+            />
+          </button>
         </div>
       </section>
-      <section id="section-intro" class="container border">
-        <div class="subsection margin-0">
-          <div class="subsection margin-0">
-            <p class="_1-44rem">
-              Diners face challenges in confidently discovering dining options
-              and making decisions due to
-              <strong class="semibold"
-                >skepticism surrounding crowdsourced reviews</strong
-              >. Moreover, the
-              <strong class="semibold">rising commercialization</strong> and
-              <strong class="semibold">reduced personalization</strong> in
-              popular platforms such as
-              <strong class="semibold">Yelp and Google Maps</strong> contribute
-              to <strong class="semibold">information overload</strong> and
-              <strong class="semibold">decision paralysis</strong> among users.
-            </p>
-            <p class="_1-44rem black">
-              How might I empower diners to confidently discover new dining
-              options?
-            </p>
+      <section id="the-problem" class="section-container equal-padding">
+        <div class="content">
+          <header>
+            <h2>The challenge</h2>
+          </header>
+          <p>
+            PostUp is a new startup that allow freelancers and remote workers
+            share tips, resources, and advice. Witnessing an uptick in feedback
+            and discussions between users about finding good public places to
+            work from, PostUp wants to create a better solution. create a
+            subscription-based mobile app that addresses this trend for $5.99 a
+            month. PostUp is a new startup that wants to make it easier for
+            freelancers and remote workers to find great coffee shops and public
+            spaces to do work from.
+          </p>
+          <p class="mb-32">
+            With a modified Google Ventures (GV) design sprint, I aimed to
+            design the mobile app for PostUp over a course of five days that
+            helps remote workers quickly find suitable public workspaces,
+            helping PostUp enhance its user experience while opening a new
+            revenue stream.
+          </p>
+          <p class="secondary-text mb-0">
+            How can I connect remote workers with suitable public workspaces and
+            help PostUp meet its business goals?
+          </p>
+        </div>
+      </section>
+      <section id="the-constraints" class="section-container equal-padding">
+        <div class="content">
+          <header>
+            <h2>Constraints</h2>
+          </header>
+          <p class="span-fw-medium">
+            Throughout the project, there were several constraints. Although I
+            obtained user research data from PostUp, it was limited to findings
+            from <span>9 interviews</span>, comprising only
+            <span>8 quotes</span>, a <span>single user persona</span>, and an
+            <span>audio and screen recording from one interview</span>
+            illustrating a participant guiding the Lead Researcher through her
+            current solutions.
+          </p>
+        </div>
+        <div class="card">
+          <div class="constraints-content-container">
+            <div class="constraint-grid-container">
+              <div class="svg-wrapper">
+                <!-- <img src="/public/svg/constraint-research.svg" alt="" /> -->
+                <img src="/public/svg/ic-paper-folder.svg" alt="" />
+              </div>
+              <div>
+                <p class="subheading">Resource</p>
+                <ul class="resource-constraints-grid">
+                  <li>Limited research materials</li>
+                  <li>No access to PostUp personnel</li>
+                  <li>No access to current customers</li>
+                </ul>
+              </div>
+            </div>
+            <div class="constraint-grid-container">
+              <div class="svg-wrapper">
+                <img src="/public/svg/constraint-business.svg" alt="" />
+              </div>
+              <div>
+                <p class="subheading">Product and business</p>
+                <ul>
+                  <li>Mobile-app solution</li>
+                  <li>$5.99 monthly subscription fee</li>
+                  <li>Feature existing places only</li>
+                </ul>
+              </div>
+            </div>
+            <div class="constraint-grid-container">
+              <div class="svg-time-wrapper">
+                <img
+                  class="svg-time"
+                  src="/public/svg/constraint-time--flat.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="subheading">Time</p>
+                <ul>
+                  <li>Tight 5 day deadline</li>
+                  <li>Limited iterations and testing</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="container border">
-        <div class="dfdf">
-          <h2 class="main-heading blue">Process</h2>
+      <section id="the-solution" class="section-container equal-padding border">
+        <div class="content">
+          <header>
+            <h2>The solution</h2>
+          </header>
+          <p>
+            The final solution redefines remote work in public spaces by
+            seamlessly connecting workers with suitable locations anywhere,
+            assessed by amenities such as WiFi speed, outlet availability, noise
+            levels, and more. Through its business partnership program,
+            subscribers enjoy exclusive benefits at PostUp partner locations,
+            including real-time seating updates, reservation systems, and
+            promotions—enriching the remote work journey for subscribers and
+            local businesses alike.
+          </p>
+          <button id="scrollToSolution" class="btn-scrollToSection">
+            Jump to final prototype<span
+              class="material-symbols-outlined ic-arrow_jump-to-section"
+            >
+              arrow_outward
+            </span>
+          </button>
+        </div>
+      </section>
+      <section id="research-process" class="section-container border">
+        <header>
+          <h2>
+            <span>research process</span>
+            <br />
+            Designing an MVP in 5 days
+          </h2>
+        </header>
+        <div class="content">
+          <div class="design-sprint-graphic">
+            <img
+              alt=""
+              loading="lazy"
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65879a9e6a8de1e8236937ef_design-sprint-graphic.webp"
+            />
+          </div>
+          <p>
+            My design sprint adopts a modified version of Google Venture's (GV)
+            design sprint.
+          </p>
+          <p>
+            This is a structured five-day process that rapidly solves critical
+            business problems through design, prototyping, and testing ideas
+            with users. Typically, a full-scale process involves a diverse team
+            collaborating intensively in a series of exercises, such as mapping,
+            sketching, and prototyping, to validate solutions quickly.
+          </p>
+          <p>
+            This project employs an adaptation that enables a solo designer to
+            effectively carry out the streamlined process. Working
+            independently, this process helped me quickly deliver a design and
+            business solution to PostUp.
+          </p>
+        </div>
+      </section>
+      <section id="section-intro" class="section-container border">
+        <div class="content">
+          <p class="_1-44rem">
+            Diners face challenges in confidently discovering dining options and
+            making decisions due to
+            <strong class="semibold"
+              >skepticism surrounding crowdsourced reviews</strong
+            >. Moreover, the
+            <strong class="semibold">rising commercialization</strong> and
+            <strong class="semibold">reduced personalization</strong> in popular
+            platforms such as
+            <strong class="semibold">Yelp and Google Maps</strong> contribute to
+            <strong class="semibold">information overload</strong> and
+            <strong class="semibold">decision paralysis</strong> among users.
+          </p>
+          <p class="_1-44rem black">
+            How might I empower diners to confidently discover new dining
+            options?
+          </p>
+        </div>
+      </section>
+      <section class="section-container border">
+        <div class="content">
+          <h2>Process</h2>
           <p>
             My research process follows the 5-stage Design Thinking model
-            proposed by the Hasso Plattner Institute of Design at Stanford (the "d. school").
+            proposed by the Hasso Plattner Institute of Design at Stanford (the
+            "d. school").
           </p>
         </div>
         <div class="subsection">
@@ -212,10 +369,11 @@
                 <polygon
                   points="6,6 6,8 14.59,8 5,17.59 6.41,19 16,9.41 16,18 18,18 18,6"
                 ></polygon>
-              </g></svg></a>
+              </g></svg
+          ></a>
         </div>
         <div class="subsection margin-0">
-          <div class="subsection last-child">
+          <div class="content">
             <img
               src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6577a42a55ca30c75c5bb706_Research%20Process%20(1).png"
               loading="lazy"
@@ -233,525 +391,305 @@
         </div>
       </section>
       <section class="w-layout-blockcontainer section no-border w-container">
-        <div class="container border mb-0">
-          <div class="subsection first-child">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">
-                secondary research
-              </h2>
-              <h2 class="main-heading blue">Understanding the landscape</h2>
+        <div class="content>
+        <div class="subsection first-child">
+          <div class="content">
+            <h2>secondary research</h2>
+            <h2>Understanding the landscape</h2>
+            <p>
+              I began to explore the problem space through secondary research: I
+              sought to clarify the dining out landscape, delving into emerging
+              dining habits and the evolving preferences of consumers within the
+              food service industry.
+            </p>
+          </div>
+        </div>
+        <div class="w-layout-vflex content">
+          <h3>research questions</h3>
+          <ul class="list">
+            <li class="paragraph list-item">
+              What are the
+              <strong class="semibold">latest dining out trends</strong>?
+            </li>
+            <li class="paragraph list-item">
+              What <strong class="semibold">motivate</strong> people to dine
+              out?
+            </li>
+            <li class="paragraph list-item">
+              What do diners <strong class="semibold">enjoy</strong> about
+              dining out?
+            </li>
+            <li class="paragraph list-item">
+              What do diners <strong class="semibold">struggle</strong> with
+              dining out?
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <h3>diner trends 2022</h3>
+          <div class="respondent-profile w-embed">
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <link
+              rel="stylesheet"
+              href="https://www.w3schools.com/w3css/4/w3.css"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            />
+            <div>
               <p>
-                I began to explore the problem space through secondary research:
-                I sought to clarify the dining out landscape, delving into
-                emerging dining habits and the evolving preferences of consumers
-                within the food service industry.
+                Luckily, I came across TouchBistro's
+                <a
+                  href="https://drive.google.com/file/d/1N3JZtG2lmz37f3ENw4mfARL32MCkLxzO/view?usp=sharing"
+                  >2022 Diner Trends Report on "What Diners Want"<span
+                    style="vertical-align: -5%"
+                    >↗</span
+                  ></a
+                >
+                and
+                <a
+                  href="https://drive.google.com/file/d/1mxbnJpPNwWf7t11OqpbG1wIhjhI75VNE/view?usp=sharing"
+                  >2020 Restaurant Insights Report on "How Diners Choose
+                  Restaurants"<span style="vertical-align: -5%">↗</span></a
+                >. The Diner Trends Report surveyed more than 2,600 diners from
+                across the U.S. and Canada (only data on U.S. participants are
+                referenced below), and the Restaurant Insights Report surveyed
+                521 diners. <br />
+                These reports offered a comprehensive review on diner behaviors,
+                preferences, and experiences! Here are the highlights of what I
+                learned:
               </p>
             </div>
           </div>
-          <div class="w-layout-vflex subsection detail">
-            <h2 class="h3">research questions</h2>
-            <ul class="list">
-              <li class="paragraph list-item">
-                What are the
-                <strong class="semibold">latest dining out trends</strong>?
-              </li>
-              <li class="paragraph list-item">
-                What <strong class="semibold">motivate</strong> people to dine
-                out?
-              </li>
-              <li class="paragraph list-item">
-                What do diners <strong class="semibold">enjoy</strong> about
-                dining out?
-              </li>
-              <li class="paragraph list-item">
-                What do diners <strong class="semibold">struggle</strong> with
-                dining out?
-              </li>
-            </ul>
-          </div>
-          <div class="subsection last-child">
-            <h2 class="h3">diner trends 2022</h2>
-            <div class="respondent-profile w-embed">
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-              <link
-                rel="stylesheet"
-                href="https://www.w3schools.com/w3css/4/w3.css"
-              />
-              <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              />
-              <div>
-                <p>
-                  Luckily, I came across TouchBistro's
-                  <a
-                    href="https://drive.google.com/file/d/1N3JZtG2lmz37f3ENw4mfARL32MCkLxzO/view?usp=sharing"
-                    >2022 Diner Trends Report on "What Diners Want"<span
-                      style="vertical-align: -5%"
-                      >↗</span
-                    ></a
-                  >
-                  and
-                  <a
-                    href="https://drive.google.com/file/d/1mxbnJpPNwWf7t11OqpbG1wIhjhI75VNE/view?usp=sharing"
-                    >2020 Restaurant Insights Report on "How Diners Choose
-                    Restaurants"<span style="vertical-align: -5%">↗</span></a
-                  >. The Diner Trends Report surveyed more than 2,600 diners
-                  from across the U.S. and Canada (only data on U.S.
-                  participants are referenced below), and the Restaurant
-                  Insights Report surveyed 521 diners. <br />
-                  These reports offered a comprehensive review on diner
-                  behaviors, preferences, and experiences! Here are the
-                  highlights of what I learned:
-                </p>
-              </div>
-            </div>
-            <div class="container blue padding-40px">
-              <div class="subsection margin-0">
-                <div class="w-layout-hflex flex-block-35">
-                  <div class="flex _8px wrap">
-                    <div class="div-block-141">
-                      <div class="diner-trends-block text">
-                        <h2 class="heading-3 trends">
-                          If the food is good,
-                          <strong class="semi-bold-1-424"
-                            >service doesn't matter </strong
-                          >to diners.
-                        </h2>
-                      </div>
-                      <div class="div-block-142"></div>
-                      <div class="diner-trends-block text right">
-                        <h2 class="heading-3 trends">
-                          <strong class="bold-text-15 semi-bold-1-424"
-                            >Recommendations from friends </strong
-                          >outweigh online reviews.
-                        </h2>
-                      </div>
+          <div class="container blue padding-40px">
+            <div class="subsection margin-0">
+              <div class="w-layout-hflex flex-block-35">
+                <div class="flex _8px wrap">
+                  <div class="div-block-141">
+                    <div class="diner-trends-block text">
+                      <h2 class="heading-3 trends">
+                        If the food is good,
+                        <strong class="semi-bold-1-424"
+                          >service doesn't matter </strong
+                        >to diners.
+                      </h2>
                     </div>
-                    <div class="div-block-141">
-                      <div class="diner-trends-block text">
-                        <h2 class="heading-3 trends">
-                          Most diners would visit a restaurant for their<strong
-                            class="semi-bold-1-424"
-                          >
-                            promotions.</strong
-                          >
-                        </h2>
-                      </div>
-                      <div class="div-block-142"></div>
-                      <div class="diner-trends-block text right">
-                        <h2 class="heading-3 trends">
-                          Most diners visit a restaurant's
-                          <strong class="bold-text-15"
-                            >online menu and websites</strong
-                          >
-                          first.
-                        </h2>
-                      </div>
+                    <div class="div-block-142"></div>
+                    <div class="diner-trends-block text right">
+                      <h2 class="heading-3 trends">
+                        <strong class="bold-text-15 semi-bold-1-424"
+                          >Recommendations from friends </strong
+                        >outweigh online reviews.
+                      </h2>
                     </div>
-                    <div class="diner-trends-block dining-factors">
-                      <p class="heading-3 trends mb-0">
-                        <strong class="semi-bold-1-424">Top 3 factors </strong
-                        >that<strong> </strong>influence dine-in and takeout
-                        decisions
-                      </p>
-                      <div
-                        id="w-node-ce0ead28-3bad-3a55-4f3c-830784ea0c26-6d157316"
-                        class="_70"
-                      >
-                        <div
-                          id="w-node-ce0ead28-3bad-3a55-4f3c-830784ea0c27-6d157316"
-                          class="diner-trends factors"
+                  </div>
+                  <div class="div-block-141">
+                    <div class="diner-trends-block text">
+                      <h2 class="heading-3 trends">
+                        Most diners would visit a restaurant for their<strong
+                          class="semi-bold-1-424"
                         >
-                          <h2 class="heading-3 trends dining-factors">
-                            <strong>#1</strong>
-                          </h2>
-                          <img
-                            src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c716e9b21b1b63cdfc9e_img-plate.png"
-                            loading="lazy"
-                            alt=""
-                            class="img-diningfactors"
-                          />
-                          <p class="heading-3 dining-factors">Type of food</p>
+                          promotions.</strong
+                        >
+                      </h2>
+                    </div>
+                    <div class="div-block-142"></div>
+                    <div class="diner-trends-block text right">
+                      <h2 class="heading-3 trends">
+                        Most diners visit a restaurant's
+                        <strong class="bold-text-15"
+                          >online menu and websites</strong
+                        >
+                        first.
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="diner-trends-block dining-factors">
+                    <p class="heading-3 trends mb-0">
+                      <strong class="semi-bold-1-424">Top 3 factors </strong
+                      >that<strong> </strong>influence dine-in and takeout
+                      decisions
+                    </p>
+                    <div
+                      id="w-node-ce0ead28-3bad-3a55-4f3c-830784ea0c26-6d157316"
+                      class="_70"
+                    >
+                      <div
+                        id="w-node-ce0ead28-3bad-3a55-4f3c-830784ea0c27-6d157316"
+                        class="diner-trends factors"
+                      >
+                        <h2 class="heading-3 trends dining-factors">
+                          <strong>#1</strong>
+                        </h2>
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c716e9b21b1b63cdfc9e_img-plate.png"
+                          loading="lazy"
+                          alt=""
+                          class="img-diningfactors"
+                        />
+                        <p class="heading-3 dining-factors">Type of food</p>
+                      </div>
+                      <div class="diner-trends factors">
+                        <h2 class="heading-3 trends dining-factors">
+                          <strong>#2</strong>
+                        </h2>
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c71604e63b7e618ec56c_img-location.png"
+                          loading="lazy"
+                          alt=""
+                          class="img-diningfactors"
+                        />
+                        <div class="div-block-54">
+                          <p class="heading-3 dining-factors">Location</p>
                         </div>
-                        <div class="diner-trends factors">
-                          <h2 class="heading-3 trends dining-factors">
-                            <strong>#2</strong>
-                          </h2>
-                          <img
-                            src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c71604e63b7e618ec56c_img-location.png"
-                            loading="lazy"
-                            alt=""
-                            class="img-diningfactors"
-                          />
-                          <div class="div-block-54">
-                            <p class="heading-3 dining-factors">Location</p>
-                          </div>
-                        </div>
-                        <div class="diner-trends factors">
-                          <h2 class="heading-3 trends dining-factors">
-                            <strong>#3</strong>
-                          </h2>
-                          <img
-                            src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c716d26f3b0edeabaee4_img-chat.png"
-                            loading="lazy"
-                            alt=""
-                            class="img-diningfactors"
-                          />
-                          <p class="heading-3 dining-factors">Word-of-mouth</p>
-                        </div>
+                      </div>
+                      <div class="diner-trends factors">
+                        <h2 class="heading-3 trends dining-factors">
+                          <strong>#3</strong>
+                        </h2>
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6552c716d26f3b0edeabaee4_img-chat.png"
+                          loading="lazy"
+                          alt=""
+                          class="img-diningfactors"
+                        />
+                        <p class="heading-3 dining-factors">Word-of-mouth</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="subsection padding-64-px border">
-              <p>
-                Among my findings, I found this statistic the most
-                interesting:<br />
-              </p>
-              <h2 class="heading-21">
-                While 73% of diners use online review sources, only 24% say
-                online reviews influence where they decide to eat...
-              </h2>
-              <div class="subsection detail margin-0">
-                <p>
-                  <strong class="medium-black"
-                    >This raised two questions for me: </strong
-                  ><br />
-                </p>
-                <ul class="list-2 number">
-                  <li class="padding-left-8px">
-                    Why do most diners not consider their primary method when
-                    making dining decisions?
-                  </li>
-                  <li class="padding-left-8px">
-                    And what leads most diners to utilize this method to guide
-                    their dining choices, despite often not taking it seriously?
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
-          <div class="container border">
-            <div class="subsection first-child">
-              <div class="dfdf">
-                <h2 class="h3 label section-title capitalized">
-                  primary research
-                </h2>
-                <h2 class="main-heading blue">
-                  Screening for user interviews while surveying diners
-                </h2>
-                <p>
-                  Working independently, I had to make the most out of my
-                  research methods. Therefore, I designed a screening survey for
-                  user interviews that also aimed to collect preliminary data
-                  and insights about diner behaviors, preferences, and
-                  experiences, which I then used to tailor user interview
-                  questions to each participant to delve into significant
-                  findings.
-                </p>
-              </div>
-            </div>
-            <div class="subsection detail margin-0">
-              <div class="heading-icon">
-                <svg
-                  class="svg-icon medium"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <h2 class="h3">my target diners</h2>
-              </div>
-              <ul class="list-2">
-                <li class="padding-left-8px">Diners aged 16-55</li>
+          <div class="subsection padding-64-px border">
+            <p>
+              Among my findings, I found this statistic the most interesting:<br />
+            </p>
+            <h2 class="heading-21">
+              While 73% of diners use online review sources, only 24% say online
+              reviews influence where they decide to eat...
+            </h2>
+            <div class="content">
+              <p>
+                <strong class="medium-black"
+                  >This raised two questions for me: </strong
+                ><br />
+              </p>
+              <ul class="list-2 number">
                 <li class="padding-left-8px">
-                  Use mobile apps regularly (3+ times a week)
+                  Why do most diners not consider their primary method when
+                  making dining decisions?
                 </li>
                 <li class="padding-left-8px">
-                  Dine out or order takeout at least once a week
-                </li>
-                <li class="padding-left-8px">
-                  Feel at least somewhat dissatisfied about one or more aspects
-                  of their dining experience
-                </li>
-                <li class="padding-left-8px">
-                  Use mobile apps to make dining out decisions at least once a
-                  week
+                  And what leads most diners to utilize this method to guide
+                  their dining choices, despite often not taking it seriously?
                 </li>
               </ul>
             </div>
-            <div class="subsection last-child">
-              <div class="flex gap-24px">
-                <div class="div-block-170">
-                  <img
-                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM.png"
-                    loading="lazy"
-                    sizes="100vw"
-                    srcset="
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-500.png   500w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-800.png   800w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-1080.png 1080w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM.png        1156w
-                    "
-                    alt=""
-                    class="image-31"
-                  />
-                </div>
-                <div class="w-layout-hflex flex vertical align-middle">
-                  <div class="subsection detail margin-0">
-                    <div class="heading-icon">
-                      <svg
-                        class="svg-icon medium"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path
-                          d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                      <h2 class="h3">a few questions i asked</h2>
-                    </div>
-                    <ul class="list-2">
-                      <li class="padding-left-8px">
-                        In the past four weeks, how many new restaurants have
-                        you tried?
-                      </li>
-                      <li class="padding-left-8px">
-                        How much time does it take you to decide on place to
-                        eat?
-                      </li>
-                      <li class="padding-left-8px">
-                        How often do you try something new at a restaurant?
-                      </li>
-                      <li class="padding-left-8px">
-                        What methods do you use to decide on a place to eat?
-                      </li>
-                    </ul>
-                    <div class="subsection detail margin-0">
-                      <h2 class="h3">satisfaction scale</h2>
-                      <p>
-                        For each question above, I asked respondents how
-                        satisfied they feel:<br />
-                      </p>
-                      <div class="likert-scale _1-column"></div>
-                      <div class="flex align-center">
-                        <div class="likert">
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822960302ac505789002_1.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Completely satisfied<br />
-                            </p>
-                          </div>
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229ae20072b288c194e_2.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Mostly satisfied<br />
-                            </p>
-                          </div>
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b788aa_3.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Somewhat satisfied<br />
-                            </p>
-                          </div>
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822875f4578c98957c27_4.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Neither<br />
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          id="w-node-b0d0cfe7-868a-4f47-ba62-57b302ccaaa6-6d157316"
-                          class="likert"
-                        >
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b7885b_5.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Somewhat dissatisfied<br />
-                            </p>
-                          </div>
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229e69fd7677313794d_6.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Mostly dissatisfied<br />
-                            </p>
-                          </div>
-                          <div class="satisfaction-level">
-                            <img
-                              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/655582299b9eb9738832afa6_7.png"
-                              loading="lazy"
-                              alt=""
-                              class="mood"
-                            />
-                            <p class="_1-125-rem black">
-                              Completely dissatisfied<br />
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="container border">
+          <div class="subsection first-child">
+            <div class="content">
+              <h2>primary research</h2>
+              <h2>Screening for user interviews while surveying diners</h2>
+              <p>
+                Working independently, I had to make the most out of my research
+                methods. Therefore, I designed a screening survey for user
+                interviews that also aimed to collect preliminary data and
+                insights about diner behaviors, preferences, and experiences,
+                which I then used to tailor user interview questions to each
+                participant to delve into significant findings.
+              </p>
             </div>
-            <div class="container">
-              <div class="subsection margin-0">
-                <p>
-                  The survey received a total of 21 responses. Here's what I
-                  found:<br />
-                </p>
-                <div
-                  data-current="Tab 1"
-                  data-easing="ease"
-                  data-duration-in="300"
-                  data-duration-out="100"
-                  class="tabs iterations w-tabs"
-                >
-                  <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-                    <a
-                      data-w-tab="Tab 1"
-                      class="tab-link-30 _50 w-inline-block w-tab-link w--current"
-                      id="w-tabs-0-data-w-tab-0"
-                      href="#w-tabs-0-data-w-pane-0"
-                      role="tab"
-                      aria-controls="w-tabs-0-data-w-pane-0"
-                      aria-selected="true"
-                      ><div class="tab-link-tab-1">CHarts</div></a
-                    ><a
-                      data-w-tab="Tab 2"
-                      class="tab-link-30 _50 w-inline-block w-tab-link"
-                      tabindex="-1"
-                      id="w-tabs-0-data-w-tab-1"
-                      href="#w-tabs-0-data-w-pane-1"
-                      role="tab"
-                      aria-controls="w-tabs-0-data-w-pane-1"
-                      aria-selected="false"
-                      ><div class="tab-link-inactive">
-                        SATISFACTION&nbsp;SCORES
-                      </div></a
-                    >
-                  </div>
-                  <div class="w-tab-content">
-                    <div
-                      data-w-tab="Tab 1"
-                      class="tab-pane-tab-1 w-tab-pane w--tab-active"
-                      id="w-tabs-0-data-w-pane-0"
-                      role="tabpanel"
-                      aria-labelledby="w-tabs-0-data-w-tab-0"
-                    >
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-500.png   500w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-800.png   800w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1080.png 1080w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1600.png 1600w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png        1800w
-                        "
-                        alt=""
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      data-w-tab="Tab 2"
-                      class="tab-pane-tab-3 w-tab-pane"
-                      id="w-tabs-0-data-w-pane-1"
-                      role="tabpanel"
-                      aria-labelledby="w-tabs-0-data-w-tab-1"
-                    >
-                      <div class="div-block-161">
-                        <div class="div-block-73">
-                          <h2 class="h3 label _1-125-rem">
-                            TOTAL satisfaction assessment methodology
-                          </h2>
-                          <h2 class="paragraph _1-rem light">
-                            First, I measured individual user satisfaction
-                            levels on the following: average time spent on
-                            finding a place to eat, frequency of trying new
-                            restaurants, frequency of trying new dishes, and
-                            current methods to make dining decisions. Then I
-                            assigned a scoring system, where I&nbsp;assigned
-                            points to each satisfaction level, with "Completely
-                            satisfied" being 5 points and both "Completely
-                            dissatisfied" &amp; "Mostly dissatisfied" being 0
-                            points. Due to having only one data point for
-                            "Completely dissatisfied," I combined its score with
-                            "Mostly dissatisfied" to simplify calculations and
-                            keep the ratings as whole numbers without decimals
-                            for a clearer analysis.
-                          </h2>
-                        </div>
-                      </div>
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-500.png   500w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-800.png   800w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1080.png 1080w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1600.png 1600w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png        1800w
-                        "
-                        alt=""
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="content">
+            <div class="heading-icon">
+              <svg
+                class="svg-icon medium"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h3>my target diners</h3>
             </div>
-            <div class="container margin-0 grey">
-              <div class="container _2-column">
-                <div
-                  id="w-node-_38424625-acad-730f-ffbb-77378589ba35-6d157316"
-                  class="container-survey-results satisfaction"
-                >
-                  <div class="survey-results left">
-                    <h2 class="h3">satisfaction scale</h2>
+            <ul class="list-2">
+              <li class="padding-left-8px">Diners aged 16-55</li>
+              <li class="padding-left-8px">
+                Use mobile apps regularly (3+ times a week)
+              </li>
+              <li class="padding-left-8px">
+                Dine out or order takeout at least once a week
+              </li>
+              <li class="padding-left-8px">
+                Feel at least somewhat dissatisfied about one or more aspects of
+                their dining experience
+              </li>
+              <li class="padding-left-8px">
+                Use mobile apps to make dining out decisions at least once a
+                week
+              </li>
+            </ul>
+          </div>
+          <div class="content">
+            <div class="flex gap-24px">
+              <div class="div-block-170">
+                <img
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM.png"
+                  loading="lazy"
+                  sizes="100vw"
+                  srcset="
+                    https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-500.png   500w,
+                    https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-800.png   800w,
+                    https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM-p-1080.png 1080w,
+                    https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555a4d41f91a5f72f498f47_Screenshot%202023-11-15%20at%209.12.07%20PM.png        1156w
+                  "
+                  alt=""
+                  class="image-31"
+                />
+              </div>
+              <div class="w-layout-hflex flex vertical align-middle">
+                <div class="content">
+                  <div class="heading-icon">
+                    <svg
+                      class="svg-icon medium"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <h3>a few questions i asked</h3>
+                  </div>
+                  <ul class="list-2">
+                    <li class="padding-left-8px">
+                      In the past four weeks, how many new restaurants have you
+                      tried?
+                    </li>
+                    <li class="padding-left-8px">
+                      How much time does it take you to decide on place to eat?
+                    </li>
+                    <li class="padding-left-8px">
+                      How often do you try something new at a restaurant?
+                    </li>
+                    <li class="padding-left-8px">
+                      What methods do you use to decide on a place to eat?
+                    </li>
+                  </ul>
+                  <div class="content">
+                    <h3>satisfaction scale</h3>
                     <p>
                       For each question above, I asked respondents how satisfied
                       they feel:<br />
@@ -777,9 +715,7 @@
                             alt=""
                             class="mood"
                           />
-                          <p class="_1-125-rem black">
-                            Mostly satisfied<br />
-                          </p>
+                          <p class="_1-125-rem black">Mostly satisfied<br /></p>
                         </div>
                         <div class="satisfaction-level">
                           <img
@@ -799,13 +735,11 @@
                             alt=""
                             class="mood"
                           />
-                          <p class="_1-125-rem black">
-                            Neither<br />
-                          </p>
+                          <p class="_1-125-rem black">Neither<br /></p>
                         </div>
                       </div>
                       <div
-                        id="w-node-_1250e69c-d63c-1046-09f8-217478a06de7-6d157316"
+                        id="w-node-b0d0cfe7-868a-4f47-ba62-57b302ccaaa6-6d157316"
                         class="likert"
                       >
                         <div class="satisfaction-level">
@@ -845,13 +779,250 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  id="w-node-_55ceda09-71ca-8638-71da-e4ccd0d77cc4-6d157316"
-                  class="container-survey-results right satisfaction"
-                ></div>
               </div>
             </div>
-            <div class="subsection last-child padding-top-80px">
+          </div>
+          <div class="container">
+            <div class="subsection margin-0">
+              <p>
+                The survey received a total of 21 responses. Here's what I
+                found:<br />
+              </p>
+              <div
+                data-current="Tab 1"
+                data-easing="ease"
+                data-duration-in="300"
+                data-duration-out="100"
+                class="tabs iterations w-tabs"
+              >
+                <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
+                  <a
+                    data-w-tab="Tab 1"
+                    class="tab-link-30 _50 w-inline-block w-tab-link w--current"
+                    id="w-tabs-0-data-w-tab-0"
+                    href="#w-tabs-0-data-w-pane-0"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                    ><div class="tab-link-tab-1">CHarts</div></a
+                  ><a
+                    data-w-tab="Tab 2"
+                    class="tab-link-30 _50 w-inline-block w-tab-link"
+                    tabindex="-1"
+                    id="w-tabs-0-data-w-tab-1"
+                    href="#w-tabs-0-data-w-pane-1"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-1"
+                    aria-selected="false"
+                    ><div class="tab-link-inactive">
+                      SATISFACTION&nbsp;SCORES
+                    </div></a
+                  >
+                </div>
+                <div class="w-tab-content">
+                  <div
+                    data-w-tab="Tab 1"
+                    class="tab-pane-tab-1 w-tab-pane w--tab-active"
+                    id="w-tabs-0-data-w-pane-0"
+                    role="tabpanel"
+                    aria-labelledby="w-tabs-0-data-w-tab-0"
+                  >
+                    <img
+                      sizes="100vw"
+                      srcset="
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-500.png   500w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-800.png   800w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1080.png 1080w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1600.png 1600w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png        1800w
+                      "
+                      alt=""
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    data-w-tab="Tab 2"
+                    class="tab-pane-tab-3 w-tab-pane"
+                    id="w-tabs-0-data-w-pane-1"
+                    role="tabpanel"
+                    aria-labelledby="w-tabs-0-data-w-tab-1"
+                  >
+                    <div class="div-block-161">
+                      <div class="div-block-73">
+                        <h2 class="h3 label _1-125-rem">
+                          TOTAL satisfaction assessment methodology
+                        </h2>
+                        <h2 class="paragraph _1-rem light">
+                          First, I measured individual user satisfaction levels
+                          on the following: average time spent on finding a
+                          place to eat, frequency of trying new restaurants,
+                          frequency of trying new dishes, and current methods to
+                          make dining decisions. Then I assigned a scoring
+                          system, where I&nbsp;assigned points to each
+                          satisfaction level, with "Completely satisfied" being
+                          5 points and both "Completely dissatisfied" &amp;
+                          "Mostly dissatisfied" being 0 points. Due to having
+                          only one data point for "Completely dissatisfied," I
+                          combined its score with "Mostly dissatisfied" to
+                          simplify calculations and keep the ratings as whole
+                          numbers without decimals for a clearer analysis.
+                        </h2>
+                      </div>
+                    </div>
+                    <img
+                      sizes="100vw"
+                      srcset="
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-500.png   500w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-800.png   800w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1080.png 1080w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1600.png 1600w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png        1800w
+                      "
+                      alt=""
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container margin-0 grey">
+            <div class="container _2-column">
+              <div
+                id="w-node-_38424625-acad-730f-ffbb-77378589ba35-6d157316"
+                class="container-survey-results satisfaction"
+              >
+                <div class="survey-results left">
+                  <h3>satisfaction scale</h3>
+                  <p>
+                    For each question above, I asked respondents how satisfied
+                    they feel:<br />
+                  </p>
+                  <div class="likert-scale _1-column"></div>
+                  <div class="flex align-center">
+                    <div class="likert">
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822960302ac505789002_1.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">
+                          Completely satisfied<br />
+                        </p>
+                      </div>
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229ae20072b288c194e_2.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">Mostly satisfied<br /></p>
+                      </div>
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b788aa_3.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">Somewhat satisfied<br /></p>
+                      </div>
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822875f4578c98957c27_4.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">Neither<br /></p>
+                      </div>
+                    </div>
+                    <div
+                      id="w-node-_1250e69c-d63c-1046-09f8-217478a06de7-6d157316"
+                      class="likert"
+                    >
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b7885b_5.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">
+                          Somewhat dissatisfied<br />
+                        </p>
+                      </div>
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229e69fd7677313794d_6.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">
+                          Mostly dissatisfied<br />
+                        </p>
+                      </div>
+                      <div class="satisfaction-level">
+                        <img
+                          src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/655582299b9eb9738832afa6_7.png"
+                          loading="lazy"
+                          alt=""
+                          class="mood"
+                        />
+                        <p class="_1-125-rem black">
+                          Completely dissatisfied<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="w-node-_55ceda09-71ca-8638-71da-e4ccd0d77cc4-6d157316"
+                class="container-survey-results right satisfaction"
+              ></div>
+            </div>
+          </div>
+          <div class="subsection last-child padding-top-80px">
+            <div class="heading-icon">
+              <svg
+                class="svg-icon medium black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+              <h3>how satisfied do diners feel?</h3>
+            </div>
+            <div class="heading-icon">
+              <svg
+                class="svg-icon medium"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+              <h3>results</h3>
+            </div>
+            <div class="survey-results right">
               <div class="heading-icon">
                 <svg
                   class="svg-icon medium black"
@@ -866,28 +1037,295 @@
                   <path d="M3 3v18h18"></path>
                   <path d="m19 9-5 5-4-4-3 3"></path>
                 </svg>
-                <h2 class="h3">how satisfied do diners feel?</h2>
+                <h3>how satisfied do diners feel?</h3>
               </div>
-              <div class="heading-icon">
-                <svg
-                  class="svg-icon medium"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M3 3v18h18"></path>
-                  <path d="m19 9-5 5-4-4-3 3"></path>
-                </svg>
-                <h2 class="h3">results</h2>
+              <div class="flex vertical _16px">
+                <img
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b7885b_5.png"
+                  loading="lazy"
+                  alt=""
+                  class="mood large"
+                />
+                <p>
+                  Overall, respondents feel
+                  <strong class="semibold"
+                    >least satisfied the time they take to make
+                    decisions</strong
+                  >—an average of
+                  <strong class="semibold">50% rating</strong>.<br />
+                </p>
               </div>
-              <div class="survey-results right">
+              <div class="flex vertical _16px">
+                <img
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229e69fd7677313794d_6.png"
+                  loading="lazy"
+                  alt=""
+                  class="mood large"
+                />
+                <p>
+                  Among the least satisfied respondents, this rating drops to an
+                  <strong class="semibold">average of 26%</strong>.<br />
+                </p>
+              </div>
+            </div>
+            <div class="subsection margin-0">
+              <div
+                data-current="Tab 1"
+                data-easing="ease"
+                data-duration-in="300"
+                data-duration-out="100"
+                class="tabs iterations w-tabs"
+              >
+                <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
+                  <a
+                    data-w-tab="Tab 1"
+                    class="tab-link-30 _50 w-inline-block w-tab-link w--current"
+                    id="w-tabs-1-data-w-tab-0"
+                    href="#w-tabs-1-data-w-pane-0"
+                    role="tab"
+                    aria-controls="w-tabs-1-data-w-pane-0"
+                    aria-selected="true"
+                    ><div class="tab-link-tab-1">CHarts</div></a
+                  ><a
+                    data-w-tab="Tab 2"
+                    class="tab-link-30 _50 w-inline-block w-tab-link"
+                    tabindex="-1"
+                    id="w-tabs-1-data-w-tab-1"
+                    href="#w-tabs-1-data-w-pane-1"
+                    role="tab"
+                    aria-controls="w-tabs-1-data-w-pane-1"
+                    aria-selected="false"
+                    ><div class="tab-link-inactive">
+                      SATISFACTION&nbsp;SCORES
+                    </div></a
+                  >
+                </div>
+                <div class="w-tab-content">
+                  <div
+                    data-w-tab="Tab 1"
+                    class="tab-pane-tab-1 w-tab-pane w--tab-active"
+                    id="w-tabs-1-data-w-pane-0"
+                    role="tabpanel"
+                    aria-labelledby="w-tabs-1-data-w-tab-0"
+                  >
+                    <img
+                      sizes="100vw"
+                      srcset="
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-500.png   500w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-800.png   800w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1080.png 1080w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1600.png 1600w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png        1800w
+                      "
+                      alt=""
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    data-w-tab="Tab 2"
+                    class="tab-pane-tab-3 w-tab-pane"
+                    id="w-tabs-1-data-w-pane-1"
+                    role="tabpanel"
+                    aria-labelledby="w-tabs-1-data-w-tab-1"
+                  >
+                    <div class="div-block-161">
+                      <div class="div-block-73">
+                        <h2 class="h3 label _1-125-rem">
+                          TOTAL satisfaction assessment methodology
+                        </h2>
+                        <h2 class="paragraph _1-rem light">
+                          First, I measured individual user satisfaction levels
+                          on the following: average time spent on finding a
+                          place to eat, frequency of trying new restaurants,
+                          frequency of trying new dishes, and current methods to
+                          make dining decisions. Then I assigned a scoring
+                          system, where I&nbsp;assigned points to each
+                          satisfaction level, with "Completely satisfied" being
+                          5 points and both "Completely dissatisfied" &amp;
+                          "Mostly dissatisfied" being 0 points. Due to having
+                          only one data point for "Completely dissatisfied," I
+                          combined its score with "Mostly dissatisfied" to
+                          simplify calculations and keep the ratings as whole
+                          numbers without decimals for a clearer analysis.
+                        </h2>
+                      </div>
+                    </div>
+                    <img
+                      sizes="100vw"
+                      srcset="
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-500.png   500w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-800.png   800w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1080.png 1080w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1600.png 1600w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png        1800w
+                      "
+                      alt=""
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>
+              For respondents who were not "Completely satisfied" with their
+              methods, they had the chance to explain.<br />
+            </p>
+            <div class="quote-block user-interviews _70">
+              <div class="w-layout-hflex flex-block-29">
+                <h2 class="quote _70">
+                  "To find something that's good, we have to trust reviews
+                  online right? Sometimes they're inflated and sometimes they're
+                  not entirely truthful. There's just not enough data points out
+                  there. It's just difficult to gather and gauge what's truly
+                  good... Looking through menus takes a long time. In summary,
+                  discovering food is just troublesome sometimes."
+                </h2>
+                <p class="blue">
+                  One of the least satisfied respondents mentioned skepticism
+                  with online reviews.<br />
+                </p>
+              </div>
+              <div class="w-layout-hflex flex-block-29">
+                <h2 class="quote _70">
+                  "Too many options, the recommendations it gives aren't
+                  tailored to my preferences, businesses who pay Yelp get
+                  priority on being shown higher on the list which limits how I
+                  find new places."
+                </h2>
+                <p class="blue">
+                  Another mentioned decision paralysis and lack of
+                  personalization.<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container border">
+          <div class="subsection margin-0">
+            <div class="content">
+              <h2>user interviews</h2>
+              <h2>Interviewing dissatisfied diners</h2>
+              <p>
+                Working independently, I had to make the most out of my research
+                methods. Therefore, I designed a screening survey for user
+                interviews that also aimed to collect preliminary data and
+                insights about diner behaviors, preferences, and experiences,
+                which I then used to tailor user interview questions to each
+                participant to delve into significant findings.
+              </p>
+            </div>
+            <div class="heading-icon">
+              <svg
+                class="svg-icon medium"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h3>A few questions I asked</h3>
+            </div>
+            <ul class="list _24px">
+              <li class="paragraph list-item">
+                What compels you to dine out? What do you enjoy about it?
+              </li>
+              <li class="paragraph list-item">
+                What factors do you consider when finding a place to eat? Why?
+              </li>
+              <li class="paragraph list-item">
+                Talk me through how you decide on a place to eat.
+              </li>
+              <li class="paragraph list-item">
+                What are your most frequent challenges? How have you tried to
+                resolve them?
+              </li>
+              <li class="paragraph list-item">
+                How can your most used method improve to better meet your needs?
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container light-grey">
+          <div class="subsection margin-0">
+            <div class="content">
+              <h2>define</h2>
+              <h2>Narrowing the scope</h2>
+              <p>
+                Thanks to the 7 participants I interviewed, I collected ample
+                data on the dining out experience. I synthesized my research
+                using affinity mapping by grouping my data into themes to
+                identify patterns using FigJam.
+              </p>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555dd6459635fdb1649e6df_Untitled%20design.gif"
+              loading="lazy"
+              alt=""
+              class="image-32"
+            />
+          </div>
+        </div>
+        <div class="container border">
+          <div class="subsection margin-0 gap-40px">
+            <h2>Here is a summary of my findings:</h2>
+            <img
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6).png"
+              loading="lazy"
+              sizes="90vw"
+              srcset="
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-500.png   500w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-800.png   800w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-1080.png 1080w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-1600.png 1600w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6).png        2000w
+              "
+              alt=""
+            />
+            <div class="horizontal-divider grey-solid"></div>
+            <img
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1).png"
+              loading="lazy"
+              sizes="90vw"
+              srcset="
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-500.png   500w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-800.png   800w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-1080.png 1080w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-1600.png 1600w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1).png        2000w
+              "
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="content">
+            <h2>Competitor Analysis</h2>
+            <h2>Learning from my competitors</h2>
+            <p>
+              Based on my primary and secondary research, I found that diners
+              mostly use Yelp, Google, Google Maps, and word-of-mouth
+              recommendations to explore options. Therefore, I analyzed Google
+              Maps and Yelp's designs and looked into their relationship with
+              diners' pain points.
+            </p>
+          </div>
+          <div
+            id="w-node-_6e51b0f4-6e8c-a5e6-a51e-9e234e69f3c8-6d157316"
+            class="subsection last-child"
+          >
+            <div
+              id="w-node-_709e5b81-8841-f321-82f9-0dd360dc6b08-6d157316"
+              class="w-layout-hflex flex horizontal"
+            >
+              <div class="flex vertical _40px width-35">
                 <div class="heading-icon">
                   <svg
-                    class="svg-icon medium black"
+                    class="svg-icon medium"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -896,149 +1334,341 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <path d="M3 3v18h18"></path>
-                    <path d="m19 9-5 5-4-4-3 3"></path>
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
                   </svg>
-                  <h2 class="h3">how satisfied do diners feel?</h2>
+                  <h3>research goals</h3>
                 </div>
-                <div class="flex vertical _16px">
+                <ul class="list _8px">
+                  <li class="paragraph mb-8">
+                    Understanding user expectations
+                  </li>
+                  <li class="mb-8">Gauging their weaknesses</li>
+                  <li class="mb-8">Understanding their strengths</li>
+                  <li class="mb-8">Finding the common ground</li>
+                  <li class="paragraph last-bulletpoint">
+                    Evaluating gaps and unmet needs
+                  </li>
+                </ul>
+                <h2>
+                  Given the typical journey for diners, I assessed three
+                  critical routes: search results, listing page, and review
+                  page.
+                </h2>
+              </div>
+              <div
+                id="w-node-b46a848a-5707-73bc-b94c-bb3e242718b5-6d157316"
+                class="div-block-150"
+              >
+                <div class="w-layout-vflex competitor-logo">
                   <img
-                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555822957c6182e37b7885b_5.png"
+                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656ffe6e0fb2e670f3e3162e_Yelp%20Logo.png"
                     loading="lazy"
                     alt=""
-                    class="mood large"
+                    class="image-111"
                   />
-                  <p>
-                    Overall, respondents feel
+                </div>
+                <div class="w-layout-vflex flex-block-32">
+                  <img
+                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb28360331e4222cd0a5_IMG_3206.PNG"
+                    loading="lazy"
+                    alt=""
+                    class="image-109"
+                  />
+                </div>
+                <img
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb2802c1aa3c45ccaf09_IMG_3204%202.PNG"
+                  loading="lazy"
+                  id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfe4-6d157316"
+                  alt=""
+                  class="image-109"
+                />
+                <div class="w-layout-vflex flex-block-32">
+                  <img
+                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213.PNG"
+                    loading="lazy"
+                    sizes="100vw"
+                    srcset="
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-500.png   500w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-800.png   800w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-1080.png 1080w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213.PNG        1170w
+                    "
+                    alt=""
+                    class="image-109"
+                  />
+                </div>
+                <div class="w-layout-vflex competitor-logo">
+                  <img
+                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656ffe6dc1084fd6ef14a718_Google%20Maps%20Logo.png"
+                    loading="lazy"
+                    alt=""
+                    class="image-111"
+                  />
+                </div>
+                <div class="w-layout-vflex flex-block-32 left">
+                  <img
+                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205.PNG"
+                    loading="lazy"
+                    sizes="100vw"
+                    srcset="
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-500.png   500w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-800.png   800w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-1080.png 1080w,
+                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205.PNG        1170w
+                    "
+                    alt=""
+                    class="image-109"
+                  />
+                </div>
+                <div class="w-layout-vflex flex-block-32 left">
+                  <div class="w-layout-hflex">
+                    <img
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb2828d7177f0d86d67b_IMG_3208.PNG"
+                      loading="lazy"
+                      alt=""
+                      class="image-109"
+                    />
+                  </div>
+                </div>
+                <div class="w-layout-vflex flex-block-32 left">
+                  <div class="w-layout-hflex">
+                    <img
+                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210.PNG"
+                      loading="lazy"
+                      sizes="100vw"
+                      srcset="
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-500.png   500w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-800.png   800w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-1080.png 1080w,
+                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210.PNG        1170w
+                      "
+                      alt=""
+                      class="image-109"
+                    />
+                  </div>
+                </div>
+                <div class="competitor-analysis-screenshots">
+                  <div class="div-block-140"></div>
+                </div>
+                <h2
+                  id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcff8-6d157316"
+                  class="h3 label _1-125-rem center"
+                >
+                  search results
+                </h2>
+                <h2
+                  id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfde-6d157316"
+                  class="h3 label _1-125-rem center"
+                >
+                  listing
+                </h2>
+                <h2
+                  id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfee-6d157316"
+                  class="h3 label _1-125-rem center"
+                >
+                  review
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-layout-hflex container blue">
+          <div class="w-layout-vflex flex-block-33">
+            <div class="competitor-analysis-screenshots">
+              <div class="w-layout-vflex flex-block-32"></div>
+            </div>
+          </div>
+          <div class="w-layout-vflex flex-block-33">
+            <div class="competitor-analysis-screenshots"></div>
+          </div>
+          <div class="w-layout-vflex flex-block-33">
+            <div class="competitor-analysis-screenshots"></div>
+          </div>
+          <div class="subsection margin-0">
+            <div class="heading-icon">
+              <svg
+                class="svg-icon medium"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+              <h3>results</h3>
+            </div>
+            <div class="w-layout-hflex">
+              <div class="grid _2-columns">
+                <div class="flex vertical _16px align-top _50">
+                  <h2 class="h3 label _1-266-rem">Google maps</h2>
+                  <h2>
+                    Google Maps presents a
                     <strong class="semibold"
-                      >least satisfied the time they take to make
-                      decisions</strong
-                    >—an average of
-                    <strong class="semibold">50% rating</strong>.<br />
-                  </p>
+                      >clean and intuitive interface</strong
+                    >, simplifying restaurant searches and navigation. Its
+                    <strong class="semibold"
+                      >well-executed above-the-fold design</strong
+                    >
+                    and
+                    <strong class="semibold">clear CTAs</strong> contribute to
+                    its appeal. The
+                    <strong class="semibold">structured review process</strong>
+                    aids in
+                    <strong class="semibold">comprehensive feedback</strong>.
+                    However, the
+                    <strong class="semibold"
+                      >lack of filtering or sorting </strong
+                    >options might overwhelm users, potentially causing
+                    <strong class="semibold">decision paralysis</strong>,
+                    especially for location-focused diners.<br />
+                  </h2>
                 </div>
-                <div class="flex vertical _16px">
-                  <img
-                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65558229e69fd7677313794d_6.png"
-                    loading="lazy"
-                    alt=""
-                    class="mood large"
-                  />
-                  <p>
-                    Among the least satisfied respondents, this rating drops to
-                    an
-                    <strong class="semibold">average of 26%</strong>.<br />
-                  </p>
+                <div class="flex vertical _16px align-top _50">
+                  <h2 class="h3 label _1-266-rem">yelp</h2>
+                  <h2>
+                    Yelp excels in user-generated reviews, aiding informed
+                    dining decisions. However, its
+                    <strong class="semibold">cluttered interface</strong> with
+                    <strong class="semibold"
+                      >excessive sponsored content</strong
+                    >
+                    overshadows this strength.
+                    <strong class="semibold">Complex navigation</strong>,
+                    <strong class="semibold"
+                      >subpar above-the-fold design</strong
+                    >, and <strong class="semibold">unclear CTAs</strong> hinder
+                    user experience, requiring
+                    <strong class="semibold">extensive scrolling</strong> for
+                    essential information. Moreover, Yelp's open-ended review
+                    process may pose challenges in maintaining review quality.
+                  </h2>
                 </div>
               </div>
-              <div class="subsection margin-0">
-                <div
-                  data-current="Tab 1"
-                  data-easing="ease"
-                  data-duration-in="300"
-                  data-duration-out="100"
-                  class="tabs iterations w-tabs"
-                >
-                  <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-                    <a
-                      data-w-tab="Tab 1"
-                      class="tab-link-30 _50 w-inline-block w-tab-link w--current"
-                      id="w-tabs-1-data-w-tab-0"
-                      href="#w-tabs-1-data-w-pane-0"
-                      role="tab"
-                      aria-controls="w-tabs-1-data-w-pane-0"
-                      aria-selected="true"
-                      ><div class="tab-link-tab-1">CHarts</div></a
-                    ><a
-                      data-w-tab="Tab 2"
-                      class="tab-link-30 _50 w-inline-block w-tab-link"
-                      tabindex="-1"
-                      id="w-tabs-1-data-w-tab-1"
-                      href="#w-tabs-1-data-w-pane-1"
-                      role="tab"
-                      aria-controls="w-tabs-1-data-w-pane-1"
-                      aria-selected="false"
-                      ><div class="tab-link-inactive">
-                        SATISFACTION&nbsp;SCORES
-                      </div></a
-                    >
-                  </div>
-                  <div class="w-tab-content">
-                    <div
-                      data-w-tab="Tab 1"
-                      class="tab-pane-tab-1 w-tab-pane w--tab-active"
-                      id="w-tabs-1-data-w-pane-0"
-                      role="tabpanel"
-                      aria-labelledby="w-tabs-1-data-w-tab-0"
-                    >
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-500.png   500w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-800.png   800w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1080.png 1080w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1600.png 1600w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png        1800w
-                        "
-                        alt=""
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div
-                      data-w-tab="Tab 2"
-                      class="tab-pane-tab-3 w-tab-pane"
-                      id="w-tabs-1-data-w-pane-1"
-                      role="tabpanel"
-                      aria-labelledby="w-tabs-1-data-w-tab-1"
-                    >
-                      <div class="div-block-161">
-                        <div class="div-block-73">
-                          <h2 class="h3 label _1-125-rem">
-                            TOTAL satisfaction assessment methodology
-                          </h2>
-                          <h2 class="paragraph _1-rem light">
-                            First, I measured individual user satisfaction
-                            levels on the following: average time spent on
-                            finding a place to eat, frequency of trying new
-                            restaurants, frequency of trying new dishes, and
-                            current methods to make dining decisions. Then I
-                            assigned a scoring system, where I&nbsp;assigned
-                            points to each satisfaction level, with "Completely
-                            satisfied" being 5 points and both "Completely
-                            dissatisfied" &amp; "Mostly dissatisfied" being 0
-                            points. Due to having only one data point for
-                            "Completely dissatisfied," I combined its score with
-                            "Mostly dissatisfied" to simplify calculations and
-                            keep the ratings as whole numbers without decimals
-                            for a clearer analysis.
-                          </h2>
-                        </div>
-                      </div>
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-500.png   500w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-800.png   800w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1080.png 1080w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1600.png 1600w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png        1800w
-                        "
-                        alt=""
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="flex vertical _16px">
+              <h2 class="h3 label _1-266-rem">conclusion</h2>
+              <h2>
+                This analysis helped me draw connections between the pain points
+                outlined in my mind map and comprehend their relationship with
+                competitors. Ultimately, my comprehensive research uncovered a
+                significant shift in my competitors' products—from being
+                user-centric to becoming more
+                <strong class="semibold-black">system-centric</strong>. This
+                shift, fueled by their
+                <strong class="semibold-black">lack of personalization</strong>
+                and an
+                <strong class="semibold">excess of commercialization</strong>,
+                has resulted in
+                <strong class="semibold"
+                  >diners experiencing mistrust, information overload, and
+                  decision paralysis</strong
+                >.
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="subsection first-child">
+            <div class="title">
+              <div class="flex vertical _24-px">
+                <h2 class="title-label">define</h2>
+                <h2 class="section-title">narrowing the scope</h2>
               </div>
               <p>
-                For respondents who were not "Completely satisfied" with their
-                methods, they had the chance to explain.<br />
+                Following my research, I refined my focus by connecting diners'
+                pain points, crafting diner personas, and framing "how might we"
+                statements. Given the extensive data I gathered, this process
+                significantly aided in honing my design objectives, helping me
+                carry out a more effective and concentrated design process.
               </p>
-              <div class="quote-block user-interviews _70">
-                <div class="w-layout-hflex flex-block-29">
-                  <h2 class="quote _70">
+            </div>
+          </div>
+          <div class="content">
+            <h2>Connecting the dots</h2>
+            <div class="flex vertical _24-px">
+              <p>
+                My research revealed that diners struggle to make timely
+                decisions due to many factors. While this was sufficient to
+                guide my ideation phase, I wanted to further
+                <strong class="semibold"
+                  >understand how these factors relate to each other</strong
+                >. Therefore, as a visual learner, I crafted a mind map to
+                uncover connections between factors and
+                <strong class="semibold">identify the overarching issue</strong
+                >.
+              </p>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2).png"
+              loading="lazy"
+              sizes="90vw"
+              srcset="
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-500.png   500w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-800.png   800w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-1080.png 1080w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-1600.png 1600w,
+                https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2).png        1920w
+              "
+              alt=""
+              class="image-112"
+            />
+          </div>
+        </div>
+        <div class="container grey">
+          <div class="subsection margin-0">
+            <div class="flex border-bottom">
+              <div class="cards left">
+                <h2 class="main-heading _1-602-rem">
+                  Diners face decision paralysis
+                </h2>
+                <div class="quote-block user-interviews sample">
+                  <h2 class="quote">
+                    "I feel worried that I'm missing out on better options if I
+                    don't keep scrolling."
+                  </h2>
+                </div>
+              </div>
+              <div class="vertical-divider black"></div>
+              <div class="cards">
+                <h2 class="main-heading _1-602-rem">
+                  Yelp and Google Maps lack personalization
+                </h2>
+                <div class="quote-block user-interviews">
+                  <h2 class="quote">
+                    "If I had a magic wand, I’d want to receive suggested
+                    items... know how good it'd be for my tastes."
+                  </h2>
+                </div>
+              </div>
+              <div class="vertical-divider black"></div>
+              <div class="div-block-142"></div>
+              <div class="cards right">
+                <h2 class="main-heading _1-602-rem">
+                  Diners often don't know their craving
+                </h2>
+                <div class="quote-block user-interviews">
+                  <h2 class="quote">
+                    "If only there was a way you can put a criteria of what
+                    you’re craving to be given suggestions."
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="cards horizontal">
+              <div class="div-block-145">
+                <h2 class="main-heading _1-602-rem">
+                  Yelp and Google users face unreliable content that are often
+                  irrelevant and biased
+                </h2>
+              </div>
+              <div class="flex-block-38">
+                <div class="quote-block user-interviews">
+                  <h2 class="quote">
                     "To find something that's good, we have to trust reviews
                     online right? Sometimes they're inflated and sometimes
                     they're not entirely truthful. There's just not enough data
@@ -1047,625 +1677,101 @@
                     time. In summary, discovering food is just troublesome
                     sometimes."
                   </h2>
-                  <p class="blue">
-                    One of the least satisfied respondents mentioned skepticism
-                    with online reviews.<br />
-                  </p>
-                </div>
-                <div class="w-layout-hflex flex-block-29">
-                  <h2 class="quote _70">
-                    "Too many options, the recommendations it gives aren't
-                    tailored to my preferences, businesses who pay Yelp get
-                    priority on being shown higher on the list which limits how
-                    I find new places."
-                  </h2>
-                  <p class="blue">
-                    Another mentioned decision paralysis and lack of
-                    personalization.<br />
-                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="container border">
-            <div class="subsection margin-0">
-              <div class="dfdf">
-                <h2 class="h3 label section-title capitalized">
-                  user interviews
+            <div class="cards horizontal border-0">
+              <div class="div-block-145">
+                <h2 class="main-heading _1-602-rem">
+                  Most diners value word-of-mouth recommendations from trusted
+                  friends the most
                 </h2>
-                <h2 class="main-heading blue">
-                  Interviewing dissatisfied diners
+              </div>
+              <div class="quote-block user-interviews mb-16">
+                <h2 class="quote">
+                  “I feel like especially for friends, if I kind of know what
+                  their normal taste is like, then I know what they like and
+                  what they respond to, so I can kind of gauge what they expect
+                  already. If someone gives me a recommendation that means they
+                  went and they liked it, so the odds of me going and not liking
+                  it are not really big at all.”
                 </h2>
-                <p>
-                  Working independently, I had to make the most out of my
-                  research methods. Therefore, I designed a screening survey for
-                  user interviews that also aimed to collect preliminary data
-                  and insights about diner behaviors, preferences, and
-                  experiences, which I then used to tailor user interview
-                  questions to each participant to delve into significant
-                  findings.
-                </p>
-              </div>
-              <div class="heading-icon">
-                <svg
-                  class="svg-icon medium"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <h2 class="h3">A few questions I asked</h2>
-              </div>
-              <ul class="list _24px">
-                <li class="paragraph list-item">
-                  What compels you to dine out? What do you enjoy about it?
-                </li>
-                <li class="paragraph list-item">
-                  What factors do you consider when finding a place to eat? Why?
-                </li>
-                <li class="paragraph list-item">
-                  Talk me through how you decide on a place to eat.
-                </li>
-                <li class="paragraph list-item">
-                  What are your most frequent challenges? How have you tried to
-                  resolve them?
-                </li>
-                <li class="paragraph list-item">
-                  How can your most used method improve to better meet your
-                  needs?
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="container light-grey">
-            <div class="subsection margin-0">
-              <div class="dfdf">
-                <h2 class="h3 label section-title capitalized">define</h2>
-                <h2 class="main-heading blue">Narrowing the scope</h2>
-                <p>
-                  Thanks to the 7 participants I interviewed, I collected ample
-                  data on the dining out experience. I synthesized my research
-                  using affinity mapping by grouping my data into themes to
-                  identify patterns using FigJam.
-                </p>
-              </div>
-              <img
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6555dd6459635fdb1649e6df_Untitled%20design.gif"
-                loading="lazy"
-                alt=""
-                class="image-32"
-              />
-            </div>
-          </div>
-          <div class="container border">
-            <div class="subsection margin-0 gap-40px">
-              <h2>Here is a summary of my findings:</h2>
-              <img
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6).png"
-                loading="lazy"
-                sizes="90vw"
-                srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6)-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/65710d82535f5094c60dd0d3_Green%20Fiction%20Vs%20Non-Fiction%20School%20%20Academic%20Infographic%20Poster%20(6).png        2000w
-                "
-                alt=""
-              />
-              <div class="horizontal-divider grey-solid"></div>
-              <img
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1).png"
-                loading="lazy"
-                sizes="90vw"
-                srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1)-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6571103b366a866f9043cecc_Multicolor%20%20Illustrative%20Customer%20Journey%20Steps%20Graph%20(1).png        2000w
-                "
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="container">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">
-                Competitor Analysis
-              </h2>
-              <h2 class="main-heading blue">Learning from my competitors</h2>
-              <p>
-                Based on my primary and secondary research, I found that diners
-                mostly use Yelp, Google, Google Maps, and word-of-mouth
-                recommendations to explore options. Therefore, I analyzed Google
-                Maps and Yelp's designs and looked into their relationship with
-                diners' pain points.
-              </p>
-            </div>
-            <div
-              id="w-node-_6e51b0f4-6e8c-a5e6-a51e-9e234e69f3c8-6d157316"
-              class="subsection last-child"
-            >
-              <div
-                id="w-node-_709e5b81-8841-f321-82f9-0dd360dc6b08-6d157316"
-                class="w-layout-hflex flex horizontal"
-              >
-                <div class="flex vertical _40px width-35">
-                  <div class="heading-icon">
-                    <svg
-                      class="svg-icon medium"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.3-4.3"></path>
-                    </svg>
-                    <h2 class="h3">research goals</h2>
-                  </div>
-                  <ul class="list _8px">
-                    <li class="paragraph mb-8">
-                      Understanding user expectations
-                    </li>
-                    <li class="mb-8">
-                      Gauging their weaknesses
-                    </li>
-                    <li class="mb-8">
-                      Understanding their strengths
-                    </li>
-                    <li class="mb-8">
-                      Finding the common ground
-                    </li>
-                    <li class="paragraph last-bulletpoint">
-                      Evaluating gaps and unmet needs
-                    </li>
-                  </ul>
-                  <h2>
-                    Given the typical journey for diners, I assessed three
-                    critical routes: search results, listing page, and review
-                    page.
-                  </h2>
-                </div>
-                <div
-                  id="w-node-b46a848a-5707-73bc-b94c-bb3e242718b5-6d157316"
-                  class="div-block-150"
-                >
-                  <div class="w-layout-vflex competitor-logo">
-                    <img
-                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656ffe6e0fb2e670f3e3162e_Yelp%20Logo.png"
-                      loading="lazy"
-                      alt=""
-                      class="image-111"
-                    />
-                  </div>
-                  <div class="w-layout-vflex flex-block-32">
-                    <img
-                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb28360331e4222cd0a5_IMG_3206.PNG"
-                      loading="lazy"
-                      alt=""
-                      class="image-109"
-                    />
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb2802c1aa3c45ccaf09_IMG_3204%202.PNG"
-                    loading="lazy"
-                    id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfe4-6d157316"
-                    alt=""
-                    class="image-109"
-                  />
-                  <div class="w-layout-vflex flex-block-32">
-                    <img
-                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213.PNG"
-                      loading="lazy"
-                      sizes="100vw"
-                      srcset="
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-500.png   500w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-800.png   800w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213-p-1080.png 1080w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd990e2884938759f8b76_IMG_3213.PNG        1170w
-                      "
-                      alt=""
-                      class="image-109"
-                    />
-                  </div>
-                  <div class="w-layout-vflex competitor-logo">
-                    <img
-                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656ffe6dc1084fd6ef14a718_Google%20Maps%20Logo.png"
-                      loading="lazy"
-                      alt=""
-                      class="image-111"
-                    />
-                  </div>
-                  <div class="w-layout-vflex flex-block-32 left">
-                    <img
-                      src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205.PNG"
-                      loading="lazy"
-                      sizes="100vw"
-                      srcset="
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-500.png   500w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-800.png   800w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205-p-1080.png 1080w,
-                        https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd994b7d990a66a10753a_IMG_3205.PNG        1170w
-                      "
-                      alt=""
-                      class="image-109"
-                    />
-                  </div>
-                  <div class="w-layout-vflex flex-block-32 left">
-                    <div class="w-layout-hflex">
-                      <img
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fdb2828d7177f0d86d67b_IMG_3208.PNG"
-                        loading="lazy"
-                        alt=""
-                        class="image-109"
-                      />
-                    </div>
-                  </div>
-                  <div class="w-layout-vflex flex-block-32 left">
-                    <div class="w-layout-hflex">
-                      <img
-                        src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210.PNG"
-                        loading="lazy"
-                        sizes="100vw"
-                        srcset="
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-500.png   500w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-800.png   800w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210-p-1080.png 1080w,
-                          https://assets-global.website-files.com/651649456fb9882d90cce3aa/656fd991ea34adffc54c3f0e_IMG_3210.PNG        1170w
-                        "
-                        alt=""
-                        class="image-109"
-                      />
-                    </div>
-                  </div>
-                  <div class="competitor-analysis-screenshots">
-                    <div class="div-block-140"></div>
-                  </div>
-                  <h2
-                    id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcff8-6d157316"
-                    class="h3 label _1-125-rem center"
-                  >
-                    search results
-                  </h2>
-                  <h2
-                    id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfde-6d157316"
-                    class="h3 label _1-125-rem center"
-                  >
-                    listing
-                  </h2>
-                  <h2
-                    id="w-node-_8555f80c-7ccd-1de0-279f-e81350cdcfee-6d157316"
-                    class="h3 label _1-125-rem center"
-                  >
-                    review
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-layout-hflex container blue">
-            <div class="w-layout-vflex flex-block-33">
-              <div class="competitor-analysis-screenshots">
-                <div class="w-layout-vflex flex-block-32"></div>
-              </div>
-            </div>
-            <div class="w-layout-vflex flex-block-33">
-              <div class="competitor-analysis-screenshots"></div>
-            </div>
-            <div class="w-layout-vflex flex-block-33">
-              <div class="competitor-analysis-screenshots"></div>
-            </div>
-            <div class="subsection margin-0">
-              <div class="heading-icon">
-                <svg
-                  class="svg-icon medium"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M3 3v18h18"></path>
-                  <path d="m19 9-5 5-4-4-3 3"></path>
-                </svg>
-                <h2 class="h3">results</h2>
-              </div>
-              <div class="w-layout-hflex">
-                <div class="grid _2-columns">
-                  <div class="flex vertical _16px align-top _50">
-                    <h2 class="h3 label _1-266-rem">Google maps</h2>
-                    <h2>
-                      Google Maps presents a
-                      <strong class="semibold"
-                        >clean and intuitive interface</strong
-                      >, simplifying restaurant searches and navigation. Its
-                      <strong class="semibold"
-                        >well-executed above-the-fold design</strong
-                      >
-                      and
-                      <strong class="semibold">clear CTAs</strong> contribute to
-                      its appeal. The
-                      <strong class="semibold"
-                        >structured review process</strong
-                      >
-                      aids in
-                      <strong class="semibold">comprehensive feedback</strong>.
-                      However, the
-                      <strong class="semibold"
-                        >lack of filtering or sorting </strong
-                      >options might overwhelm users, potentially causing
-                      <strong class="semibold">decision paralysis</strong>,
-                      especially for location-focused diners.<br />
-                    </h2>
-                  </div>
-                  <div class="flex vertical _16px align-top _50">
-                    <h2 class="h3 label _1-266-rem">yelp</h2>
-                    <h2>
-                      Yelp excels in user-generated reviews, aiding informed
-                      dining decisions. However, its
-                      <strong class="semibold">cluttered interface</strong> with
-                      <strong class="semibold"
-                        >excessive sponsored content</strong
-                      >
-                      overshadows this strength.
-                      <strong class="semibold">Complex navigation</strong>,
-                      <strong class="semibold"
-                        >subpar above-the-fold design</strong
-                      >, and
-                      <strong class="semibold">unclear CTAs</strong> hinder user
-                      experience, requiring
-                      <strong class="semibold">extensive scrolling</strong> for
-                      essential information. Moreover, Yelp's open-ended review
-                      process may pose challenges in maintaining review quality.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div class="flex vertical _16px">
-                <h2 class="h3 label _1-266-rem">conclusion</h2>
-                <h2>
-                  This analysis helped me draw connections between the pain
-                  points outlined in my mind map and comprehend their
-                  relationship with competitors. Ultimately, my comprehensive
-                  research uncovered a significant shift in my competitors'
-                  products—from being user-centric to becoming more
-                  <strong class="semibold-black">system-centric</strong>. This
-                  shift, fueled by their
-                  <strong class="semibold-black"
-                    >lack of personalization</strong
-                  >
-                  and an
-                  <strong class="semibold">excess of commercialization</strong>,
-                  has resulted in
-                  <strong class="semibold"
-                    >diners experiencing mistrust, information overload, and
-                    decision paralysis</strong
-                  >.
+                <h2 class="quote _100">
+                  “There's a certain emotional trust about talking to someone
+                  about it..”
                 </h2>
               </div>
             </div>
+            <h2 class="heading-20">
+              “There's a certain emotional trust about talking to someone about
+              it...”
+            </h2>
           </div>
-          <div class="container">
-            <div class="subsection first-child">
-              <div class="title">
-                <div class="flex vertical _24-px">
-                  <h2 class="title-label">define</h2>
-                  <h2 class="section-title">narrowing the scope</h2>
-                </div>
-                <p>
-                  Following my research, I refined my focus by connecting
-                  diners' pain points, crafting diner personas, and framing "how
-                  might we" statements. Given the extensive data I gathered,
-                  this process significantly aided in honing my design
-                  objectives, helping me carry out a more effective and
-                  concentrated design process.
-                </p>
-              </div>
-            </div>
-            <div class="subsection last-child">
-              <h2 class="main-heading blue">Connecting the dots</h2>
-              <div class="flex vertical _24-px">
-                <p>
-                  My research revealed that diners struggle to make timely
-                  decisions due to many factors. While this was sufficient to
-                  guide my ideation phase, I wanted to further
-                  <strong class="semibold"
-                    >understand how these factors relate to each other</strong
-                  >. Therefore, as a visual learner, I crafted a mind map to
-                  uncover connections between factors and
-                  <strong class="semibold"
-                    >identify the overarching issue</strong
-                  >.
-                </p>
-              </div>
-              <img
-                src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2).png"
-                loading="lazy"
-                sizes="90vw"
-                srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2)-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/6557f328ce0cd1c26bc5d274_Purple%20Colorful%20Organic%20Mind%20Map%20Brainstorm%20(2).png        1920w
-                "
-                alt=""
-                class="image-112"
-              />
+          <div>
+            <div class="w-layout-hflex quotes">
+              <div class="vertical-divider"></div>
             </div>
           </div>
-          <div class="container grey">
-            <div class="subsection margin-0">
-              <div class="flex border-bottom">
-                <div class="cards left">
-                  <h2 class="main-heading _1-602-rem">
-                    Diners face decision paralysis
-                  </h2>
-                  <div class="quote-block user-interviews sample">
-                    <h2 class="quote">
-                      "I feel worried that I'm missing out on better options if
-                      I don't keep scrolling."
-                    </h2>
-                  </div>
-                </div>
-                <div class="vertical-divider black"></div>
-                <div class="cards">
-                  <h2 class="main-heading _1-602-rem">
-                    Yelp and Google Maps lack personalization
-                  </h2>
-                  <div class="quote-block user-interviews">
-                    <h2 class="quote">
-                      "If I had a magic wand, I’d want to receive suggested
-                      items... know how good it'd be for my tastes."
-                    </h2>
-                  </div>
-                </div>
-                <div class="vertical-divider black"></div>
-                <div class="div-block-142"></div>
-                <div class="cards right">
-                  <h2 class="main-heading _1-602-rem">
-                    Diners often don't know their craving
-                  </h2>
-                  <div class="quote-block user-interviews">
-                    <h2 class="quote">
-                      "If only there was a way you can put a criteria of what
-                      you’re craving to be given suggestions."
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div class="cards horizontal">
-                <div class="div-block-145">
-                  <h2 class="main-heading _1-602-rem">
-                    Yelp and Google users face unreliable content that are often
-                    irrelevant and biased
-                  </h2>
-                </div>
-                <div class="flex-block-38">
-                  <div class="quote-block user-interviews">
-                    <h2 class="quote">
-                      "To find something that's good, we have to trust reviews
-                      online right? Sometimes they're inflated and sometimes
-                      they're not entirely truthful. There's just not enough
-                      data points out there. It's just difficult to gather and
-                      gauge what's truly good... Looking through menus takes a
-                      long time. In summary, discovering food is just
-                      troublesome sometimes."
-                    </h2>
-                  </div>
-                </div>
-              </div>
-              <div class="cards horizontal border-0">
-                <div class="div-block-145">
-                  <h2 class="main-heading _1-602-rem">
-                    Most diners value word-of-mouth recommendations from trusted
-                    friends the most
-                  </h2>
-                </div>
-                <div class="quote-block user-interviews mb-16">
-                  <h2 class="quote">
-                    “I feel like especially for friends, if I kind of know what
-                    their normal taste is like, then I know what they like and
-                    what they respond to, so I can kind of gauge what they
-                    expect already. If someone gives me a recommendation that
-                    means they went and they liked it, so the odds of me going
-                    and not liking it are not really big at all.”
-                  </h2>
-                  <h2 class="quote _100">
-                    “There's a certain emotional trust about talking to someone
-                    about it..”
-                  </h2>
-                </div>
-              </div>
-              <h2 class="heading-20">
-                “There's a certain emotional trust about talking to someone
-                about it...”
-              </h2>
-            </div>
-            <div>
-              <div class="w-layout-hflex quotes">
-                <div class="vertical-divider"></div>
-              </div>
-            </div>
-            <div class="div-block-149">
-              <div class="w-layout-hflex flex vertical">
-                <div class="vertical-divider"></div>
-              </div>
-            </div>
-          </div>
-          <div id="Research-Conclusion" class="container _100vh">
-            <div class="subsection margin-0">
-              <h2 class="main-heading blue">Conclusion</h2>
-              <p>
-                Delving deeper into diners’ experiences revealed that the core
-                obstacle to making prompt decisions is their
-                <strong class="semibold">lack of confidence</strong>. Their
-                hesitance in decision-making stems from uncertainties regarding
-                their current tools.<br />
-              </p>
-              <p>
-                Yelp and Google stand as the go-to tools for many diners, yet
-                these platforms suffer from notable shortcomings. Increasingly
-                commercialized content and a lack of personalization have
-                fostered rising skepticism among diners toward their favorite
-                platforms. The deluge of information and the prevalence of
-                irrelevant or unreliable content often lead to decision
-                paralysis and information overload. Consequently, diners
-                struggle to confidently explore dining options and make informed
-                decisions.<br />My research journey commenced with secondary
-                research, which led to two pivotal questions:
-              </p>
-              <div class="subsection margin-0 reference">
-                <div class="subsection detail margin-0">
-                  <ul class="list-2 number">
-                    <li class="padding-left-8px grey">
-                      Why do most diners not consider their primary method when
-                      making dining decisions?
-                    </li>
-                    <li class="padding-left-8px grey">
-                      And what leads most diners to utilize this method to guide
-                      their dining choices, despite often not taking it
-                      seriously?
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <p>
-                Conclusively, my research revealed that while diners don't
-                primarily rely on online reviews to shape their dining choices,
-                the accessibility of platforms like Yelp and Google compels
-                their persistent use. Despite being the most accessible option,
-                these platforms fail to match the reliability of recommendations
-                from trusted friends. The preference for personal
-                recommendations is hindered by its limited accessibility,
-                leaving diners with no choice but to frequently turn to online
-                reviews as a substitute.
-              </p>
-              <div class="flex vertical _24-px"></div>
+          <div class="div-block-149">
+            <div class="w-layout-hflex flex vertical">
+              <div class="vertical-divider"></div>
             </div>
           </div>
         </div>
+        <div id="Research-Conclusion" class="container _100vh">
+          <div class="subsection margin-0">
+            <h2>Conclusion</h2>
+            <p>
+              Delving deeper into diners’ experiences revealed that the core
+              obstacle to making prompt decisions is their
+              <strong class="semibold">lack of confidence</strong>. Their
+              hesitance in decision-making stems from uncertainties regarding
+              their current tools.<br />
+            </p>
+            <p>
+              Yelp and Google stand as the go-to tools for many diners, yet
+              these platforms suffer from notable shortcomings. Increasingly
+              commercialized content and a lack of personalization have fostered
+              rising skepticism among diners toward their favorite platforms.
+              The deluge of information and the prevalence of irrelevant or
+              unreliable content often lead to decision paralysis and
+              information overload. Consequently, diners struggle to confidently
+              explore dining options and make informed decisions.<br />My
+              research journey commenced with secondary research, which led to
+              two pivotal questions:
+            </p>
+            <div class="subsection margin-0 reference">
+              <div class="content">
+                <ul class="list-2 number">
+                  <li class="padding-left-8px grey">
+                    Why do most diners not consider their primary method when
+                    making dining decisions?
+                  </li>
+                  <li class="padding-left-8px grey">
+                    And what leads most diners to utilize this method to guide
+                    their dining choices, despite often not taking it seriously?
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Conclusively, my research revealed that while diners don't
+              primarily rely on online reviews to shape their dining choices,
+              the accessibility of platforms like Yelp and Google compels their
+              persistent use. Despite being the most accessible option, these
+              platforms fail to match the reliability of recommendations from
+              trusted friends. The preference for personal recommendations is
+              hindered by its limited accessibility, leaving diners with no
+              choice but to frequently turn to online reviews as a substitute.
+            </p>
+            <div class="flex vertical _24-px"></div>
+          </div>
+        </div>
       </section>
-      <div class="container margin-0">
-        <div class="flex horizontal"></div>
-      </div>
       <section class="container border">
-        <div class="dfdf">
-          <h2 class="h3 label section-title capitalized">user personas</h2>
-          <h2 class="main-heading blue">
-            Meet the diners: Alex, Brandon, and Cleo
-          </h2>
+        <div class="content">
+          <h2>user personas</h2>
+          <h2>Meet the diners: Alex, Brandon, and Cleo</h2>
           <p>
             After uncovering a diverse range of dining experiences, it was time
             to zero in on the key players among diners: Alex, Brandon, and Cleo.
@@ -1680,7 +1786,7 @@
                 alt=""
                 class="image-40"
               />
-              <h2 class="h3">alex</h2>
+              <h3>alex</h3>
             </div>
             <div class="w-layout-vflex flex-block-18">
               <p>
@@ -1712,7 +1818,7 @@
                 alt=""
                 class="image-40"
               />
-              <h2 class="h3">brandon</h2>
+              <h3>brandon</h3>
             </div>
             <div class="w-layout-vflex flex-block-18">
               <p>
@@ -1734,7 +1840,7 @@
                 alt=""
                 class="image-40"
               />
-              <h2 class="h3">cleo</h2>
+              <h3>cleo</h3>
             </div>
             <div class="w-layout-vflex flex-block-18">
               <p>
@@ -1785,7 +1891,7 @@
             keep things diner-focused!
           </p>
         </div>
-        <div class="subsection last-child">
+        <div class="content">
           <div
             data-current="Tab 1"
             data-easing="ease"
@@ -1901,11 +2007,9 @@
       </section>
       <section class="container border">
         <div class="subsection first-child">
-          <div class="dfdf">
-            <h2 class="h3 label section-title capitalized">HMW STATEMENTS</h2>
-            <h2 class="main-heading blue">
-              How might I help Alex, Brandon, and Cleo?
-            </h2>
+          <div class="content">
+            <h2>HMW STATEMENTS</h2>
+            <h2>How might I help Alex, Brandon, and Cleo?</h2>
             <p>
               Finally, after getting a better understanding diners, I concluded
               my research with the following questions to guide my ideation
@@ -2004,11 +2108,9 @@
             </div>
           </div>
           <div class="subsection first-child">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">user stories</h2>
-              <h2 class="main-heading blue">
-                What functionalities do diners desire?
-              </h2>
+            <div class="content">
+              <h2>user stories</h2>
+              <h2>What functionalities do diners desire?</h2>
               <p>
                 With newfound insights into critical diners' pain points, I
                 kicked off my ideation process by creating user stories to
@@ -2017,7 +2119,7 @@
               </p>
             </div>
           </div>
-          <div class="subsection last-child">
+          <div class="content">
             <div class="flex vertical _24-px margin-0">
               <div class="heading-icon">
                 <div class="div-block-74">
@@ -2156,11 +2258,9 @@
         </div>
         <div class="container border">
           <div class="subsection first-child">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">user flow</h2>
-              <h2 class="main-heading blue">
-                How do I make diner stories a reality?
-              </h2>
+            <div class="content">
+              <h2>user flow</h2>
+              <h2>How do I make diner stories a reality?</h2>
               <p>
                 To bring the diner stories to life, I brainstormed unique
                 features that I conceptualized them into three potential routes.
@@ -2387,13 +2487,9 @@
         </div>
         <div class="container mb-0">
           <div class="subsection first-child">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">
-                information architecture
-              </h2>
-              <h2 class="main-heading blue">
-                Organizing information that makes sense to diners
-              </h2>
+            <div class="content">
+              <h2>information architecture</h2>
+              <h2>Organizing information that makes sense to diners</h2>
               <p>
                 Based on the user flows above, I created my first version of the
                 site map to brainstorm the app's structure and navigation. This
@@ -2543,9 +2639,9 @@
       <section class="w-layout-blockcontainer section w-container">
         <div class="container">
           <div class="subsection">
-            <div class="dfdf">
-              <h2 class="h3 label section-title capitalized">designing</h2>
-              <h2 class="main-heading blue">Sketches</h2>
+            <div class="content">
+              <h2>designing</h2>
+              <h2>Sketches</h2>
             </div>
           </div>
           <div class="content">
@@ -2653,9 +2749,7 @@
                   <div class="w-layout-vflex flex vertical _24-px">
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          1. Favorite Cuisines
-                        </p>
+                        <p class="fw-medium _24px blue">1. Favorite Cuisines</p>
                       </div>
                     </div>
                     <div class="w-layout-vflex heading-icon">
@@ -2667,16 +2761,12 @@
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          3. Favorite Dishes
-                        </p>
+                        <p class="fw-medium _24px blue">3. Favorite Dishes</p>
                       </div>
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          4. Ingredients
-                        </p>
+                        <p class="fw-medium _24px blue">4. Ingredients</p>
                         <p>
                           This was inspired by my interview participants who
                           noted how they often get results on foods they cannot
@@ -2743,16 +2833,12 @@
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          2. Saved Search
-                        </p>
+                        <p class="fw-medium _24px blue">2. Saved Search</p>
                       </div>
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          3. Preferences
-                        </p>
+                        <p class="fw-medium _24px blue">3. Preferences</p>
                         <p>
                           While search filters are typically altered in the
                           search results, I placed it within the search screen
@@ -2849,9 +2935,7 @@
                     <div class="w-layout-vflex flex vertical sketches-02">
                       <div class="w-layout-vflex heading-icon">
                         <div class="flex vertical _4px">
-                          <p class="fw-medium _24px blue">
-                            5. Refresh Results
-                          </p>
+                          <p class="fw-medium _24px blue">5. Refresh Results</p>
                           <p>
                             If diners aren't content with the results, they can
                             refresh for a new set. In my user flows, I had
@@ -2924,9 +3008,7 @@
                   <div class="w-layout-vflex flex vertical _24-px">
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          1. Restaurant Tags
-                        </p>
+                        <p class="fw-medium _24px blue">1. Restaurant Tags</p>
                       </div>
                     </div>
                     <div class="w-layout-vflex heading-icon">
@@ -3061,9 +3143,7 @@
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          3. Bestsellers
-                        </p>
+                        <p class="fw-medium _24px blue">3. Bestsellers</p>
                         <p>
                           In addition to personalized recommendations, diners
                           can see the bestselling menu items among their friends
@@ -3439,9 +3519,7 @@
           </div>
           <div class="subsection detail">
             <h2 class="main-heading sub">Outcomes</h2>
-            <p>
-              After testing, these are the key insights I found:
-            </p>
+            <p>After testing, these are the key insights I found:</p>
             <div class="flex">
               <div class="w-layout-vflex flex-block-15">
                 <div class="div-block-90">
@@ -3795,7 +3873,7 @@
                 alt=""
               />
             </div>
-            <div class="w-layout-vflex subsection detail">
+            <div class="w-layout-vflex content">
               <div class="w-layout-vflex flex vertical _16px">
                 <div class="w-layout-vflex flex-block-14">
                   <div class="heading-with-divider">
@@ -4063,7 +4141,7 @@
                   </div>
                 </div>
               </div>
-              <div class="subsection last-child">
+              <div class="content">
                 <div>
                   <div class="flex horizontal _24-px">
                     <div class="flex vertical _16px">
@@ -4151,9 +4229,7 @@
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          Contact Buttons
-                        </p>
+                        <p class="fw-medium _24px blue">Contact Buttons</p>
                         <p>
                           I added buttons that allow diners to call the
                           restaurant, navigate directions, and visit the
@@ -4163,9 +4239,7 @@
                     </div>
                     <div class="w-layout-vflex heading-icon">
                       <div class="flex vertical _4px">
-                        <p class="fw-medium _24px blue">
-                          Condensed Header
-                        </p>
+                        <p class="fw-medium _24px blue">Condensed Header</p>
                         <p>
                           While search filters are typically altered in the
                           search results, I placed it within the search screen
@@ -4226,9 +4300,7 @@
                 <div class="w-layout-vflex flex vertical _24-px">
                   <div class="w-layout-vflex heading-icon">
                     <div class="flex vertical _4px">
-                      <p class="fw-medium _24px blue">
-                        Streamlined Process
-                      </p>
+                      <p class="fw-medium _24px blue">Streamlined Process</p>
                       <p>
                         I streamlined the process by consolidating the sections
                         that review overall experience, merging the steps to
@@ -4345,9 +4417,7 @@
                   </div>
                   <div class="w-layout-vflex heading-icon">
                     <div class="flex vertical _4px">
-                      <p class="fw-medium _24px blue">
-                        8. Disallow Selecting
-                      </p>
+                      <p class="fw-medium _24px blue">8. Disallow Selecting</p>
                       <p>
                         For instance, if diner selects "Authentic" for positive
                         feedback, "Inauthentic" for negative feedback is
@@ -4652,7 +4722,7 @@
           </div>
           <div class="subsection">
             <div class="w-layout-hflex flex-block-28">
-              <div class="subsection detail margin-0">
+              <div class="content">
                 <div class="w-layout-vflex flex-block-14">
                   <div class="heading-with-divider">
                     <div class="w-layout-vflex">
@@ -4705,7 +4775,7 @@
                   >.
                 </p>
               </div>
-              <div class="subsection detail margin-0">
+              <div class="content">
                 <div class="w-layout-vflex flex-block-14">
                   <div class="heading-with-divider">
                     <div class="w-layout-vflex">
@@ -4817,7 +4887,7 @@
               </div>
             </div>
           </div>
-          <div class="subsection last-child">
+          <div class="content">
             <div class="heading-secondarytext">
               <h2 class="main-heading">High-Fidelity</h2>
               <p>
@@ -5552,7 +5622,7 @@
             </div>
           </div>
           <div class="content">
-            <div class="subsection last-child">
+            <div class="content">
               <h2 class="main-heading sub">Recommendations</h2>
               <p>
                 Given my findings, here are a few improvements and changes I
@@ -5758,9 +5828,7 @@
                     >Amplify the social component.</strong
                   >‍
                 </li>
-                <li>
-                  <strong>Enhance visual aids.</strong>‍
-                </li>
+                <li><strong>Enhance visual aids.</strong>‍</li>
                 <li>
                   <strong
                     >Ensure users fully understand the app's purpose by the end
@@ -5908,18 +5976,10 @@
               <div class="w-layout-hflex flex horizontal _40-px">
                 <div class="div-block-156">
                   <ul class="list _8px">
-                    <li>
-                      Switched order to eliminate allergies
-                    </li>
-                    <li>
-                      Unique title copy in upper-navigation
-                    </li>
-                    <li>
-                      Removed yellow background for visual clarity
-                    </li>
-                    <li>
-                      Changed typography for visual clarity
-                    </li>
+                    <li>Switched order to eliminate allergies</li>
+                    <li>Unique title copy in upper-navigation</li>
+                    <li>Removed yellow background for visual clarity</li>
+                    <li>Changed typography for visual clarity</li>
                   </ul>
                 </div>
                 <div class="div-block-155">
@@ -5927,9 +5987,7 @@
                     <li>Changed "Reset" button to blue</li>
                     <li>Progress bar increases</li>
                     <li>Color coded descriptive heading</li>
-                    <li>
-                      New "Save &amp; finish later" button
-                    </li>
+                    <li>New "Save &amp; finish later" button</li>
                   </ul>
                 </div>
               </div>
@@ -6177,22 +6235,14 @@
                 <div class="w-layout-hflex flex horizontal _40-px">
                   <div class="div-block-156">
                     <ul class="list _8px">
-                      <li>
-                        Consolidated Info and Home pages
-                      </li>
-                      <li>
-                        Added "Posts" and "Events" pages
-                      </li>
-                      <li>
-                        Reordered pagination to reflect diner journey
-                      </li>
+                      <li>Consolidated Info and Home pages</li>
+                      <li>Added "Posts" and "Events" pages</li>
+                      <li>Reordered pagination to reflect diner journey</li>
                       <li>
                         Reordered information hierarchy in info section to
                         reflect diner priorities
                       </li>
-                      <li>
-                        Added profile picture and follow button
-                      </li>
+                      <li>Added profile picture and follow button</li>
                     </ul>
                   </div>
                 </div>
@@ -6204,7 +6254,7 @@
               </div>
             </div>
           </div>
-          <div class="subsection last-child">
+          <div class="content">
             <div class="w-layout-vflex flex-block-14">
               <div class="heading-with-divider">
                 <div class="w-layout-vflex">
@@ -6327,22 +6377,16 @@
                   By the end of the test, do users understand the intended
                   purpose and functionalities of TasteBuds?
                 </li>
-                <li>
-                  Are users interacting with the new features? How?
-                </li>
-                <li>
-                  How do users interpret the design solutions?
-                </li>
-                <li>
-                  Are there any unintended use cases? What are they?
-                </li>
+                <li>Are users interacting with the new features? How?</li>
+                <li>How do users interpret the design solutions?</li>
+                <li>Are there any unintended use cases? What are they?</li>
                 <li>
                   Did the iterations resolve critical issues found last
                   usability testing?
                 </li>
               </ul>
             </div>
-            <div class="subsection detail margin-0">
+            <div class="content">
               <p class="h3 _1-266-rem">participant characteristics</p>
               <ul class="list">
                 <li>Ages 21-30</li>
@@ -7008,8 +7052,8 @@
         </div>
         <div class="container border">
           <div class="subsection margin-0">
-            <div class="dfdf">
-              <h2 class="main-heading blue">Learnings</h2>
+            <div class="content">
+              <h2>Learnings</h2>
             </div>
             <p>
               This usability test taught me a lot about my design solutions and
@@ -7017,7 +7061,7 @@
               and weaknesses as a designer and as an individual that contributed
               to the issues:
             </p>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 <strong class="h3 _1-266-rem"
                   >stop trying to please everyone</strong
@@ -7037,7 +7081,7 @@
                 by my decision to merge the home and info pages.
               </p>
             </div>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 <strong class="h3 _1-266-rem"
                   >user behaviors are circumstantial</strong
@@ -7061,7 +7105,7 @@
                 their recommendations for their friends only.
               </p>
             </div>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 <strong class="h3 _1-266-rem"
                   >mental models are not definitive</strong
@@ -7099,7 +7143,7 @@
                 solutions work!
               </p>
             </div>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 ‍<strong class="h3 _1-266-rem"
                   >When users willingly rebel against their mental
@@ -7139,7 +7183,7 @@
                 standards, standards are always evolving!
               </p>
             </div>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 <strong class="h3 _1-266-rem"
                   >the right approach to usability testing</strong
@@ -7165,8 +7209,8 @@
         </div>
         <div class="container">
           <div class="subsection first-child">
-            <div class="dfdf">
-              <h2 class="main-heading blue">Next steps</h2>
+            <div class="content">
+              <h2>Next steps</h2>
             </div>
             <p>
               My second usability test taught me a lot about my design solutions
@@ -7174,7 +7218,7 @@
               mistakes and weaknesses as a designer and as an individual that
               contributed to the issues:
             </p>
-            <div class="subsection detail margin-0 gap-16px">
+            <div class="content gap-16px">
               <p>
                 <strong class="h3 _1-266-rem"
                   >the final affinity map (until further notice)</strong
@@ -7423,8 +7467,8 @@
       </section>
       <section class="container">
         <div class="subsection">
-          <div class="dfdf">
-            <h2 class="main-heading blue">Reflection</h2>
+          <div class="content">
+            <h2>Reflection</h2>
           </div>
           <h2 class="main-heading sub">Conclusion</h2>
           <p>
@@ -7481,7 +7525,7 @@
         </div>
       </section>
     </main>
-    <script src="/public/js/heroScrollDown.js"></script> 
+    <script src="/public/js/heroScrollDown.js"></script>
     <script
       src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=651649456fb9882d90cce3aa"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
