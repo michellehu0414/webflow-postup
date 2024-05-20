@@ -26,12 +26,7 @@ body {
 
 main {
   display: block;
-  margin-top: 55vh;
   background: white;
-
-  @include breakpoint(med) {
-    margin-top: 50vh;
-  }
 }
 
 article,
@@ -139,7 +134,7 @@ textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  margin: inherit;
 }
 
 /**
@@ -162,6 +157,7 @@ button,
 select {
   /* 1 */
   text-transform: none;
+  border: 0;
 }
 
 /**

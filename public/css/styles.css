@@ -414,13 +414,7 @@ body {
 
 main {
   display: block;
-  margin-top: 55vh;
   background: white;
-}
-@media (min-width: 768px) {
-  main {
-    margin-top: 50vh;
-  }
 }
 
 article,
@@ -521,7 +515,7 @@ textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  margin: inherit;
 }
 
 /**
@@ -542,6 +536,7 @@ button,
 select {
   /* 1 */
   text-transform: none;
+  border: 0;
 }
 
 /**
@@ -729,11 +724,12 @@ template {
 }
 
 .hero {
-  position: fixed;
-  padding-top: 2rem;
   width: 100vw;
-  height: 55vh;
-  z-index: -1;
+  height: 60vh;
+  overflow: hidden;
+}
+.hero.heroBG-postup {
+  background-color: #8cb4ac;
 }
 .hero.wrapper {
   display: flex;
@@ -741,6 +737,7 @@ template {
   gap: 2rem;
   height: 100%;
   margin: auto;
+  width: 100%;
 }
 .hero.wrapper .img-wrapper {
   justify-content: flex-end;
@@ -749,49 +746,34 @@ template {
   overflow: hidden;
   margin: auto;
 }
-.hero.wrapper .img-wrapper img.mobile-app {
+.hero.wrapper .img-wrapper .hero-gif {
   width: 75vw;
   max-width: 20.5rem;
-  margin: 0;
+  margin: auto 0;
 }
 .hero#tastebuds-heroBG {
   background-color: rgba(255, 220, 147, 0.75);
-}
-.hero.heroBG-postup {
-  background-color: #8cb4ac;
 }
 @media (min-width: 768px) {
   .hero {
     padding-top: 4rem;
     width: 100vw;
     height: 50vh;
-    z-index: -1;
   }
   .hero .wrapper {
     gap: 2rem;
     height: 100%;
     margin: auto;
   }
-  .hero .wrapper .img-wrapper {
+  .hero .wrapper .hero-gif-wrapper {
     justify-content: flex-end;
     align-items: center;
     padding: auto;
     overflow: hidden;
     margin: auto;
+    width: 20%;
+    margin: 0 auto;
   }
-  .hero .wrapper .img-wrapper img.mobile-app {
-    width: 15vw;
-    margin: 0;
-  }
-}
-
-.section-hero {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  gap: 2.5rem;
-  z-index: -1;
-  width: 10 0vw;
 }
 
 .caption-container {
@@ -1548,6 +1530,9 @@ blockquote .interviewee p {
 }
 .bg-lightest-grey {
   background-color: #f9f9f9;
+}
+.bg-transparent {
+  background: transparent;
 }
 
 .w-embed:before,
