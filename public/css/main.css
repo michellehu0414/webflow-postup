@@ -1422,7 +1422,7 @@ blockquote .interviewee p {
   flex-direction: row;
   align-items: start;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin: 0 auto;
 }
 .constraints-content-container .subheading {
@@ -1568,7 +1568,7 @@ header h3 {
 .subheader, header span {
   color: #757575;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 125%;
   text-transform: uppercase;
@@ -1615,6 +1615,12 @@ header h3 {
 .container-full-width > :last-child,
 .container-full-width > :only-child {
   margin-bottom: 0;
+}
+
+.the-challenge-text {
+  font-size: 1.44rem;
+  color: #757575;
+  font-weight: 500;
 }
 
 .flex {

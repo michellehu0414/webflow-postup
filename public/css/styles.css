@@ -366,6 +366,11 @@ h6 {
   font-weight: 500;
 }
 
+.span-fw-medium span {
+  color: #1e1e1e;
+  font-weight: 500;
+}
+
 .notes {
   color: #00bdd6;
   font-size: 1.125rem;
@@ -1115,6 +1120,18 @@ blockquote .interviewee p {
   font-weight: 500;
 }
 
+.card {
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  border-radius: 1.5rem;
+  height: fit-content;
+  overflow: hidden;
+  padding: 3rem;
+}
+
 .flex {
   flex-flow: wrap;
   flex: 1;
@@ -1307,6 +1324,26 @@ blockquote .interviewee p {
   text-align: center;
 }
 
+.items-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.ic-arrow_jump-to-section {
+  vertical-align: baseline;
+  transform: rotate(90deg) translateX(5px);
+}
+
+.btn-scrollToSection {
+  font-size: 1.125rem;
+  background-color: transparent;
+  text-decoration: none;
+  color: #0281E3;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .mb-0 {
   margin-bottom: 0rem;
 }
@@ -1389,6 +1426,10 @@ blockquote .interviewee p {
 }
 .mt-40 {
   margin-top: 2.5rem;
+}
+
+.padding-40 {
+  padding: 2.5rem;
 }
 
 .pt-32 {
@@ -1529,7 +1570,7 @@ ul {
 
 li {
   font-size: 1.125rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .list {
@@ -1577,6 +1618,10 @@ li {
 
 .hide {
   display: none;
+}
+
+.icon-inline {
+  top: 0.5rem;
 }
 
 .w-inline-block {
