@@ -366,6 +366,11 @@ h6 {
   font-weight: 500;
 }
 
+.span-fw-medium span {
+  color: #1e1e1e;
+  font-weight: 500;
+}
+
 .notes {
   color: #00bdd6;
   font-size: 1.125rem;
@@ -1115,6 +1120,18 @@ blockquote .interviewee p {
   font-weight: 500;
 }
 
+.card {
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  border-radius: 1.5rem;
+  height: fit-content;
+  overflow: hidden;
+  padding: 3rem;
+}
+
 .section-overview {
   display: flex;
   flex-direction: column;
@@ -1122,6 +1139,7 @@ blockquote .interviewee p {
   width: 100%;
   background: #fff;
   padding: 2rem 0;
+  border-bottom: 1.25px solid #f0f0f0;
 }
 .section-overview .content-wrapper {
   display: flex;
@@ -1392,38 +1410,69 @@ blockquote .interviewee p {
   }
 }
 
-#the-constraints .subheading {
-  margin-bottom: 0;
+#the-constraints {
+  background-color: #f9f9f9;
 }
-#the-constraints ul {
-  margin: 0.5rem 0;
-  list-style: disc outside none;
-}
-#the-constraints li {
-  line-height: 150%;
-  margin-bottom: 0.5rem;
+#the-constraints > .card {
+  background-color: white;
 }
 
+.constraints-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+.constraints-content-container .subheading {
+  font-size: 1.5rem;
+}
+
+.constraint-grid-container .subheading {
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
   .constraint-grid-container {
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: start;
-    gap: 1rem;
-    padding: 1.5rem;
-    padding-left: 2.5rem;
-    background-color: #f9f9f9;
+    align-items: start;
+    gap: 1.5rem;
+    width: fit-content;
+    text-align: left;
   }
   .constraint-grid-container ul {
     margin-bottom: 0;
+    margin-top: 0.5rem;
+    list-style-type: none;
+  }
+  .constraint-grid-container ul li {
+    line-height: 160%;
+    margin-bottom: 0.25rem;
   }
   .constraint-grid-container ul li:last-child {
     margin-bottom: 0;
   }
   .constraint-grid-container img {
-    margin-right: auto;
+    margin: auto 0;
+  }
+  .constraint-grid-container .svg-wrapper {
+    display: flex;
     width: 3.5rem;
-    opacity: 0.6;
+    height: 3.5rem;
+  }
+  .constraint-grid-container .svg-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3.5rem;
+  }
+  .constraint-grid-container .svg-time {
+    height: 2.98375rem;
+    width: fit-content;
+    margin: auto 0;
   }
 }
 
@@ -1434,19 +1483,6 @@ blockquote .interviewee p {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 2rem;
-}
-.constraints-flex-container .constraint-grid-container {
-  width: 100%;
-}
-.constraints-flex-container > div:last-child {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.resource-constraints-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
 }
 
 .section-container {
@@ -1465,11 +1501,12 @@ blockquote .interviewee p {
 .section-container.lightest-grey {
   background-color: #f9f9f9;
 }
-.section-container.border {
-  border-bottom: 1px solid #f0f0f0;
-}
 .section-container.equal-padding {
   padding: 4rem 0;
+}
+
+.border {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .section-container > img,
@@ -1772,6 +1809,26 @@ header h3 {
   text-align: center;
 }
 
+.items-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.ic-arrow_jump-to-section {
+  vertical-align: baseline;
+  transform: rotate(90deg) translateX(5px);
+}
+
+.btn-scrollToSection {
+  font-size: 1.125rem;
+  background-color: transparent;
+  text-decoration: none;
+  color: #0281E3;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .mb-0 {
   margin-bottom: 0rem;
 }
@@ -1855,6 +1912,10 @@ header h3 {
 }
 .mt-40 {
   margin-top: 2.5rem;
+}
+
+.padding-40 {
+  padding: 2.5rem;
 }
 
 .pt-32 {
@@ -1995,7 +2056,7 @@ ul {
 
 li {
   font-size: 1.125rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .list {
@@ -2043,6 +2104,10 @@ li {
 
 .hide {
   display: none;
+}
+
+.icon-inline {
+  top: 0.5rem;
 }
 
 .list-research-materials {
@@ -2221,6 +2286,7 @@ li {
   margin-bottom: 6rem;
   border-radius: 1rem;
   height: fit-content;
+  overflow: hidden;
 }
 .prototype-walkthrough .grid-container {
   display: grid;
