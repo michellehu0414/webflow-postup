@@ -1,14 +1,14 @@
+@import 'tastebuds/all-tastebuds';
+
 @import 'abstracts/all-abstracts';
 
-@import 'base/all-bases';        
-
-@import 'components/all-components';  
-
-@import 'sections/all-sections';  
+@import 'base/all-bases';
 
 @import 'utilities/all-utilities';
 
-@import 'tastebuds/all-tastebuds';
+@import 'components/all-components';  
+
+@import 'sections/all-sections';
 
 .header-container.tastebuds {
     margin-bottom: 1rem;
