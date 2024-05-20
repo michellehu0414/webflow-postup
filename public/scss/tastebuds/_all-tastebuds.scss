@@ -104,6 +104,11 @@ $border-bottom-color_3: var(--light-grey);
 $border-bottom-color_4: var(--off-black);
 $border-bottom-color_5: var(--blue-accent);
 $border-left-color_1: var(--light-grey);
+$primary-color: #076261;
+
+:root {
+  --primary-color: #076261;
+}
 
 @font-face {
 	font-family: webflow-icons;
@@ -237,7 +242,7 @@ $border-left-color_1: var(--light-grey);
 }
 
 :root {
-  --blue-accent: #3a56bd;
+  --primary-coo: #3a56bd;
   --black: #1e1e1e;
   --medium-light-grey: #757575;
   --off-black: #565656;
@@ -841,22 +846,6 @@ $border-left-color_1: var(--light-grey);
 
 .div-block-15 {
   padding: 0%
-}
-
-.content {
-  grid-column-gap: 80px;
-  grid-row-gap: 80px;
-  border: 0px solid var(--light-grey);
-  flex-direction: column;
-  flex: none;
-  align-self: auto;
-  align-items: stretch;
-  width: 100%;
-  max-width: none;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex
 }
 
 .content.low-fidelity {
