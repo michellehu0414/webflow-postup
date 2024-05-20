@@ -1,4 +1,4 @@
-header.hero {
+.hero {
     position: fixed;
     padding-top: 2rem;
     width: 100vw;
@@ -31,7 +31,7 @@ header.hero {
       background-color: rgba(255, 220, 147, 0.75);
     }
   
-    &#postup-heroBG {
+    &.heroBG-postup {
       background-color: #8cb4ac;
     }
   
@@ -42,8 +42,6 @@ header.hero {
       z-index: -1;
   
       .wrapper {
-        display: flex;
-        flex-direction: column;
         gap: 2rem;
         height: 100%;
         margin: auto;
