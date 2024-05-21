@@ -33,7 +33,7 @@ p {
 
 /* Specific heading styles with colors and sizes */
 h1 {
-  font-size: 3.25rem; /* Example size, adjust as necessary */
+  font-size: 2.986rem; /* Example size, adjust as necessary */
   color: $black; /* Assuming a color variable, adjust as needed */
   margin-bottom: 0.5rem;
 }
@@ -41,7 +41,7 @@ h1 {
 h2 {
   color: $black;
   flex: 1;
-  font-size: 2.986rem;
+  font-size: 2.488rem;
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
@@ -53,7 +53,7 @@ h3 {
   color: $primary-color;
   letter-spacing: 0;
   text-transform: none;
-  font-size: 2.488rem;
+  font-size: 2.074rem;
   font-weight: 500;
   line-height: 130%; /* Slightly adjusted for better readability */
   margin-bottom: 1.5rem;
@@ -66,7 +66,7 @@ h4 {
   letter-spacing: 0;
   line-height: 120%;
   color: var(--black); /* CSS variable, ensure it's defined in your styles */
-  font-size: 2rem;
+  font-size: 1.728rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -76,13 +76,13 @@ h5 {
   letter-spacing: 0;
   line-height: 120%;
   color: $black; /* CSS variable, ensure it's defined in your styles */
-  font-size: 1.4rem;
+  font-size: 1.44rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
 h6 {
-  font-size: 1rem; /* Smallest heading, specify if needed */
+  font-size: 1.2rem; /* Smallest heading, specify if needed */
   line-height: 120%;
   color: $primary-color; /* Example, adjust as necessary */
   margin-top: 2rem;
@@ -112,6 +112,10 @@ h6 {
   color: $medium-grey;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 // Tab content
 .subheading {
   font-weight: 500;
@@ -119,7 +123,18 @@ h6 {
   line-height: 130%;
   color: $black;
   font-size: 1.3rem;
-  text-decoration: none;
+  text-transform: none;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.section-subheading {
+  @extend .subheading;
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
 }
 
 .secondary-text {
@@ -157,4 +172,12 @@ h6 {
   line-height: 115%;
   margin-bottom: 1rem;
   letter-spacing: 0rem;
+}
+
+.the-problem-text {
+  font-size: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
 }

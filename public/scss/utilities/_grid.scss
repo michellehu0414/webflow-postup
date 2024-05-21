@@ -1,38 +1,45 @@
 // Mixin for creating a dynamic grid layout with flexible fr distribution
-@mixin dynamic-grid($layout-type, $fractions, $row-gap: 0px, $col-gap: 0px) {
+// Mixin for grid container with customizable columns, rows, and gap
+@mixin grid-container($columns, $rows: auto, $column-gap: 1rem, $row-gap: 1rem) {
   display: grid;
-  grid-gap: $row-gap $col-gap;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: $rows;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
 
-  @if $layout-type == 'columns' {
-    grid-template-columns: $fractions;
-  } @else if $layout-type == 'rows' {
-    grid-template-rows: $fractions;
-  } @else {
-    @warn "Invalid layout type: #{$layout-type}. Use 'columns' or 'rows'.";
+// Mixin for grid item with span and optional row span
+@mixin grid-item($column-span, $row-span: auto) {
+  grid-column: span $column-span;
+  @if $row-span != auto {
+    grid-row: span $row-span;
   }
 }
 
-// Example SCSS usage
-// .custom-column-grid {
-//   @include dynamic-grid('columns', '1fr 2fr 1fr 3fr', 10px, 20px); // Four columns with different fr values
+
+// Using the grid-container mixin for the container
+// .container {
+//   @include grid-container(3, auto, 20px, 20px); // 3 columns, auto rows, 20px gaps
 // }
 
-// Container for a grid with specific row fractions
-// .custom-row-grid {
-//   @include dynamic-grid('rows', '3fr 1fr 2fr', 15px, 25px); // Three rows with different fr values
+// // Using the grid-item mixin for the items
+// .item-1 {
+//   @include grid-item(2, 1); // Spans 2 columns, 1 row
 // }
 
-// ----------------------------------------
-// Example HTML usage
-// <div class="custom-column-grid">
-//   <div>Item 1 (1fr)</div>
-//   <div>Item 2 (2fr)</div>
-//   <div>Item 3 (1fr)</div>
-//   <div>Item 4 (3fr)</div>
-// </div>
+// .item-2 {
+//   @include grid-item(1, 2); // Spans 1 column, 2 rows
+// }
 
-// <div class="custom-row-grid">
-//   <div>Row 1 (3fr)</div>
-//   <div>Row 2 (1fr)</div>
-//   <div>Row 3 (2fr)</div>
-// </div>
+// .item-3 {
+//   @include grid-item(1, 1); // Spans 1 column, 1 row
+// }
+
+// .item-4 {
+//   @include grid-item(2, 1); // Spans 2 columns, 1 row
+// }
+
+// .item-5 {
+//   @include grid-item(1, 1); // Spans 1 column, 1 row
+// }
+

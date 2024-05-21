@@ -1,10 +1,4 @@
 .flex {
-  flex-flow: wrap;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.flex {
   display: flex;
 
   &-row {

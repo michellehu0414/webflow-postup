@@ -1,4 +1,10 @@
-@import 'tastebuds/all-tastebuds';
+$primary-color: #3a56bd;
+$light-blue: #dee3f4;
+$bg-grey: #f0f0f0;
+
+.bg-grey {
+    background-color: $bg-grey;
+}
 
 @import 'abstracts/all-abstracts';
 
@@ -9,6 +15,8 @@
 @import 'components/all-components';  
 
 @import 'sections/all-sections';
+
+@import 'tastebuds/all-tastebuds';
 
 .header-container.tastebuds {
     margin-bottom: 1rem;

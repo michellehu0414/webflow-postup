@@ -70,7 +70,7 @@ main {
   background-color: $lightest-grey;
   margin: 2.5rem 0 4rem 0;
   width: 100vw;
-  padding: 4rem 0;
+  padding: 4rem;
 
   .content-wrapper {
     div {
@@ -80,6 +80,10 @@ main {
 
   &.transparent {
     background-color: transparent;
+  }
+
+  &.grey {
+    background-color: #f3f3f3;
   }
 }
 

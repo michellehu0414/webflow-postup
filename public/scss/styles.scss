@@ -924,44 +924,6 @@ label {
   color: var(--blue-accent);
   font-weight: 600;
 }
-.heading-icon.align-top {
-  align-items: flex-start;
-}
-.heading-icon._8px {
-  border-bottom: 1px solid #000;
-  flex: 0 auto;
-  grid-column-gap: 4px;
-  grid-row-gap: 4px;
-  line-height: 75%;
-  text-decoration: none;
-  width: auto;
-}
-.h5 {
-  color: var(--black);
-  font-size: 1.266rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 125%;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-transform: none;
-}
-.h5.blue {
-  color: var(--blue-accent);
-  font-weight: 600;
-  line-height: 150%;
-}
-
-.title-label {
-  color: var(--medium-light-grey);
-  font-size: 1.266rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 125%;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-transform: uppercase;
-}
 .delights.last-child {
   border-bottom-width: 0;
   grid-column-gap: 0;
@@ -4533,11 +4495,6 @@ textarea.w-select {
   max-width: 1000px;
   padding-bottom: 0;
   width: 100%;
-}
-._70 {
-  display: flex;
-  justify-content: space-between;
-  min-width: 70%;
 }
 .delights {
   background-color: var(--transparent);

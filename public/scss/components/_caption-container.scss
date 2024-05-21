@@ -9,25 +9,4 @@
   margin-bottom: $content-mb;
   margin: auto;
   justify-content: center;
-
-  ul.user-flow {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    list-style-type: decimal;
-    margin-bottom: 0;
-    gap: 0.5rem;
-    text-align: left;
-
-    li {
-      color: var(--off-black);
-      font-size: 1.125rem;
-      line-height: 150%;
-      text-align: left;
-
-      span {
-        @extend .fw-medium;
-      }
-    }
-  }
 }

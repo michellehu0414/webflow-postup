@@ -1,0 +1,103 @@
+.diner-trends-grid {
+  @include grid-container(
+    2,
+    auto,
+    0.5rem,
+    0.5rem
+  ); // 3 columns, auto rows, 20px gaps
+  // Using the grid-item mixin for the items
+  width: 90%;
+  max-width: $content-max-width;
+  margin: auto;
+
+  $diner-trends-border: 1px solid $black;
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4,
+  .item-5 {
+    // border: $diner-trends-border;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+
+    > p {
+      color: $black;
+      text-align: left;
+      flex: 0 auto;
+      align-self: auto;
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 150%;
+
+      strong {
+        color: $emphasis-blue;
+      }
+    }
+  }
+  .item-5 {
+    @include grid-item(2, 1);
+    > p {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: 550;
+    }
+  }
+}
+
+.dining-factors-grid {
+  @extend .flex-row;
+  @extend .space-between;
+  text-align: center;
+
+  > div {
+    @extend .flex-row;
+    @extend .gap-16;
+
+    > div {
+      text-align: center;
+    }
+
+    p:first-child {
+      font-size: 1.5rem;
+      color: $medium-grey;
+      font-weight: 500;
+    }
+
+    img {
+      width: 5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p:last-child {
+      color: $black;
+      text-align: center;
+      flex: 0 auto;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.dining-factors-number {
+  font-size: 1.3rem;
+  color: $emphasis-blue;
+  font-weight: 700;
+}
+
+blockquote.statistic-highlight {
+    margin: 0;
+  p {
+    color: $black;
+  }
+  .blockquote-content {
+    margin: 0;
+    @extend .pv-16;
+    border-color: $medium-light-grey;
+    background-color: transparent;
+    color: $medium-grey;
+  }
+}

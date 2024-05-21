@@ -1,0 +1,13 @@
+.hanging-icon {
+    position: relative; // Adjust based on icon size
+  
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(calc(-100% - 0.5rem));
+      // Adjust vertical alignment if needed
+      line-height: 1.2; // Adjust to match the paragraph line-height
+    }
+  }
+  

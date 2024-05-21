@@ -1,13 +1,36 @@
-ul {
-  list-style-type: disc;
-  list-style: outside;
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 0;
+  gap: 0.5rem;
+  text-align: left;
+
+  li {
+    color: var(--off-black);
+    font-size: 1.125rem;
+    line-height: 150%;
+    text-align: left;
+
+    span {
+      @extend .fw-medium;
+    }
+  }
 }
 
-li {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
+ol {
+  list-style-type: decimal;
 }
+
+ul {
+  list-style-type: disc;
+}
+
+ul.list-none {
+  list-style-type: none;
+}
+
 
 .list {
   display: flex;
