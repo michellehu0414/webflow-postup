@@ -407,7 +407,7 @@
           </p>
         </div>
         <div class="content">
-          <p class="section-subheading hanging-icon">
+          <p class="section-subheading heading-icon">
             <span class="material-symbols-rounded icon"> account_circle </span
             >my target diners
           </p>
@@ -456,20 +456,16 @@
                 <div class="flex gap-32">
                   <div class="likert">
                     <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/satisfaction-emoji-1.png"
-                      />
+                      <img src="public/images/tastebuds/likert-mood-1.png" />
                       <p>Completely satisfied</p>
                     </div>
                     <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/satisfaction-emoji-2.png"
-                      />
+                      <img src="public/images/tastebuds/likert-mood-2.png" />
                       <p>Mostly satisfied</p>
                     </div>
                     <div class="satisfaction-level">
                       <img
-                        src="public/images/tastebuds/satisfaction-emoji-3.png"
+                        src="public/images/tastebuds/likert-mood-3.png"
                         loading="lazy"
                         alt=""
                       />
@@ -477,7 +473,7 @@
                     </div>
                     <div class="satisfaction-level">
                       <img
-                        src="public/images/tastebuds/satisfaction-emoji-4.png"
+                        src="public/images/tastebuds/likert-mood-4.png"
                         loading="lazy"
                         alt=""
                       />
@@ -487,7 +483,7 @@
                   <div class="likert">
                     <div class="satisfaction-level">
                       <img
-                        src="public/images/tastebuds/satisfaction-emoji-5.png"
+                        src="public/images/tastebuds/likert-mood-5.png"
                         loading="lazy"
                         alt=""
                       />
@@ -495,7 +491,7 @@
                     </div>
                     <div class="satisfaction-level">
                       <img
-                        src="public/images/tastebuds/satisfaction-emoji-6.png"
+                        src="public/images/tastebuds/likert-mood-6.png"
                         loading="lazy"
                         alt=""
                       />
@@ -503,7 +499,7 @@
                     </div>
                     <div class="satisfaction-level">
                       <img
-                        src="public/images/tastebuds/satisfaction-emoji-7.png"
+                        src="public/images/tastebuds/likert-mood-7.png"
                         loading="lazy"
                         alt=""
                       />
@@ -515,8 +511,8 @@
             </div>
           </div>
         </div>
-        <div class="container-full-width pv-40 mb-0">
-          <div class="flex-row">
+        <div class="container-full-width">
+          <div class="survey-results-wrapper">
             <div
               class="survey-results-tabs tabs-container"
               data-current="Tab 1"
@@ -526,20 +522,52 @@
             >
               <div class="tabs-menu">
                 <button class="tab-button active" data-tab="tab1">
-                  <p>Charts</p>
+                  <p>Findings</p>
                 </button>
                 <button class="tab-button" data-tab="tab2">
-                  <p>Satisfaction Scores</p>
+                  <p>Data Table</p>
                 </button>
               </div>
               <div id="tab1" class="tab-content active">
-                <p class="subheading">Total satisfaction levels</p>
-                <img
-                  alt=""
-                  loading="lazy"
-                  class="img-responsive"
-                  src="public/images/tastebuds/survey-results-bars.png"
-                />
+                <div>
+                  <p class="section-subheading black">How satisfied do diners feel?</p>
+                  <div class="survey-results_graphs-wrapper  mb-8">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      class="img-responsive"
+                      src="public/images/tastebuds/survey-results-bars.png"
+                    />
+                  </div>
+                  <div class="survey-results-cards-wrapper">
+                    <div class="survey-results-card flex-1">
+                      <img
+                        src="public/images/tastebuds/likert-mood-5.png"
+                        loading="lazy"
+                        alt=""
+                        class="likert-mood large"
+                      />
+                      <p>
+                        Overall, respondents feel
+                        <span class="fw-medium"
+                          >least satisfied about how long they take to make dining decisions</span
+                        >—an average of <span class="fw-medium">50% rating</span>.
+                      </p>
+                    </div>
+                    <div class="survey-results-card">
+                      <img
+                        src="public/images/tastebuds/likert-mood-6.png"
+                        loading="lazy"
+                        alt=""
+                        class="likert-mood large"
+                      />
+                      <p>
+                        Among the least satisfied respondents, this rating drops to an
+                        <span class="fw-medium">average of 26%</span>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div id="tab2" class="tab-content">
                 <img
@@ -551,9 +579,7 @@
             </div>
             <div>
               <div class="total-satisfaction-method">
-                <p>
-                  TOTAL satisfaction assessment methodology
-                </p>
+                <p>Satisfaction assessment methodology</p>
                 <p>
                   First, I measured individual user satisfaction levels on the
                   following: average time spent on finding a place to eat,
@@ -563,284 +589,25 @@
                   each satisfaction level, with "Completely satisfied" being 5
                   points and both "Completely dissatisfied" &amp; "Mostly
                   dissatisfied" being 0 points. Due to having only one data
-                  point for "Completely dissatisfied," I combined its score
-                  with "Mostly dissatisfied" to simplify calculations and keep
-                  the ratings as whole numbers without decimals for a clearer
+                  point for "Completely dissatisfied," I combined its score with
+                  "Mostly dissatisfied" to simplify calculations and keep the
+                  ratings as whole numbers without decimals for a clearer
                   analysis.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <section class="section-container grey">
-          <div class="container _2-column">
-            <div
-              id="w-node-_38424625-acad-730f-ffbb-77378589ba35-6d157316"
-              class="container-survey-results satisfaction"
-            >
-              <div class="survey-results left">
-                <p class="section-subheading">satisfaction scale</p>
-                <p>
-                  For each question above, I asked respondents how satisfied
-                  they feel:
-                </p>
-                <div class="likert-scale _1-column"></div>
-                <div class="flex align-center">
-                  <div class="likert">
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/1.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Completely satisfied</p>
-                    </div>
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/2.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Mostly satisfied</p>
-                    </div>
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/3.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Somewhat satisfied</p>
-                    </div>
-                    <div class="satisfaction-level">
-                      <img
-                        src="/public/images/tastebuds/6555822875f4578c98957c27_4.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Neither</p>
-                    </div>
-                  </div>
-                  <div
-                    id="w-node-_1250e69c-d63c-1046-09f8-217478a06de7-6d157316"
-                    class="likert"
-                  >
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/5.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Somewhat dissatisfied</p>
-                    </div>
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/6.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Mostly dissatisfied</p>
-                    </div>
-                    <div class="satisfaction-level">
-                      <img
-                        src="public/images/tastebuds/7.png"
-                        loading="lazy"
-                        alt=""
-                        class="mood"
-                      />
-                      <p>Completely dissatisfied</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="w-node-_55ceda09-71ca-8638-71da-e4ccd0d77cc4-6d157316"
-              class="container-survey-results right satisfaction"
-            ></div>
-          </div>
-        </section>
-        <section class="content padding-top-80px">
-          <div class="heading-icon">
-            <svg
-              class="svg-icon medium black"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3v18h28"></path>
-              <path d="m19 9-5 5-4-4-3 3"></path>
-            </svg>
-            <p class="section-subheading">how satisfied do diners feel?</p>
-          </div>
-          <div class="heading-icon">
-            <svg
-              class="svg-icon medium"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3v18h28"></path>
-              <path d="m19 9-5 5-4-4-3 3"></path>
-            </svg>
-            <p class="section-subheading">results</p>
-          </div>
+        <section class="content">
           <div class="survey-results right">
-            <div class="heading-icon">
-              <svg
-                class="svg-icon medium black"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M3 3v18h28"></path>
-                <path d="m19 9-5 5-4-4-3 3"></path>
-              </svg>
-              <p class="section-subheading">how satisfied do diners feel?</p>
-            </div>
-            <div class="flex vertical _16px">
-              <img
-                src="public/images/tastebuds/5.png"
-                loading="lazy"
-                alt=""
-                class="mood large"
-              />
-              <p>
-                Overall, respondents feel
-                <span class="fw-medium"
-                  >least satisfied the time they take to make decisions</span
-                >—an average of <span class="fw-medium">50% rating</span>.
-              </p>
-            </div>
-            <div class="flex vertical _16px">
-              <img
-                src="public/images/tastebuds/6.png"
-                loading="lazy"
-                alt=""
-                class="mood large"
-              />
-              <p>
-                Among the least satisfied respondents, this rating drops to an
-                <span class="fw-medium">average of 26%</span>.
-              </p>
-            </div>
-          </div>
-          <div class="content">
-            <div
-              data-current="Tab 1"
-              data-easing="ease"
-              data-duration-in="300"
-              data-duration-out="100"
-              class="tabs iterations w-tabs"
-            >
-              <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-                <a
-                  data-w-tab="Tab 1"
-                  class="tab-link-30 _50 w-inline-block w-tab-link w--current"
-                  id="w-tabs-1-data-w-tab-0"
-                  href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-1-data-w-pane-0"
-                  role="tab"
-                  aria-controls="w-tabs-1-data-w-pane-0"
-                  aria-selected="true"
-                  ><div class="tab-link-tab-1">CHarts</div></a
-                ><a
-                  data-w-tab="Tab 2"
-                  class="tab-link-30 _50 w-inline-block w-tab-link"
-                  tabindex="-1"
-                  id="w-tabs-1-data-w-tab-1"
-                  href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-1-data-w-pane-1"
-                  role="tab"
-                  aria-controls="w-tabs-1-data-w-pane-1"
-                  aria-selected="false"
-                  ><div class="tab-link-inactive">
-                    SATISFACTION&nbsp;SCORES
-                  </div></a
-                >
-              </div>
-              <div class="w-tab-content">
-                <div
-                  data-w-tab="Tab 1"
-                  class="tab-pane-tab-1 w-tab-pane w--tab-active"
-                  id="w-tabs-1-data-w-pane-0"
-                  role="tabpanel"
-                  aria-labelledby="w-tabs-1-data-w-tab-0"
-                >
-                  <img
-                    sizes="100vw"
-                    srcset="
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-500.png   500w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-800.png   800w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1080.png 1080w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203-p-1600.png 1600w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756776b9d7afd78b529077_Survey%20Results%203.png        1800w
-                    "
-                    alt=""
-                    src="/public/images/tastebuds/65756776b9d7afd78b529077_Survey Results 3.png"
-                    loading="lazy"
-                  />
-                </div>
-                <div
-                  data-w-tab="Tab 2"
-                  class="tab-pane-tab-3 w-tab-pane"
-                  id="w-tabs-1-data-w-pane-1"
-                  role="tabpanel"
-                  aria-labelledby="w-tabs-1-data-w-tab-1"
-                >
-                  <div>
-                    <div class="div-block-73">
-                      <h2 class="p label _1-125-rem">
-                        TOTAL satisfaction assessment methodology
-                      </h2>
-                      <h2 class="paragraph _1-rem light">
-                        First, I measured individual user satisfaction levels on
-                        the following: average time spent on finding a place to
-                        eat, frequency of trying new restaurants, frequency of
-                        trying new dishes, and current methods to make dining
-                        decisions. Then I assigned a scoring system, where
-                        I&nbsp;assigned points to each satisfaction level, with
-                        "Completely satisfied" being 5 points and both
-                        "Completely dissatisfied" &amp; "Mostly dissatisfied"
-                        being 0 points. Due to having only one data point for
-                        "Completely dissatisfied," I combined its score with
-                        "Mostly dissatisfied" to simplify calculations and keep
-                        the ratings as whole numbers without decimals for a
-                        clearer analysis.
-                      </h2>
-                    </div>
-                  </div>
-                  <img
-                    sizes="100vw"
-                    srcset="
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-500.png   500w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-800.png   800w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1080.png 1080w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201-p-1600.png 1600w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65756811575373ec2fb7267e_Survey%20Results%201.png        1800w
-                    "
-                    alt=""
-                    src="/public/images/tastebuds/65756811575373ec2fb7267e_Survey Results 1.png"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
+            <p class="section-subheading heading-icon">
+              <span
+                ><img
+                  src="public/svg/tastebuds/ic-assessment.svg"
+                  class="svg-icon"
+                  alt="" /></span
+              >how satisfied do diners feel?
+            </p>
           </div>
           <p>
             For respondents who were not "Completely satisfied" with their

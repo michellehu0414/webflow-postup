@@ -13,21 +13,14 @@
     width: auto;
     max-height: 32rem;
   }
-  
 
   .content-container {
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
     gap: 2rem;
+    padding: 0 1rem;
   }
-}
-
-.mood.large {
-  align-self: flex-start;
-  width: 40px;
-  max-width: none;
-  height: 40px;
 }
 
 .likert-scale {
@@ -61,4 +54,61 @@
   p {
     margin-bottom: 0;
   }
+}
+
+.survey-results-wrapper {
+  @extend .flex-row;
+  gap: 2rem;
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+
+  > div:first-child {
+    flex: content;
+  }
+
+  >div:last-child {
+    margin-top: calc(32px + 56px);
+  }
+
+  .section-subheading {
+    margin-bottom:1.5rem;
+  }
+}
+
+.survey-results_graphs-wrapper {
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.survey-results-cards-wrapper {
+  @extend .flex-row;
+  gap: 0.5rem;
+
+  img {
+    border-radius: 5px;
+  }
+
+  .survey-results-card {
+    width: 50%;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 5px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.likert-mood.large {
+  align-self: flex-start;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.flex-1 {
+  flex: 1;
 }

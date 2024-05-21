@@ -36,7 +36,7 @@ $tab-border-radius: 2rem;
   padding: 2rem 1rem;
   padding-bottom: 0;
 
-  div, 
+  > div, 
   blockquote {
     @extend .mb-32;
   }
@@ -89,7 +89,6 @@ $tab-border-radius: 2rem;
   }
 }
 
-
 // Tab content grid
 .tab-content-grid {
   display: grid;
@@ -98,6 +97,7 @@ $tab-border-radius: 2rem;
   grid-template-rows: auto;
   column-gap: 2rem;
   align-items: center;
+  margin-bottom: 2rem;
 
   img {
     margin: 0;
