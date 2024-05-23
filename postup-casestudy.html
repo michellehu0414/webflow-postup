@@ -156,8 +156,9 @@
           </div>
           <div style="text-align: center; width: fit-content">
             <button
-              id="scrollButton"
-              class="hero-scroll-arrow bg-transparent"
+            class="scroll-button"
+            data-scroll-target="the-problem"
+              class="hero-scroll-arrowbg-transparent"
               aria-label="Scroll down"
             >
               <img
@@ -282,7 +283,7 @@
             updates and promotions, enriching the remote work journey for both
             users and businesses.
           </p>
-          <button id="scrollToSolution" class="btn-scrollToSection">
+          <button class="scroll-button" class="btn-scrollToSection"             data-scroll-target="final-solution">
             Jump to final prototype<span
               class="material-symbols-outlined ic-arrow_jump-to-section"
             >
@@ -1995,7 +1996,7 @@
       })(window, document);
     </script>
     <script src="/public/js/scrollable.js"></script>
-    <script src="/public/js/heroScrollDown.js"></script>
+    <script src="/public/js/scroll-button.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
