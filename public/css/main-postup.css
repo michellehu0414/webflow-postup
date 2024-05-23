@@ -388,6 +388,7 @@ h6 {
 .section-subheading {
   font-size: 1.5rem;
   color: #076261;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1516,7 +1517,7 @@ blockquote {
   background-color: #f9f9f9;
 }
 .section-container.equal-padding {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .border {
@@ -2264,6 +2265,10 @@ main div > img:only-child {
   justify-content: center;
 }
 
+.items-start {
+  align-items: start;
+}
+
 .scroll-button {
   cursor: pointer;
   font-size: 1.125rem;
@@ -2298,6 +2303,10 @@ main div > img:only-child {
 }
 .mb-80 {
   margin-bottom: 5rem !important;
+}
+
+.ml-24 {
+  margin-left: 1rem;
 }
 
 .margin-0 {

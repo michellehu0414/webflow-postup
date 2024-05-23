@@ -10,7 +10,8 @@ $diner-trends-border: 1px solid $black;
   // Using the grid-item mixin for the items
   max-width: $content-max-width;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   > div {
     // border: $diner-trends-border;

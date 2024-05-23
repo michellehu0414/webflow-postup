@@ -198,17 +198,19 @@
   // grid-template-columns: 3fr 7fr;
   column-gap: 1.25rem;
   align-items: center;
-  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
 
-  > div:first-child {
-    p {
-      color: $off-black;
-      font-size: 1.5rem;
-      font-weight: 500;
-      line-height: 150%;
-      margin-bottom: 0;
-      margin-top: 0;
-      text-align: left;
-    }
-  }
+.quotation-mark {
+  --primary-color: #076261;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  padding: 0;
+  box-sizing: border-box;
+  border-style: none;
+  width: 100%;
+  margin: 0;
+  max-width: 4rem;
 }
