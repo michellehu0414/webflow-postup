@@ -47,7 +47,6 @@ summary {
 hr {
   box-sizing: content-box;
   height: 0;
-  overflow: visible;
   border: none;
 }
 
@@ -323,4 +322,9 @@ template {
 
 [hidden] {
   display: none;
+}
+
+// Material icons
+.material-icons {
+  vertical-align: -14%;
 }

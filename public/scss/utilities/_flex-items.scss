@@ -33,7 +33,8 @@
     transform: rotate(90deg) translateX(5px);
 }
 
-.btn-scrollToSection {
+.scroll-button {
+    cursor: pointer;
     font-size: 1.125rem;
     background-color: transparent; // Removes background color
     text-decoration: none; // Removes underline
