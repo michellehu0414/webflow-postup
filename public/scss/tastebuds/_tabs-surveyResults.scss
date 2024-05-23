@@ -3,7 +3,7 @@ $tab-border-radius: 2rem;
 .survey-results-tabs.tabs-container {
     width: 90%;
     max-width: 52rem;
-    @extend .mt-32;
+    margin-top: 2rem;
     margin: 0 auto;
   
   .tabs-menu {

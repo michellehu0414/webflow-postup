@@ -93,23 +93,20 @@ h6 {
   color: $black;
   font-family: "Noto Serif", serif;
   font-size: 1.125rem;
-  font-weight: 350;
+  font-weight: 500;
   line-height: 160%; // 28.8px
 }
 
 .quote-text {
-  font-family: "Noto Serif", sans-serif;
+  font-family: "Noto Serif", serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 160%;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  margin: 0;
   overflow-wrap: normal;
-  width: 100%;
-  text-align: left;
-  color: $medium-grey;
+  color: $black;
 }
 
 .bold {
@@ -130,8 +127,21 @@ h6 {
   }
 }
 
+%subheading {
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 130%;
+  color: $black;
+  font-size: 1.3rem;
+  text-transform: none;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
 .section-subheading {
-  @extend .subheading;
+  @extend %subheading;
   font-size: 1.5rem;
   color: $primary-color;
   margin-bottom: 1rem;

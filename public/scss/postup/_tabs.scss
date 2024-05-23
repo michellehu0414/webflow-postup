@@ -2,7 +2,7 @@ $tab-border-radius: 2rem;
 
 .tabs-container {
   width: $content-max-width;
-  @extend .mt-32;
+  margin-top: 2rem;
   margin: auto;
 }
 
@@ -38,7 +38,7 @@ $tab-border-radius: 2rem;
 
   > div, 
   blockquote {
-    @extend .mb-32;
+    margin-bottom: 2rem;
   }
 
   > :last-child {

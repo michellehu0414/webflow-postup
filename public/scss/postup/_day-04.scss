@@ -1,6 +1,6 @@
 // Thursday design checklist {
 .design-checklist {
-  @include flex-row;
+  @include flex(row, 2rem, flex-start, flex-start);
   align-items: flex-start;
   gap: 2rem;
   > div:first-child {

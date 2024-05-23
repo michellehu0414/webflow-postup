@@ -16,7 +16,7 @@ ol {
     transform:translateX(-0.25rem);
 
     span {
-      @extend .fw-medium;
+      font-weight: 500;
     }
   }
 }

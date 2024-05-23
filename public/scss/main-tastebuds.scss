@@ -10,13 +10,13 @@ $bg-grey: #f0f0f0;
 
 @import 'base/all-bases';
 
-@import 'utilities/all-utilities';
-
 @import 'components/all-components';  
 
 @import 'sections/all-sections';
 
 @import 'tastebuds/all-tastebuds';
+
+@import 'utilities/all-utilities';
 
 .header-container.tastebuds {
     margin-bottom: 1rem;
