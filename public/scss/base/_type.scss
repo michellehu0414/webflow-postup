@@ -134,6 +134,7 @@ h6 {
   color: $black;
   font-size: 1.3rem;
   text-transform: none;
+  margin-bottom: 0.5rem;
 
   &::first-letter {
     text-transform: capitalize;
@@ -144,7 +145,7 @@ h6 {
   @extend %subheading;
   font-size: 1.5rem;
   color: $primary-color;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .secondary-text {

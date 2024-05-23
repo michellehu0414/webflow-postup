@@ -6,10 +6,6 @@
 @import 'lists';
 
 .hide {
-    display: none;
+    display: none !important;
     overflow: hidden;
-}
-
-.icon-inline {
-    top: 0.5rem;
 }

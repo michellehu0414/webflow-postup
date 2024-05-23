@@ -47,8 +47,7 @@
   }
 
   @include breakpoint(lg) {
-    min-width: 52rem;
-    max-width: 65rem;
+    max-width: 55rem;
 
     .img-screener-survey {
       max-height: 50rem;
@@ -56,6 +55,10 @@
 
     .content-container {
       max-width: 60rem;
+    }
+
+    .target-diners_wrapper {
+      margin-top: 1rem;
     }
   }
 }
@@ -133,35 +136,50 @@
   > div:last-child {
     margin-top: calc(32px + 56px);
   }
-
-  .section-subheading {
-    margin-bottom: 1.5rem;
-  }
 }
 
-.survey-results_graphs-wrapper {
+.img-survey-results_wrapper {
   box-sizing: border-box;
   padding: 1rem;
   background-color: #fff;
+  border: 1.25px solid $medium-light-grey;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .survey-results-cards-wrapper {
-  @include flex(row, 0.5rem);
+  @include flex(row, 0.5rem, stretch, stretch);
   img {
     border-radius: 5px;
   }
 
-  .survey-results-card {
-    width: 50%;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 5px;
+}
 
-    p {
-      margin: 0;
-    }
+.survey-results-card {
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  border: 1.25px solid $medium-light-grey;
+
+  .content {
+    width: 100%;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: $black;
   }
 }
+
+.img-survey-results_wrapper {
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1.25px solid $medium-light-grey;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
 
 .likert-mood.large {
   align-self: flex-start;

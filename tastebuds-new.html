@@ -368,6 +368,16 @@
             used to tailor user interview questions to each participant to delve
             into significant findings.
           </p>
+        </div>
+        <div class="content">
+          <p>
+            Working independently, I had to make the most out of my research
+            methods. Therefore, I designed a screening survey for user
+            interviews that also aimed to collect preliminary data and insights
+            about diner behaviors, preferences, and experiences, which I then
+            used to tailor user interview questions to each participant to delve
+            into significant findings.
+          </p>
           <div class="target-diners_wrapper">
             <p class="section-subheading">my target diners</p>
             <ul role="list">
@@ -385,42 +395,44 @@
             </ul>
           </div>
         </div>
-        <div class="screener-survey-wrapper-2 mb-40">
-          <img
-            src="/public/images/tastebuds/screener-survey.png"
-            loading="lazy"
-            alt=""
-            class="img-screener-survey"
-          />
-          <div class="content-container">
-            <p>
-              Working independently, I had to make the most out of my research
-              methods. Therefore, I designed a screening survey for user
-              interviews that also aimed to collect preliminary data and
-              insights about diner behaviors, preferences, and experiences,
-              which I then used to tailor user interview questions to each
-              participant to delve into significant findings.
-            </p>
-            <div class="target-diners_wrapper">
-              <p class="section-subheading">my target diners</p>
-              <ul role="list">
-                <li>Diners aged 16-55</li>
-                <li>Use mobile apps regularly (3+ times a week)</li>
-                <li>Dine out or order takeout at least once a week</li>
-                <li>
-                  Feel at least somewhat dissatisfied about one or more aspects
-                  of their dining experience
-                </li>
-                <li>
-                  Use mobile apps to make dining out decisions at least once a
-                  week
-                </li>
-              </ul>
+        <div class="content hide">
+          <div class="screener-survey-wrapper-2 mv-40">
+            <img
+              src="/public/images/tastebuds/screener-survey.png"
+              loading="lazy"
+              alt=""
+              class="img-screener-survey"
+            />
+            <div class="content-container">
+              <p class="hide">
+                Working independently, I had to make the most out of my research
+                methods. Therefore, I designed a screening survey for user
+                interviews that also aimed to collect preliminary data and
+                insights about diner behaviors, preferences, and experiences,
+                which I then used to tailor user interview questions to each
+                participant to delve into significant findings.
+              </p>
+              <div class="target-diners_wrapper mt-16">
+                <p class="section-subheading">my target diners</p>
+                <ul role="list">
+                  <li>Diners aged 16-55</li>
+                  <li>Use mobile apps regularly (3+ times a week)</li>
+                  <li>Dine out or order takeout at least once a week</li>
+                  <li>
+                    Feel at least somewhat dissatisfied about one or more
+                    aspects of their dining experience
+                  </li>
+                  <li>
+                    Use mobile apps to make dining out decisions at least once a
+                    week
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="content">
-          <div class="mb-16">
+        <div class="content hide">
+          <div class="mb-32">
             <p class="section-subheading">A few questions I asked:</p>
             <ul role="list">
               <li>
@@ -492,7 +504,7 @@
             </div>
           </div>
         </div>
-        <div class="container-full-width">
+        <div class="card medium bg-lightest-grey mb-64">
           <div class="screener-survey-wrapper">
             <img
               src="/public/images/tastebuds/screener-survey.png"
@@ -579,7 +591,7 @@
             </div>
           </div>
         </div>
-        <div class="content">
+        <div class="container-full-width">
           <div class="survey-results-wrapper">
             <div
               class="survey-results-tabs tabs-container"
@@ -593,15 +605,15 @@
                   <p>Findings</p>
                 </button>
                 <button class="tab-button" data-tab="tab2">
-                  <p>Data Table</p>
+                  <p>Survey Data and Methods</p>
                 </button>
               </div>
               <div id="tab1" class="tab-content active">
                 <div>
-                  <p class="section-subheading black">
+                  <p class="secondary-text mb-24">
                     How satisfied do diners feel?
                   </p>
-                  <div class="survey-results_graphs-wrapper mb-8">
+                  <div class="img-survey-results_wrapper mb-8">
                     <img
                       alt=""
                       loading="lazy"
@@ -610,16 +622,16 @@
                     />
                   </div>
                   <div class="survey-results-cards-wrapper">
-                    <div class="survey-results-card flex-1">
+                    <div class="survey-results-card">
                       <img
                         src="public/images/tastebuds/likert-mood-5.png"
                         loading="lazy"
                         alt=""
                         class="likert-mood large"
                       />
-                      <p>
+                      <p class="content">
                         Overall, respondents feel
-                        <span class="fw-medium"
+                        <span
                           >least satisfied about how long they take to make
                           dining decisions</span
                         >—an average of
@@ -633,7 +645,7 @@
                         alt=""
                         class="likert-mood large"
                       />
-                      <p>
+                      <p class="content">
                         Among the least satisfied respondents, this rating drops
                         to an
                         <span class="fw-medium">average of 26%</span>.
@@ -641,8 +653,19 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div id="tab2" class="tab-content">
+                <p class="secondary-text">
+                  Complete Survey Data
+                </p>
+                <p>The table below was used to calculate the satisfaction levels and findings in the first tab.</p>
+                <img
+                  alt=""
+                  src="/public/images/tastebuds/65756811575373ec2fb7267e_Survey Results 1.png"
+                  loading="lazy"
+                />
                 <div class="total-satisfaction-method">
-                  <p>Satisfaction assessment methodology</p>
+                  <p>Methodology</p>
                   <p>
                     First, I measured individual user satisfaction levels on the
                     following: average time spent on finding a place to eat,
@@ -652,23 +675,16 @@
                     each satisfaction level, with "Completely satisfied" being 5
                     points and both "Completely dissatisfied" &amp; "Mostly
                     dissatisfied" being 0 points. Due to having only one data
-                    point for "Completely dissatisfied," I combined its score
-                    with "Mostly dissatisfied" to simplify calculations and keep
-                    the ratings as whole numbers without decimals for a clearer
+                    point for "Completely dissatisfied," I combined its score with
+                    "Mostly dissatisfied" to simplify calculations and keep the
+                    ratings as whole numbers without decimals for a clearer
                     analysis.
                   </p>
                 </div>
               </div>
-              <div id="tab2" class="tab-content">
-                <img
-                  alt=""
-                  src="/public/images/tastebuds/65756811575373ec2fb7267e_Survey Results 1.png"
-                  loading="lazy"
-                />
-              </div>
             </div>
             <div class="hide">
-              <div class="total-satisfaction-method hide">
+              <div class="total-satisfaction-method">
                 <p>Satisfaction assessment methodology</p>
                 <p>
                   First, I measured individual user satisfaction levels on the
@@ -742,7 +758,7 @@
           </div>
         </section>
       </section>
-      <section class="section-container border">
+      <section class="subsection">
         <div class="content">
           <header class="header-container">
             <span> user interviews </span>
@@ -756,21 +772,8 @@
               participant to delve into significant findings.
             </p>
           </header>
-          <div class="heading-icon">
-            <svg
-              class="svg-icon medium"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h24c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h22v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h22v2z"
-                fill="currentColor"
-              ></path>
-            </svg>
-            <p class="section-subheading">A few questions I asked</p>
-          </div>
-          <ul role="list" class="list _24px">
+          <p class="section-subheading">A few questions I asked</p>
+          <ul role="list">
             <li>What compels you to dine out? What do you enjoy about it?</li>
             <li>
               What factors do you consider when finding a place to eat? Why?

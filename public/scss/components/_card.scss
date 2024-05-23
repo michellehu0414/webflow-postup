@@ -1,11 +1,15 @@
 .card {
     gap: 2.5rem;
     max-width: 1200px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 6rem;
     border-radius: 1.5rem;
     height: fit-content;
     overflow: hidden;
     padding: 3rem;
+
+    &.medium {
+        max-width: 1080px;
+    }
 }
