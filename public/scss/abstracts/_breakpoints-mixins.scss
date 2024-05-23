@@ -1,4 +1,3 @@
-
 //Media breakpoints
 $breakpoints: (
   mobile-sm: 320px,
@@ -53,75 +52,131 @@ $breakpoints: (
 }
 
 // Classes for showing content at different breakpoints
-.show-mobile-sm { display: none; }
-.show-mobile-med { display: none; }
-.show-mobile-lg { display: none; }
-.show-sm { display: none; }
-.show-med { display: none; }
-.show-lg { display: none; }
-.show-xl { display: none; }
+.show-mobile-sm {
+  display: none;
+}
+.show-mobile-med {
+  display: none;
+}
+.show-mobile-lg {
+  display: none;
+}
+.show-sm {
+  display: none;
+}
+.show-med {
+  display: none;
+}
+.show-lg {
+  display: none;
+}
+.show-xl {
+  display: none;
+}
 
 @include breakpoint(mobile-sm) {
-  .show-mobile-sm { display: block; }
+  .show-mobile-sm {
+    display: block;
+  }
 }
 
 @include breakpoint(mobile-med) {
-  .show-mobile-med { display: block; }
+  .show-mobile-med {
+    display: block;
+  }
 }
 
 @include breakpoint(mobile-lg) {
-  .show-mobile-lg { display: block; }
+  .show-mobile-lg {
+    display: block;
+  }
 }
 
 @include breakpoint(sm) {
-  .show-sm { display: block; }
+  .show-sm {
+    display: block;
+  }
 }
 
 @include breakpoint(med) {
-  .show-med { display: block; }
+  .show-med {
+    display: block;
+  }
 }
 
 @include breakpoint(lg) {
-  .show-lg { display: block; }
+  .show-lg {
+    display: block;
+  }
 }
 
 @include breakpoint(xl) {
-  .show-xl { display: block; }
+  .show-xl {
+    display: block;
+  }
 }
 
 // Classes for hiding content at different breakpoints
-.hide-mobile-sm { display: block; }
-.hide-mobile-med { display: block; }
-.hide-mobile-lg { display: block; }
-.hide-sm { display: block; }
-.hide-med { display: block; }
-.hide-lg { display: block; }
-.hide-xl { display: block; }
+.hide-mobile-sm {
+display: none
+}
+.hide-mobile-med {
+display: none
+}
+.hide-mobile-lg {
+display: none
+}
+.hide-sm {
+display: none
+}
+.hide-med {
+display: none
+}
+.hide-lg {
+display: none
+}
+.hide-xl {
+display: none
+}
 
 @include breakpoint(mobile-sm) {
-  .hide-mobile-sm { display: none; }
+  .hide-mobile-sm {
+    display: none;
+  }
 }
 
 @include breakpoint(mobile-med) {
-  .hide-mobile-med { display: none; }
+  .hide-mobile-med {
+    display: none;
+  }
 }
 
 @include breakpoint(mobile-lg) {
-  .hide-mobile-lg { display: none; }
+  .hide-mobile-lg {
+    display: none;
+  }
 }
 
 @include breakpoint(sm) {
-  .hide-sm { display: none; }
+  .hide-sm {
+    display: none;
+  }
 }
 
 @include breakpoint(med) {
-  .hide-med { display: none; }
+  .hide-med {
+    display: none;
+  }
 }
 
 @include breakpoint(lg) {
-  .hide-lg { display: none; }
+  .hide-lg {
+    display: none;
+  }
 }
 
 @include breakpoint(xl) {
-  .hide-xl { display: none; }
+  .hide-xl {
+    display: none;
+  }
 }

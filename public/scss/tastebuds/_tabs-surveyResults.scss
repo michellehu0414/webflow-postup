@@ -85,6 +85,10 @@ $tab-border-radius: 2rem;
       }
     }
   }
+
+  .total-satisfaction-method {
+    margin-top: 2rem;
+  }
 }
 
 // Tab content
@@ -100,16 +104,17 @@ $tab-border-radius: 2rem;
 .total-satisfaction-method {
   border: 1px solid var(--medium-light-grey);
   padding: 16px;
-  max-width: $content-max-width;
   margin: auto;
+  color: $dark-grey;
   
-  p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-weight: 400;
+  p:first-child {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    font-weight: 500;
   }
 
   p:last-child {
     margin-bottom: 0;
+    font-size: 1rem;
   }
 }

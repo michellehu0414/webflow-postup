@@ -70,7 +70,7 @@ main {
   background-color: $lightest-grey;
   margin: 2.5rem 0 4rem 0;
   width: 100vw;
-  padding: 4rem;
+  padding: 1rem 0;
 
   .content-wrapper {
     div {
@@ -84,6 +84,14 @@ main {
 
   &.grey {
     background-color: #f3f3f3;
+  }
+
+  @include breakpoint(med) {
+    padding: 2rem 0;
+  }
+
+  @include breakpoint(lg) {
+    padding: 4rem 0;
   }
 }
 

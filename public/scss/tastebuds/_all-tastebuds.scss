@@ -141,17 +141,6 @@ $border-left-color_1: var(--light-grey);
   font-family: webflow-icons !important;
 }
 
-.w-embed:before,
-.w-embed:after {
-  content: " ";
-  grid-area: 1/1/2/2;
-  display: table;
-}
-
-.w-embed:after {
-  clear: both;
-}
-
 .w-container {
   max-width: 940px;
   margin-left: auto;

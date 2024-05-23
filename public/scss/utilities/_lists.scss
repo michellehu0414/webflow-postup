@@ -12,6 +12,8 @@ ol {
     font-size: 1.125rem;
     line-height: 150%;
     text-align: left;
+    padding-left: 0.25rem;
+    transform:translateX(-0.25rem);
 
     span {
       @extend .fw-medium;

@@ -76,31 +76,31 @@
   }
 }
 .hide-mobile-sm {
-  display: block;
+  display: none;
 }
 
 .hide-mobile-med {
-  display: block;
+  display: none;
 }
 
 .hide-mobile-lg {
-  display: block;
+  display: none;
 }
 
 .hide-sm {
-  display: block;
+  display: none;
 }
 
 .hide-med, blockquote .interviewee .img-interviewee {
-  display: block;
+  display: none;
 }
 
 .hide-lg {
-  display: block;
+  display: none;
 }
 
 .hide-xl {
-  display: block;
+  display: none;
 }
 
 @media (min-width: 320px) {
@@ -1174,18 +1174,6 @@ template {
   background: transparent;
 }
 
-.w-embed:before,
-.w-embed:after {
-  content: " ";
-  display: table;
-  grid-area: 1/1/2/2;
-  width: 45rem;
-}
-
-.w-embed:after {
-  clear: both;
-}
-
 ul,
 ol {
   display: flex;
@@ -1201,6 +1189,8 @@ ol li {
   font-size: 1.125rem;
   line-height: 150%;
   text-align: left;
+  padding-left: 0.25rem;
+  transform: translateX(-0.25rem);
 }
 ol {
   list-style-type: decimal;
@@ -2046,7 +2036,7 @@ main div > img:only-child {
   background-color: #f9f9f9;
   margin: 2.5rem 0 4rem 0;
   width: 100vw;
-  padding: 4rem;
+  padding: 1rem 0;
 }
 .container-full-width .content-wrapper div {
   margin: auto;
@@ -2056,6 +2046,16 @@ main div > img:only-child {
 }
 .container-full-width.grey {
   background-color: #f3f3f3;
+}
+@media (min-width: 768px) {
+  .container-full-width {
+    padding: 2rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .container-full-width {
+    padding: 4rem 0;
+  }
 }
 
 .header-container {

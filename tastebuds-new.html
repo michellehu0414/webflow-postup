@@ -378,26 +378,8 @@
             into significant findings.
           </p>
         </div>
-        <div class="content">
-          <p class="section-subheading heading-icon">
-            <span class="material-symbols-rounded icon"> account_circle </span
-            >my target diners
-          </p>
-          <ul role="list">
-            <li>Diners aged 16-55</li>
-            <li>Use mobile apps regularly (3+ times a week)</li>
-            <li>Dine out or order takeout at least once a week</li>
-            <li>
-              Feel at least somewhat dissatisfied about one or more aspects of
-              their dining experience
-            </li>
-            <li>
-              Use mobile apps to make dining out decisions at least once a week
-            </li>
-          </ul>
-        </div>
         <div class="container-full-width">
-          <div class="screener-survey-container">
+          <div class="screener-survey-wrapper">
             <img
               src="/public/images/tastebuds/screener-survey.png"
               loading="lazy"
@@ -405,6 +387,22 @@
               class="img-screener-survey"
             />
             <div class="content-container">
+              <div class="target-diners_wrapper">
+                <p class="section-subheading">my target diners</p>
+                <ul role="list">
+                  <li>Diners aged 16-55</li>
+                  <li>Use mobile apps regularly (3+ times a week)</li>
+                  <li>Dine out or order takeout at least once a week</li>
+                  <li>
+                    Feel at least somewhat dissatisfied about one or more
+                    aspects of their dining experience
+                  </li>
+                  <li>
+                    Use mobile apps to make dining out decisions at least once a
+                    week
+                  </li>
+                </ul>
+              </div>
               <div>
                 <p class="section-subheading">A few questions I asked:</p>
                 <ul role="list">
@@ -425,7 +423,7 @@
                   For each question, I asked respondents how satisfied they
                   feel:
                 </p>
-                <div class="flex gap-32">
+                <div class="likert_flex-container">
                   <div class="likert">
                     <div class="satisfaction-level">
                       <img src="public/images/tastebuds/likert-mood-1.png" />
@@ -545,6 +543,23 @@
                     </div>
                   </div>
                 </div>
+                <div class="total-satisfaction-method">
+                  <p>Satisfaction assessment methodology</p>
+                  <p>
+                    First, I measured individual user satisfaction levels on the
+                    following: average time spent on finding a place to eat,
+                    frequency of trying new restaurants, frequency of trying new
+                    dishes, and current methods to make dining decisions. Then I
+                    assigned a scoring system, where I&nbsp;assigned points to
+                    each satisfaction level, with "Completely satisfied" being 5
+                    points and both "Completely dissatisfied" &amp; "Mostly
+                    dissatisfied" being 0 points. Due to having only one data
+                    point for "Completely dissatisfied," I combined its score with
+                    "Mostly dissatisfied" to simplify calculations and keep the
+                    ratings as whole numbers without decimals for a clearer
+                    analysis.
+                  </p>
+                </div>
               </div>
               <div id="tab2" class="tab-content">
                 <img
@@ -554,8 +569,8 @@
                 />
               </div>
             </div>
-            <div>
-              <div class="total-satisfaction-method">
+            <div class="hide">
+              <div class="total-satisfaction-method hide">
                 <p>Satisfaction assessment methodology</p>
                 <p>
                   First, I measured individual user satisfaction levels on the
@@ -576,16 +591,7 @@
           </div>
         </div>
         <section class="content">
-          <div class="survey-results right">
-            <p class="section-subheading heading-icon">
-              <span
-                ><img
-                  src="public/svg/tastebuds/ic-assessment.svg"
-                  class="svg-icon"
-                  alt="" /></span
-              >how satisfied do diners feel?
-            </p>
-          </div>
+
           <p>
             For respondents who were not "Completely satisfied" with their
             methods, they had the chance to explain.
