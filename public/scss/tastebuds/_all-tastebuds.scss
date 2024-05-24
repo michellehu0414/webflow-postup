@@ -3,6 +3,7 @@
 @import 'likert-scale';
 @import 'tabs-surveyResults';
 @import 'user-personas';
+@import 'narrowingScope';
 
 .container-full-width.light-blue {
   background-color: #BBDBF5;
@@ -689,45 +690,6 @@ $border-left-color_1: var(--light-grey);
   line-height: 100%;
 }
 
-.main-heading._1-602-rem {
-  flex: 0 auto;
-  align-self: flex-start;
-  font-size: 1.6022rem;
-  line-height: 150%;
-}
-
-.list-item {
-  font-size: 18px;
-  font-style: normal;
-}
-
-.list {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  flex-direction: column;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 24px;
-  line-height: 150%;
-  list-style-type: decimal;
-  display: flex;
-}
-
-.list._8px {
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
-  text-align: left;
-  align-self: flex-start;
-  align-items: flex-start;
-  padding-left: 18px;
-  list-style-type: disc;
-}
-
-.list._24px {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-}
-
 .div-block-15 {
   padding: 0%;
 }
@@ -735,13 +697,6 @@ $border-left-color_1: var(--light-grey);
 .content.low-fidelity {
   grid-column-gap: 96px;
   grid-row-gap: 96px;
-}
-
-.content._64-px {
-  grid-column-gap: 64px;
-  grid-row-gap: 64px;
-  padding-left: 0%;
-  padding-right: 0%;
 }
 
 .div-block-21 {
@@ -1660,11 +1615,6 @@ $border-left-color_1: var(--light-grey);
   grid-row-gap: 40px;
   flex-direction: column;
   display: flex;
-}
-
-.image-32 {
-  flex: 0 auto;
-  max-width: 100%;
 }
 
 .diner-stories {

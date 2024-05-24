@@ -391,6 +391,12 @@ h6 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+.section-subheading.small {
+  font-size: 1.25rem;
+  color: #1e1e1e;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
 
 .secondary-text {
   color: #1e1e1e;

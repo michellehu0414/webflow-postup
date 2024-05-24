@@ -13,7 +13,7 @@
   .content-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
 
     > div {
@@ -124,9 +124,9 @@
 }
 
 .survey-results-wrapper {
-  @include flex(row, 2rem, null, null);
+  @include flex(column, 2rem, null, null);
   width: 90%;
-  max-width: 75rem;
+  max-width: 52rem;
   margin: 0 auto;
 
   > div:first-child {
