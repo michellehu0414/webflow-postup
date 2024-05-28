@@ -66,9 +66,14 @@ $diner-trends-border: 1px solid $black;
       }
     }
 
-    img {
+    .dining-factors-icon {
       width: 5rem;
       margin-bottom: 0.5rem;
+    }
+
+    .ic-dining-factors-location {
+      width: 4.5rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -79,16 +84,19 @@ $diner-trends-border: 1px solid $black;
   font-weight: 400;
 }
 
-blockquote.statistic-highlight {
+.blockquote-statistic-highlight {
   margin: 0;
-  p {
-    color: $black;
-  }
+
   .blockquote-content {
     margin: 0;
     @extend %pv-16;
     border-color: $medium-light-grey;
     background-color: transparent;
-    color: $medium-grey;
+    color: $black;
   }
+  
+}
+.blockquote-text {
+  margin: 0;
+  color: $black;
 }

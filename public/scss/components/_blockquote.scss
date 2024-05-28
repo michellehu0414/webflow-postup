@@ -19,9 +19,9 @@ blockquote {
   background-color: #fafafa;
   border-left: 6px solid $medium-light-grey;
 
-  p {
+  p:first-child {
     @extend %quote-text;
-    margin: 0 0 0.5rem 0;
+    margin: 0;
   }
 }
 
@@ -35,7 +35,7 @@ blockquote {
   }
 
   p {
-    color: $medium-grey;
+    color: $dark-grey;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     margin-bottom: 0;

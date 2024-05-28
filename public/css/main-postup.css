@@ -230,14 +230,13 @@
   height: 80px;
 }
 
-.blockquote-content p {
+.blockquote-content p:first-child {
   font-family: "Noto Serif", sans-serif !important;
   font-size: 1.25rem !important;
   font-style: normal !important;
   font-weight: 400 !important;
   letter-spacing: 0.2px !important;
   line-height: 160% !important;
-  margin-bottom: 1rem !important;
   margin-top: 0 !important;
   overflow-wrap: normal !important;
   width: 100% !important;
@@ -1128,8 +1127,8 @@ blockquote {
   background-color: #fafafa;
   border-left: 6px solid #dbdbdb;
 }
-.blockquote-content p {
-  margin: 0 0 0.5rem 0;
+.blockquote-content p:first-child {
+  margin: 0;
 }
 
 .interviewee {
@@ -1138,7 +1137,7 @@ blockquote {
   align-items: center;
 }
 .interviewee p {
-  color: #757575;
+  color: #565656;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   margin-bottom: 0;
@@ -1681,6 +1680,7 @@ main div > img:only-child {
 }
 .interview-quotes-wrapper > .img-quotation-mark {
   margin: 0;
+  margin-bottom: 1rem;
   max-width: 5rem;
 }
 .interview-quotes-wrapper .grid-container {
