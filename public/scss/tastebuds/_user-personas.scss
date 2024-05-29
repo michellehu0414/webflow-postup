@@ -18,6 +18,11 @@
   p:last-child {
     margin-bottom: 0;
   }
+
+  span {
+    font-weight: 500;
+    color: $emphasis-blue;
+  }
 }
 
 .user-persona_heading-container {

@@ -1158,17 +1158,28 @@ blockquote {
   max-width: 1080px;
 }
 
-.heading-icon {
+.header-with-icon {
+  display: flex;
+  width: 100%;
+  max-width: 45rem;
+  margin: auto;
+  margin-bottom: 1.25rem;
   position: relative;
+  transform: translateX(-2.5rem);
 }
-.heading-icon .icon {
+.header-with-icon .headline {
+  width: 100%;
+  text-align: left;
+  padding-left: 2.5rem;
+  margin-bottom: 0;
+}
+.header-with-icon .icon_wrapper {
+  width: 1.5rem;
   position: absolute;
   left: 0;
-  top: 0;
-  width: 1rem;
-  height: 1rem;
-  transform: translateX(calc(-100% - 0.5rem));
-  line-height: 1.2;
+}
+.header-with-icon .ic-lightbulb {
+  width: 1.5rem;
 }
 
 .hero-overview {
