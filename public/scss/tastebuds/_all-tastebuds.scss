@@ -4,6 +4,8 @@
 @import 'tabs-surveyResults';
 @import 'user-personas';
 @import 'narrowingScope';
+@import 'definingScope';
+@import 'competitorAnalysis';
 
 .container-full-width.light-blue {
   background-color: #BBDBF5;
@@ -1502,12 +1504,6 @@ $border-left-color_1: var(--light-grey);
 .image-111 {
   border-radius: 5px;
   max-width: 64px;
-}
-
-.competitor-logo {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .div-block-140 {

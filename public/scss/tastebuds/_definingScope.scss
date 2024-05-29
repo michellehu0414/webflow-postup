@@ -1,0 +1,24 @@
+.user-interview-findings_wrapper {
+    @include flex(column, 2rem);
+    margin: auto;
+    border-radius: 1.25rem;
+    background-color: $light-grey;
+    padding: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-user-interview-findings {
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 2.5rem;
+    margin: auto;
+}
+
+.img-diner-journey_wrapper {
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+}

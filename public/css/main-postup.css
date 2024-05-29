@@ -304,7 +304,6 @@ h3 {
   line-height: 130%; /* Slightly adjusted for better readability */
   margin-bottom: 1.5rem;
   margin-top: 1rem;
-  text-transform: capitalize;
 }
 
 h4 {
@@ -906,7 +905,7 @@ template {
 .content-grid.large aside p {
   font-size: 1rem;
   color: #00bdd6;
-  font-family: Noto Serif, sans-serif;
+  font-family: "Noto Serif", sans-serif;
   text-align: left;
 }
 @media (min-width: 768px) {
@@ -1524,6 +1523,9 @@ blockquote {
 .section-container.equal-padding {
   padding: 6rem 0;
 }
+.section-container > :first-child {
+  margin-top: 0;
+}
 
 .border {
   border-bottom: 1px solid #f0f0f0;
@@ -1558,6 +1560,9 @@ main div > img:only-child {
 .content.xl {
   max-width: 1400px;
 }
+.content > :first-child {
+  margin-top: 0;
+}
 
 .container-full-width {
   display: flex;
@@ -1587,6 +1592,9 @@ main div > img:only-child {
     padding: 4rem 0;
   }
 }
+.container-full-width > :first-child {
+  margin-top: 0;
+}
 
 .header-container {
   display: block;
@@ -1603,7 +1611,7 @@ main div > img:only-child {
 
 .subheader, .header-container span {
   color: #757575;
-  font-size: 1.125rem;
+  font-size: 0.889rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 125%;
@@ -2321,6 +2329,11 @@ main div > img:only-child {
 
 .margin-auto {
   margin: auto !important;
+}
+
+.mv-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mv-8 {

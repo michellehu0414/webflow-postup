@@ -41,6 +41,11 @@
   margin: auto !important;
 }
 
+.mv-auto {
+  margin-top: auto;
+  margin-bottom:auto;
+}
+
 // Margin vertical
 @mixin mv($size) {
   margin-top: $size !important;

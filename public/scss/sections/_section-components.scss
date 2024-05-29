@@ -20,6 +20,10 @@
   &.equal-padding {
     padding: 6rem 0;
   }
+
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 .border {
@@ -62,6 +66,10 @@ main {
   &.xl {
     max-width: 1400px;
   }
+
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 .container-full-width {
@@ -94,6 +102,10 @@ main {
   @include breakpoint(lg) {
     padding: 4rem 0;
   }
+
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 // Header
@@ -118,7 +130,7 @@ main {
 
 .subheader {
   color: $medium-grey;
-  font-size: 1.125rem;
+  font-size: 0.889rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 125%;
@@ -136,7 +148,6 @@ main {
 }
 
 // Extra classes
-
 .subsection,
 .section-container,
 .container-full-width {
