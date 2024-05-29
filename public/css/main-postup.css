@@ -1172,6 +1172,8 @@ blockquote {
   text-align: left;
   padding-left: 2.5rem;
   margin-bottom: 0;
+  font-size: 1.25rem;
+  color: #565656;
 }
 .header-with-icon .icon_wrapper {
   width: 1.5rem;
@@ -1180,6 +1182,40 @@ blockquote {
 }
 .header-with-icon .ic-lightbulb {
   width: 1.5rem;
+}
+
+.card-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 45rem;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+  height: 100%;
+}
+.card-vertical .headline {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
+  color: #1e1e1e;
+  font-size: 1.35rem;
+  font-weight: normal;
+}
+.card-vertical .ic-lightbulb {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .hero-overview {
