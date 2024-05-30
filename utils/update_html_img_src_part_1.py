@@ -1,8 +1,10 @@
+# [Part 1/2] Run script to clean up img src filenames of images downloaded from WebFlow: removes all leading randomized characters and the first '_'
+
 from bs4 import BeautifulSoup
 import os
 
 # Path to your HTML file
-html_file_path = 'tastebuds-new.html'
+html_file_path = 'postup-casestudy-copy.html'
 
 # Read the HTML file
 with open(html_file_path, 'r', encoding='utf-8') as file:

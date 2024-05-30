@@ -1,3 +1,5 @@
+# [Part 2/2] Run script to clean up img src filenames of images downloaded from WebFlow: replaces spaces with '-' and transforms all text to lowercase
+
 import os
 
 # Directory containing the files

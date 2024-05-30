@@ -1,7 +1,9 @@
+# [Part 1/2] Run script to clean up png file names downloaded from WebFlow: removes all leading randomized characters and the first '_'
+
 import os
 
 # Directory containing the files
-directory = 'public/images/tastebuds'
+directory = 'public/images/postup'
 
 # Iterate over each file in the directory
 for filename in os.listdir(directory):
