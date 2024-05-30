@@ -1,0 +1,37 @@
+.userflowFeatures_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: stretch; /* This will stretch the children to fill the container */
+}
+
+.userflowFeatures_card {
+  @extend .card-vertical;
+  display: flex;
+  flex: 1;
+}
+
+.card-vertical_subheader {
+  font-size: 1rem;
+
+  text-transform: uppercase;
+  font-family: 'Source Code Pro', monospace;
+  color: $dark-grey;
+  margin: 0;
+}
+
+.card-vertical_headline {
+  font-size: 1.5rem;
+  color: $black;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.userflowFeatures_list {
+  width: 100%;
+  margin: 0;
+  border-top: 1.5px solid $black;
+  padding-top: 1rem;
+  list-style-type: none;
+}

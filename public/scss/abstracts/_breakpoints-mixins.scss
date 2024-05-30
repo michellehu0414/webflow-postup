@@ -20,7 +20,7 @@ $breakpoints: (
 }
 
 .mobile-only {
-  display: flex;
+  display: inherit;
   width: 1.5rem;
   height: 1.5rem;
   padding-right: 1rem;
@@ -33,19 +33,19 @@ $breakpoints: (
 }
 
 @mixin iconSize($size) {
-  @if $size == "xs" {
+  @if $size == 'xs' {
     width: 24px;
     height: 24px;
-  } @else if $size == "sm" {
+  } @else if $size == 'sm' {
     width: 32px;
     height: 32px;
-  } @else if $size == "med" {
+  } @else if $size == 'med' {
     width: 40px;
     height: 40px;
-  } @else if $size == "lg" {
+  } @else if $size == 'lg' {
     width: 56px;
     height: 56px;
-  } @else if $size == "xl" {
+  } @else if $size == 'xl' {
     width: 64px;
     height: 64px;
   }
@@ -76,68 +76,47 @@ $breakpoints: (
 
 @include breakpoint(mobile-sm) {
   .show-mobile-sm {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(mobile-med) {
   .show-mobile-med {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(mobile-lg) {
   .show-mobile-lg {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(sm) {
   .show-sm {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(med) {
   .show-med {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(lg) {
   .show-lg {
-    display: block;
+    display: inherit;
   }
 }
 
 @include breakpoint(xl) {
   .show-xl {
-    display: block;
+    display: inherit;
   }
 }
 
 // Classes for hiding content at different breakpoints
-.hide-mobile-sm {
-display: none
-}
-.hide-mobile-med {
-display: none
-}
-.hide-mobile-lg {
-display: none
-}
-.hide-sm {
-display: none
-}
-.hide-med {
-display: none
-}
-.hide-lg {
-display: none
-}
-.hide-xl {
-display: none
-}
 
 @include breakpoint(mobile-sm) {
   .hide-mobile-sm {

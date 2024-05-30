@@ -1,5 +1,5 @@
 .mobile-only {
-  display: flex;
+  display: inherit;
   width: 1.5rem;
   height: 1.5rem;
   padding-right: 1rem;
@@ -42,67 +42,39 @@
 
 @media (min-width: 320px) {
   .show-mobile-sm {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 375px) {
   .show-mobile-med {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 425px) {
   .show-mobile-lg {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 576px) {
   .show-sm {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 768px) {
   .show-med {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 992px) {
   .show-lg {
-    display: block;
+    display: inherit;
   }
 }
 @media (min-width: 1200px) {
   .show-xl {
-    display: block;
+    display: inherit;
   }
 }
-.hide-mobile-sm {
-  display: none;
-}
-
-.hide-mobile-med {
-  display: none;
-}
-
-.hide-mobile-lg {
-  display: none;
-}
-
-.hide-sm {
-  display: none;
-}
-
-.hide-med, .interviewee .img-interviewee {
-  display: none;
-}
-
-.hide-lg {
-  display: none;
-}
-
-.hide-xl {
-  display: none;
-}
-
 @media (min-width: 320px) {
   .hide-mobile-sm {
     display: none;
