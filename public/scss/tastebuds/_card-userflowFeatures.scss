@@ -29,6 +29,20 @@
 	font-weight: 500;
 }
 
+.userflow-walkthrough_header {
+	margin-bottom: 1rem;
+
+	:first-child {
+		@extend .card-vertical_subheader;
+		margin: 0;
+	}
+
+	:last-child {
+		@extend .card-vertical_headline;
+		margin: 0;
+	}
+}
+
 .userflowFeatures_list {
 	width: 100%;
 	margin: 0;
@@ -36,4 +50,10 @@
 	padding-top: 1rem;
 	list-style-type: none;
 	font-weight: 400;
+}
+
+.userflow-img-border {
+	border: 1.5px solid $medium-light-grey;
+	border-radius: 3px;
+	margin-bottom: 1rem;
 }

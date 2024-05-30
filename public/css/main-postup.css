@@ -334,6 +334,7 @@ h6 {
   font-weight: 500;
   letter-spacing: 0;
   line-height: 130%;
+  margin-bottom: 0.5rem;
   color: #1e1e1e;
   font-size: 1.3rem;
   text-transform: none;
@@ -1206,7 +1207,7 @@ blockquote {
   font-size: 1.35rem;
   font-weight: normal;
 }
-.card-vertical .ic-lightbulb {
+.card-vertical .icon {
   width: 2.5rem;
   height: 2.5rem;
 }

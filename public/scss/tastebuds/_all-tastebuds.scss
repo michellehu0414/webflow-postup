@@ -7,6 +7,7 @@
 @import 'definingScope';
 @import 'competitorAnalysis';
 @import 'card-userflowFeatures';
+@import 'sitemap';
 
 .container-full-width.light-blue {
 	background-color: #bbdbf5;
@@ -953,11 +954,6 @@ $border-left-color_1: var(--light-grey);
 	height: auto;
 	min-height: 30.375px;
 	display: flex;
-}
-
-.image-29 {
-	border: 1px solid var(--light-grey);
-	border-radius: 10px;
 }
 
 .h5 {
