@@ -410,6 +410,34 @@ h6 {
   text-align: center;
 }
 
+.subheader, .header-container span {
+  font-family: "Source Code Pro", monospace;
+  color: #757575;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 125%;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+}
+
+.source-code-pro {
+  font-family: "Source Code Pro", monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+}
+.source-code-pro-300 {
+  font-weight: 300;
+}
+.source-code-pro-500 {
+  font-weight: 500;
+}
+
 html {
   text-size-adjust: none;
   padding: 0;
@@ -1626,18 +1654,6 @@ main div > img:only-child {
 }
 .header-container .secondary-text {
   margin: 0;
-}
-
-.subheader, .header-container span {
-  color: #757575;
-  font-size: 0.889rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 125%;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  height: fit-content;
 }
 
 .img-sprint-schedule {
