@@ -1557,13 +1557,7 @@ blockquote {
   align-items: center;
   padding: 4rem 0 calc(6.12rem - 5px) 0;
   width: 100%;
-}
-.section-container .subsection {
-  display: block;
-  margin: auto;
-  padding: 0;
-  margin-bottom: 4rem;
-  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
 }
 .section-container.lightest-grey {
   background-color: #f9f9f9;
@@ -1574,14 +1568,20 @@ blockquote {
 .section-container > :first-child {
   margin-top: 0;
 }
-
-.border {
-  border-bottom: 1px solid #f0f0f0;
-}
-
 .section-container > img,
 .section-container figure {
   margin: 2rem auto;
+}
+.section-container.border-0 {
+  border: 0;
+}
+
+.subsection {
+  display: block;
+  margin: auto;
+  padding: 0;
+  margin-bottom: 4rem;
+  width: 100%;
 }
 
 main div > img:only-child {
