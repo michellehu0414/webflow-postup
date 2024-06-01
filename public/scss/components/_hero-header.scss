@@ -1,60 +1,55 @@
-
-
 .hero {
-  width: 100vw;
-  height: 60vh;
-  overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100vw;
+	height: 60vh;
+	overflow: hidden;
+	padding-top: 3rem;
 
-  &.heroBG-postup {
-    background-color: #8cb4ac;
-  }
+	&.heroBG-postup {
+		background-color: #8cb4ac;
+	}
 
-  &.wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: 100%;
-    margin: auto;
-    width: 100%;
+	&.hero_wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		justify-content: start;
+	}
 
-    .img-wrapper {
-      justify-content: flex-end;
-      align-items: center;
-      padding: auto;
-      overflow: hidden;
-      margin: auto;
+	&.tastebuds-hero_bg {
+		background-color: #f8eacd;
+	}
 
-      .hero-gif {
-        width: 75vw;
-        max-width: 20.5rem;
-        margin: auto 0;
-      }
-    }
-  }
+	@include breakpoint(med) {
+		padding-top: 4rem;
+		width: 100vw;
+		height: 55vh;
 
-  &#tastebuds-heroBG {
-    background-color: rgba(255, 220, 147, 0.75);
-  }
+		.wrapper {
+			height: 100%;
+			margin: auto;
+		}
 
-  @include breakpoint(med) {
-    padding-top: 4rem;
-    width: 100vw;
-    height: 50vh;
+		.hero_gif-wrapper {
+			display: flex;
+			overflow: hidden;
+			align-items: start;
+			justify-content: start;
+			margin: auto;
+			width: 53%;
+			margin: 0 auto;
+		}
+	}
+}
 
-    .wrapper {
-      gap: 2rem;
-      height: 100%;
-      margin: auto;
-
-      .hero-gif-wrapper {
-        justify-content: flex-end;
-        align-items: center;
-        padding: auto;
-        overflow: hidden;
-        margin: auto;
-        width: 20%;
-        margin: 0 auto;
-      }
-    }
-  }
+.tastebuds-hero_image-wrapper {
+	display: flex;
+	overflow: hidden;
+	margin-top: auto;
+	margin-bottom: 0;
+	height: 100%;
 }

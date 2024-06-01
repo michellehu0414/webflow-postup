@@ -1,44 +1,38 @@
+.center {
+	align-items: center;
+	justify-content: center;
+}
+
 .self-center {
-    align-self: center;
+	align-self: center;
 }
 
 .space-between {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .justify-self-center {
-    justify-self: center;
+	justify-self: center;
 }
 
 .align-center {
-    align-items: center;
+	align-items: center;
 }
 
 .justify-center {
-    justify-items: center;
-    justify-content: center;
+	justify-items: center;
+	justify-content: center;
 }
 
 .text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .items-center {
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .items-start {
-    align-items: start;
-}
-
-.scroll-button {
-    cursor: pointer;
-    font-size: 1.125rem;
-    background-color: transparent; // Removes background color
-    text-decoration: none; // Removes underline
-    color: #0281E3; // Link colors inherit from parent
-    border: 0;
-    margin: 0;
-    padding: 0;
+	align-items: start;
 }

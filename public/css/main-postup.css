@@ -268,13 +268,13 @@ h6 {
   font-size: 1.5rem;
   color: #076261;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 .section-subheading.small {
   font-size: 1.25rem;
   color: #1e1e1e;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .secondary-text {
@@ -688,56 +688,55 @@ template {
 }
 
 .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100vw;
   height: 60vh;
   overflow: hidden;
+  padding-top: 3rem;
 }
 .hero.heroBG-postup {
   background-color: #8cb4ac;
 }
-.hero.wrapper {
+.hero.hero_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   height: 100%;
-  margin: auto;
   width: 100%;
-}
-.hero.wrapper .img-wrapper {
-  justify-content: flex-end;
   align-items: center;
-  padding: auto;
-  overflow: hidden;
-  margin: auto;
+  justify-content: start;
 }
-.hero.wrapper .img-wrapper .hero-gif {
-  width: 75vw;
-  max-width: 20.5rem;
-  margin: auto 0;
-}
-.hero#tastebuds-heroBG {
-  background-color: rgba(255, 220, 147, 0.75);
+.hero.tastebuds-hero_bg {
+  background-color: #f8eacd;
 }
 @media (min-width: 768px) {
   .hero {
     padding-top: 4rem;
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
   }
   .hero .wrapper {
-    gap: 2rem;
     height: 100%;
     margin: auto;
   }
-  .hero .wrapper .hero-gif-wrapper {
-    justify-content: flex-end;
-    align-items: center;
-    padding: auto;
+  .hero .hero_gif-wrapper {
+    display: flex;
     overflow: hidden;
+    align-items: start;
+    justify-content: start;
     margin: auto;
-    width: 20%;
+    width: 53%;
     margin: 0 auto;
   }
+}
+
+.tastebuds-hero_image-wrapper {
+  display: flex;
+  overflow: hidden;
+  margin-top: auto;
+  margin-bottom: 0;
+  height: 100%;
 }
 
 .caption-container {
@@ -1135,40 +1134,43 @@ blockquote {
 
 .hero-overview {
   width: 100%;
-  border-bottom: 1px solid #dbdbdb;
 }
 
 .section-overview {
   display: flex;
   flex-direction: column;
-  flex: content;
+  align-items: center;
+  justify-content: space-between;
   margin: auto;
-  padding: 2rem 0;
-  width: max-content;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  height: 100%;
+  border-bottom: 1px solid #dbdbdb;
 }
 .section-overview .content-wrapper {
   display: flex;
   flex-direction: column;
   margin: auto;
   width: fit-content;
+  max-width: 90%;
 }
-.section-overview .content-wrapper .project-details-container {
+.section-overview .project-details_container {
   display: flex;
   flex-direction: row;
   width: 50%;
   gap: 4rem;
 }
-.section-overview .content-wrapper .project-details-container .project-details-list p {
+.section-overview .project-details-list p {
   color: #1e1e1e;
   font-size: 1rem;
   font-weight: 500;
   line-height: 125%;
   margin-bottom: 0.25rem;
 }
-.section-overview .content-wrapper .project-details-container .project-details-list ul {
+.section-overview .project-details-list ul {
   padding: 0;
 }
-.section-overview .content-wrapper .project-details-container .project-details-list ul li {
+.section-overview .project-details-list ul li {
   font-family: "Inter";
   color: #f0f0f0;
   font-size: 1rem;
@@ -1178,14 +1180,14 @@ blockquote {
   list-style-type: none;
   margin: 0;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container {
+.section-overview .tools_flex-container {
   display: flex;
   flex-direction: column;
   width: fit-content;
   margin-top: 0.75rem;
   gap: 1rem;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper {
+.section-overview .tools_logo-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1194,32 +1196,42 @@ blockquote {
   border-radius: 0.625rem;
   overflow: hidden;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.canva-app {
+.section-overview .tools_logo-wrapper.general-app {
   box-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(0, 0, 0, 0.05), inset 1px 1px 2px rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.canva-app img {
+.section-overview .tools_logo-wrapper.canva-app {
+  box-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(0, 0, 0, 0.05), inset 1px 1px 2px rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.section-overview .tools_logo-wrapper.canva-app img {
   width: 3.5rem;
   height: 3.5rem;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.figma-app, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.miro-app, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.whiteBG {
+.section-overview .tools_logo-wrapper.figma-app, .section-overview .tools_logo-wrapper.miro-app, .section-overview .tools_logo-wrapper.whiteBG {
   padding: 0.5rem;
   background: #2e3139;
   box-shadow: -1px -1px 2px rgba(49, 49, 49, 0.05), 1px 1px 2px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(0, 0, 0, 0.05), inset 1px 1px 2px rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.figma-app.miro-app, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.miro-app.miro-app, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.whiteBG.miro-app {
+.section-overview .tools_logo-wrapper.figma-app.miro-app, .section-overview .tools_logo-wrapper.miro-app.miro-app, .section-overview .tools_logo-wrapper.whiteBG.miro-app {
   background: #ffd12b;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.figma-app.whiteBG, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.miro-app.whiteBG, .section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper.whiteBG.whiteBG {
+.section-overview .tools_logo-wrapper.figma-app.whiteBG, .section-overview .tools_logo-wrapper.miro-app.whiteBG, .section-overview .tools_logo-wrapper.whiteBG.whiteBG {
   background: #fff;
 }
-.section-overview .content-wrapper .project-details-container .tools-flex-container .tool-logo-wrapper img {
+.section-overview .tools_logo-wrapper img {
   width: 2.5rem;
   height: auto;
   margin: 0;
 }
-.section-overview .content-wrapper .project-title {
+.section-overview .tools_grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.section-overview .project-title {
   font-family: "Inter";
   color: var(--black);
   font-size: 2.66rem;
@@ -1228,8 +1240,8 @@ blockquote {
   letter-spacing: -0.144px;
   margin-bottom: 1rem;
 }
-.section-overview .content-wrapper .project-tagline,
-.section-overview .content-wrapper .tags-wrapper {
+.section-overview .project-tagline,
+.section-overview .tags-wrapper {
   align-self: center;
   color: #f0f0f0;
   margin: 0 0 1rem;
@@ -1237,14 +1249,14 @@ blockquote {
   font-weight: 500;
   line-height: 135%;
 }
-.section-overview .content-wrapper .tags-wrapper {
+.section-overview .tags-wrapper {
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
   white-space: nowrap;
   cursor: pointer;
 }
-.section-overview .content-wrapper .tags-wrapper .project-tag {
+.section-overview .tags-wrapper .project-tag {
   display: flex;
   height: 2rem;
   align-items: center;
@@ -1254,48 +1266,59 @@ blockquote {
   font-weight: 500;
   border-radius: 0.3125rem;
 }
-.section-overview .content-wrapper .tags-wrapper .project-tag.postup {
+.section-overview .tags-wrapper .project-tag.postup {
   background: #daede9;
-  color: #388e7d;
+  color: #207665;
 }
-.section-overview .content-wrapper .scrollable {
+.section-overview .tags-wrapper .project-tag.tastebuds {
+  background-color: #ffe4ae;
+  color: #945a17;
+}
+.section-overview .scrollable {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-text-overflow: none;
   text-overflow: none;
 }
-.section-overview .content-wrapper .scrollable::-webkit-scrollbar {
+.section-overview .scrollable::-webkit-scrollbar {
   display: none;
 }
-.section-overview .content-wrapper .hero-scroll-button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.section-overview .content-wrapper .hero-scroll-arrow {
-  display: block;
-  margin: 0 auto;
-  width: 3rem;
-  height: 3rem;
-  border: none;
-  font-size: 24px;
+
+.scroll-button.hero {
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1.125rem;
   background-color: transparent;
+  text-decoration: none;
+  border: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.2s ease;
 }
-.section-overview .content-wrapper .hero-scroll-arrow:hover {
-  stroke: #f0f0f0;
-  transform: scale(1.1);
+.scroll-button.hero:hover {
+  transform: scale(1.05);
 }
-.section-overview .content-wrapper .hero-scroll-arrow img {
+.scroll-button.hero img {
   height: 3rem;
   width: 3rem;
-  background-color: transparent;
   margin: auto;
+  transition: opacity 0.3s ease;
+}
+.scroll-button.hero:hover img {
+  opacity: 0.35;
+}
+.scroll-button.hero:active img {
+  opacity: 0.75;
+}
+
+.section-overview {
+  gap: 3rem;
+  height: 45vh;
+  padding-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   .section-overview {
-    padding: 4rem 0;
+    padding-top: 4rem;
   }
   .section-overview .section-overview-header {
     min-width: 40%;
@@ -1305,84 +1328,95 @@ blockquote {
     flex-direction: row;
     gap: 2rem;
     margin: 0 auto;
-    width: fit-content;
+    justify-content: center;
   }
-  .section-overview .content-wrapper .project-title {
+  .section-overview .project-title {
     flex: auto;
     color: var(--black);
-    font-size: 2.66rem;
+    font-size: 2.98rem;
     font-weight: 600;
     line-height: 100%;
     letter-spacing: -0.144px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
-  .section-overview .content-wrapper .project-tagline {
+  .section-overview .project-tagline {
     align-self: center;
     color: #757575;
-    margin: 0 0 1rem;
-    font-size: 1.25rem;
-    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     line-height: 135%;
   }
-  .section-overview .content-wrapper .scrollable {
+  .section-overview .scrollable {
     overflow-y: auto;
     scrollbar-width: none;
     -ms-text-overflow: none;
     text-overflow: none;
   }
-  .section-overview .content-wrapper .scrollable::-webkit-scrollbar {
+  .section-overview .scrollable::-webkit-scrollbar {
     display: none;
   }
-  .section-overview .content-wrapper .tags-wrapper {
+  .section-overview .tags-wrapper {
     flex-wrap: wrap;
     margin-bottom: 1rem;
   }
-  .section-overview .content-wrapper .tags-wrapper .project-tag {
+  .section-overview .tags-wrapper .project-tag {
     background: rgba(219, 219, 219, 0.5);
   }
-  .section-overview .content-wrapper .tags-wrapper .project-tag.postup {
+  .section-overview .tags-wrapper .project-tag.postup {
     background: #daede9;
     color: #388e7d;
   }
-  .section-overview .content-wrapper .tags-wrapper#boardspaceTags .project-tag {
+  .section-overview .tags-wrapper#boardspaceTags .project-tag {
     background: #daede9;
     color: #388e7d;
   }
-  .section-overview .content-wrapper .project-details-container {
+  .section-overview .project-details_container {
+    align-items: flex-start;
     width: fit-content;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item {
+  .section-overview .project-details_container .grid-item {
     display: flex;
     flex: auto;
     flex-direction: row;
+    align-items: start;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list {
+  .section-overview .project-details_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     flex: 1;
+    align-items: flex-start;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list .project-details-headline {
+  .section-overview .project-details_list.timeline {
+    gap: 0.5rem;
+  }
+  .section-overview .project-details_headline {
     color: #1e1e1e;
-    font-size: 1rem;
     font-weight: 500;
+    font-size: 1.25rem;
     line-height: 125%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin: auto;
+    width: 100%;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list ul {
+  .section-overview ul {
     padding: 0;
-    margin: 0 0 8px;
+    margin: 0;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list ul li {
+  .section-overview ul li {
     color: #757575;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 135%;
+    line-height: 100%;
     text-decoration: none;
     list-style-type: none;
     margin: 0;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list.project-tools {
+  .section-overview.project-tools {
     flex: 0 0 auto;
   }
-  .section-overview .content-wrapper .project-details-container .grid-item .project-details-list .tools-flex-container {
+  .section-overview .tools_flex-container {
     width: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
@@ -2203,6 +2237,11 @@ main div > img:only-child {
   align-items: center;
 }
 
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
 .self-center {
   align-self: center;
 }
@@ -2235,17 +2274,6 @@ main div > img:only-child {
 
 .items-start {
   align-items: start;
-}
-
-.scroll-button {
-  cursor: pointer;
-  font-size: 1.125rem;
-  background-color: transparent;
-  text-decoration: none;
-  color: #0281E3;
-  border: 0;
-  margin: 0;
-  padding: 0;
 }
 
 .mb-0 {
@@ -2444,6 +2472,10 @@ main div > img:only-child {
 
 .light-blue {
   color: #e7ecff !important;
+}
+
+.link-blue {
+  color: #0281e3;
 }
 
 .black {
