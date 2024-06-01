@@ -1,6 +1,7 @@
 .content-grid {
   display: grid;
   grid-template-rows: auto;
+  gap: 1rem;
   width: 90vw;
   max-width: $content-max-width;
   margin: auto; /* Center the container */
