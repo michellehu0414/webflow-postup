@@ -159,12 +159,15 @@
 
 .survey-results_flex-container {
 	@include breakpoint(med) {
-		@include flex(row, 1rem);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
+
+	align-items: stretch;
+	gap: 1rem;
 }
 
 .survey-results-card {
-	width: 50%;
 	padding: 2rem;
 	background-color: white;
 	border-radius: 5px;
