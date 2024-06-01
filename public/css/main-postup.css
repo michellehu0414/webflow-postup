@@ -1061,7 +1061,12 @@ blockquote {
   border-radius: 1.5rem;
   height: fit-content;
   overflow: hidden;
-  padding: 3rem;
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  .card {
+    padding: 3rem;
+  }
 }
 .card.medium {
   max-width: 1080px;
@@ -2587,6 +2592,7 @@ ol li {
   text-align: left;
   padding-left: 0.25rem;
   transform: translateX(-0.25rem);
+  font-weight: normal;
 }
 ul li span,
 ol li span {
