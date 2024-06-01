@@ -3,14 +3,14 @@ $light-blue: #dee3f4;
 $bg-grey: #f0f0f0;
 
 .bg-grey {
-    background-color: $bg-grey;
+	background-color: $bg-grey;
 }
 
 @import 'abstracts/all-abstracts';
 
 @import 'base/all-bases';
 
-@import 'components/all-components';  
+@import 'components/all-components';
 
 @import 'sections/all-sections';
 
@@ -19,5 +19,5 @@ $bg-grey: #f0f0f0;
 @import 'utilities/all-utilities';
 
 .header-container.tastebuds {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }

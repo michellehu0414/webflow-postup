@@ -269,6 +269,8 @@ h6 {
   color: #076261;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
+  width: 100%;
+  text-align: left;
 }
 .section-subheading.small {
   font-size: 1.25rem;
@@ -1071,6 +1073,11 @@ blockquote {
 .card.medium {
   max-width: 1080px;
 }
+.card.small {
+  border-radius: 5px;
+  padding: 1rem;
+  width: 53rem;
+}
 
 .header-with-icon {
   display: flex;
@@ -1687,7 +1694,7 @@ main div > img:only-child {
 }
 .interview-quotes-wrapper .quote-grid-item {
   display: grid;
-  grid-template-columns: 3fr 2.5rem 7fr;
+  grid-template-columns: 3fr 2.57fr;
   column-gap: 1.25rem;
   align-items: center;
   padding: 2rem 0;

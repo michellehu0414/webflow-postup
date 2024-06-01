@@ -1,7 +1,7 @@
 .interview-quotes-wrapper {
-	width: 90vw;
+	width: 100%;
 	margin: auto;
-	max-width: 56rem;
+	max-width: $content-max-width;
 
 	> .img-quotation-mark {
 		margin: 0;
@@ -18,11 +18,17 @@
 
 	.quote-grid-item {
 		display: grid;
-		grid-template-columns: 3fr 2.5rem 7fr;
 		grid-template-columns: 3fr 7fr;
 		column-gap: 1.25rem;
-		align-items: center;
+		gap: 1.5rem;
 		padding: 2rem 0;
+		align-items: center;
+
+		&.quote-flex-col {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 
 		&:nth-child(n + 2) {
 			border-top: 1px solid $medium-light-grey;
@@ -54,5 +60,9 @@
 		.item-6 {
 			padding-bottom: 0;
 		}
+	}
+
+	.blockquote-content {
+		background-color: transparent;
 	}
 }

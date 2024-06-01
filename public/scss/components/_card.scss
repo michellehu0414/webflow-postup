@@ -16,4 +16,10 @@
 	&.medium {
 		max-width: 1080px;
 	}
+
+	&.small {
+		border-radius: 5px;
+		padding: 1rem;
+		width: calc($content-max-width + 8rem);
+	}
 }
