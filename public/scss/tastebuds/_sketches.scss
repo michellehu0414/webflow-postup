@@ -1,10 +1,10 @@
-.img-border-pd-16 {
-	border-radius: 3px;
-	margin-top: 0.5rem;
-	margin-bottom: 1rem;
-	padding: 1rem;
-	background-color: $light-grey;
-}
+// .route-1-sketches-all_wrapper {
+// 	border-radius: 3px;
+// 	margin-top: 0.5rem;
+// 	margin-bottom: 1rem;
+// 	padding: 1rem;
+// 	background-color: $dark-grey;
+// }
 
 .route-1-sketches_container {
 	display: grid;
@@ -16,9 +16,9 @@
 
 .sketches-walkthrough_grid-container {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1.25fr 2fr;
 	gap: 1rem;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
 .sketches-walkthrough_content {
@@ -40,6 +40,19 @@
 	}
 }
 
-.sketches-walkthrough_heading {
-	border-bottom: 1px solid $light-grey;
+.sketches-walkthrough_heading-container {
+	border-bottom: 1px solid $dark-grey;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+
+	p {
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+		color: $medium-grey;
+		font-weight: 500;
+	}
+}
+
+.section-subheading.sketches {
+	margin-bottom: 2rem;
 }

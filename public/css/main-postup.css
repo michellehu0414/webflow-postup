@@ -110,98 +110,6 @@
     display: none;
   }
 }
-.pure-black {
-  color: #000;
-}
-
-.black {
-  color: #1e1e1e;
-}
-
-.off-black {
-  color: #4a4a4a;
-}
-
-.dark-grey {
-  color: #565656;
-}
-
-.medium-grey {
-  color: #757575;
-}
-
-.medium-light-grey {
-  color: #dbdbdb;
-}
-
-.light-grey {
-  color: #f0f0f0;
-}
-
-.lightest-grey {
-  color: #f9f9f9;
-}
-
-.sub-grey {
-  color: #cfcfcf;
-}
-
-.emphasis-blue {
-  color: #4479df;
-}
-
-.invalid-red {
-  color: #dc1d25;
-}
-
-.light-blue {
-  color: #e7ecff;
-}
-
-.emphasis {
-  color: #e2583e;
-}
-
-.primary-bg {
-  color: #ffdc93;
-}
-
-.primary-color {
-  color: #076261;
-}
-
-.bg-light-blue {
-  background-color: #e7ecff;
-}
-.bg-lightest-grey {
-  background-color: #f9f9f9;
-}
-
-.iconSize-xxs {
-  width: 20px;
-  height: 20px;
-}
-.iconSize-xs {
-  width: 24px;
-  height: 24px;
-}
-.iconSize-sm {
-  width: 32px;
-  height: 32px;
-}
-.iconSize-med {
-  width: 40px;
-  height: 40px;
-}
-.iconSize-lg {
-  width: 64px;
-  height: 64px;
-}
-.iconSize-xl {
-  width: 80px;
-  height: 80px;
-}
-
 .blockquote-content p:first-child {
   font-family: "Noto Serif", sans-serif !important;
   font-size: 1.25rem !important;
@@ -1608,6 +1516,10 @@ main div > img:only-child {
 .content.xl {
   max-width: 1400px;
 }
+.content.xxl {
+  max-width: 1600px;
+  width: 90%;
+}
 .content > :first-child {
   margin-top: 0;
 }
@@ -2477,80 +2389,185 @@ main div > img:only-child {
 }
 
 .teal {
-  color: #45b5aa;
+  color: #45b5aa !important;
 }
 
 .yellow {
-  color: #f0c05a;
+  color: #f0c05a !important;
 }
 
 .red-orange {
-  color: #e2583e;
+  color: #e2583e !important;
 }
 
 .tan {
-  color: #decdbd;
+  color: #decdbd !important;
 }
 
 .dark-grey {
-  color: #565656;
+  color: #565656 !important;
 }
 
 .off-black {
-  color: #4a4a4a;
+  color: #4a4a4a !important;
 }
 
 .emphasis-blue {
-  color: #4479df;
+  color: #4479df !important;
 }
 
 .medium-grey {
-  color: #757575;
+  color: #757575 !important;
 }
 
 .lightest-grey {
-  color: #f9f9f9;
+  color: #f9f9f9 !important;
 }
 
 .invalid-red {
-  color: #dc1d25;
+  color: #dc1d25 !important;
 }
 
 .medium-light-grey {
-  color: #dbdbdb;
+  color: #dbdbdb !important;
 }
 
 .light-grey {
-  color: #f0f0f0;
+  color: #f0f0f0 !important;
 }
 
 .light-blue {
-  color: #e7ecff;
+  color: #e7ecff !important;
 }
 
 .black {
-  color: #1e1e1e;
+  color: #1e1e1e !important;
 }
 
 .sub-grey {
-  color: #cfcfcf;
+  color: #cfcfcf !important;
 }
 
 .emphasis {
-  color: #e2583e;
+  color: #e2583e !important;
 }
 
 .bg-light-blue {
-  background-color: var(--light-blue);
+  background-color: var(--light-blue) !important;
 }
 .bg-light-grey {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
 }
 .bg-lightest-grey {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
 }
 .bg-transparent {
-  background: transparent;
+  background: transparent !important;
+}
+
+.white {
+  color: #ffffff !important;
+}
+
+.pure-black {
+  color: #000 !important;
+}
+
+.black {
+  color: #1e1e1e !important;
+}
+
+.off-black {
+  color: #4a4a4a !important;
+}
+
+.dark-grey {
+  color: #565656 !important;
+}
+
+.medium-grey {
+  color: #757575 !important;
+}
+
+.medium-light-grey {
+  color: #dbdbdb !important;
+}
+
+.light-grey {
+  color: #f0f0f0 !important;
+}
+
+.lightest-grey {
+  color: #f9f9f9 !important;
+}
+
+.sub-grey {
+  color: #cfcfcf !important;
+}
+
+.emphasis-blue {
+  color: #4479df !important;
+}
+
+.invalid-red {
+  color: #dc1d25 !important;
+}
+
+.light-blue {
+  color: #e7ecff !important;
+}
+
+.emphasis {
+  color: #e2583e !important;
+}
+
+.primary-bg {
+  color: #ffdc93 !important;
+}
+
+.primary-color {
+  color: #076261 !important;
+}
+
+.bg-light-blue {
+  background-color: #e7ecff !important;
+}
+.bg-lightest-grey {
+  background-color: #f9f9f9 !important;
+}
+.bg-dark-grey {
+  background-color: #565656 !important;
+}
+.bg-off-black {
+  background-color: #4a4a4a !important;
+}
+.bg-black {
+  background-color: #1e1e1e !important;
+}
+
+.iconSize-xxs {
+  width: 20px;
+  height: 20px;
+}
+.iconSize-xs {
+  width: 24px;
+  height: 24px;
+}
+.iconSize-sm {
+  width: 32px;
+  height: 32px;
+}
+.iconSize-med {
+  width: 40px;
+  height: 40px;
+}
+.iconSize-lg {
+  width: 64px;
+  height: 64px;
+}
+.iconSize-xl {
+  width: 80px;
+  height: 80px;
 }
 
 ul,
