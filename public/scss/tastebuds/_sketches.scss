@@ -22,7 +22,6 @@
 }
 
 .sketches-walkthrough_content {
-	padding-left: 1.5rem;
 	ol {
 		margin: 0;
 		font-weight: 500;
@@ -45,7 +44,6 @@
 	border-bottom: 1px solid $dark-grey;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
-	margin-left: 2.45rem;
 
 	p {
 		margin-bottom: 0.5rem;
@@ -54,10 +52,19 @@
 	}
 }
 
-.sketches-walkthrough_summary {
-	margin-left: 2.45rem;
-}
-
 .section-subheading.sketches {
 	margin-bottom: 2rem;
+}
+
+.route-2-sketches_grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto;
+	gap: 1rem;
+	align-items: center;
+	text-align: center;
+
+	p {
+		font-size: 1rem;
+	}
 }
