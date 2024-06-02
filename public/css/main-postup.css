@@ -40,6 +40,10 @@
   display: none;
 }
 
+.show-xxl {
+  display: none;
+}
+
 @media (min-width: 320px) {
   .show-mobile-sm {
     display: inherit;
@@ -75,6 +79,11 @@
     display: inherit;
   }
 }
+@media (min-width: 1400px) {
+  .show-xxl {
+    display: inherit;
+  }
+}
 @media (min-width: 320px) {
   .hide-mobile-sm {
     display: none;
@@ -107,6 +116,11 @@
 }
 @media (min-width: 1200px) {
   .hide-xl {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  .hide-xxl {
     display: none;
   }
 }

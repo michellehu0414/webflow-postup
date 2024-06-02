@@ -1,10 +1,15 @@
 .sitemap_wrapper {
-	@extend .content;
-	max-width: 800px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto auto;
 	gap: 0.5rem;
+	@extend %mb-16;
+	max-width: 95%;
+
+	@include breakpoint(xxl) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+	}
 
 	.headline {
 		font-weight: 500;
@@ -33,6 +38,7 @@
 
 	.card-vertical.sitemap {
 		background-color: white;
+		width: 15rem;
 	}
 
 	color: $black;
@@ -52,4 +58,5 @@
 	background-color: #fff;
 	padding: 2rem;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }

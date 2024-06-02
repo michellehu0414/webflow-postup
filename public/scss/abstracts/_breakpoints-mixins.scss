@@ -1,161 +1,176 @@
 //Media breakpoints
 $breakpoints: (
-  mobile-sm: 320px,
-  mobile-med: 375px,
-  mobile-lg: 425px,
-  sm: 576px,
-  med: 768px,
-  lg: 992px,
-  xl: 1200px,
+	mobile-sm: 320px,
+	mobile-med: 375px,
+	mobile-lg: 425px,
+	sm: 576px,
+	med: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
 );
 
 @mixin breakpoint($name) {
-  @if map-has-key($breakpoints, $name) {
-    @media (min-width: map-get($breakpoints, $name)) {
-      @content;
-    }
-  } @else {
-    @error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
-  }
+	@if map-has-key($breakpoints, $name) {
+		@media (min-width: map-get($breakpoints, $name)) {
+			@content;
+		}
+	} @else {
+		@error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
+	}
 }
 
 .mobile-only {
-  display: inherit;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding-right: 1rem;
-  border-radius: 50px;
-  overflow: hidden;
+	display: inherit;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding-right: 1rem;
+	border-radius: 50px;
+	overflow: hidden;
 
-  @include breakpoint(med) {
-    display: none;
-  }
+	@include breakpoint(med) {
+		display: none;
+	}
 }
 
 @mixin iconSize($size) {
-  @if $size == 'xs' {
-    width: 24px;
-    height: 24px;
-  } @else if $size == 'sm' {
-    width: 32px;
-    height: 32px;
-  } @else if $size == 'med' {
-    width: 40px;
-    height: 40px;
-  } @else if $size == 'lg' {
-    width: 56px;
-    height: 56px;
-  } @else if $size == 'xl' {
-    width: 64px;
-    height: 64px;
-  }
+	@if $size == 'xs' {
+		width: 24px;
+		height: 24px;
+	} @else if $size == 'sm' {
+		width: 32px;
+		height: 32px;
+	} @else if $size == 'med' {
+		width: 40px;
+		height: 40px;
+	} @else if $size == 'lg' {
+		width: 56px;
+		height: 56px;
+	} @else if $size == 'xl' {
+		width: 64px;
+		height: 64px;
+	}
 }
 
 // Classes for showing content at different breakpoints
 .show-mobile-sm {
-  display: none;
+	display: none;
 }
 .show-mobile-med {
-  display: none;
+	display: none;
 }
 .show-mobile-lg {
-  display: none;
+	display: none;
 }
 .show-sm {
-  display: none;
+	display: none;
 }
 .show-med {
-  display: none;
+	display: none;
 }
 .show-lg {
-  display: none;
+	display: none;
 }
 .show-xl {
-  display: none;
+	display: none;
+}
+.show-xxl {
+	display: none;
 }
 
 @include breakpoint(mobile-sm) {
-  .show-mobile-sm {
-    display: inherit;
-  }
+	.show-mobile-sm {
+		display: inherit;
+	}
 }
 
 @include breakpoint(mobile-med) {
-  .show-mobile-med {
-    display: inherit;
-  }
+	.show-mobile-med {
+		display: inherit;
+	}
 }
 
 @include breakpoint(mobile-lg) {
-  .show-mobile-lg {
-    display: inherit;
-  }
+	.show-mobile-lg {
+		display: inherit;
+	}
 }
 
 @include breakpoint(sm) {
-  .show-sm {
-    display: inherit;
-  }
+	.show-sm {
+		display: inherit;
+	}
 }
 
 @include breakpoint(med) {
-  .show-med {
-    display: inherit;
-  }
+	.show-med {
+		display: inherit;
+	}
 }
 
 @include breakpoint(lg) {
-  .show-lg {
-    display: inherit;
-  }
+	.show-lg {
+		display: inherit;
+	}
 }
 
 @include breakpoint(xl) {
-  .show-xl {
-    display: inherit;
-  }
+	.show-xl {
+		display: inherit;
+	}
+}
+@include breakpoint(xxl) {
+	.show-xxl {
+		display: inherit;
+	}
 }
 
 // Classes for hiding content at different breakpoints
 
 @include breakpoint(mobile-sm) {
-  .hide-mobile-sm {
-    display: none;
-  }
+	.hide-mobile-sm {
+		display: none;
+	}
 }
 
 @include breakpoint(mobile-med) {
-  .hide-mobile-med {
-    display: none;
-  }
+	.hide-mobile-med {
+		display: none;
+	}
 }
 
 @include breakpoint(mobile-lg) {
-  .hide-mobile-lg {
-    display: none;
-  }
+	.hide-mobile-lg {
+		display: none;
+	}
 }
 
 @include breakpoint(sm) {
-  .hide-sm {
-    display: none;
-  }
+	.hide-sm {
+		display: none;
+	}
 }
 
 @include breakpoint(med) {
-  .hide-med {
-    display: none;
-  }
+	.hide-med {
+		display: none;
+	}
 }
 
 @include breakpoint(lg) {
-  .hide-lg {
-    display: none;
-  }
+	.hide-lg {
+		display: none;
+	}
 }
 
 @include breakpoint(xl) {
-  .hide-xl {
-    display: none;
-  }
+	.hide-xl {
+		display: none;
+	}
+}
+
+@include breakpoint(xxl) {
+	.hide-xxl {
+		display: none;
+	}
 }
