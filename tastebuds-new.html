@@ -1041,7 +1041,7 @@
       </div>
     </div>
   </section>
-  <section id="userflows" class="section-container">
+  <section id="user-flows" class="section-container pb-0">
     <header class="header-container">
       <h2>
         <span>user flow</span>
@@ -1051,148 +1051,144 @@
     </header>
     <div class="content mb-16">
       <p>
-        To bring the diner stories to life, I brainstormed features,
-        which I then conceptualized into 3 potential routes.
-        <!-- The main
-        issues I wanted to address are information overload, lack of
-        personalization, unreliable content, and decision paralysis: -->
+        Given diners' habits with using mobile apps for decision-making, I decided that my product
+        would also be a mobile application. To bring the diner stories I created to life, I
+        brainstormed potential features, which I conceptualized into three potential routes using
+        user flows. This process helped me begin visualizing how diners would interact with my
+        product to enhance their dining experience!
       </p>
     </div>
-    <div class="userflowFeatures_wrapper content medium">
-      <div class="userflowFeatures_card">
-        <p class="card-vertical_subheader">Route 01</p>
-        <p class="card-vertical_headline hide-med">
-          Create and set up new account
-        </p>
-        <p class="card-vertical_headline show-med">
-          Create and set up <br />new account
-        </p>
-        <ul class="userflowFeatures_list">
-          <li>Create account with email or social media</li>
-          <li>Input food preferences</li>
-          <li>Add friends</li>
-        </ul>
-      </div>
-      <div class="userflowFeatures_card">
-        <p class="card-vertical_subheader">Route 02</p>
-        <p class="card-vertical_headline show-med">
-          Search for <br />dining options
-        </p>
-        <p class="card-vertical_headline hide-med">
-          Search for dining options
-        </p>
-        <ul class="userflowFeatures_list">
-          <li>Saved search presets</li>
-          <li>Filter by 'Cuisines'</li>
-          <li>Filter by 'Visit history'</li>
-          <li>Personalized recommendations</li>
-          <li>Compatibility score (% Match)</li>
-          <li>Limited search results</li>
-        </ul>
-      </div>
-      <div class="userflowFeatures_card">
-        <p class="card-vertical_subheader">Route 03</p>
-        <p class="card-vertical_headline show-med">
-          Review dining experience
-        </p>
-        <ul class="userflowFeatures_list">
-          <li>Ordered items (required)</li>
-          <li>Zero and half star rating system</li>
-          <li>Strengths and weaknesses of dining experience</li>
-          <li>Recommendation rating</li>
-          <li>Written review (optional)</li>
-        </ul>
-      </div>
-    </div>
-    <div class="content">
-      <div class="mb-32">
-        <div class="userflow-walkthrough_header">
-          <p>Route 01</p>
-          <p>Diner signs up and sets up their account</p>
+    <div class="container-full-width userflow-walkthrough bg-black">
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 01</p>
+          <p class="userflow-walkthrough_card_headline hide-med">
+            Create and set up new account
+          </p>
+          <p class="userflow-walkthrough_card_headline show-med">
+            Diner signs up and sets up their account
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Create an account with email or social media</li>
+            <li>Input food preferences</li>
+            <li>Add friends</li>
+          </ul>
         </div>
-        <img class="userflow-img-border" loading="lazy"
-          src="/public/images/tastebuds/route-1-user-flow.png">
-        <p>After a standard sign-up process, the user can input their food preferences then add
-          friends through their social media accounts and phone contacts. These two actions will
-          enable personalized recommendations for diners and allow diners to see dining
-          recommendations from friends they add.</p>
-      </div>
-      <hr>
-      <br>
-      <div class="mb-32">
-        <div class="userflow-walkthrough_header">
-          <p>Route 02</p>
-          <p>Diner searches for dining options</p>
+        <div class="userflow-walkthrough_content-container">
+          <div class="userflow-walkthrough_header hide">
+            <p>Route 01</p>
+            <p>Diner signs up and sets up their account</p>
+          </div>
+          <img class="userflow-walkthrough_image"
+            src="/public/images/tastebuds/route-1-userflow.png">
+          <div class="userflow-walkthrough_content">
+            <p>After a standard sign-up process, diners can input their food preferences then add
+              their friends by linking their social media accounts and contacts. This would
+              <span class="white">enable personalized recommendations</span> for diners and allow
+              diners to <span class="white"> see dining recommendations from friends </span> they
+              add.
+            </p>
+          </div>
         </div>
-        <img class="userflow-img-border" loading="lazy"
-          src="/public/images/tastebuds/route-2-user-flow.png">
-        <p>After a standard sign-up process, the user can input their food preferences then add
-          friends through their social media accounts and phone contacts. These two actions will
-          enable personalized recommendations for diners and allow diners to see dining
-          recommendations from friends they add.</p>
-        <p class="subheading">New search</p>
-        <p>
-          With a new search, diners may enter
-          <span class="fw-medium">keywords</span> and
-          <span class="fw-medium">detailed preferences</span>, then
-          receive results that are sorted by “<span class="fw-medium">% Match</span>” by default (in
-          addition to distance, rating, and reviews).
-          At this point in the design process, I speculated filters for
-          places not previously visited (according to their
-          <span class="fw-medium">visit history</span> and reviews) and a
-          diverse list of cuisines would help diners like
-          <strong class="fw-medium blue">Alex</strong> and
-          <strong class="fw-medium blue">Cleo</strong> (especially Alex)
-          discover suitable restaurants.
-        </p>
-        <p class="subheading">Saved search</p>
-        <p>
-          Saved searches offer
-          <span class="fw-medium">preset preferences</span>, which are
-          tailored to diners like
-          <strong class="fw-medium blue">Brandon</strong>. For instance,
-          since Brandon works late often, he might create a saved search
-          called <em>Late-night dinner</em> to find places he’s
-          “previously visited”, within a “0.5 mile radius”, is “open
-          until 12:00 AM”, and “offers takeout”. This would offer him a
-          quick dining solution when pressed for time.<em class="italic-text"></em>
-        </p>
-        <p class="subheading">Search results</p>
-        <p>
-          For both search options, diners would receive a
-          <span class="fw-medium">finite number of results</span> sorted
-          by <span class="fw-medium">% Match</span> from high to low by
-          default. If they feel dissatisfied with the results, they may
-          <span class="fw-medium">refresh the results</span>, which they
-          may not undo. I hypothesized that this would mitigate decision
-          paralysis and encourage diners to carefully consider their
-          options without restricting their discovery.
-        </p>
       </div>
-      <hr>
-      <br>
-      <div>
-        <div class="userflow-walkthrough_header">
-          <p>Route 03</p>
-          <p>Diner reviews a dining experience</p>
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 02</p>
+          <p class="userflow-walkthrough_card_headline show-med">
+            Diner searches for dining options
+          </p>
+          <p class="userflow-walkthrough_card_headline hide-med">
+            Diner searches for dining options
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Saved search presets</li>
+            <li>Filter by 'Cuisines'</li>
+            <li>Filter by 'Visit history'</li>
+            <li>Personalized recommendations</li>
+            <li>Compatibility score (% Match)</li>
+            <li>Limited search results</li>
+          </ul>
         </div>
-        <img class="userflow-img-border" loading="lazy"
-          src="/public/images/tastebuds/route-3-user-flow.png">
-        <p class="mb-0">
-          Finally, diners may share their thoughts on a dining experience
-          with their friends by writing a comprehensive review. Since
-          diners seek detailed reviews about the food, I wanted to design a
-          <span class="fw-medium">guided process</span> for diners to
-          produce
-          <span class="fw-medium">comprehensive, food-focused reviews</span>. This also aims to
-          somewhat
-          <span class="fw-medium">standardize reviews</span> to help diners
-          who are skeptical of the objectivity with online reviews.
-          However, I wanted to keep in mind that many diners are reluctant
-          or do not have the habit of writing reviews. Therefore, I made
-          the <span class="fw-medium">key information required</span> and
-          <span class="fw-medium">everything else optional</span>.
-        </p>
+        <div class="userflow-walkthrough_content-container">
+          <div class="userflow-walkthrough_header hide">
+            <p>Route 01</p>
+            <p>Diner signs up and sets up their account</p>
+          </div>
+          <img class="userflow-walkthrough_image" loading="lazy"
+            src="/public/images/tastebuds/route-2-user-flow.png">
+          <div class="userflow-walkthrough_content">
+            <p class="subheading">New search</p>
+            <p>
+              With a new search, diners can enter keywords and <span>detailed
+                preferences</span>.
+            </p>
+            <p class="subheading">"Filter by visit history"</p>
+            <p>Diners like Alex and Cleo who value discovery can filter for <span>
+                restaurants they haven't tried yet</span> (according to their visit history and
+              reviews). Diners like Brandon who value convenience can
+              also filter for restaurants they have visited.</p>
+            <p class="subheading">Compatability score (% Match)</p>
+            <p>To enhance personalization, search results are sorted by “% Match” by default. Using
+              AI and machine learning, this represents the diner's compatability with the restaurant
+              based on their food preferences and dining history.</p>
+            <p class="subheading">Saved search</p>
+            <p>
+              For convenience, similar to the concept of "Saved/Favorite orders" diners can add
+              "Saved searches" to efficiently find dining options they seek often. For instance,
+              since <span>Brandon</span> often works late, he might create a saved search called
+              <span>"Late-night dinner"</span> with the following preferences: <span>previously
+                visited, 0.5 mile radius”, “open until 12:00 AM”, and “offers takeout</span>. This
+              would offer him a quick dining solution when pressed for time.
+            </p>
+            <p class="subheading">Search results</p>
+            <p>
+              For both search options, diners would receive a <span>finite number of
+                results</span>. <span>If dissatisfied</span> with the results, they can
+              <span>refresh</span> the results, which they can only undo one previous set. This
+              intends to <span>mitigate decision paralysis while encouraging diners to
+                carefully consider their options without restricting >discovery</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="userflow-walkthrough_grid-container">
+        <div class="userflow-walkthrough_card">
+          <p class="userflow-walkthrough_card_subheader">Route 03</p>
+          <p class="userflow-walkthrough_card_headline show-med">
+            Diner reviews their dining experience
+          </p>
+          <ul class="userflowFeatures_list">
+            <li>Rate ordered items (required)</li>
+            <li>Zero and half star rating system</li>
+            <li>Strengths and weaknesses of dining experience</li>
+            <li>Recommendation rating</li>
+            <li>Written review (optional)</li>
+          </ul>
+        </div>
+        <div class="userflow-walkthrough_content-container">
+          <div class="userflow-walkthrough_header hide">
+            <p>Route 01</p>
+            <p>Diner signs up and sets up their account</p>
+          </div>
+          <img class="userflow-walkthrough_image" loading="lazy"
+            src="/public/images/tastebuds/route-3-user-flow.png">
+          <div class="userflow-walkthrough_content">
+            <p>
+              Finally, diners can share <span>detailed reviews</span> of
+              their dining experiences with friends through a
+              <span>structured review process</span> that
+              is broken down into <span>multiple input fields</span>. This design approach leverages
+              the
+              psychological phenomenon of
+              <span>"completion bias,"</span> where users feel a sense of accomplishment with each
+              completed
+              section! Since most diners aren't used to writing reviews, I hoped to <span>
+                boost
+                engagement and completion rates
+              </span> by guiding diners through the process.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

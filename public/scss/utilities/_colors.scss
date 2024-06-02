@@ -68,7 +68,19 @@
 	}
 
 	&transparent {
-		background: transparent !important;
+		background-color: transparent !important;
+	}
+
+	&medium-grey {
+		background-color: $medium-grey !important;
+	}
+
+	&medium-light-grey {
+		background-color: $medium-light-grey !important;
+	}
+
+	&dark-grey {
+		background-color: $dark-grey !important;
 	}
 }
 

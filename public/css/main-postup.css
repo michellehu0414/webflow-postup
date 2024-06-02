@@ -1139,6 +1139,23 @@ blockquote {
   gap: 1rem;
 }
 
+.card-vertical_subheader {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  color: #565656;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.card-vertical_headline {
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
 .hero-overview {
   width: 100%;
 }
@@ -2507,7 +2524,16 @@ main div > img:only-child {
   background-color: #f9f9f9 !important;
 }
 .bg-transparent {
-  background: transparent !important;
+  background-color: transparent !important;
+}
+.bg-medium-grey {
+  background-color: #757575 !important;
+}
+.bg-medium-light-grey {
+  background-color: #dbdbdb !important;
+}
+.bg-dark-grey {
+  background-color: #565656 !important;
 }
 
 .white {

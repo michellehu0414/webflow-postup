@@ -1,36 +1,21 @@
-.userflowFeatures_wrapper {
+$userflow-walkthrough-border-radius: 1rem;
+
+.userflow-walkthrough {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.userflowFeatures_wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 0.5rem;
 	align-items: stretch; /* This will stretch the children to fill the container */
 }
 
-.userflowFeatures_card {
-	@extend .card-vertical;
-	display: flex;
-	flex: 1;
-}
-
-.card-vertical_subheader {
-	font-size: 1rem;
-	text-transform: uppercase;
-	font-family: 'Source Code Pro', monospace;
-	color: $dark-grey;
-	margin: 0;
-	letter-spacing: 1px;
-}
-
-.card-vertical_headline {
-	font-size: 1.5rem;
-	color: $black;
-	margin: 0;
-	margin-bottom: 0.5rem;
-	font-weight: 500;
-}
-
 .userflow-walkthrough_header {
-	margin-bottom: 1rem;
+	margin: auto;
+	margin-bottom: 1.5rem;
 
 	:first-child {
 		@extend .card-vertical_subheader;
@@ -43,17 +28,84 @@
 	}
 }
 
+.userflow-walkthrough_grid-container {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	gap: 2rem;
+	width: 95%;
+	max-width: 80rem;
+}
+
+.userflow-walkthrough_card {
+	@extend .card-vertical;
+	display: flex;
+	height: fit-content;
+	margin-top: 0;
+	width: 20rem;
+	background-color: #0f0f0f;
+}
+
+.userflow-walkthrough_card_subheader {
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: 'Source Code Pro', monospace;
+	color: #e6e6e6d2;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.userflow-walkthrough_card_headline {
+	font-size: 1.5rem;
+	color: white;
+	margin: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
 .userflowFeatures_list {
 	width: 100%;
 	margin: 0;
-	border-top: 1.5px solid $black;
-	padding-top: 1rem;
 	list-style-type: none;
 	font-weight: 400;
+
+	li {
+		color: #ffffff;
+		font-weight: 300;
+	}
 }
 
-.userflow-img-border {
-	border: 1.5px solid $medium-light-grey;
-	border-radius: 3px;
-	margin-bottom: 1rem;
+.userflow-walkthrough_image {
+	margin-bottom: 1.5rem;
+	border-radius: $userflow-walkthrough-border-radius;
+	background-color: #fff;
+}
+
+.userflow-walkthrough_content-container {
+	flex: 1;
+}
+
+.userflow-walkthrough_content {
+	// background-color: $lightest-grey;
+	// border-radius: $userflow-walkthrough-border-radius;
+	padding: 0 1rem;
+	width: 100%;
+
+	.subheading {
+		color: white;
+	}
+
+	p {
+		color: #aaa;
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	span {
+		color: white;
+	}
 }
