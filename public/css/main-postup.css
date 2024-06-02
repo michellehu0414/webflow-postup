@@ -750,9 +750,10 @@ template {
 .tastebuds-hero_image-wrapper {
   display: flex;
   overflow: hidden;
+  margin: auto;
   margin-top: auto;
   margin-bottom: 0;
-  height: 100%;
+  width: 53%;
 }
 
 .caption-container {
