@@ -1349,7 +1349,7 @@
           <span class="fw-medium">finite number of results</span> sorted
           by <span class="fw-medium">% Match</span> from high to low by
           default. If they feel dissatisfied with the results, they may
-          <span class="fw-medium">refresh the results</span>, which they
+          <span class="fw-medium">refresh the results</span>, but they
           may not undo. I hypothesized that this would mitigate decision
           paralysis and encourage diners to carefully consider their
           options without restricting their discovery.
@@ -1453,42 +1453,48 @@
       <span>designing</span>
       <h2>Sketches</h2>
     </header>
-    <div class="container-full-width bg-dark-grey">
-      <div class="content xxl">
-        <p class="section-subheading white mb-32">Route 1: Sign up + onboarding</p>
-        <img alt="" class="route-1-sketches-all_wrapper" loading="lazy"
-          src="/public/images/tastebuds/route-1-sketches-all.png">
-      </div>
-    </div>
-    <div class="content">
+    <div class="content mb-0">
+      <p>During sketching, I made a few changes to the user flow.</p>
+      <p class="section-subheading">Route 1: Sign up + onboarding</p>
       <p>
-        Previously, in my user flow, the onboarding process prompts
-        users to add both their friends and food preferences. However,
-        throughout sketching, I realized that this might make the
-        onboarding process too lengthy, so I only included inputing
+        Previously, the onboarding process in my user flow prompts diners to add their friends and
+        input food preferences. However, I realized that this might
+        make the onboarding process too lengthy, so I only included inputing
         food preferences.
       </p>
-      <p class="subheading">Food preferences</p>
-      <p>
-        <strong class="source-code-pro">Design Hypothesis</strong>: Breaking down a diner's
-        taste preferences in detail
-        could curate relevant personalized recommendations for both
-        restaurants and menu items. Besides dietary restrictions
-        and allergies, the dining recommendations aim to
-        <span class="fw-medium">prioritize food preferences without limiting
-          results</span>.<br />
-      </p>
+      <p class="subheading mt-32">Food preferences</p>
       <div class="route-1-sketches_container">
         <img alt="" loading="lazy"
           src="/public/images/tastebuds/route-1-sketch-food-preferences.png">
         <img alt="" loading="lazy" src="/public/images/tastebuds/route-1-sketch-cuisines.png">
         <img alt="" loading="lazy" src="/public/images/tastebuds/route-1-sketch-diet.png">
       </div>
+      <p class="span-fw-medium">
+        <strong class="source-code-pro hide">Design Hypothesis:</strong>Diners can input their
+        preferences and restrictions during onboarding, which can be updated anytime in their
+        profile settings. Breaking down a diner's
+        taste preferences in detail intends to tailor personalized recommendations for
+        both restaurants and menu items.
+      </p>
+      <p class="medium-grey">
+        *Note: Only dietary preferences and restrictions
+        like allergies are strictly adhered to:
+        Food preferences are only prioritized and not restrictive to avoid limiting discovery!
+      </p>
+    </div>
+    <div class="container-full-width bg-dark-grey">
+      <div class="content xxl">
+        <p class="section-subheading white mb-32">Route 1 sketches</p>
+        <img alt="" class="route-1-sketches-all_wrapper" loading="lazy"
+          src="/public/images/tastebuds/route-1-sketches-all.png">
+      </div>
     </div>
     <div class="content">
       <p class="section-subheading sketches">
         Route 2: Diner searches for dining options
       </p>
+    </div>
+    <div class="content medium">
       <div>
         <div class="sketches-walkthrough_heading-container">
           <p>Search options</p>
@@ -1500,11 +1506,6 @@
             <ol>
               <li>
                 <p>New search</p>
-                <p>
-                  Diners may toggle between New and Saved search by
-                  tapping on the navigation buttons or swipe the screen
-                  horizontally.
-                </p>
               </li>
               <li>
                 <p>Saved search</p>
@@ -1519,16 +1520,63 @@
             </ol>
           </div>
         </div>
+      </div>
+      <div>
         <div class="sketches-walkthrough_heading-container mb-16">
-          <p>Search results: List view</p>
+          <p>Search results: Map view</p>
         </div>
-        <p class="mb-32">Upon initiating the search, a list of restaurants is displayed. Since
-          diners typically
-          seek the same set of details when exploring restaurant listings, to streamline
-          decision-making, my sketches focused on presenting essential information directly in the
-          results. The design hypothesis was that this would reduce the need for users to repeatedly
-          click into listings for the same basic details.</p>
-        <p></p>
+        <p class="sketches-walkthrough_summary">
+          An alternate view of search results is the map view, where diners may toggle between the
+          location icons and view details in the card-vertical in a carousel.</p>
+        <div class="sketches-walkthrough_grid-container">
+          <img alt="" loading="lazy"
+            src="/public/images/tastebuds/route-2-sketch-search-results-card-carousel.png">
+          <div class="sketches-walkthrough_content">
+            <ol>
+              <li>
+                <p>Restaurant qualities</p>
+              </li>
+              <li>
+                <p>Carousel of photos posted by friends</p>
+              </li>
+              <li>
+                <p>Top 3 personalized recommendations</p>
+              </li>
+              <li>
+                <p>Top 3 qualities voted by friends</p>
+                <p>When reviewing a dining experience, diners select up to 3 qualities that stood
+                  out.
+                  Qualities with the most votes are displayed so they can better gauge the
+                  restaurant's strengths at a glance.</p>
+              </li>
+              <li>
+                <p>Refresh for a new set of results</p>
+                <p>If diners aren't content with the results, they can refresh the results.
+                </p>
+                <p>
+                  <span class="fw-medium primary-color">Change:</span> Earlier, my user flows
+                  disallow undoing refresh, but I realized like that would limit exploration. I
+                  decided to allow users to undo their last set of results to maintain my initial
+                  goal of encouraging diners to be more deliverate and thoughtful.
+                </p>
+              </li>
+              <li>
+                <p>Commute time</p>
+                <p>Since location is an important factor for diners, I speculated displaying the
+                  commute time in the search results would make their process more efficient.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sketches-walkthrough_heading-container mb-16">
+          <p>Search results: Map view</p>
+        </div>
+        <p class="sketches-walkthrough_summary">
+          An alternate view of search results is the map view, where diners may toggle between the
+          location icons and view details in the card-vertical in a carousel.</p>
         <div class="sketches-walkthrough_grid-container">
           <img alt="" loading="lazy"
             src="/public/images/tastebuds/route-2-sketch-search-results-list-labeled.png">
@@ -1538,30 +1586,50 @@
                 <p>Toggle listing preview</p>
                 <p>This button displays a preview of the restaurant listing in a carousel.</p>
               </li>
-              <li>Carousel of photos posted by friends</li>
+              <li>
+                <p>Carousel of photos posted by friends</p>
+              </li>
               <li>
                 <p>Top 3 personalized recommendations</p>
-                <p>Each result displays the top 3 items recommended for the diner according to their
-                  food preferences and history
-                </p>
               </li>
               <li>
                 <p>Top 3 qualities voted by friends</p>
-                <p>When reviewing restaurants, diners may select up to 3 qualities that stood out.
-                  Displaying the top 3 voted qualities may allow diners better understand the
+                <p>When reviewing a dining experience, diners select up to 3 qualities that stood
+                  out.
+                  Qualities with the most votes are displayed so they can better gauge the
                   restaurant's strengths at a glance.</p>
               </li>
               <li>
                 <p>Refresh for a new set of results</p>
-                <p>If diners aren't content with the results, they can refresh for a new set. In my
-                  user flows, I had designed the route to disallow undoing the refresh, but I
-                  realized like that would limit exploration. Therefore, my sketches allow undoing
-                  it once, encouraging careful restaurant assessment without limiting exploration.
+                <p>If diners aren't content with the results, they can refresh the results.
+                </p>
+                <p>
+                  <span class="fw-medium primary-color">Change:</span> Earlier, my user flows
+                  disallow undoing refresh, but I realized like that would limit exploration. I
+                  decided to allow users to undo their last set of results to maintain my initial
+                  goal of encouraging diners to be more deliverate and thoughtful.
+                </p>
+              </li>
+              <li>
+                <p>Commute time</p>
+                <p>Since location is an important factor for diners, I speculated displaying the
+                  commute time in the search results would make their process more efficient.
                 </p>
               </li>
             </ol>
           </div>
         </div>
+      </div>
+      <div>
+        <div class="sketches-walkthrough_heading-container mb-16">
+          <p>Search results: List view</p>
+        </div>
+        <p class="sketches-walkthrough_summary">
+          Diners typically seek the same set of details when exploring restaurant listings, so I
+          focused on making the results scannable by presenting essential information in the
+          results.
+          This way, diners don't have to repeatedly click into listings for the same basic
+          details.</p>
         <div class="sketches-walkthrough_grid-container">
           <img alt="" loading="lazy"
             src="/public/images/tastebuds/route-2-sketch-search-results-list-labeled.png">
@@ -1583,287 +1651,170 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="flex-block-14">
+      <div class="heading-with-divider">
+        <div class="w-layout-vflex">
+          <div class="header-with-icon">
+            <h2 class="p _1-125-rem _1-5-spacing">
+              03 search results: Map View
+            </h2>
+          </div>
+        </div>
+      </div>
+      <h2>
+        An alternate view of search results is the map view, where
+        diners may toggle between the location icons and view
+        details in the card-vertical in a carousel.
+      </h2>
+    </div>
+    <div class="flex gap-24px">
+      <img alt="" loading="lazy"
+        sizes="(max-width: 479px) 100vw, (max-width: 767px) 17vw, 100.59375px"
+        src="/public/images/tastebuds/route-2_sketches_labeled_02.png" srcset="
+            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-500.png   500w,
+            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-800.png   800w,
+            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-1080.png 1080w,
+            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02.png        1758w
+          ">
+      <div class="flex vertical _24-px">
+        <div class="header-with-icon">
+          <div class="flex vertical _4px">
+            <p class="subheading">
+              1. Restaurant Tags
+            </p>
+          </div>
+        </div>
+        <div class="header-with-icon">
+          <div class="flex vertical _4px">
+            <p class="subheading">
+              2. Recommended Menu Items
+            </p>
+            <p>
+              A compact display compared to the list view of
+              results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
       <div class="flex-block-14">
         <div class="heading-with-divider">
           <div class="w-layout-vflex">
             <div class="header-with-icon">
               <h2 class="p _1-125-rem _1-5-spacing">
-                02 Search results: list view
-              </h2>
-            </div>
-          </div>
-        </div>
-        <p>
-          Upon initiating the search, a list of restaurants is
-          displayed. Since diners typically seek the same set of
-          details when exploring restaurant listings, to streamline
-          decision-making, my sketches focused on presenting
-          essential information directly in the results. The design
-          hypothesis was that this would reduce the need for users to
-          repeatedly click into listings for the same basic details.
-        </p>
-      </div>
-      <div>
-        <div class="flex gap-24px">
-          <img alt="" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 17vw, 18vw"
-            src="/public/images/tastebuds/route-2_sketches_labeled_01_left.png" srcset="
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d85f4095f5344e0738473_Route%202_Sketches_Labeled_01_Left-p-500.png   500w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d85f4095f5344e0738473_Route%202_Sketches_Labeled_01_Left-p-800.png   800w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d85f4095f5344e0738473_Route%202_Sketches_Labeled_01_Left-p-1080.png 1080w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d85f4095f5344e0738473_Route%202_Sketches_Labeled_01_Left.png        1760w
-              ">
-          <div class="flex vertical _24-px">
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  1. Expanded Card View
-                </p>
-                <p>
-                  This button switches the view to an expanded
-                  carousel. More details available in 03.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  2. Carousel of photos posted by friends
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  3. Top 3 items recommended for the diner
-                </p>
-                <p>
-                  Each result displays the top 3 items recommended for
-                  the diner according to their food preferences and
-                  history.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  4. Top 3 qualities according to the diner's friends
-                </p>
-                <p>
-                  When reviewing restaurants, diners may select up to 3
-                  qualities that stood out. Displaying the top 3 voted
-                  qualities may allow diners better understand the
-                  restaurant's strengths at a glance.
-                </p>
-              </div>
-            </div>
-            <div class="flex vertical sketches-02">
-              <div class="header-with-icon">
-                <div class="flex vertical _4px">
-                  <p class="subheading">
-                    5. Refresh Results
-                  </p>
-                  <p>
-                    If diners aren't content with the results, they can
-                    refresh for a new set. In my user flows, I had
-                    designed the route to disallow undoing the refresh,
-                    but I realized like that would limit exploration.
-                    Therefore, my sketches allow undoing it once,
-                    encouraging careful restaurant assessment without
-                    limiting exploration.
-                  </p>
-                </div>
-              </div>
-              <div class="header-with-icon">
-                <div class="flex vertical _4px">
-                  <p class="subheading">
-                    6. Percentage Match
-                  </p>
-                  <p>
-                    Each result displays a compatibility score in
-                    percentage according to their search criteria,
-                    dining history, and personal food preferences.
-                  </p>
-                </div>
-              </div>
-              <div class="header-with-icon">
-                <div class="flex vertical _4px">
-                  <p class="subheading">7. Commute</p>
-                  <p>
-                    Since location is an important factor for diners,
-                    displaying the commute time on the search results
-                    would make their search more efficient.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-24px"></div>
-      </div>
-      <div class="flex-block-14">
-        <div class="heading-with-divider">
-          <div class="w-layout-vflex">
-            <div class="header-with-icon">
-              <h2 class="p _1-125-rem _1-5-spacing">
-                03 search results: Map View
+                04 search results: card carousel
               </h2>
             </div>
           </div>
         </div>
         <h2>
-          An alternate view of search results is the map view, where
-          diners may toggle between the location icons and view
-          details in the card-vertical in a carousel.
+          Since restaurant information in this view is limited,
+          diners may view a minimized version of the restaurant
+          listing by toggling this button, allowing diners to
+          evaluate restaurants more seamlessly.
         </h2>
       </div>
       <div class="flex gap-24px">
         <img alt="" loading="lazy"
-          sizes="(max-width: 479px) 100vw, (max-width: 767px) 17vw, 100.59375px"
-          src="/public/images/tastebuds/route-2_sketches_labeled_02.png" srcset="
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-500.png   500w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-800.png   800w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02-p-1080.png 1080w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656145eddc402b17a4560ddd_Route%202_Sketches_Labeled_02.png        1758w
+          sizes="(max-width: 479px) 100vw, (max-width: 767px) 17vw, (max-width: 991px) 18vw, 170.234375px"
+          src="/public/images/tastebuds/route-2_sketches_labeled_03.png" srcset="
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-500.png   500w,
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-800.png   800w,
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-1080.png 1080w,
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03.png        2016w
+            ">
+        <div class="flex vertical _24-px">
+          <div class="header-with-icon">
+            <div class="flex vertical _4px">
+              <p class="subheading">1. List View</p>
+              <p>
+                In addition to dragging the list view from below,
+                diners can switch to a list view with this button.
+              </p>
+            </div>
+          </div>
+          <div class="header-with-icon">
+            <div class="flex vertical _4px">
+              <p class="subheading">
+                2. Map Button
+              </p>
+              <p>
+                Toggling this would revert back to the compact
+                carousel view.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="flex-block-14">
+        <div class="heading-with-divider">
+          <div class="w-layout-vflex">
+            <div class="header-with-icon">
+              <h2 class="p _1-125-rem _1-5-spacing">
+                05 Restaurant listing
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        <strong class="design-hypothesis">Design Hypothesis</strong>:
+        A significant portion of a diner's journey on apps like Yelp
+        and Google Maps is navigating through restaurant photos and
+        reviews in search for details on restaurant offerings.
+        Similar to my design hypothesis for the search results, this
+        user journey can be streamlined within the restaurant listing
+        by prioritizing essential information on the initial screen.
+      </p>
+      <div class="flex gap-24px">
+        <img alt="" loading="lazy" sizes="(max-width: 479px) 100vw, 20vw"
+          src="/public/images/tastebuds/route-2_sketches_labeled_04_right.png" srcset="
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right-p-500.png  500w,
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right-p-800.png  800w,
+              https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right.png       1756w
             ">
         <div class="flex vertical _24-px">
           <div class="header-with-icon">
             <div class="flex vertical _4px">
               <p class="subheading">
-                1. Restaurant Tags
+                1. Deals and Promotions
+              </p>
+              <p>
+                Diners like Alex and Brandon prioritize value so
+                they're incentivized by deals. Showcasing ongoing
+                promotions may enhance their ability to assess the
+                affordability of restaurants. This also may
+                encourages them to consider visiting restaurants
+                offering good value for their money.
               </p>
             </div>
           </div>
           <div class="header-with-icon">
             <div class="flex vertical _4px">
               <p class="subheading">
-                2. Recommended Menu Items
+                2. Recommended For You
               </p>
               <p>
-                A compact display compared to the list view of
-                results.
+                These recommendations would be based on a combination
+                of their food preferences, search criteria, and
+                dining history.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  04 search results: card carousel
-                </h2>
-              </div>
-            </div>
-          </div>
-          <h2>
-            Since restaurant information in this view is limited,
-            diners may view a minimized version of the restaurant
-            listing by toggling this button, allowing diners to
-            evaluate restaurants more seamlessly.
-          </h2>
-        </div>
-        <div class="flex gap-24px">
-          <img alt="" loading="lazy"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 17vw, (max-width: 991px) 18vw, 170.234375px"
-            src="/public/images/tastebuds/route-2_sketches_labeled_03.png" srcset="
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-500.png   500w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-800.png   800w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03-p-1080.png 1080w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d6184080bf9cf81631c29_Route%202_Sketches_Labeled_03.png        2016w
-              ">
-          <div class="flex vertical _24-px">
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">1. List View</p>
-                <p>
-                  In addition to dragging the list view from below,
-                  diners can switch to a list view with this button.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  2. Map Button
-                </p>
-                <p>
-                  Toggling this would revert back to the compact
-                  carousel view.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  05 Restaurant listing
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p>
-          <strong class="design-hypothesis">Design Hypothesis</strong>:
-          A significant portion of a diner's journey on apps like Yelp
-          and Google Maps is navigating through restaurant photos and
-          reviews in search for details on restaurant offerings.
-          Similar to my design hypothesis for the search results, this
-          user journey can be streamlined within the restaurant listing
-          by prioritizing essential information on the initial screen.
-        </p>
-        <div class="flex gap-24px">
-          <img alt="" loading="lazy" sizes="(max-width: 479px) 100vw, 20vw"
-            src="/public/images/tastebuds/route-2_sketches_labeled_04_right.png" srcset="
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right-p-500.png  500w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right-p-800.png  800w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/655d98ae62feaa6b27b3466b_Route%202_Sketches_Labeled_04_Right.png       1756w
-              ">
-          <div class="flex vertical _24-px">
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  1. Deals and Promotions
-                </p>
-                <p>
-                  Diners like Alex and Brandon prioritize value so
-                  they're incentivized by deals. Showcasing ongoing
-                  promotions may enhance their ability to assess the
-                  affordability of restaurants. This also may
-                  encourages them to consider visiting restaurants
-                  offering good value for their money.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  2. Recommended For You
-                </p>
-                <p>
-                  These recommendations would be based on a combination
-                  of their food preferences, search criteria, and
-                  dining history.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  3. Bestsellers
-                </p>
-                <p>
-                  In addition to personalized recommendations, diners
-                  can see the bestselling menu items among their
-                  friends for further consideration.
-                </p>
-              </div>
+          <div class="header-with-icon">
+            <div class="flex vertical _4px">
+              <p class="subheading">
+                3. Bestsellers
+              </p>
+              <p>
+                In addition to personalized recommendations, diners
+                can see the bestselling menu items among their
+                friends for further consideration.
+              </p>
             </div>
           </div>
         </div>

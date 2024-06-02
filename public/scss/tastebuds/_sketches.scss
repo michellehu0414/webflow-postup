@@ -10,20 +10,21 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
-	margin-top: 0;
-	margin-bottom: 3rem;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .sketches-walkthrough_grid-container {
 	display: grid;
 	grid-template-columns: 1.25fr 2fr;
-	gap: 1rem;
+	gap: 2rem;
 	margin-bottom: 3rem;
 }
 
 .sketches-walkthrough_content {
 	padding-left: 1.5rem;
 	ol {
+		margin: 0;
 		font-weight: 500;
 
 		li {
@@ -44,13 +45,17 @@
 	border-bottom: 1px solid $dark-grey;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+	margin-left: 2.45rem;
 
 	p {
 		margin-bottom: 0.5rem;
 		font-size: 1.25rem;
-		color: $medium-grey;
 		font-weight: 500;
 	}
+}
+
+.sketches-walkthrough_summary {
+	margin-left: 2.45rem;
 }
 
 .section-subheading.sketches {
