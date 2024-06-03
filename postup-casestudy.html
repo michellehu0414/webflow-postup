@@ -29,82 +29,88 @@
 
 <body>
   <main>
-    <div class="hero-overview">
-      <div class="hero heroBG-postup">
-        <div class="hero_wrapper">
-          <!-- Hero v.1 Title and image is in a row -->
-          <div style="display: none">
-            <h1 class="hero-title">PostUp</h1>
-            <p class="hero-tagline">
-              Helping remote workers find great public workspaces anywhere.
-            </p>
-          </div>
-          <div class="hero_gif-wrapper">
-            <img alt="" class="hero_gif" loading="eager"
-              src="/public/images/postup/postup-final-prototype.gif" />
-          </div>
-        </div>
+    <section id="hero" class="hero hero--bg-postup">
+      <div class="hero__content">
+        <img alt="" class="hero__gif" loading="eager"
+          src="/public/images/postup/postup-final-prototype.gif" />
       </div>
-      <section class="section-overview">
-        <div class="content-wrapper">
-          <header class="section-overview-header">
-            <h1 class="project-title">PostUp</h1>
-            <p class="project-tagline">
-              Connecting remote workers to ideal public workspaces anywhere.
+    </section>
+    <section class="overview">
+      <div class="overview__content-wrapper">
+        <header class="overview__header">
+          <h1 class="overview__title">PostUp</h1>
+          <p class="overview__tagline">
+            Connecting remote workers to ideal public workspaces anywhere.
+          </p>
+          <div class="overview__tags-wrapper overview__tags-wrapper--scrollable">
+            <div class="overview__tag overview__tag--postup">product design</div>
+            <div class="overview__tag overview__tag--postup">monetization strategy</div>
+            <div class="overview__tag overview__tag--postup">business strategy</div>
+            <div class="overview__tag overview__tag--postup">interaction design</div>
+            <div class="overview__tag overview__tag--postup show-med">visual design</div>
+          </div>
+        </header>
+        <div class="overview__details-container">
+          <div class="overview__details-list">
+            <p class="overview__details-headline">Timeline
             </p>
-            <div class="tags-wrapper scrollable">
-              <div class="project-tag postup">product design</div>
-              <div class="project-tag postup">monetization strategy</div>
-              <div class="project-tag postup">business strategy</div>
-              <div class="project-tag postup">interaction design</div>
-              <div class="project-tag postup">visual design</div>
-            </div>
-          </header>
-          <div class="project-details_container">
-            <div>
-              <div class="grid-item">
-                <div class="project-details_list">
-                  <p class="project-details_headline timeline">Timeline</p>
-                  <ul>
-                    <li>5-day design sprint</li>
-                  </ul>
-                </div>
-                <div class="project-details_list hide">
-                  <p class="project-details_headline">Techniques</p>
-                  <ul>
-                    <li>User flow</li>
-                    <li>Storyboarding</li>
-                    <li>Wireframing</li>
-                    <li>Prototyping</li>
-                    <li>MVP design</li>
-                    <li>Information architecture</li>
-                  </ul>
-                </div>
+            <ul>
+              <li>5-day design sprint</li>
+              <li>December 2023</li>
+            </ul>
+          </div>
+          <div class="overview__details-list">
+            <p class="overview__details-headline headline-tools">Tools</p>
+            <div class="overview__tools-flex-container">
+              <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
+                <img loading="lazy" src="/public/images/toolbox-logos/logo-figma.png" alt="" />
+              </div>
+              <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
+                <img alt="" loading="lazy"
+                  src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65767624d94958bc63fff523_canva%20logo.png" />
               </div>
             </div>
-            <div class="project-details_list">
-              <p class="project-details_headline text-center">Tools</p>
-              <div class="tools_flex-container">
-                <div class="tools_logo-wrapper figma-app">
+          </div>
+        </div>
+        <div class="overview-mobile-only hide">
+          <div>
+            <div class="overview__details-list mb-16">
+              <p class="overview__details-headline">Timeline
+              </p>
+              <ul>
+                <li>5-day design sprint</li>
+              </ul>
+            </div>
+            <div class="overview__details-list">
+              <p class="overview__details-headline headline-tools">Tools</p>
+              <div class="overview__tools-flex-container">
+                <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
                   <img loading="lazy" src="/public/images/toolbox-logos/logo-figma.png" alt="" />
                 </div>
-                <div class="tools_logo-wrapper canva-app">
+                <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
                   <img alt="" loading="lazy"
                     src="https://assets-global.website-files.com/651649456fb9882d90cce3aa/65767624d94958bc63fff523_canva%20logo.png" />
                 </div>
               </div>
             </div>
           </div>
+          <div class="flex-row center">
+            <button class="scroll-button hero" data-scroll-target="the-problem"
+              aria-label="Scroll down">
+              <img src="/public/svg/ic-arrowDown.svg"
+                alt="Chevron arrow pointing down, indicating to scroll down" />
+            </button>
+          </div>
         </div>
-        <div class="flex-row center">
-          <button class="scroll-button hero" data-scroll-target="the-problem"
-            aria-label="Scroll down">
-            <img src="/public/svg/ic-arrowDown.svg"
-              alt="Chevron arrow pointing down, indicating to scroll down" />
-          </button>
-        </div>
-      </section>
-    </div>
+      </div>
+      <div class="flex-row center">
+        <button class="scroll-button hero" data-scroll-target="the-problem"
+          aria-label="Scroll down">
+          <img src="/public/svg/ic-arrowDown.svg"
+            alt="Chevron arrow pointing down, indicating to scroll down" />
+        </button>
+      </div>
+    </section>
     <section id="the-problem" class="section-container equal-padding">
       <div class="content">
         <header class="header-container">

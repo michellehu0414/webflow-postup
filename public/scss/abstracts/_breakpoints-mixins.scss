@@ -29,7 +29,7 @@ $breakpoints: (
 	overflow: hidden;
 
 	@include breakpoint(med) {
-		display: none;
+		display: none !important;
 	}
 }
 
@@ -54,28 +54,28 @@ $breakpoints: (
 
 // Classes for showing content at different breakpoints
 .show-mobile-sm {
-	display: none;
+	display: none !important;
 }
 .show-mobile-med {
-	display: none;
+	display: none !important;
 }
 .show-mobile-lg {
-	display: none;
+	display: none !important;
 }
 .show-sm {
-	display: none;
+	display: none !important;
 }
 .show-med {
-	display: none;
+	display: none !important;
 }
 .show-lg {
-	display: none;
+	display: none !important;
 }
 .show-xl {
-	display: none;
+	display: none !important;
 }
 .show-xxl {
-	display: none;
+	display: none !important;
 }
 
 @include breakpoint(mobile-sm) {
@@ -129,48 +129,48 @@ $breakpoints: (
 
 @include breakpoint(mobile-sm) {
 	.hide-mobile-sm {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(mobile-med) {
 	.hide-mobile-med {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(mobile-lg) {
 	.hide-mobile-lg {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(sm) {
 	.hide-sm {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(med) {
 	.hide-med {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(lg) {
 	.hide-lg {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(xl) {
 	.hide-xl {
-		display: none;
+		display: none !important;
 	}
 }
 
 @include breakpoint(xxl) {
 	.hide-xxl {
-		display: none;
+		display: none !important;
 	}
 }

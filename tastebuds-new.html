@@ -8,6 +8,8 @@
   <title>Tastebuds — Michelle Hu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
@@ -22,75 +24,51 @@
 </head>
 
 <body>
-  <section class="hero-overview">
-    <div class="hero tastebuds-hero_bg">
-      <div class="hero_wrapper">
-        <!-- Hero v.1 Title and image is in a row -->
-        <div style="display: none">
-          <h1 class="hero-title">TasteBuds</h1>
-          <p class="hero-tagline">
-            Empowering diners to discover dining options with
-            tastebuds they trust.
-          </p>
-        </div>
-        <div class="tastebuds-hero_image-wrapper">
-          <img alt="" class="tastebuds-hero_image" loading="eager"
-            src="/public/images/tastebuds/hero-image.png" />
-        </div>
-      </div>
+  <section id="hero" class="hero hero--bg-tastebuds">
+    <div class="hero__content">
+      <img alt="" class="hero__image" loading="eager"
+        src="/public/images/tastebuds/hero-image.png" />
+      <!-- <div class="hero__image-wrapper">
+      </div> -->
     </div>
   </section>
-  <section class="section-overview">
-    <div class="content-wrapper">
-      <header class="section-overview-header">
-        <h1 class="project-title">TasteBuds</h1>
-        <p class="project-tagline">
-          Empowering diners to discover dining options with
-          tastebuds they trust.
+  <section class="overview">
+    <div class="overview__content-wrapper">
+      <header class="overview__header">
+        <h1 class="overview__title">TasteBuds</h1>
+        <p class="overview__tagline">
+          Empowering diners to discover dining options with tastebuds they trust.
         </p>
-        <div class="tags-wrapper scrollable">
-          <div class="project-tag tastebuds">product design</div>
-          <div class="project-tag tastebuds">interaction design</div>
-          <div class="project-tag tastebuds">business strategy</div>
-          <div class="project-tag tastebuds">competitive research</div>
-          <div class="project-tag tastebuds">prototyping</div>
+        <div class="overview__tags-wrapper overview__tags-wrapper--scrollable">
+          <div class="overview__tag overview__tag--tastebuds">product design</div>
+          <div class="overview__tag overview__tag--tastebuds">interaction design</div>
+          <div class="overview__tag overview__tag--tastebuds">business strategy</div>
+          <div class="overview__tag overview__tag--tastebuds">competitive research</div>
+          <div class="overview__tag overview__tag--tastebuds">prototyping</div>
         </div>
       </header>
-      <div class="project-details_container">
-        <div>
-          <div class="grid-item">
-            <div class="project-details_list">
-              <p class="project-details_headline">Timeline</p>
-              <ul>
-                <li>December 2022 - June 2023</li>
-              </ul>
-            </div>
-            <div class="project-details_list hide">
-              <p class="headline">Techniques</p>
-              <ul>
-                <li>User flow</li>
-                <li>Storyboarding</li>
-                <li>Wireframing</li>
-                <li>Prototyping</li>
-                <li>MVP design</li>
-                <li>Information architecture</li>
-              </ul>
-            </div>
+      <div class="overview__details-container">
+        <div class="overview__grid-item">
+          <div class="overview__details-list">
+            <p class="overview__details-headline">Timeline</p>
+            <ul>
+              <li>December 2022 - June 2023</li>
+            </ul>
           </div>
         </div>
-        <div class="project-details_list">
-          <p class="project-details_headline text-center">Tools</p>
-          <div class="tools_grid-container">
-            <div class="tools_logo-wrapper figma-app">
+        <div class="overview__details-list">
+          <p class="overview__details-headline">Tools</p>
+          <div class="overview__tools-grid-container">
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
               <img loading="lazy" src="/public/images/toolbox-logos/logo-figma.png" alt="" />
             </div>
-            <div class="tools_logo-wrapper general-app">
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--general">
               <img alt="" loading="lazy" src="/public/images/tastebuds/logo-notion.png" />
             </div>
-            <div class="tools_logo-wrapper miro-app">
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--miro">
               <img alt="" loading="lazy" src="/public/images/tastebuds/logo-miro.png" />
             </div>
-            <div class="tools_logo-wrapper canva-app">
+            <div class="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
               <img alt="" loading="lazy" src="/public/images/tastebuds/logo-canva.png" />
             </div>
           </div>
@@ -1275,7 +1253,9 @@
         between pages and losing the search progress!
       </p>
       <p class="subheading">New features ✨</p>
-      <p>Since I was able to identify and address gaps in my user flows, I used my user personas to further empathize with my target diners and brainstorm more features that would enhance their experience. I added direct messaging, exclusive in-app
+      <p>Since I was able to identify and address gaps in my user flows, I used my user personas to
+        further empathize with my target diners and brainstorm more features that would enhance
+        their experience. I added direct messaging, exclusive in-app
         offers, and saved reviews and restaurants.</p>
       <p class="subheading">Challenge 😵‍💫</p>
       <p>The most challenging aspect was deciding the placement of the social feed. Both
