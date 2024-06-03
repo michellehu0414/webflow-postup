@@ -60,11 +60,58 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto auto;
-	gap: 1rem;
+	column-gap: 1.5rem;
+	row-gap: 1rem;
 	align-items: center;
 	text-align: center;
 
 	p {
 		font-size: 1rem;
+	}
+}
+
+.sketches-walkthrough_flex-container {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	gap: 2rem;
+	width: 95%;
+	max-width: 80rem;
+}
+
+.sketches-walkthrough__card {
+	@extend .card-vertical;
+	display: flex;
+	height: fit-content;
+	margin-top: 0;
+	width: 20rem;
+	background-color: $light-grey;
+}
+
+.sketches-walkthrough__card--subheader {
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: 'Source Code Pro', monospace;
+	color: $medium-grey;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.sketches-walkthrough__card--headline {
+	font-size: 1.5rem;
+	color: $black;
+	margin: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+.sketches-walkthrough__card--list {
+	width: 100%;
+	margin: 0;
+	list-style-type: none;
+	font-weight: 400;
+
+	li {
+		font-weight: 400;
 	}
 }
