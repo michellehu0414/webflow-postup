@@ -40,7 +40,7 @@
 	}
 }
 
-.sketches-walkthrough_heading-container {
+.sketches-walkthrough__heading-container {
 	border-bottom: 1px solid $dark-grey;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
@@ -70,22 +70,37 @@
 	}
 }
 
-.sketches-walkthrough_flex-container {
-	display: flex;
-	flex-direction: row;
+.sketches-walkthrough__grid-container--large {
+	display: grid;
+	grid-template-columns: 1.25fr 3fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		'. a'
+		'b  c';
+	align-items: start;
 	margin: auto;
-	gap: 2rem;
+	column-gap: 2rem;
+	row-gap: 0;
 	width: 95%;
-	max-width: 80rem;
+	max-width: 1200px;
+	margin-bottom: 4rem;
 }
 
 .sketches-walkthrough__card {
-	@extend .card-vertical;
-	display: flex;
+	grid-area: b;
+	@include flex(column, 0.5rem);
+	padding: 1.5rem 2.5rem;
+	padding-left: 2.5rem;
+	background-color: #f6f6f6;
+	border-radius: 0.25rem;
 	height: fit-content;
-	margin-top: 0;
-	width: 20rem;
 	background-color: $light-grey;
+}
+
+.sketches-walkthrough__content {
+	color: $black;
+	font-size: 1.125rem;
+	text-wrap: wrap;
 }
 
 .sketches-walkthrough__card--subheader {
@@ -95,23 +110,39 @@
 	color: $medium-grey;
 	margin: 0;
 	letter-spacing: 1px;
+	line-height: 100%;
 }
 
+.sketches-walkthrough__content {
+	grid-area: a;
+
+	header {
+		margin-bottom: 1rem;
+	}
+}
 .sketches-walkthrough__card--headline {
 	font-size: 1.5rem;
 	color: $black;
 	margin: 0;
-	margin-bottom: 0.5rem;
 	font-weight: 500;
 }
 
 .sketches-walkthrough__card--list {
 	width: 100%;
 	margin: 0;
-	list-style-type: none;
 	font-weight: 400;
+
+	ul {
+		gap: 0.25rem;
+		margin: 0;
+	}
 
 	li {
 		font-weight: 400;
+		font-size: 1rem;
 	}
+}
+
+.sketches-walkthrough__img {
+	grid-area: c;
 }
