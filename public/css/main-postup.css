@@ -703,95 +703,6 @@ template {
   filter: sepia(100%);
 }
 
-.hero {
-  display: flex;
-  align-items: flex-start;
-  height: 40vh;
-  overflow: hidden;
-  padding-top: 2rem;
-}
-.hero--bg-tastebuds {
-  background-color: #f8eacd;
-}
-.hero--bg-postup {
-  background-color: #8cb4ac;
-}
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-start;
-}
-.hero__gif {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: start;
-  justify-content: start;
-  margin: auto auto 0 auto;
-  width: 60%;
-  max-width: 15rem;
-}
-.hero__image-wrapper {
-  overflow: hidden;
-  margin: auto;
-  margin-bottom: 0;
-}
-.hero__image {
-  display: flex;
-  width: 80%;
-  max-width: 20rem;
-}
-@media (min-width: 768px) {
-  .hero {
-    height: 55vh;
-    padding-top: 3rem;
-    max-height: 36rem;
-  }
-  .hero__content {
-    justify-content: flex-end;
-  }
-  .hero__gif-wrapper {
-    width: 35%;
-    max-width: 20rem;
-    height: 100%;
-  }
-  .hero__image-wrapper {
-    max-width: 30rem;
-  }
-}
-@media (min-width: 992px) {
-  .hero {
-    height: 55vh;
-    padding-top: 4rem;
-    max-height: none;
-  }
-  .hero__gif {
-    margin: auto auto 0 auto;
-    width: 55%;
-    max-width: 18rem;
-  }
-}
-@media (min-width: 1200px) {
-  .hero__image-wrapper {
-    max-width: 40rem;
-  }
-}
-
-.caption-container {
-  height: fit-content;
-  align-items: center;
-  width: 100%;
-  border: 1px solid #dbdbdb;
-  border-radius: 10px;
-  display: flex;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-  margin: auto;
-  justify-content: center;
-}
-
 .content-grid {
   display: grid;
   grid-template-rows: auto;
@@ -880,11 +791,11 @@ template {
   }
 }
 
-.content-grid--card-left {
+.grid-card-left {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
-  grid-template-areas: ". a" "b  c";
+  grid-template-areas: ". a" "b c";
   align-items: start;
   justify-content: flex-end;
   margin: auto;
@@ -894,13 +805,21 @@ template {
   max-width: 50rem;
   margin-bottom: 4rem;
 }
-.content-grid--card-left .headline {
+.grid-card-left .content {
+  color: #1e1e1e;
+  font-size: 1.125rem;
+  text-wrap: wrap;
+  grid-area: a;
+  margin-bottom: 1.5rem;
+}
+.grid-card-left .content .headline {
   font-size: 1.5rem;
   color: #1e1e1e;
   margin: 0;
+  margin-bottom: 0.5rem;
   font-weight: 500;
 }
-.content-grid--card-left > .card {
+.grid-card-left .card {
   grid-area: b;
   display: flex;
   flex-direction: column;
@@ -914,7 +833,7 @@ template {
   background-color: #f0f0f0;
   width: 17rem;
 }
-.content-grid--card-left > .card .card__subheader {
+.grid-card-left .card .subheader, .grid-card-left .card .header-container span, .header-container .grid-card-left .card span {
   font-size: 1rem;
   text-transform: uppercase;
   font-family: "Source Code Pro", monospace;
@@ -923,34 +842,20 @@ template {
   letter-spacing: 1px;
   line-height: 100%;
 }
-.content-grid--card-left > .card .card__list {
+.grid-card-left .card ul {
   width: 100%;
   margin: 0;
   font-weight: 400;
-}
-.content-grid--card-left > .card .card__list ul {
   gap: 0.25rem;
   margin: 0 !important;
 }
-.content-grid--card-left > .card .card__list ul li {
+.grid-card-left .card ul li {
   font-weight: 400;
   font-size: 1rem;
-  color: #1e1e1e !important;
+  color: #4a4a4a !important;
 }
-
-.content-grid__content {
-  color: #1e1e1e;
-  font-size: 1.125rem;
-  text-wrap: wrap;
-  grid-area: a;
-}
-.content-grid__content header {
-  margin-bottom: 1rem;
-}
-
-.sketches-walkthrough__img {
+.grid-card-left img {
   grid-area: c;
-  width: 50rem;
 }
 
 hr {
@@ -1060,6 +965,19 @@ hr.solid-grey {
 
 .rotate {
   transform: rotate(-180deg);
+}
+
+.caption-container {
+  height: fit-content;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  display: flex;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  margin: auto;
+  justify-content: center;
 }
 
 .carousel-container {
@@ -1228,32 +1146,6 @@ blockquote {
   width: 53rem;
 }
 
-.header-with-icon {
-  display: flex;
-  width: 100%;
-  max-width: 45rem;
-  margin: auto;
-  margin-bottom: 1.25rem;
-  position: relative;
-  transform: translateX(-2.5rem);
-}
-.header-with-icon .headline {
-  width: 100%;
-  text-align: left;
-  padding-left: 2.5rem;
-  margin-bottom: 0;
-  font-size: 1.25rem;
-  color: #565656;
-}
-.header-with-icon .icon_wrapper {
-  width: 1.5rem;
-  position: absolute;
-  left: 0;
-}
-.header-with-icon .ic-lightbulb {
-  width: 1.5rem;
-}
-
 .card-vertical {
   display: flex;
   flex-direction: column;
@@ -1303,6 +1195,108 @@ blockquote {
   margin: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+.header-with-icon {
+  display: flex;
+  width: 100%;
+  max-width: 45rem;
+  margin: auto;
+  margin-bottom: 1.25rem;
+  position: relative;
+  transform: translateX(-2.5rem);
+}
+.header-with-icon .headline {
+  width: 100%;
+  text-align: left;
+  padding-left: 2.5rem;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: #565656;
+}
+.header-with-icon .icon_wrapper {
+  width: 1.5rem;
+  position: absolute;
+  left: 0;
+}
+.header-with-icon .ic-lightbulb {
+  width: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  height: 40vh;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+.hero--bg-tastebuds {
+  background-color: #f8eacd;
+}
+.hero--bg-postup {
+  background-color: #8cb4ac;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero__gif {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: start;
+  justify-content: start;
+  margin: auto auto 0 auto;
+  width: 60%;
+  max-width: 15rem;
+}
+.hero__image-wrapper {
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 0;
+}
+.hero__image {
+  display: flex;
+  width: 80%;
+  max-width: 20rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 55vh;
+    padding-top: 3rem;
+    max-height: 36rem;
+  }
+  .hero__content {
+    justify-content: flex-end;
+  }
+  .hero__gif-wrapper {
+    width: 35%;
+    max-width: 20rem;
+    height: 100%;
+  }
+  .hero__image-wrapper {
+    max-width: 30rem;
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    height: 55vh;
+    padding-top: 4rem;
+    max-height: none;
+  }
+  .hero__gif {
+    margin: auto auto 0 auto;
+    width: 55%;
+    max-width: 18rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__image-wrapper {
+    max-width: 40rem;
+  }
 }
 
 .overview {
@@ -1677,6 +1671,36 @@ blockquote {
 .section-container.border-0 {
   border: 0;
 }
+.section-container > .content {
+  display: block;
+  max-width: 45rem;
+  width: 90vw;
+  margin: auto;
+  align-items: left;
+  margin-top: 1.5rem;
+}
+.section-container > .content > figure > img {
+  margin: 0;
+}
+.section-container > .content.medium-small {
+  max-width: 50rem;
+}
+.section-container > .content.medium {
+  max-width: 1000px;
+}
+.section-container > .content.large {
+  max-width: 1200px;
+}
+.section-container > .content.xl {
+  max-width: 1400px;
+}
+.section-container > .content.xxl {
+  max-width: 1600px;
+  width: 90%;
+}
+.section-container > .content > :first-child {
+  margin-top: 0;
+}
 
 .subsection {
   display: block;
@@ -1685,12 +1709,7 @@ blockquote {
   margin-bottom: 4rem;
   width: 100%;
 }
-
-main div > img:only-child {
-  margin: 0;
-}
-
-.content {
+.subsection > .content {
   display: block;
   max-width: 45rem;
   width: 90vw;
@@ -1698,27 +1717,31 @@ main div > img:only-child {
   align-items: left;
   margin-top: 1.5rem;
 }
-.content > figure > img {
+.subsection > .content > figure > img {
   margin: 0;
 }
-.content.medium-small {
+.subsection > .content.medium-small {
   max-width: 50rem;
 }
-.content.medium {
+.subsection > .content.medium {
   max-width: 1000px;
 }
-.content.large {
+.subsection > .content.large {
   max-width: 1200px;
 }
-.content.xl {
+.subsection > .content.xl {
   max-width: 1400px;
 }
-.content.xxl {
+.subsection > .content.xxl {
   max-width: 1600px;
   width: 90%;
 }
-.content > :first-child {
+.subsection > .content > :first-child {
   margin-top: 0;
+}
+
+main div > img:only-child {
+  margin: 0;
 }
 
 .container-full-width {
@@ -1730,7 +1753,7 @@ main div > img:only-child {
   width: 100vw;
   padding: 1rem 0;
 }
-.container-full-width .content-wrapper div {
+.container-full-width .content > div {
   margin: auto;
 }
 .container-full-width.transparent {

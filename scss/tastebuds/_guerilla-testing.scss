@@ -1,0 +1,73 @@
+.testing-outcomes-content.grey {
+	align-items: center;
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	flex-direction: row;
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	padding-bottom: 16px;
+	padding-top: 36px;
+}
+.testing-outcomes-content.arrow {
+	align-self: center;
+	background-color: var(--transparent);
+	justify-content: center;
+}
+.testing-outcomes-content.padding-0 {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+.flex-block-40 {
+	align-self: stretch;
+	background-color: #fafafa;
+	border-radius: 15px 5px 5px;
+	flex: 1;
+	flex-direction: column;
+	grid-column-gap: 24px;
+	grid-row-gap: 24px;
+	margin-top: -20px;
+	padding-top: 40px;
+}
+.flex-block-40.gap-0 {
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+}
+
+.testing-outcomes-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	.icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		z-index: 1;
+
+		@include breakpoint(med) {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+
+	.content {
+		background-color: $light-grey;
+		margin-top: -1.5rem;
+		padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+		border-radius: 1rem;
+
+		.icon {
+			width: 5rem;
+			height: auto;
+		}
+	}
+}
+
+.grid-container-4x1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 1rem;
+	padding: 1rem;
+}
