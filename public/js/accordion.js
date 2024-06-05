@@ -1,8 +1,8 @@
-document.querySelectorAll('.accordion .accordionHeader').forEach(header => {
+document.querySelectorAll('.accordion .accordion__header').forEach(header => {
   header.addEventListener('click', function () {
     const accordion = header.parentElement;
-    const content = accordion.querySelector('.accordionContent');
-    const icon = accordion.querySelector('.accordion-icon'); // Select the icon within the accordion
+    const content = accordion.querySelector('.accordion__content');
+    const icon = accordion.querySelector('.accordion__icon'); // Select the icon within the accordion
 
     content.classList.toggle('active');
     icon.classList.toggle('rotate');
@@ -17,7 +17,7 @@ document.querySelectorAll('.accordion .accordionHeader').forEach(header => {
 
 function toggleAccordion(button) {
   const content = button.nextElementSibling;
-  const icon = button.querySelector('.accordion-icon');
+  const icon = button.querySelector('.accordion__icon');
 
   content.classList.toggle('active');
   icon.classList.toggle('rotate');

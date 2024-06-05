@@ -54,6 +54,10 @@ main {
 		margin: 0;
 	}
 
+	&.medium-small {
+		max-width: 50rem;
+	}
+
 	&.medium {
 		max-width: 1000px;
 	}

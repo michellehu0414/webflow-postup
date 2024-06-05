@@ -20,6 +20,10 @@ ol {
 			font-weight: 500;
 		}
 	}
+
+	&.gap--medium {
+		gap: 1rem;
+	}
 }
 
 ol {
@@ -80,5 +84,11 @@ ul.list-none {
 	&._24px {
 		grid-column-gap: 24px;
 		grid-row-gap: 24px;
+	}
+
+	&--dark {
+		li {
+			color: #cccccc;
+		}
 	}
 }
