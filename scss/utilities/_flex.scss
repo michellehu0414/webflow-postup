@@ -1,40 +1,59 @@
 .flex {
-  display: flex;
+	display: flex;
 
-  &-row {
-    flex-direction: row;
-  }
+	&-row {
+		flex-direction: row;
+	}
 
-  &-row-reverse {
-    flex-direction: row-reverse;
-  }
+	&-row-reverse {
+		flex-direction: row-reverse;
+	}
 
-  &-col {
-    flex-direction: column;
-  }
+	&-col {
+		flex-direction: column;
+	}
 
-  &-col-reverse {
-    flex-direction: column-reverse;
-  }
+	&-col-reverse {
+		flex-direction: column-reverse;
+	}
 
-  &-wrap {
-    flex-wrap: wrap;
-  }
+	&-wrap {
+		flex-wrap: wrap;
+	}
 
-  &-wrap-reverse {
-    flex-wrap: wrap-reverse;
-  }
+	&-wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
 
-  &-nowwrap {
-    flex-wrap: nowrap;
-  }
+	&-nowwrap {
+		flex-wrap: nowrap;
+	}
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
+.row-evenly {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.flex-block {
-  align-items: center;
+.gap {
+	&-8 {
+		gap: 0.5rem;
+	}
+
+	&-16 {
+		gap: 1rem;
+	}
+
+	&-24 {
+		gap: 1.5rem;
+	}
+
+	&-32 {
+		gap: 2rem;
+	}
+
+	&-40 {
+		gap: 2.5rem;
+	}
 }

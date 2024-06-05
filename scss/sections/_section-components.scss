@@ -66,6 +66,44 @@
 	}
 }
 
+.content-wrapper {
+	display: block;
+	max-width: $content-max-width;
+	width: 90vw;
+	margin: auto;
+	align-items: left;
+	margin-top: 1.5rem;
+
+	> figure > img {
+		margin: 0;
+	}
+
+	&.medium-small {
+		max-width: 50rem;
+	}
+
+	&.medium {
+		max-width: 1000px;
+	}
+
+	&.large {
+		max-width: 1200px;
+	}
+
+	&.xl {
+		max-width: 1400px;
+	}
+
+	&.xxl {
+		max-width: 1600px;
+		width: 90%;
+	}
+
+	> :first-child {
+		margin-top: 0;
+	}
+}
+
 .content-max-width {
 	width: $content-max-width;
 }

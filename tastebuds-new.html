@@ -1307,9 +1307,11 @@
               <header class="sketches-walkthrough_grid-container--header">
                 <p class="subheading">Food preferences</p>
               </header>
+              <p>What data sets are necessary for personalized dining recommendations?
+                Here's a few I brainstormed:</p>
               <div class="sketches-walkthrough__card mb-32">
                 <ul class="card--list mt-0">
-                  <p class="card--headline">Features</p>
+                  <p class="card--headline">Categories</p>
                   <li>Cuisines</li>
                   <li>Diet</li>
                   <li>Dishes</li>
@@ -1322,6 +1324,29 @@
                 Food preferences are prioritized—not restrictive—to avoid limiting discovery!
               </p>
             </div>
+          </div>
+          <div>
+            <button class="accordion mb-16" onclick="toggleAccordion(this)">
+              <div class="accordion__header">
+                <p>Where would the mobile app obtain information on 'ingredients'?</p>
+                <img class="accordion__icon" src="/public/svg/ic-chevron-arrow__down--white.svg" />
+              </div>
+              <div class="accordion__content">
+                <p>
+                  With ingredients being the building blocks of food, I speculated that these
+                  preferences and restrictions would be key to generating relevant recommendations
+                  by targeting specific ingredients in menu item description.
+                  <br><br>
+                  After some research, I learned that this can be engineered using Yelp and Google
+                  APIs. However, this idea was a key moment in my brainstorming phase because this
+                  gave me the idea of integrating restaurants into the mobile solution as users to
+                  update their information and menus. This also gave me the idea for a business
+                  strategy to generate revenue from business partnerships, keeping the app free for
+                  diners and providing user insights to businesses to enhance their offerings, thus
+                  enhancing the overall diner journey cycle.
+                </p>
+              </div>
+            </button>
           </div>
         </div>
       </section>
@@ -1418,7 +1443,34 @@
               </div>
             </div>
           </div>
-          <p class="subheading mb-16 dark-grey">Sketches flow</p>
+          <br>
+          <div>
+            <h3 class="section-subheading">Where would the mobile app retrieve restaurant info?</h3>
+            <p>
+              To ensure that my ideas are feasible, I did some research:
+            </p>
+            <ol>
+              <li class="fw-medium black">
+                <p class="fw-medium mb-8">Using Yelp and Google APIs</p>
+                <p>Leveraging these APIs, engineers can import existing data on restaurants from
+                  their Yelp and Google profiles.</p>
+              </li>
+              <li class="fw-medium black">
+                <p class="fw-medium mb-8">Business partnerships</p>
+                <p class="span-fw-medium">Alternatively or supplementally, the mobile solution could
+                  <span>
+                    integrate
+                    restaurants as users to update their info and
+                    menus
+                  </span>. This gave me the idea for a <span>
+                    business strategy with business
+                    partnerships to keep the app free
+                  </span> for diners and provide user
+                  insights for restaurants to enhance the overall diner journey!</p>
+              </li>
+            </ol>
+          </div>
+          <p class="subheading mt-16 mb-16 dark-grey">Sketches flow</p>
           <img src="/public/images/tastebuds/route-2-sketches-search-results.png"
             alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
         </div>

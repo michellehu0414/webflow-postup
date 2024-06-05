@@ -1,1 +1,53 @@
+// 3 columns x 1 row
+.grid {
+	display: grid;
+	grid-template-rows: auto;
 
+	&-2x1 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&-3x1 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&-4x1 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	&-5x1 {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+// Column gap
+.col-gap-8 {
+	column-gap: 0.5rem;
+}
+
+.col-gap-16 {
+	column-gap: 1rem;
+}
+
+.col-gap-24 {
+	column-gap: 1.5rem;
+}
+
+// Row gap
+.row-gap-8 {
+	row-gap: 0.5rem;
+}
+
+.row-gap-16 {
+	row-gap: 1rem;
+}
+
+.row-gap-24 {
+	row-gap: 1.5rem;
+}
+
+.row-evenly {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
