@@ -1671,7 +1671,7 @@ blockquote {
 .section-container.border-0 {
   border: 0;
 }
-.section-container > .content {
+.section-container .content {
   display: block;
   max-width: 45rem;
   width: 90vw;
@@ -1679,27 +1679,31 @@ blockquote {
   align-items: left;
   margin-top: 1.5rem;
 }
-.section-container > .content > figure > img {
+.section-container .content > figure > img {
   margin: 0;
 }
-.section-container > .content.medium-small {
+.section-container .content.medium-small {
   max-width: 50rem;
 }
-.section-container > .content.medium {
+.section-container .content.medium {
   max-width: 1000px;
 }
-.section-container > .content.large {
+.section-container .content.large {
   max-width: 1200px;
 }
-.section-container > .content.xl {
+.section-container .content.xl {
   max-width: 1400px;
 }
-.section-container > .content.xxl {
+.section-container .content.xxl {
   max-width: 1600px;
   width: 90%;
 }
-.section-container > .content > :first-child {
+.section-container .content > :first-child {
   margin-top: 0;
+}
+
+.content-max-width {
+  width: 45rem;
 }
 
 .subsection {
