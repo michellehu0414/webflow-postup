@@ -1200,7 +1200,7 @@ blockquote {
 .design-walkthrough_wrapper {
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #757575;
+  border-bottom: 1px solid #dbdbdb;
 }
 .design-walkthrough_wrapper.border-0 {
   border: 0;
@@ -1209,8 +1209,8 @@ blockquote {
   margin: 0;
   margin-bottom: 1rem;
 }
-.design-walkthrough_wrapper header p.subheading, .design-walkthrough_wrapper header .design-walkthrough_content ol li p:first-child, .design-walkthrough_content ol li .design-walkthrough_wrapper header p:first-child {
-  margin-bottom: 0.5rem;
+.design-walkthrough_wrapper > .subheading, .design-walkthrough_content ol li .design-walkthrough_wrapper > p:first-child {
+  margin-bottom: 1rem;
   font-size: 1.35rem;
   font-weight: 500;
 }
@@ -1225,7 +1225,6 @@ blockquote {
 }
 .design-walkthrough_wrapper .design-walkthrough_grid-container > .design-walkthrough_gif {
   grid-area: b;
-  border: 1px solid #1e1e1e;
 }
 .design-walkthrough_wrapper .design-walkthrough_grid-container > div {
   grid-area: a;
@@ -1265,6 +1264,14 @@ blockquote {
 }
 .design-walkthrough_content .subheading, .design-walkthrough_content ol li p:first-child {
   font-size: 1.125rem;
+}
+
+.design-walkthrough_gif {
+  border: 1px solid #1e1e1e;
+}
+.design-walkthrough_gif.low-fidelity {
+  border-radius: 1rem;
+  border: 1.5px solid #4a4a4a;
 }
 
 .header-with-icon {

@@ -44,6 +44,7 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		z-index: 1;
+		margin: auto;
 
 		@include breakpoint(med) {
 			width: 2.5rem;
@@ -57,7 +58,7 @@
 		gap: 1rem;
 		background-color: white;
 		margin-top: -1.5rem;
-		padding: 2.5rem 1rem 2rem 1rem;
+		padding: 2.5rem 1rem 1rem 1rem;
 		border-radius: 1rem;
 		height: 100%;
 
@@ -69,7 +70,7 @@
 			border: 3px solid #dc1d26;
 		}
 
-		.icon {
+		.testing-outcomes-icon {
 			width: 5rem;
 			height: auto;
 			opacity: 0.5;
@@ -77,23 +78,24 @@
 		}
 
 		p {
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 			color: $black;
 			text-align: center;
 		}
 	}
 }
 
-.grid-container-4x1 {
+.testing-outcomes_grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	gap: 0.5rem;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1rem 0.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
 
 	@include breakpoint(med) {
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 1fr;
-		width: 90%;
-		max-width: 55rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		max-width: $content-max-width;
 	}
 }

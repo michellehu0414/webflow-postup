@@ -1319,14 +1319,14 @@
                   <li>Allergies</li>
                 </ul>
               </div>
-              <p class="medium-grey">
+              <p class="medium-grey mb-0">
                 *Note: Only dietary preferences would be strictly adhered to:
                 Food preferences are prioritized—not restrictive—to avoid limiting discovery!
               </p>
             </div>
           </div>
           <div>
-            <button class="accordion mb-16" onclick="toggleAccordion(this)">
+            <button class="accordion mt-32" onclick="toggleAccordion(this)">
               <div class="accordion__header">
                 <p>Where would the mobile app obtain information on 'ingredients'?</p>
                 <img class="accordion__icon" src="/public/svg/ic-chevron-arrow__down--white.svg" />
@@ -1356,7 +1356,7 @@
         </p>
         <!-- Search results with gif -->
         <div class="sketches-walkthrough__wrapper">
-          <div class="sketches-walkthrough_grid-container mb-32">
+          <div class="sketches-walkthrough_grid-container mb-0">
             <img alt="" loading="lazy" class="sketches-walkthrough_gif"
               src="/public/images/tastebuds/route-2-sketches-search.gif">
             <div>
@@ -1367,54 +1367,45 @@
                 To promote search relevance, I placed food preferences (filters) on the first search
                 screen prompts users to enter preferences before initiating search.
               </p>
-              <div class="sketches-walkthrough__card">
-                <ul class="card--list mt-0">
-                  <p class="card--headline">Features</p>
-                  <li>Tailored recommendations</li>
-                  <li>Top 3 qualities by friends</li>
-                  <li>Commute time</li>
-                  <li>Photos posted by friends</li>
-                  <li>Compatability score</li>
-                </ul>
+              <div>
+                <button class="accordion" onclick="toggleAccordion(this)">
+                  <div class="accordion__header">
+                    <p>More details</p>
+                    <img class="accordion__icon"
+                      src="/public/svg/ic-chevron-arrow__down--white.svg" />
+                  </div>
+                  <div class="accordion__content">
+                    <ul class="span-fw-medium list--dark gap--medium">
+                      <li>
+                        <span>Top 3 qualities voted by friends</span>
+                        <br>
+                        When reviewing a dining experience, diners select up to 3 qualities that
+                        stood
+                        out. Qualities with the most votes are displayed so they can better gauge
+                        the
+                        restaurant's strengths at a glance.
+                      </li>
+                      <li>
+                        <span>Refresh for a new set of results</span>
+                        <br>
+                        Earlier, my user flows disallow undoing refresh, but I realized like that
+                        would
+                        limit exploration. I decided to allow users to undo their last set of
+                        results to
+                        maintain my initial goal of encouraging diners to be more deliverate and
+                        thoughtful.
+                      </li>
+                      <li> <span>Commute time</span>
+                        <br>
+                        Since location is an important factor for diners, I speculated displaying
+                        the
+                        commute time in the search results would make their process more efficient.
+                      </li>
+                    </ul>
+                  </div>
+                </button>
               </div>
             </div>
-          </div>
-          <p class="subheading mb-16 dark-grey">Sketches flow</p>
-          <img src="/public/images/tastebuds/route-2-sketches-search.png"
-            alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
-          <br><br>
-          <div>
-            <button class="accordion mb-16" onclick="toggleAccordion(this)">
-              <div class="accordion__header">
-                <p>More details</p>
-                <img class="accordion__icon" src="/public/svg/ic-chevron-arrow__down--white.svg" />
-              </div>
-              <div class="accordion__content">
-                <ul class="span-fw-medium list--dark gap--medium">
-                  <li>
-                    <span>Top 3 qualities voted by friends</span>
-                    <br>
-                    When reviewing a dining experience, diners select up to 3 qualities that stood
-                    out. Qualities with the most votes are displayed so they can better gauge the
-                    restaurant's strengths at a glance.
-                  </li>
-                  <li>
-                    <span>Refresh for a new set of results</span>
-                    <br>
-                    Earlier, my user flows disallow undoing refresh, but I realized like that would
-                    limit exploration. I decided to allow users to undo their last set of results to
-                    maintain my initial goal of encouraging diners to be more deliverate and
-                    thoughtful.
-                  </li>
-                  <li>
-                    <span>Commute time</span>
-                    <br>
-                    Since location is an important factor for diners, I speculated displaying the
-                    commute time in the search results would make their process more efficient.
-                  </li>
-                </ul>
-              </div>
-            </button>
           </div>
         </div>
         <div class="sketches-walkthrough__wrapper">
@@ -1427,8 +1418,8 @@
               </header>
               <p>
                 I wanted to help diners easily assess and compare restaurants, so my sketches
-                present 4 scannable views: List view (default), map view, bottom sheet (carousel),
-                and listing preview. The listing preview uses a swipeable carousel.
+                present 3 scannable views: List view (default), map view, and bottom sheet
+                (carousel).
               </p>
               <div class="sketches-walkthrough__card">
                 <ul class="card--list mt-0">
@@ -1455,9 +1446,10 @@
                 <p>Leveraging these APIs, engineers can import existing data on restaurants from
                   their Yelp and Google profiles.</p>
               </li>
-              <li class="fw-medium black">
+              <li class="fw-medium black ">
                 <p class="fw-medium mb-8">Business partnerships</p>
-                <p class="span-fw-medium">Alternatively or supplementally, the mobile solution could
+                <p class="span-fw-medium mb-0">Alternatively or supplementally, the mobile solution
+                  could
                   <span>
                     integrate
                     restaurants as users to update their info and
@@ -1466,16 +1458,14 @@
                     business strategy with business
                     partnerships to keep the app free
                   </span> for diners and provide user
-                  insights for restaurants to enhance the overall diner journey!</p>
+                  insights for restaurants to enhance the overall diner journey!
+                </p>
               </li>
             </ol>
           </div>
-          <p class="subheading mt-16 mb-16 dark-grey">Sketches flow</p>
-          <img src="/public/images/tastebuds/route-2-sketches-search-results.png"
-            alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
         </div>
-        <div class="sketches-walkthrough__wrapper mb-0">
-          <div class="sketches-walkthrough_grid-container mb-48">
+        <div class="sketches-walkthrough__wrapper mb-0 border-0">
+          <div class="sketches-walkthrough_grid-container mb-32">
             <img alt="" loading="lazy"
               src="/public/images/tastebuds/route-2-sketch-restaurant-listing.png">
             <div>
@@ -1501,8 +1491,8 @@
               </div>
             </div>
           </div>
-          <p class="subheading mb-16 dark-grey">Sketches flow</p>
-          <img src="/public/images/tastebuds/route-2-sketches-search-results.png"
+          <p class="subheading mv-24 dark-grey">Sketches flow</p>
+          <img src="/public/images/tastebuds/route-2-sketches-flow-search-results.png"
             alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
         </div>
       </section>
@@ -1529,7 +1519,7 @@
         </p>
       </div>
       <div class="sketches-walkthrough__wrapper">
-        <div class="sketches-walkthrough_grid-container mb-48">
+        <div class="sketches-walkthrough_grid-container mb-32">
           <img alt="" loading="lazy" src="/public/images/tastebuds/route-3-sketch-review-item.png">
           <div>
             <header class="sketches-walkthrough_grid-container--header">
@@ -1623,17 +1613,35 @@
       </h2>
     </header>
     <div class="content">
-      <p>I prototoyped my sketches and conducted guerilla tests with 5 participants.</p>
-      <h3 class="section-subheading">Outcomes</h3>
+      <p>Since my sketches for routes 2 and 3 were close to low-fidelity, I prototoyped them and
+        conducted guerilla usability tests with 5 participants. Here's what I found:</p>
     </div>
-    <div class="grid-container-4x1 mb-32">
+    <div class="testing-outcomes_grid">
       <div class="testing-outcomes-card">
         <img alt="" class="testing-outcomes-icon" loading="lazy"
           src="/public/images/tastebuds/icon-checkmark-circle-filled-green.png">
         <div class="card__content validation">
           <img alt="" class="testing-outcomes-icon" loading="lazy"
             src="/public/svg/tastebuds/ic-discount-tag.svg">
-          <p>Diners highly value deals.</p>
+          <p>All diners pointed out and affirmed the restaurant "deal".</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon" loading="lazy"
+          src="/public/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="/public/svg/tastebuds/ic-discount-tag.svg">
+          <p>All diners affirmed the personalized recommendations.</p>
+        </div>
+      </div>
+      <div class="testing-outcomes-card">
+        <img alt="" class="testing-outcomes-icon" loading="lazy"
+          src="/public/images/tastebuds/icon-checkmark-circle-filled-green.png">
+        <div class="card__content validation">
+          <img alt="" class="testing-outcomes-icon" loading="lazy"
+            src="/public/svg/tastebuds/ic-discount-tag.svg">
+          <p>All diners found the prototype intuitive and affirmed its potential.</p>
         </div>
       </div>
       <div class="testing-outcomes-card">
@@ -1642,7 +1650,7 @@
         <div class="card__content validation">
           <img alt="" class="testing-outcomes-icon" loading="lazy"
             src="/public/svg/tastebuds/ic-map-with-location-icon.svg">
-          <p>Map is for location based search.</p>
+          <p>The map view is essential for a location based search.</p>
         </div>
       </div>
       <div class="testing-outcomes-card">
@@ -1651,7 +1659,7 @@
         <div class="card__content invalidation">
           <img alt="" class="testing-outcomes-icon" loading="lazy"
             src="/public/svg/tastebuds/ic-not-visible.svg">
-          <p>3 diners couldn't detect the map.</p>
+          <p>3 diners didn't notice the map (behind the list of results).</p>
         </div>
       </div>
       <div class="testing-outcomes-card">
@@ -1660,589 +1668,174 @@
         <div class="card__content invalidation">
           <img alt="" class="testing-outcomes-icon" loading="lazy"
             src="/public/svg/tastebuds/ic-star-rating-slider.svg">
-          <p>4 diners did not use the slider.</p>
+          <p>4 diners struggled with the slider design to rate stars.</p>
         </div>
       </div>
     </div>
     <div class="content">
-      <h3 class="section-subheading">Recommendations</h3>
-      <p>
-        Given my findings, here are a few improvements and changes I
-        planned to integrate into my low-fidelity wireframes:
-      </p>
-      <div>
-        <h4 class="subheading">Route 1</h4>
-        <ul class="span-fw-medium">
-          <li>
-            Make "strengths and weaknesses" selection values mutually exclusive
-            <br>
-            (i.e. if “authentic” as a strength is selected, it can't be selected as a weakness)
-          </li>
-          <li>
-            Implement drag interaction design for star rating component
-          </li>
-          <li>
-            Clarify rules of rating system
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="subheading">Route 2</h4>
-        <ul class="span-fw-medium">
-          <li>
-            Add a 'map' button at the bottom of search results when in list view
-          </li>
-          <li>
-            Add 'sort by distance' into search filters
-          </li>
-          <li>
-            Add restaurant 'deals' into search results
-          </li>
-        </ul>
-      </div>
-      <div class="flex-row gap-24">
-      </div>
+      <a
+        href="https://docs.google.com/document/d/1nq9g-vct7cKA-PFsIPlcCAuN3rX1QibhBRnavFDOs_0/edit?usp=sharing">
+        <p class="link-blue text-center">
+          View
+          complete test report
+        </p>
+      </a>
     </div>
-    <div class="content"></div>
   </section>
   <section id="low-fidelity" class="section-container">
     <header class="header-container">
       <h2>
-        <span>design</span>
+        <span>design iterations</span>
         <br>
-        Low-Fidelity Wireframes
+        Low-fidelity wireframes
       </h2>
-      <p>
-        My next round of designs were low-fidelity wireframes,
-        where I implemented the recommendations I made as a result
-        of my first usability test.
-      </p>
     </header>
-    <div class="content">
-      <p class="section-subheading">Route 1: Sign up + onboarding</p>
+    <section class="content">
       <p>
-        While I didn’t test my onboarding process, I made a few
-        improvements to improve its clarity and flow:
+        Using my testing insights, I iterated my sketches into low-fidelity wireframes.
       </p>
-    </div>
-    <div class="content">
-      <div class="flex vertical _16px">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  01 progress bar + checkpoint
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p>
-          <strong class="design-hypothesis">Design Hypothesis</strong>: Implementing a progress
-          bar and progress checkpoint can
-          help diners feel less overwhelmed and
-          <span class="fw-medium">promote completion rate</span>.<br />
-        </p>
-      </div>
-      <img alt="" loading="lazy"
-        src="/public/images/tastebuds/route-1-low-fidelity-food-preferences-01.png">
-    </div>
-    <div class="content">
-      <div class="flex vertical _16px">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  02 disliked ingredients
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p>
-          <strong class="design-hypothesis">Design Hypothesis</strong>: Some diners strictly
-          avoid selected ingredients that
-          they are not allergic to. Therefore, in addition to "Liked
-          Ingredients" and "Allergies", allowing diners to
-          <span class="fw-medium">input ingredients they dislike can improve personalized
-            recommendations</span>.<br />
-        </p>
-        <img alt="" loading="lazy" sizes="100vw"
-          src="/public/images/tastebuds/route-1-low-fidelity-food-preferences-02.png">
-      </div>
-    </div>
-    <div class="content">
-      <p>
-        Putting it all together, here is a wire flow of my
-        low-fidelity wireframes!
-      </p>
-      <img alt="" loading="lazy" sizes="90vw"
-        src="/public/images/tastebuds/route-1-low-fidelity-wire-flow.png" srcset="
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-500.png   500w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-800.png   800w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-1080.png 1080w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-1600.png 1600w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-2000.png 2000w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-2600.png 2600w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow-p-3200.png 3200w,
-            https://assets-global.website-files.com/651649456fb9882d90cce3aa/656949bde368939016333301_Route%201%20Low-Fidelity%20Wire%20Flow.png        4028w
-          ">
-    </div>
-    <div class="content">
+    </section>
+    <!-- Route 1 low fidelity wireframes -->
+    <section class="content">
       <p class="section-subheading">
-        Route 2: Diner searches for dining options
+        Route 1: Diner signs up and sets up account
       </p>
-      <div class="content first-child">
-        <div class="flex vertical _16px">
-          <div class="flex-block-14">
-            <div class="heading-with-divider">
-              <div class="w-layout-vflex">
-                <div class="header-with-icon">
-                  <h2 class="p _1-125-rem _1-5-spacing">
-                    01 viewing search results
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>
-            <strong class="design-hypothesis">Design Hypothesis</strong>: Implementing a
-            progress bar and progress checkpoint
-            can help diners feel less overwhelmed and
-            <span class="fw-medium">promote completion rate</span>.<br />
-          </p>
-        </div>
+      <p> While I didn’t test this route, I made a few improvements to improve its
+        clarity and flow!</p>
+      <div class="design-walkthrough_wrapper mt-32">
+        <p class="subheading">Streamline onboarding with a linear flow and progress bar</p>
+        <img class="mb-24"
+          src="/public/images/tastebuds/route-1-low-fidelity-food-preferences-01.png" alt="">
+        <p class="span-fw-medium mb-0">I decided to abandon the onboarding flow I sketched for a
+          linear process to streamline the experience. I also added a progress bar and a modal
+          checkpoint
+          to boost completion rates!
+        </p>
+      </div>
+      <div class="design-walkthrough_wrapper mt-32 mb-0 pb-0 border-0">
+        <p class="subheading">Enhancing recommendations with additional diner preferences</p>
+        <img class="mb-24"
+          src="/public/images/tastebuds/route-1-low-fidelity-food-preferences-02.png" alt="">
+        <p class="span-fw-medium mb-0">My participants mentioned avoiding
+          ingredients that aren't technically allergies, so I added a step to input ingredients
+          they simply dislike—"Disliked Ingredients".
+        </p>
         <div>
-          <div class="flex horizontal _16px">
-            <div class="flex vertical _16px space-between">
-              <p class="p label _1-125-rem">previous</p>
-              <div class="div-block-130">
-                <img alt="" loading="lazy" src="/public/images/tastebuds/artwork-40.png">
-              </div>
-            </div>
-            <div class="div-block-97" <img alt="" class="image-45" loading="lazy"
-              src="/public/images/tastebuds/artwork-arrow-right-blue.png">
-            </div>
-            <div class="flex vertical _16px space-between">
-              <p class="p label _1-125-rem black">iteration</p>
-              <div class="div-block-116">
-                <img alt="" loading="lazy" src="/public/images/tastebuds/untitled_artwork-39.png">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-24px">
-          <div class="flex vertical _24-px">
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  1. Map Button
-                </p>
-                <p>
-                  To help diners view the map more conveniently, a
-                  "Map" button is placed at the bottom within the
-                  Thumb Zone, increasing its visibility and
-                  accessibility.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  2. Restaurant Offer in search results.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  3. New View: Partial Map
-                </p>
-                <p>
-                  While search filters are typically altered in the
-                  search results, I placed it within the search
-                  screen to encourage users to input their
-                  preferences in order to narrow their search
-                  criteria to increase the relevancy of their search
-                  results. This design is inspired by my findings
-                  that diners care more about the food than any other
-                  factors.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p class="subheading mt-32 mb-24 dark-grey">Complete wire flow</p>
+          <img alt="" loading="lazy" sizes="90vw"
+            src="/public/images/tastebuds/route-1-low-fidelity-wire-flow.png">
         </div>
       </div>
-      <div class="flex vertical _16px">
-        <div class="content">
+    </section>
+    <!-- Route 2 low fidelity wireframes -->
+    <div class="content-wrapper">
+      <p class="section-subheading mb-32">
+        Route 2: Diner searches for dining options
+      </p>
+      <div class="design-walkthrough_wrapper mb-0 border-0">
+        <div class="design-walkthrough_grid-container">
+          <img alt="" loading="lazy" class="design-walkthrough_gif low-fidelity"
+            src="/public/images/tastebuds/route-2-low-fidelity-search-results.gif">
           <div>
-            <div class="flex-block-14">
-              <div class="heading-with-divider">
-                <div class="w-layout-vflex">
-                  <div class="header-with-icon">
-                    <h2 class="p _1-125-rem _1-5-spacing">
-                      02 restaurant listing pages
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-layout-hflex flex horizontal _40-px">
-            <div class="flex vertical _16px">
-              <div class="div-block-115">
-                <img alt="" loading="lazy"
-                  src="/public/images/tastebuds/route-2-low-fidelity-listing.png">
-              </div>
-              <p class="p label _1-125-rem light-grey center">
-                Home
-              </p>
-            </div>
-            <div class="flex vertical _16px">
-              <div class="div-block-115">
-                <img alt="" loading="lazy"
-                  src="/public/images/tastebuds/route-2-low-fidelity-listing-info.png">
-              </div>
-              <p class="p label _1-125-rem light-grey center">
-                Info
-              </p>
-            </div>
-            <div class="flex vertical _16px">
-              <div class="div-block-115">
-                <img alt="" loading="lazy"
-                  src="/public/images/tastebuds/route-2-low-fidelity-listing-menu.png">
-              </div>
-              <p class="p label _1-125-rem light-grey center">
-                menu
-              </p>
-            </div>
-            <div class="flex vertical _16px">
-              <div class="div-block-115">
-                <img alt="" loading="lazy" sizes="100vw"
-                  src="/public/images/tastebuds/route-2-low-fidelity-listing-photos.png" srcset="
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65696111d59a01edb40f0356_Route%202_Low-Fi_Listing_%20Photos-p-500.png 500w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/65696111d59a01edb40f0356_Route%202_Low-Fi_Listing_%20Photos.png       750w
-                    ">
-              </div>
-              <p class="p label _1-125-rem light-grey center">
-                photos
-              </p>
-            </div>
-            <div class="flex vertical _16px">
-              <div class="div-block-115">
-                <img alt="" loading="lazy" sizes="100vw"
-                  src="/public/images/tastebuds/route-2-low-fidelity-listing-reviews.png" srcset="
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656961138d994c8015102663_Route%202_Low-Fi_Listing_%20Reviews-p-500.png 500w,
-                      https://assets-global.website-files.com/651649456fb9882d90cce3aa/656961138d994c8015102663_Route%202_Low-Fi_Listing_%20Reviews.png       750w
-                    ">
-              </div>
-              <p class="p label _1-125-rem light-grey center">
-                reviews
-              </p>
+            <header class="design-walkthrough_header">
+              <p class="subheading">Search results</p>
+            </header>
+            <p>I changed the first
+              screen of results to a split view and added "Offers". I wanted to explore
+              additional ideas to help diners efficiently compare restaurants, so I designed a
+              way for diners to preview listings in a swipeable carousel.</p>
+            <div class="design-walkthrough_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Bottom map button in full list view</li>
+                <li>Offers displayed in results</li>
+                <li>Split view displaying map and list</li>
+                <li>Preview listings in a carousel</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-      <div class="content">
-        <div>
-          <div class="flex horizontal _24-px">
-            <div class="flex vertical _16px">
-              <p class="p label _1-125-rem">previous</p>
-              <div class="flex horizontal _40-px">
-                <div class="div-block-115">
-                  <img alt="" loading="lazy"
-                    src="/public/images/tastebuds/route-2-sketch-restaurant-listing.png">
-                </div>
-                <div class="div-block-116">
-                  <img alt="" loading="lazy"
-                    src="/public/images/tastebuds/route-2-sketch-restaurant-listing-menu.png">
-                </div>
-              </div>
-            </div>
-            <div class="div-block-97">
-              <img alt="" class="image-45" loading="lazy"
-                src="/public/images/tastebuds/artwork-arrow-right-blue.png">
-            </div>
-            <div class="flex vertical _16px">
-              <p class="p label _1-125-rem black">iteration</p>
-              <div class="flex horizontal _40-px">
-                <div class="div-block-116">
-                  <img alt="" loading="lazy"
-                    src="/public/images/tastebuds/route-2-low-fidelity-listing.png">
-                </div>
-                <div class="div-block-115">
-                  <img alt="" loading="lazy"
-                    src="/public/images/tastebuds/route-2-low-fidelity-listing-menu.png">
-                </div>
-              </div>
-            </div>
-          </div>
+        <p class="subheading">Restaurant listing</p>
+        <div class="route-2-low-fidelity-all_grid-container">
+          <img src="/public/images/tastebuds/route-2-low-fidelity-listing-home.png" alt="">
+          <img src="/public/images/tastebuds/route-2-low-fidelity-listing-info.png" alt="">
+          <img src="/public/images/tastebuds/route-2-low-fidelity-listing-menu.png" alt="">
+          <img src="/public/images/tastebuds/route-2-low-fidelity-listing-photos.png" alt="">
+          <img src="/public/images/tastebuds/route-2-low-fidelity-listing-reviews.png" alt="">
         </div>
-        <div class="flex gap-24px">
-          <div class="flex vertical _24-px">
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  Redesigned Visual Layout for Recommendations
-                </p>
-                <p>
-                  Instead of a slideshow, displaying menu item
-                  recommendations in a carousel aims to provide
-                  diners a quick overview at a glance without the
-                  need for manual interaction.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  Contact Buttons
-                </p>
-                <p>
-                  I added buttons that allow diners to call the
-                  restaurant, navigate directions, and visit the
-                  website.
-                </p>
-              </div>
-            </div>
-            <div class="header-with-icon">
-              <div class="flex vertical _4px">
-                <p class="subheading">
-                  Condensed Header
-                </p>
-                <p>
-                  While search filters are typically altered in the
-                  search results, I placed it within the search
-                  screen to encourage users to input their
-                  preferences in order to narrow their search
-                  criteria to increase the relevancy of their search
-                  results. This design is inspired by my findings
-                  that diners care more about the food than any other
-                  factors.
-                </p>
-              </div>
-            </div>
-          </div>
+        <p class="span-fw-medium mb-32">Throughout designing the remaining listing pages, I
+          struggled the most with the reviews page due to the
+          amount of information I wanted to display. The wireframe I chose organizes essential
+          information that prioritizes scannability and facilitates quick navigation to restaurant
+          lists, menu items, as well as community engagement.
+          <br><br>
+          This was the point I began to brainstorm the social aspect of the app, exploring how user
+          engagement with friends' reviews could enhance tailored recommendations. I planned to
+          develop these ideas further in my high-fidelity wireframes and implementing them in my
+          social feed page!
+          <br><br>
+          The only other changes I made were restructuring the home page to display more essential
+          information above the fold by displaying order
+          recommendations in a carousel to enhance scannability.
+        </p>
+        <p class="subheading">Iteration process</p>
+        <p>Here's a quick overview of my iteration process!</p>
+        <div class="r2-lowfi-design-evolution_grid-container">
+          <p class="medium-grey lowfi-design-evolution_heading-01">Previous</p>
+          <p class="black lowfi-design-evolution_heading-02">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="/public/images/tastebuds/route-2-sketch-restaurant-listing.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="/public/images/tastebuds/route-2-sketch-restaurant-listing-menu.png">
+          <img alt="" class="img-arrow" loading="lazy"
+            src="/public/images/tastebuds/artwork-arrow-right-blue.png">
+          <img alt="" class="img-3" loading="lazy"
+            src="/public/images/tastebuds/route-2-low-fidelity-listing-home.png">
+          <img alt="" class="img-4" loading="lazy"
+            src="/public/images/tastebuds/route-2-low-fidelity-listing-menu.png">
         </div>
       </div>
     </div>
+    <!-- Route 3 low fidelity wireframes -->
     <div class="content">
-      <p class="section-subheading">
-        Route 3: Diner reviews a dining experience
-      </p>
-      <p>
-        My iterations in the review process aim to streamline,
-        clarify, and ensure integrity and objectivity.
-      </p>
-      <div class="content no-border">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  streamlined restaurant review
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-layout-hflex flex horizontal _24-px">
-          <img alt="" class="_100" loading="lazy" sizes="100vw"
-            src="/public/images/tastebuds/illustration-sketches-route-1-review-iteration.png">
-          <p>
-            I streamlined reviewing the overall experience by merging
-            the steps to rate and assess the experience into a
-            single-step, and I added a progress bar to
-          </p>
-        </div>
-        <div class="flex vertical _24-px">
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                Streamlined Process
-              </p>
-              <p>
-                I streamlined the process by consolidating the
-                sections that review overall experience, merging the
-                steps to rate and assess the experience.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                Objectivity and Integrity
-              </p>
-              <p>
-                3 stars may mean below-average to one diner and
-                average to another, thus some diners are skeptical of
-                the objectivity of star ratings. Therefore, I created
-                a standardized rating system with clear labels to
-                mitigate subjective ratings. In other words, this
-                aims to make sure that diners are on the same page on
-                ratings.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">Clarity</p>
-              <p>
-                To increase clarity, I revised the on-page
-                explanations.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                Intuitive Interaction Design
-              </p>
-              <p>
-                To increase clarity, I revised the on-page
-                explanations.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                1. Consolidated Rating and Assessing the Overall
-                Experience
-              </p>
-              <p>
-                To help diners view the map more conveniently, a
-                "Map" button is placed at the bottom within the Thumb
-                Zone, increasing its visibility and accessibility.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                2. Progress Bar for Visual Feedback
-              </p>
-              <p>
-                While search filters are typically altered in the
-                search results, I placed it within the search screen
-                to encourage users to input their preferences in
-                order to narrow their search criteria to increase the
-                relevancy of their search results. This design is
-                inspired by my findings that diners care more about
-                the food than any other factors.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                3. "Reset" &amp; "Save &amp; Exit" Buttons
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                4. Clarified Star Rating with "How was your overall
-                experience?" copy
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                5. Created a Tiered Rating System
-              </p>
-              <p>
-                Diners expressed skepticism in ratings due to
-                subjectivity. I designed a standardized system to
-                mitigate subjectivity.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                6. Drag and Tap Stars to Rate
-              </p>
-              <p>
-                This accommodates the current mental model among
-                diners to rate experiences.
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                7. Enhanced Copy for Clarity and User-Centric Tone
-              </p>
-            </div>
-          </div>
-          <div class="header-with-icon">
-            <div class="flex vertical _4px">
-              <p class="subheading">
-                8. Disallow Selecting
-              </p>
-              <p>
-                For instance, if diner selects "Authentic" for
-                positive feedback, "Inauthentic" for negative
-                feedback is disabled.
-              </p>
+      <p class="section-subheading">Route 3: Diner reviews a dining experience</p>
+      <div class="design-walkthrough_wrapper mb-0 border-0">
+        <p class="subheading">Streamlined restaurant review</p>
+        <img alt="" class="hide" loading="lazy" sizes="100vw"
+          src="/public/images/tastebuds/illustration-sketches-route-1-review-iteration.png">
+        <div class="design-walkthrough_grid-container mb-0">
+          <img alt="" loading="lazy" class="design-walkthrough_gif low-fidelity"
+            src="/public/images/tastebuds/route-3-low-fidelity-restaurant-rating.gif">
+          <div>
+            <p class="span-fw-medium mb-32">I streamlined the flow further and enhanced visual
+              feedback, information architecture, and system status. To increase trust among
+              diners with reviews and
+              address potential issues with subjectivity, I
+              implemented a standardized rating system!
+            </p>
+            <div class="design-walkthrough_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Clear copy with user-centric voice</li>
+                <li>Progress bar</li>
+                <li>Standardized tiered rating system</li>
+                <li>Mutually exclusive strengths and weaknesses selection</li>
+                <li>Drag interaction to rate stars</li>
+                <li>Reset & finish later option</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex vertical">
-        <div class="flex-block-14">
-          <div class="heading-with-divider">
-            <div class="w-layout-vflex">
-              <div class="header-with-icon">
-                <h2 class="p _1-125-rem _1-5-spacing">
-                  user flow result
-                </h2>
-              </div>
-            </div>
-          </div>
-          <h2>
-            The final low-fidelity design for this process condensed
-            the process from seven screens to four screens!
-          </h2>
-        </div>
-        <div class="w-layout-hflex flex horizontal _16px">
-          <img alt="" class="image-41" loading="lazy" sizes="(max-width: 991px) 77vw, 76vw"
-            src="/public/images/tastebuds/route-3-sketches-wireflow-labeled.png" srcset="
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-500.png   500w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-800.png   800w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-1080.png 1080w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-1600.png 1600w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-2000.png 2000w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-2600.png 2600w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled-p-3200.png 3200w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e87742ee547183073b_Route%203%20Sketches%20Wireflow%20Labeled.png        7744w
-              ">
-          <div class="flex-block-19">
-            <p class="p label _1-125-rem">previous</p>
-          </div>
-        </div>
-        <div class="w-layout-hflex flex horizontal _16px">
-          <img alt="" class="image-42" loading="lazy" sizes="(max-width: 991px) 77vw, 76vw"
-            src="/public/images/tastebuds/route-3-low-fi-wireflow-labeled.png" srcset="
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-500.png   500w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-800.png   800w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-1080.png 1080w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-1600.png 1600w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-2000.png 2000w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-2600.png 2600w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled-p-3200.png 3200w,
-                https://assets-global.website-files.com/651649456fb9882d90cce3aa/656831e581787b5d0f183abb_Route%203%20Low-Fi%20Wireflow%20Labeled.png        4275w
-              ">
-          <div class="flex-block-20">
-            <p class="p label _1-125-rem yellow">iteration</p>
-          </div>
-        </div>
-      </div>
+      <p class="section-subheading">Review flow teration</p>
+      <p>The low-fidelity flow streamlined from 7 screens to 4 screens!</p>
+      <p class="medium-grey lowfi-design-evolution_heading-01 mb-8">Previous</p>
+      <img alt="" loading="lazy"
+        src="/public/images/tastebuds/route-3-sketches-wireflow-labeled.png">
+      <br><br>
+      <p class="black lowfi-design-evolution_heading-02 mb-8">Iteration</p>
+      <img alt="" loading="lazy"
+        src="/public/images/tastebuds/route-3-low-fidelity-wireflow-labeled.png">
     </div>
   </section>
   <section id="branding" class="section-container">

@@ -1,7 +1,7 @@
 .design-walkthrough_wrapper {
 	margin-bottom: 3rem;
 	padding-bottom: 3rem;
-	border-bottom: 1px solid $medium-grey;
+	border-bottom: 1px solid $medium-light-grey;
 
 	&.border-0 {
 		border: 0;
@@ -11,12 +11,11 @@
 		// border-bottom: 1px solid $dark-grey;
 		margin: 0;
 		margin-bottom: 1rem;
-
-		p.subheading {
-			margin-bottom: 0.5rem;
-			font-size: 1.35rem;
-			font-weight: 500;
-		}
+	}
+	> .subheading {
+		margin-bottom: 1rem;
+		font-size: 1.35rem;
+		font-weight: 500;
 	}
 	// Grid container with Gif and 'Features' Card
 	.design-walkthrough_grid-container {
@@ -31,7 +30,6 @@
 
 		> .design-walkthrough_gif {
 			grid-area: b;
-			border: 1px solid $black;
 		}
 
 		> div {
@@ -88,5 +86,14 @@
 
 	.subheading {
 		font-size: 1.125rem;
+	}
+}
+
+.design-walkthrough_gif {
+	border: 1px solid $black;
+
+	&.low-fidelity {
+		border-radius: 1rem;
+		border: 1.5px solid $off-black;
 	}
 }
