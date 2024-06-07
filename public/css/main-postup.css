@@ -1230,6 +1230,9 @@ blockquote {
 .design-walkthrough_wrapper .design-walkthrough_grid-container > .design-walkthrough_gif {
   grid-area: b;
 }
+.design-walkthrough_wrapper .design-walkthrough_grid-container > video {
+  width: 100%;
+}
 .design-walkthrough_wrapper .design-walkthrough_grid-container > div {
   grid-area: a;
 }

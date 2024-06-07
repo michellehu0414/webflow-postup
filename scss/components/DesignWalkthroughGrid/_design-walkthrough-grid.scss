@@ -32,6 +32,10 @@
 			grid-area: b;
 		}
 
+		> video {
+			width: 100%;
+		}
+
 		> div {
 			grid-area: a;
 			// padding: 1.5rem 2rem 1.5rem 3rem;
