@@ -11,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
-  <link href="/public/css/main-tastebuds.css" rel="stylesheet">
+  <link href="/styles/main-tastebuds.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet">
@@ -27,22 +27,44 @@
       <span>design</span>
       <h2>High-fidelity prototype</h2>
     </header>
-    <div class="content-wrapper">
-      <div class="mb-40">
-        <p>With my new style guide, I designed high-fidelity wireframes and prototyped them for my
-          next round of usability tests.</p>
+    <div class="content-grid mt-24 mb-0">
+      <div>
+        <p>With my new style guide, I designed high-fidelity wireframes and
+          prototyped them for my
+          next round of usability tests.
+          A key objective in my high-fidelity explorations
+          was enhancing accessibility, so I reviewed <a class="link-blue"
+            href="https://developer.apple.com/design/human-interface-guidelines/accessibility">
+            Apple's Human Interface Guidelines for
+            Accessibility</a> and <a class="link-blue" href="https://www.w3.org/TR/WCAG22/">
+            Web Content Accessibility Guidelines (WCAG)</a>.</p>
+        <p class="span-fw-medium">My learnings guided me to <span>
+            significantly
+            increase spacing and physical interactions
+            when possible</span>, supporting both users with limited mobility and power users.</p>
+      </div>
+      <aside>
+        <p>This reinforced my dedication to accessibility, one of my core design values!
+        </p>
+      </aside>
+    </div>
+    <div class="content-wrapper mb-16">
+      <div class="mb-48">
         <h3 class="section-subheading black">Route 1: Sign up + onboarding</h3>
         <p>
-          In my high-fidelity explorations, given how essential food preferences are to curate
-          accurate
-          personalized dining recommendations, my goal was to make the onboarding process more
-          personal
-          and engaging. This led me to implement more conversational UI and visual aids and further
-          streamline the user flow.
+          Given how essential food preferences are to curate
+          accurate dining recommendations, my goal was to make onboarding more engaging to
+          encourage
+          users to input preferences now than later.
+          Therefore, <span class="fw-medium">
+            I implemented more conversational UI and visual aids and
+            further
+            streamlined the user flow.
+          </span>
         </p>
       </div>
       <div class="design-walkthrough_wrapper">
-        <div class="design-walkthrough_grid-container">
+        <div class="design-walkthrough_grid-container mb-0">
           <video class="autoplay-video" loop muted>
             <source src="/public/images/tastebuds/prototype-high-fidelity-route-1-v1-intro.mp4"
               type="video/mp4">
@@ -52,11 +74,10 @@
               <p class="subheading">Introduction screens</p>
             </header>
             <p>
-              I added welcome and introduction screens to help users learn about the app and the
-              importance of adding their food preferences now in
-              order to receive personalized recommendations.
+              I added introduction screens to help users learn about the app and the
+              importance of adding their food preferences now.
             </p>
-            <div class="design-walkthrough_card">
+            <div class="design-walkthrough_card hide">
               <ul class="card_list mt-0">
                 <p class="card_headline">Card headline</p>
                 <li>Item 1</li>
@@ -67,270 +88,244 @@
           </div>
         </div>
       </div>
-      <div class="design-walkthrough_wrapper">
+      <div class="design-walkthrough_wrapper border-0 mb-0 pb-0">
+        <div class="design-walkthrough_grid-container mb-0">
+          <video class="autoplay-video" loop muted>
+            <source
+              src="/public/images/tastebuds/prototype-high-fidelity-v1-route-1-food-preferences.mp4"
+              type="video/mp4">
+          </video>
+          <div>
+            <header class="design-walkthrough_header">
+              <p class="subheading">Food preferences</p>
+            </header>
+            <p>
+              My goals here were to enhance user freedom and control, help and documentation, and
+              scannability.
+            </p>
+            <div class="design-walkthrough_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Suggest any missing items</li>
+                <li>Conversational UI</li>
+                <li>Help icon button for more details</li>
+                <li>Additional visual aids</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="mb-40">
+        <h3 class="section-subheading">Route 2: Diner searches for a restaurant</h3>
         <div class="content-grid">
-          <div class="design-walkthrough_grid-container">
-            <video class="autoplay-video" loop muted>
-              <source
-                src="/public/images/tastebuds/prototype-high-fidelity-v1-route-1-food-preferences.mp4"
+          <div>
+            <p>For this route, my design considerations included accessibility, functionality, and
+              business goals. I focused on fixing my mistake of overcrowding screens in my
+              low-fidelity wireframes, so I not only drew from my test insights but also revisited
+              diner personas to balance essential information and accessibility. Revisiting the
+              personas helped my struggle with striking a balance between diners' mental models
+              and innovative features that define my unique value proposition! Lastly, I began
+              conceptualizing integrating restaurant partnerships into the
+              diner journey.</p>
+          </div>
+          <aside>
+            <p>This was a really important lesson for me! I'll discuss this further in my
+              reflection.</p>
+          </aside>
+        </div>
+      </div>
+      <div class="design-walkthrough_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Home page</p>
+        </header>
+        <div class="r2-hf-design-evolution_grid-container mb-40">
+          <p class="medium-grey hf-heading-01">Previous</p>
+          <p class="black hf-heading-02">Iteration</p>
+          <img alt="" class="img-1 img-wireframe-border" loading="lazy"
+            src="/public/images/tastebuds/route-2-low-fidelity-home.png">
+          <img alt="" class="img-2 img-wireframe-border" loading="lazy"
+            src="/public/images/tastebuds/route-2-low-fidelity-listing-reviews.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="/public/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="autoplay-video img-3" loop muted>
+            <source src="/public/images/tastebuds/prototype-route-2-high-fidelity-v1-home.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p class="fw-medium mb-8">For You</p>
+        <p>I focused on enhancing engagement and accessibility while emphasizing a
+          personalized user experience. Therefore, I reorganized the layout to improve the
+          information and content hierarchy, redesigned the navigation tabs to be more distinct,
+          revised the label and navigational copy, and implemented guiding text in the search bar
+          using conversational UI.</p>
+        <p class="fw-medium mb-8">Following</p>
+        <p>Using the low-fidelity review page in restaurant listings, I designed the
+          "Following" page. The most challenging part of this process was trying to balance
+          essential information and social engagement while respecting user mental models.
+        </p>
+        <p class="mb-0">My final
+          design
+          reorganizes the content hierarchy and simplifies the layout. Diners
+          may engage with
+          reviews posted by their friends in a few ways:
+          They may (1) react with any emoji, (2) leave comments, (3) save the review for future
+          reference, and
+          (4) navigate to the reviewed restaurant and menu items.</p>
+      </div>
+      <div class="design-walkthrough_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Search process</p>
+        </header>
+        <div class="flex-row space-between mb-40">
+          <div class="flex-col">
+            <p class="medium-grey hf-design-evolution_heading-01">Previous</p>
+            <img alt="" class="img-route-2-hf-search" loading="lazy"
+              src="/public/images/tastebuds/route-2-low-fidelity-search-preferences.png">
+          </div>
+          <img alt="" class="img-design-evolution-arrow align-self-center" loading="lazy"
+            src="/public/images/tastebuds/artwork-arrow-right-blue.png">
+          <div class="flex-col">
+            <p class="black hf-design-evolution_heading-02">Iteration</p>
+            <video class="autoplay-video img-route-2-hf-search" loop muted>
+              <source src="/public/images/tastebuds/prototype-route-2-high-fidelity-v1-search.mp4"
                 type="video/mp4">
             </video>
-            <div>
-              <header class="design-walkthrough_header">
-                <p class="subheading">Food preferences</p>
-              </header>
-              <p>
-                My goals here were to enhance user freedom and control, help and documentation, and
-                scannability.
-              </p>
-              <div class="design-walkthrough_card">
-                <ul class="card_list mt-0">
-                  <p class="card_headline">New features</p>
-                  <li>Suggest any missing items</li>
-                  <li>Conversational UI</li>
-                  <li>Help icon button for more details</li>
-                  <li>Additional visual aids</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="subheading mb-16 dark-grey">Sketches flow</p>
-        <img src="/public/images/tastebuds/route-2-sketches-search-results.png"
-          alt="Four sketches of a mobile app interface for finding Taiwanese restaurants.">
-      </div>
-      <p>
-        With onboarding being the first impression among users, I
-        wanted to
-      </p>
-      <div class="tabs iterations w-tabs" data-current="Tab 1" data-duration-in="300"
-        data-duration-out="100" data-easing="ease">
-        <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-          <a aria-controls="w-tabs-3-data-w-pane-0" aria-selected="true"
-            class="container-tab _50 w-inline-block w-tab-link w--current" data-w-tab="Tab 1"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-3-data-w-pane-0"
-            id="w-tabs-3-data-w-tab-0" role="tab">
-            <div class="p label _1-125-rem white">
-              welcome screens
-            </div>
-          </a><a aria-controls="w-tabs-3-data-w-pane-1" aria-selected="false"
-            class="container-tab w-inline-block w-tab-link" data-w-tab="Tab 2"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-3-data-w-pane-1"
-            id="w-tabs-3-data-w-tab-1" role="tab" tabindex="-1">
-            <div class="p label _1-125-rem black">
-              streamlined food preferences
-            </div>
-          </a>
-        </div>
-        <div class="w-tab-content">
-          <div aria-labelledby="w-tabs-3-data-w-tab-0"
-            class="tab-pane-tab-1 w-tab-pane w--tab-active" data-w-tab="Tab 1"
-            id="w-tabs-3-data-w-pane-0" role="tabpanel">
-            <img alt="" id="w-node-_44624cfb-c52f-7ac3-f740-b6fb4fe7cf34-6d157316" loading="lazy"
-              sizes="100vw" src="/public/images/tastebuds/route-1-high-fidelity-intro.png">
-          </div>
-          <div aria-labelledby="w-tabs-3-data-w-tab-1" class="tab-pane-tab-3 w-tab-pane"
-            data-w-tab="Tab 2" id="w-tabs-3-data-w-pane-1" role="tabpanel">
-            <img alt="" loading="lazy" sizes="100vw"
-              src="/public/images/tastebuds/route-2_high-fidelity_search-options_center.png" srcset="
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center-p-500.png   500w,
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center-p-800.png   800w,
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center-p-1080.png 1080w,
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center-p-1600.png 1600w,
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center-p-2000.png 2000w,
-  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd24a0cbd2bb960e8b4aa_Route%202_High-Fidelity_Search-Options_Center.png        2159w
-  ">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="flex-block-14">
-        <div class="heading-with-divider">
-          <div class="w-layout-vflex">
-            <div class="header-with-icon">
-              <h2 class="p _1-125-rem _1-5-spacing">
-                streamlined ingredients preferences input
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="div-block-132">
-        <div class="flex vertical _24-px margin-0 shrink">
-          <p class="p label _1-125-rem">previous</p>
-          <div class="screenshot">
-            <img alt="" class="img-screenshot" loading="lazy"
-              sizes="(max-width: 479px) 100vw, (max-width: 767px) 54vw, 56vw"
-              src="/public/images/tastebuds/route-1_high-fidelity_ingredients_before.png" srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-2000.png 2000w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-2600.png 2600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before-p-3200.png 3200w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567247e4444dd965bfe8_Route%201_High-Fidelity_Ingredients_Before.png        3322w
-                ">
-          </div>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="flex vertical _24-px margin-0 shrink">
-          <p class="p label _1-125-rem black">iteration</p>
-          <div class="screenshot">
-            <img alt="" class="img-screenshot" loading="lazy"
-              sizes="(max-width: 479px) 100vw, (max-width: 767px) 35vw, 36vw"
-              src="/public/images/tastebuds/route-1_high-fidelity_ingredients_after.png" srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After-p-2000.png 2000w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d567426150b39796f3fab_Route%201_High-Fidelity_Ingredients_After.png        2152w
-                ">
-          </div>
-        </div>
-      </div>
-      <p>
-        Previously, I added "Disliked Ingredients" to be inclusive to
-        diners that may avoid ingredients that are not allergies. This
-        time, I <span class="fw-medium">merged them into a single section</span>
-        where diners can input ingredients they avoid in general
-        without specification.<br />
-      </p>
-    </div>
-    <div class="content">
-      <div class="flex-block-14">
-        <div class="heading-with-divider">
-          <div class="w-layout-vflex">
-            <div class="header-with-icon">
-              <h2 class="p _1-125-rem _1-5-spacing">
-                route 1 high-fidelity wireframes
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <img alt="" loading="lazy" sizes="100vw"
-          src="/public/images/tastebuds/route-1-wireframes-all.png" srcset="
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-500.png   500w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-800.png   800w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-1080.png 1080w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-1600.png 1600w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-2000.png 2000w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-2600.png 2600w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All-p-3200.png 3200w,
-              https://assets-global.website-files.com/651649456fb9882d90cce3aa/656d60394cd6b80dea6ed667_Route%201%20Wireframes%20All.png        6210w
-            ">
-      </div>
-    </div>
-    <div class="content">
-      <div class="heading-secondarytext">
-        <p class="section-subheading">
-          Route 2: Diner Searches for Dining Options
-        </p>
-        <p>
-          The main changes I made to this route was streamlining the
-          account setup process, adding a welcome carousel,
+        <p class="span-fw-medium mb-0">
+          My high-fidelity prototype adds the option to <span>select up to 3 key qualities</span>.
+          Additionally, I realized that the <span>two-column layout was too crowded</span> for other
+          filter categories, complicating scannability and accessibility. Therefore,
+          I opted for a one-column layout and increased spacing throughout the
+          interface
+          </span>.
         </p>
       </div>
-      <div class="tabs iterations w-tabs" data-current="Tab 1" data-duration-in="300"
-        data-duration-out="100" data-easing="ease">
-        <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-          <a aria-controls="w-tabs-4-data-w-pane-0" aria-selected="true"
-            class="tab-link-30 w-inline-block w-tab-link w--current" data-w-tab="Tab 1"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-4-data-w-pane-0"
-            id="w-tabs-4-data-w-tab-0" role="tab">
-            <div class="tab-link-tab-1">home + social feed</div>
-          </a><a aria-controls="w-tabs-4-data-w-pane-1" aria-selected="false"
-            class="tab-link-30 w-inline-block w-tab-link" data-w-tab="Tab 2"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-4-data-w-pane-1"
-            id="w-tabs-4-data-w-tab-1" role="tab" tabindex="-1">
-            <div class="tab-link-inactive">search options</div>
-          </a><a aria-controls="w-tabs-4-data-w-pane-2" aria-selected="false"
-            class="tab-link-30 w-inline-block w-tab-link" data-w-tab="Tab 3"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-4-data-w-pane-2"
-            id="w-tabs-4-data-w-tab-2" role="tab" tabindex="-1">
-            <div class="tab-link-inactive">search options</div>
-          </a>
+      <div class="design-walkthrough_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Search results</p>
+        </header>
+        <div class="r2-hf-design-evolution_grid-container mb-40">
+          <p class="medium-grey hf-heading-01">Previous</p>
+          <p class="black hf-heading-02">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="/public/images/tastebuds/route-2-sketch-search-results-list.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="/public/images/tastebuds/route-2-sketch-search-results-card-carousel.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="/public/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="autoplay-video img-3" loop muted>
+            <source
+              src="/public/images/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
+              type="video/mp4">
+          </video>
         </div>
-        <div class="w-tab-content">
-          <div aria-labelledby="w-tabs-4-data-w-tab-0"
-            class="tab-pane-tab-1 w-tab-pane w--tab-active" data-w-tab="Tab 1"
-            id="w-tabs-4-data-w-pane-0" role="tabpanel">
-            <img alt="" id="w-node-_7cfd8726-6e62-709c-cb3a-bb8ecb82bc3b-6d157316" loading="lazy"
-              sizes="100vw" src="/public/images/tastebuds/route-2_high-fidelity_home-iteration.png">
-          </div>
-          <div aria-labelledby="w-tabs-4-data-w-tab-1" class="tab-pane-tab-3 w-tab-pane"
-            data-w-tab="Tab 2" id="w-tabs-4-data-w-pane-1" role="tabpanel">
-            <img alt="" loading="lazy" sizes="100vw"
-              src="/public/images/tastebuds/route-2-high-fidelity-search-flow.png" srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-2000.png 2000w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516.png        2160w
-                ">
-          </div>
-          <div aria-labelledby="w-tabs-4-data-w-tab-2" class="tab-pane-tab-3 w-tab-pane"
-            data-w-tab="Tab 3" id="w-tabs-4-data-w-pane-2" role="tabpanel">
-            <img alt="" loading="lazy" sizes="100vw"
-              src="/public/images/tastebuds/route-2-high-fidelity-search-flow.png" srcset="
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-500.png   500w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-800.png   800w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-1080.png 1080w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-1600.png 1600w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516-p-2000.png 2000w,
-                  https://assets-global.website-files.com/651649456fb9882d90cce3aa/656dd27a71785c5de509046d_Frame%20516.png        2160w
-                ">
+        <p class="mb-0">I decided to forfeit the option to preview listings since none of my test
+          participants engaged with it. To improve readability and accessibility, I reorganized the
+          information hierarchy and redesigned the bottom sheet to be more consistent with the list
+          view layout.</p>
+      </div>
+      <div class="design-walkthrough_wrapper pb-0 border-0">
+        <div class="design-walkthrough_grid-container mb-0">
+          <video class="autoplay-video" loop muted>
+            <source src="/public/images/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
+              type="video/mp4">
+          </video>
+          <div>
+            <header class="design-walkthrough_header">
+              <p class="subheading">Restaurant listing</p>
+            </header>
+            <p>
+              I wanted to further amplify social engagement and conceptualize restaurant
+              partnerships, so I enhanced social proof elements, added more
+              engagement features, and developed the 'Redeem offer' screen.
+            </p>
+            <div class="design-walkthrough_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Share restaurant (button)</li>
+                <li>Save restaurant (button)</li>
+                <li>Message restaurant (button)</li>
+                <li>Write review (button)</li>
+                <li>Offer redemption page</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div class="tabs iterations w-tabs" data-current="Tab 1" data-duration-in="300"
-        data-duration-out="100" data-easing="ease">
-        <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-          <a aria-controls="w-tabs-5-data-w-pane-0" aria-selected="true"
-            class="container-tab _50 w-inline-block w-tab-link w--current" data-w-tab="Tab 1"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-5-data-w-pane-0"
-            id="w-tabs-5-data-w-tab-0" role="tab">
-            <div class="p label _1-125-rem white">iterations</div>
-          </a><a aria-controls="w-tabs-5-data-w-pane-1" aria-selected="false"
-            class="container-tab w-inline-block w-tab-link" data-w-tab="Tab 2"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-5-data-w-pane-1"
-            id="w-tabs-5-data-w-tab-1" role="tab" tabindex="-1">
-            <div class="p label _1-125-rem black">previous</div>
-          </a>
-        </div>
-        <div class="w-tab-content">
-          <div aria-labelledby="w-tabs-5-data-w-tab-0"
-            class="tab-pane-tab-1 w-tab-pane w--tab-active" data-w-tab="Tab 1"
-            id="w-tabs-5-data-w-pane-0" role="tabpanel">
-            <img alt="" id="w-node-_1dfb9795-1c51-56da-c45c-1b4424510dfc-6d157316" loading="lazy"
-              src="/public/images/tastebuds/route-1-wireframes-all.png">
-          </div>
-          <div aria-labelledby="w-tabs-5-data-w-tab-1" class="tab-pane-tab-3 w-tab-pane"
-            data-w-tab="Tab 2" id="w-tabs-5-data-w-pane-1" role="tabpanel">
-            <img loading="lazy"
-              src="/public/images/tastebuds/route-2_high-fidelity_search-options_center.png">
-          </div>
-        </div>
-      </div>
-      <div></div>
     </div>
-    <div class="content">
-      <h3 class="p _1-125-rem _1-5-spacing">
-        route 1 high-fidelity wireframes
-      </h3>
-      <img alt="" loading="lazy" src="/public/images/tastebuds/route-1-wireframes-all.png">
+    <div class="content-wrapper">
+      <div class="mb-40">
+        <h3 class="section-subheading black">Route 3: Diner reviews a restaurant</h3>
+        <p>I adapted this route to the changes I made in routes 1 and 2, streamlined the process,
+          and enhanced its usability.</p>
+      </div>
+      <div class="design-walkthrough_wrapper">
+        <header class="design-walkthrough_header">
+          <p class="subheading">Reviewing menu items</p>
+        </header>
+        <div class="r2-hf-design-evolution_grid-container mb-40">
+          <p class="medium-grey hf-heading-01">Previous</p>
+          <p class="black hf-heading-02">Iteration</p>
+          <img alt="" class="img-1" loading="lazy"
+            src="/public/images/tastebuds/route-3-low-fidelity-06-menu-items-blank.png">
+          <img alt="" class="img-2" loading="lazy"
+            src="/public/images/tastebuds/route-3-low-fidelity-07-menu-item-blank.png">
+          <img alt="" class="img-design-evolution-arrow" loading="lazy"
+            src="/public/images/tastebuds/artwork-arrow-right-blue.png">
+          <video class="autoplay-video img-3" loop muted>
+            <source src="/public/images/tastebuds/prototype-high-fidelity-v1-route-3-menu-item.mp4"
+              type="video/mp4">
+          </video>
+        </div>
+        <p class="mb-0">I removed the "What was it like?" section, added a search bar and filters to
+          find menu
+          items, simplified the list layout, and added a number badge that indicates how many items
+          have been reviewed.</p>
+      </div>
+      <div class="design-walkthrough_wrapper">
+        <header class="design-walkthrough_header">
+        </header>
+        <div class="design-walkthrough_grid-container mb-0">
+          <video class="autoplay-video" loop muted>
+            <source src="/public/images/tastebuds/prototype-high-fidelity-v1-route-3-tag-photo.mp4"
+              type="video/mp4">
+          </video>
+          <div>
+            <header class="design-walkthrough_header">
+              <p class="subheading">Adding media content and tagging menu items</p>
+            </header>
+            <p>
+              This is the flow for diners to add photos and videos to their review! Since diners
+              have the habit of searching up specific menu items, I designed a feature for
+              diners to tag their photos with the respective menu item(s) and/or friends.
+            </p>
+            <div class="design-walkthrough_card">
+              <ul class="card_list mt-0">
+                <p class="card_headline">New features</p>
+                <li>Tag menu item</li>
+                <li>Tag people</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="margin-auto">Complete flow</h3>
+      <div class="video-complete-flow margin-auto">
+        <video class="autoplay-video" loop muted>
+          <source src="/public/images/tastebuds/prototype-high-fidelity-v1-route-3.mp4"
+            type="video/mp4">
+        </video>
+      </div>
     </div>
   </section>
-  <script src="/public/js/videoPlayer.js"></script>
-  <script src="/public/js/accordion.js"></script>
-  <script src="/public/js/scrollable.js"></script>
-  <script src="/public/js/scroll-button.js"></script>
-  <script src="/public/js/tabs.js"></script>
+  <script src="/components/AutoplayVideo/videoPlayer.js"></script>
+  <script src="/components/scrollable.js"></script>
+  <script src="/components/ScrollButton/scroll-button.js"></script>
+  <script src="/components/Accordion/accordion.js"></script>
+  <script src="/components/Tabs/tabs.js"></script>
   <script type="text/javascript">
     !(function (o, c) {
       var n = c.documentElement,
