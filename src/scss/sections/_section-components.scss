@@ -225,7 +225,8 @@ main {
 .subsection,
 .section-container,
 .container-full-width {
-	.content {
+	.content,
+	.content-wrapper {
 		margin-bottom: 3rem;
 
 		&:first-child {
