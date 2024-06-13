@@ -1,29 +1,11 @@
 .video-container {
 	position: relative;
-	display: inline-block;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .autoplay-video {
 	width: 100%;
-	height: auto;
-}
-
-.custom-controls {
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-	display: flex;
-	gap: 10px;
-}
-
-.custom-controls button {
-	background-color: rgba(0, 0, 0, 0.5);
-	color: white;
-	border: none;
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-.custom-controls button:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+	display: block;
 }

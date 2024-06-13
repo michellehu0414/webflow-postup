@@ -1,7 +1,12 @@
+'use strict';
+
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
+    devtool: 'source-map',
+    context: path.resolve('src'),
     entry: {
         'main-postup': ['./src/js/main-postup.js', './src/scss/main-postup.scss'],
         'main-tastebuds': ['./src/js/main-tastebuds.js', './src/scss/main-tastebuds.scss']

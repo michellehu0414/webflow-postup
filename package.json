@@ -6,7 +6,8 @@
 		"gulp-sass": "^5.1.0",
 		"mini-css-extract-plugin": "^2.9.0",
 		"sass": "^1.75.0",
-		"tailwindcss": "^3.4.3"
+		"tailwindcss": "^3.4.3",
+		"webpack": "^5.92.0"
 	},
 	"scripts": {
 		"compile-scss": "sass --watch src/scss/:public/css/",
@@ -23,7 +24,6 @@
 		"css-loader": "^7.1.2",
 		"sass-loader": "^14.2.1",
 		"style-loader": "^4.0.0",
-		"webpack": "^5.92.0",
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^5.0.4"
 	}
