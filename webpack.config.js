@@ -3,17 +3,18 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
     context: path.resolve(__dirname, 'src'), // Corrected context path
     entry: {
-        'main-postup': ['./js/main-postup.js', './scss/main-postup.scss'], // Relative to context
-        'main-tastebuds': ['./js/main-tastebuds.js', './scss/main-tastebuds.scss'] // Relative to context
+        postup: './src/pages/postup/postup.js',
+        tastebuds: './src/pages/tastebuds/tastebuds.js',
     },
     output: {
-        filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'public')
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [

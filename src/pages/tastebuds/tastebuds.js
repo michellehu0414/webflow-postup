@@ -10,6 +10,6 @@ import '../../components/scrollable';
 import '../../components/Tabs/tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Main TasteBuds page loaded');
+    console.log('TasteBuds page loaded');
     // Additional initialization code for this page
 });

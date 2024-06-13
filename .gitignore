@@ -2,3 +2,6 @@ node_modules
 public/css
 .DS_Store
 .vscode/settings.json
+dist/
+myenv/
+path/to/venv/

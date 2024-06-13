@@ -1,13 +1,5 @@
 $primary-color: #076261;
 
-@import 'abstracts/all-abstracts';
+@import '../../scss/styles';
 
-@import 'base/all-bases';
-
-@import 'components/all-components';
-
-@import 'sections/all-sections';
-
-@import 'postup/all-postup';
-
-@import 'utilities/all-utilities';
+@import '../../scss/postup/all-postup';
