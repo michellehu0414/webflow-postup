@@ -1,6 +1,7 @@
-$primary-color: #3a56bd;
+$primary-color: #4379df;
 $light-blue: #dee3f4;
 $bg-grey: #f0f0f0;
+$wireframe-max-height: 35rem;
 
 .bg-grey {
 	background-color: $bg-grey;
@@ -10,7 +11,7 @@ $bg-grey: #f0f0f0;
 
 @import 'base/all-bases';
 
-@import '../components/all-components';
+@import 'components/all-components';
 
 @import 'sections/all-sections';
 
@@ -18,7 +19,7 @@ $bg-grey: #f0f0f0;
 
 @import 'utilities/all-utilities';
 
-@import 'tastebuds/sketches';
+@import '/all-tastebuds';
 
 .header-container.tastebuds {
 	margin-bottom: 1rem;

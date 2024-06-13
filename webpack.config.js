@@ -6,10 +6,10 @@ const webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
-    context: path.resolve('src'),
+    context: path.resolve(__dirname, 'src'), // Corrected context path
     entry: {
-        'main-postup': ['./src/js/main-postup.js', './src/scss/main-postup.scss'],
-        'main-tastebuds': ['./src/js/main-tastebuds.js', './src/scss/main-tastebuds.scss']
+        'main-postup': ['./js/main-postup.js', './scss/main-postup.scss'], // Relative to context
+        'main-tastebuds': ['./js/main-tastebuds.js', './scss/main-tastebuds.scss'] // Relative to context
     },
     output: {
         filename: 'js/[name].js',
