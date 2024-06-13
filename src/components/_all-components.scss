@@ -1,31 +1,14 @@
-$wireframe-max-height: 35rem;
-
-@import 'GridAsideRight/content-grid';
-
-@import 'GridCardLeft/grid-card-left';
-
-@import 'dividers';
-
 @import 'Accordion/accordion';
-
 @import 'AutoplayVideo/autoplay-video';
-
 @import 'AutoplayVideo/video-player';
-
-@import 'CaptionContainer/caption-container';
-
-@import 'Carousel/carousel';
-
 @import 'Blockquote/blockquote';
-
+@import 'CaptionContainer/caption-container';
 @import 'Card/card';
-
 @import 'CardVertical/card-vertical';
-
+@import 'Carousel/carousel';
 @import 'DesignWalkthroughGrid/design-walkthrough-grid';
-
-@import 'DesignWalkthroughOneColumnGrid/design-walkthrough-1-col-grid.scss';
-
+@import 'DesignWalkthroughOneColumnGrid/design-walkthrough-1-col-grid';
+@import 'GridAsideRight/content-grid';
+@import 'GridCardLeft/grid-card-left';
 @import 'HeadingHangingIcon/icon-heading';
-
 @import 'HeroHeader/hero-header';

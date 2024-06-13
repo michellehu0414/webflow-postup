@@ -1,42 +1,58 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const puppeteer = require('puppeteer');
 const fs = require('fs');
+const path = require('path');
 
-// Task to compile SCSS to CSS
-gulp.task('scss', function() {
-    return gulp.src('src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([
-            autoprefixer(),
-            cssnano() // Use cssnano for CSS optimization
-        ]))
-        .pipe(gulp.dest('dist/css'));
+const scssFolder = './src/scss/';
+const componentsFolder = './src/components/';
+
+// Function to get all subdirectories within a directory
+function getFolders(dir) {
+    return fs.readdirSync(dir).filter(file => fs.statSync(path.join(dir, file)).isDirectory());
+}
+
+// Function to generate an _all-foldername.scss file for each subdirectory
+function generateImports(folder, folderPath) {
+    const files = fs.readdirSync(folderPath)
+        .filter(file => file.endsWith('.scss') && !file.startsWith('_all-'))
+        .map(file => {
+            const filename = file.replace(/^_/, '').replace('.scss', '');
+            return `@import '${filename}';`;
+        }).join('\n');
+
+    fs.writeFileSync(path.join(folderPath, `_all-${folder}.scss`), files);
+}
+
+// Task to generate imports for SCSS folder
+gulp.task('generate-scss-imports', function (done) {
+    const folders = getFolders(scssFolder);
+    folders.forEach(folder => generateImports(folder, path.join(scssFolder, folder)));
+    done();
 });
 
-// Task to remove unused CSS using Puppeteer
-gulp.task('uncss', async function() {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(`file://${__dirname}/index.html`); // Adjust the path to your HTML file
+// Task to generate imports for components folder
+gulp.task('generate-components-imports', function (done) {
+    const componentFolders = getFolders(componentsFolder);
+    const imports = componentFolders.map(folder => {
+        const folderPath = path.join(componentsFolder, folder);
+        const files = fs.readdirSync(folderPath)
+            .filter(file => file.endsWith('.scss'))
+            .map(file => {
+                const filename = path.join(folder, file.replace(/^_/, '').replace('.scss', ''));
+                return `@import '${filename}';`;
+            }).join('\n');
 
-    const cssContent = await page.evaluate(() => {
-        const stylesheets = Array.from(document.styleSheets);
-        let css = '';
-        stylesheets.forEach(sheet => {
-            Array.from(sheet.cssRules).forEach(rule => {
-                css += rule.cssText;
-            });
-        });
-        return css;
-    });
+        return files;
+    }).join('\n');
 
-    await browser.close();
-    fs.writeFileSync('dist/css/cleaned.css', cssContent);
+    fs.writeFileSync(path.join(componentsFolder, '_all-components.scss'), imports);
+    done();
 });
 
-// Default task to run both tasks in sequence
-gulp.task('default', gulp.series('scss', 'uncss'));
+// Watch task to automatically run the generate-imports task on changes
+gulp.task('watch', function () {
+    gulp.watch(`${scssFolder}/**/*.scss`, gulp.series('generate-scss-imports'));
+    gulp.watch(`${componentsFolder}/**/*.scss`, gulp.series('generate-components-imports'));
+});
+
+// Default task to run all tasks in sequence
+gulp.task('default', gulp.series('generate-scss-imports', 'generate-components-imports', 'watch'));

@@ -1,22 +1,8 @@
-@import 'flex';
-@import 'flex-items';
-@import 'grid';
-@import 'spacing';
 @import 'colors';
+@import 'dividers';
+@import 'flex-items';
+@import 'flex';
+@import 'grid';
 @import 'lists';
-
-.hide {
-	display: none !important;
-	overflow: hidden;
-}
-
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-}
+@import 'spacing';
+@import 'svg-icons';
