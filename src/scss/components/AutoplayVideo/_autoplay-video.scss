@@ -8,6 +8,18 @@
 	height: auto;
 }
 
+// /* Hide controls by default */
+// .autoplay-video::-webkit-media-controls,
+// .autoplay-video::-webkit-media-controls-enclosure {
+// 	display: none !important;
+// }
+
+// /* Show controls on hover */
+// .autoplay-video:hover::-webkit-media-controls,
+// .autoplay-video:hover::-webkit-media-controls-enclosure {
+// 	display: inherit !important;
+// }
+
 .custom-controls {
 	position: absolute;
 	bottom: 10px;

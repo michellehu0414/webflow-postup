@@ -44,9 +44,8 @@
 		grid-template-areas: 'a b';
 		margin-bottom: 2rem;
 
-		> .sketches-walkthrough_gif {
+		> .featured-media {
 			grid-area: b;
-			border: 1px solid $black;
 		}
 
 		> div {
