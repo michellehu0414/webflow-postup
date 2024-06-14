@@ -1,6 +1,6 @@
 // Import SCSS file for this page
-import '../scss/main-postup.scss';
-
+import '../scss/tastebuds.scss';
+//
 // Import and initialize components specific to this page
 import '../scss/components/Accordion/accordion';
 import '../scss/components/AutoplayVideo/autoplay-video';

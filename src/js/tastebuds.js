@@ -1,5 +1,5 @@
 // Import SCSS file for this page
-import '../scss/main-tastebuds.scss';
+import '../scss/tastebuds.scss';
 
 // Import and initialize components specific to this page
 import '../scss/components/Accordion/accordion';

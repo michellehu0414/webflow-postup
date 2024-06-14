@@ -1,7 +1,5 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -27,7 +25,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
@@ -42,35 +40,38 @@ module.exports = {
                 },
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
-                },
+                }
             }
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
-        }),
         new HtmlWebpackPlugin({
             template: './src/tastebuds.html',
             chunks: ['tastebuds'],
-            filename: 'tastebuds.html'
+            filename: 'tastebuds.html',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             template: './src/tastebuds-sandbox.html',
             chunks: ['tastebuds'],
-            filename: 'tastebuds-sandbox.html'
+            filename: 'tastebuds-sandbox.html',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',
             chunks: ['postup'],
-            filename: 'postup.html'
-        }),
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
-            ]
+            filename: 'postup.html',
+            minify: false
         })
     ],
-    mode: 'development'
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        open: true,
+        hot: true,
+        watchFiles: ['src/**/*', 'dist/**/*'] // Add this line to watch files
+    },
+    mode: 'development',
+    devtool: 'source-map'
 };
