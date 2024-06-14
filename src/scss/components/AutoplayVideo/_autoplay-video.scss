@@ -8,18 +8,19 @@
 	height: auto;
 }
 
-// /* Hide controls by default */
-// .autoplay-video::-webkit-media-controls,
-// .autoplay-video::-webkit-media-controls-enclosure {
-// 	display: none !important;
-// }
+.autoplay-video::-webkit-media-controls-mute-button,
+.autoplay-video::-webkit-media-controls-current-time-display,
+.autoplay-video::-webkit-media-controls-time-remaining-display {
+	display: none !important;
+}
 
-// /* Show controls on hover */
-// .autoplay-video:hover::-webkit-media-controls,
-// .autoplay-video:hover::-webkit-media-controls-enclosure {
-// 	display: inherit !important;
-// }
-
+/* Hide the mute and download button */
+.autoplay-video::-webkit-media-controls-mute-button,
+.autoplay-video::-webkit-media-controls-download-button,
+.autoplay-video::-webkit-media-controls-overlay-play-button,
+.autoplay-video::-webkit-media-controls-toggle-closed-captions-button {
+	display: none !important;
+}
 .custom-controls {
 	position: absolute;
 	bottom: 10px;
