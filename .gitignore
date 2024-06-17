@@ -3,3 +3,4 @@ public/css
 .DS_Store
 .vscode/settings.json
 dist/css
+dist
