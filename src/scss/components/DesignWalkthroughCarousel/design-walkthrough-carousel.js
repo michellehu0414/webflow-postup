@@ -3,36 +3,72 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const carouselSlides = document.querySelectorAll('.design-walkthrough-carousel_slide');
     const dots = document.querySelectorAll('.dot');
     const playPauseButton = document.querySelector('.play-pause-button');
+    const resetButton = document.querySelector('.reset-button');
+    const playIcon = playPauseButton.querySelector('img.play-button');
+    const pauseIcon = playPauseButton.querySelector('img.pause-button');
 
     let currentIndex = 0;
     const totalSlides = carouselSlides.length;
-    let startX, endX, isDragging = false;
+    let isDragging = false;
+    let isPlaying = true; // Initial state is playing
+    let autoSwipeTimeout;
+    let startX, endX; // Declare endX here
+    let currentTranslate = 0, prevTranslate = 0, animationID = 0;
 
     function updateCarousel() {
         const slideWidth = parseFloat(getComputedStyle(carouselSlides[0]).width) + parseFloat(getComputedStyle(carouselSlides[0]).marginRight);
         carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         dots.forEach(dot => dot.classList.remove('active'));
         dots[currentIndex].classList.add('active');
+        prevTranslate = -currentIndex * slideWidth;
+        setPositionByIndex();
+    }
+
+    function setPositionByIndex() {
+        const slideWidth = parseFloat(getComputedStyle(carouselSlides[0]).width) + parseFloat(getComputedStyle(carouselSlides[0]).marginRight);
+        currentTranslate = currentIndex * -slideWidth;
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    function setSliderPosition() {
+        carouselTrack.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
     }
 
     function handleStart(event) {
         isDragging = true;
         startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+        animationID = requestAnimationFrame(animation);
+        carouselTrack.classList.add('grabbing');
     }
 
     function handleMove(event) {
         if (!isDragging) return;
         endX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+        const currentPosition = endX - startX;
+        currentTranslate = prevTranslate + currentPosition;
     }
 
     function handleEnd() {
-        if (!isDragging) return;
         isDragging = false;
-        if (startX > endX + 50) {
-            currentIndex = (currentIndex + 1) % totalSlides;
-        } else if (startX < endX - 50) {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        cancelAnimationFrame(animationID);
+        carouselTrack.classList.remove('grabbing');
+
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < -100 && currentIndex < totalSlides - 1) {
+            currentIndex += 1;
         }
+
+        if (movedBy > 100 && currentIndex > 0) {
+            currentIndex -= 1;
+        }
+
         updateCarousel();
         playCurrentVideo();
     }
@@ -40,12 +76,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function playPauseVideos() {
         const currentSlide = carouselSlides[currentIndex];
         const video = currentSlide.querySelector('video');
-        if (playPauseButton.classList.contains('paused')) {
-            video.play();
-            playPauseButton.classList.remove('paused');
-        } else {
+        if (isPlaying) {
             video.pause();
             playPauseButton.classList.add('paused');
+            playIcon.style.display = 'inline';
+            pauseIcon.style.display = 'none';
+            isPlaying = false;
+        } else {
+            video.play();
+            playPauseButton.classList.remove('paused');
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'inline';
+            isPlaying = true;
         }
     }
 
@@ -53,7 +95,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         carouselSlides.forEach((slide, index) => {
             const video = slide.querySelector('video');
             if (index === currentIndex) {
-                if (!playPauseButton.classList.contains('paused')) {
+                if (isPlaying) {
                     video.play();
                 }
             } else {
@@ -61,6 +103,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 video.currentTime = 0;
             }
         });
+        autoSwipe();
     }
 
     function handleVideoEnd() {
@@ -69,18 +112,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
         playCurrentVideo();
     }
 
+    function autoSwipe() {
+        clearTimeout(autoSwipeTimeout);
+        autoSwipeTimeout = setTimeout(() => {
+            if (isPlaying) {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+                playCurrentVideo();
+            }
+        }, 5000); // Change slide 5 seconds after video ends
+    }
+
+    function resetCarousel() {
+        currentIndex = 0;
+        updateCarousel();
+        playCurrentVideo();
+    }
+
     function initSequentialVideos() {
-        const videoSets = document.querySelectorAll('.sequential-video-set');
-
-        videoSets.forEach((set, index) => {
-            const video = set.querySelector('video');
-
+        carouselSlides.forEach((slide) => {
+            const video = slide.querySelector('video');
             video.addEventListener('ended', () => {
-                if (index === currentIndex) {
-                    handleVideoEnd();
-                }
+                handleVideoEnd();
             });
         });
+    }
+
+    function togglePlayPause() {
+        const currentSlide = carouselSlides[currentIndex];
+        const video = currentSlide.querySelector('video');
+        if (isPlaying) {
+            video.pause();
+            isPlaying = false;
+            playPauseButton.classList.add('paused');
+            playIcon.style.display = 'inline';
+            pauseIcon.style.display = 'none';
+            clearTimeout(autoSwipeTimeout);
+        } else {
+            video.play();
+            isPlaying = true;
+            playPauseButton.classList.remove('paused');
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'inline';
+            autoSwipe();
+        }
     }
 
     carouselTrack.addEventListener('touchstart', handleStart);
@@ -90,7 +165,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     carouselTrack.addEventListener('mousedown', handleStart);
     carouselTrack.addEventListener('mousemove', handleMove);
     carouselTrack.addEventListener('mouseup', handleEnd);
-    carouselTrack.addEventListener('mouseleave', handleEnd);
+    carouselTrack.addEventListener('mouseleave', () => {
+        if (isDragging) handleEnd();
+    });
 
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -101,8 +178,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     playPauseButton.addEventListener('click', playPauseVideos);
+    resetButton.addEventListener('click', resetCarousel);
+
+    carouselSlides.forEach(slide => {
+        slide.addEventListener('click', togglePlayPause);
+    });
 
     initSequentialVideos();
-
+    updateCarousel();
     playCurrentVideo();
 });

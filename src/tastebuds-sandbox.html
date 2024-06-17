@@ -49,7 +49,7 @@
     </header>
     <div class="design-walkthrough-carousel_wrapper bg-black">
       <div class="design-walkthrough-carousel_container">
-        <div class="design-walkthrough-carousel_track">
+        <div class="design-walkthrough-carousel_track grabbing">
           <div class="design-walkthrough-carousel_slide sequential-video-set">
             <div class="design-walkthrough-carousel-slide_content">
               <p class="subheading">Animated splash screen</p>
@@ -80,7 +80,7 @@
                 type="video/mp4">
             </video>
           </div>
-          <div class="design-walkthrough-carousel_slide sequential-video-set">
+          <div class="design-walkthrough-carousel_slide sequential-video-set last-slide">
             <div class="design-walkthrough-carousel-slide_content">
               <p class="subheading">Introduction screens</p>
               <p>
@@ -97,6 +97,9 @@
           </div>
         </div>
         <div class="design-walkthrough-carousel_video-controls">
+          <button class="reset-button">
+            <img class="center" src="assets/svg/ic-reset-button.svg" alt="Reset video">
+          </button>
           <div class="pagination-wrapper">
             <ul role="tablist" class="dotnav-items">
               <li role="presentation" class="dotnav-item">
@@ -111,7 +114,9 @@
             </ul>
           </div>
           <button class="play-pause-button">
-            <img src="assets/svg/ic-pause-button.svg" alt="">
+            <img class="play-button" src="assets/svg/ic-play-button.svg" alt="Play video"
+              style="display: none; margin-left: 4px;">
+            <img class="pause-button" src="assets/svg/ic-pause-button.svg" alt="Pause video">
           </button>
         </div>
       </div>

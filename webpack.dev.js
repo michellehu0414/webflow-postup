@@ -70,8 +70,8 @@ module.exports = {
         },
         open: true,
         hot: true,
-        watchFiles: ['src/**/*', 'dist/**/*'] // Add this line to watch files
+        watchFiles: ['src/**/*', 'dist/**/*'], // Watch these directories for changes
     },
     mode: 'development',
-    devtool: 'source-map'
+    devtool: 'source-map',
 };
