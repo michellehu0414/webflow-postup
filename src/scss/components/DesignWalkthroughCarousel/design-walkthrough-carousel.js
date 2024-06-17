@@ -103,24 +103,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 video.currentTime = 0;
             }
         });
-        autoSwipe();
     }
 
     function handleVideoEnd() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-        playCurrentVideo();
-    }
-
-    function autoSwipe() {
-        clearTimeout(autoSwipeTimeout);
-        autoSwipeTimeout = setTimeout(() => {
-            if (isPlaying) {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel();
-                playCurrentVideo();
-            }
-        }, 5000); // Change slide 5 seconds after video ends
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+            playCurrentVideo();
+        }, 500); // Wait for 2 seconds before changing slide
     }
 
     function resetCarousel() {
@@ -132,9 +122,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function initSequentialVideos() {
         carouselSlides.forEach((slide) => {
             const video = slide.querySelector('video');
-            video.addEventListener('ended', () => {
-                handleVideoEnd();
-            });
+            video.addEventListener('ended', handleVideoEnd);
         });
     }
 
@@ -147,15 +135,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
             playPauseButton.classList.add('paused');
             playIcon.style.display = 'inline';
             pauseIcon.style.display = 'none';
-            clearTimeout(autoSwipeTimeout);
         } else {
             video.play();
             isPlaying = true;
             playPauseButton.classList.remove('paused');
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'inline';
-            autoSwipe();
         }
+    }
+
+    function removeHoverClass(event) {
+        event.target.classList.remove('hover');
+    }
+
+    function addHoverClass(event) {
+        event.target.classList.add('hover');
     }
 
     carouselTrack.addEventListener('touchstart', handleStart);
@@ -178,7 +172,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     playPauseButton.addEventListener('click', playPauseVideos);
+    playPauseButton.addEventListener('click', removeHoverClass);
+    playPauseButton.addEventListener('mouseleave', addHoverClass);
+
     resetButton.addEventListener('click', resetCarousel);
+    resetButton.addEventListener('click', removeHoverClass);
+    resetButton.addEventListener('mouseleave', addHoverClass);
 
     carouselSlides.forEach(slide => {
         slide.addEventListener('click', togglePlayPause);
@@ -188,3 +187,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     updateCarousel();
     playCurrentVideo();
 });
+s

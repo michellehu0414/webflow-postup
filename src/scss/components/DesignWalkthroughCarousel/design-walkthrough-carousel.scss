@@ -1,4 +1,4 @@
-$design-walkthrough-carousel-width: 70rem;
+$design-walkthrough-carousel-width: 55rem;
 
 .design-walkthrough-carousel_wrapper {
 	display: flex;
@@ -24,6 +24,25 @@ $design-walkthrough-carousel-width: 70rem;
 	}
 }
 
+.design-walkthrough-carousel_content-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 2.5rem;
+	width: 70%;
+	max-width: calc($design-walkthrough-carousel-width + 10rem);
+	margin: auto;
+	justify-content: start;
+	align-items: center;
+
+	.side-content {
+		width: 20rem;
+
+		p {
+			color: white;
+		}
+	}
+}
+
 .design-walkthrough-carousel_header {
 	width: 90%;
 	max-width: $design-walkthrough-carousel-width;
@@ -38,14 +57,15 @@ $design-walkthrough-carousel-width: 70rem;
 	margin: auto;
 	width: 100%;
 	align-items: center;
-	max-width: $design-walkthrough-carousel-width;
+	overflow: hidden;
+	max-width: calc($design-walkthrough-carousel-width + 10rem);
 }
 
 .design-walkthrough-carousel_track {
 	display: flex;
 	transition: transform 0.3s ease-in-out;
 	width: 100%;
-	max-width: 80rem;
+	max-width: $design-walkthrough-carousel-width;
 
 	&.grabbing {
 		cursor: grab;
@@ -55,7 +75,7 @@ $design-walkthrough-carousel-width: 70rem;
 .design-walkthrough-carousel_slide {
 	display: flex;
 	flex-direction: row;
-	gap: 5rem;
+	gap: 3rem;
 	align-items: center;
 	justify-content: center;
 	margin-right: 4rem;
@@ -66,6 +86,7 @@ $design-walkthrough-carousel-width: 70rem;
 	border-radius: 2rem;
 	flex: 0 0 auto;
 	width: 100%;
+	max-width: $design-walkthrough-carousel-width;
 
 	&.last-slide {
 		margin-right: 0 !important;
@@ -73,7 +94,7 @@ $design-walkthrough-carousel-width: 70rem;
 }
 
 .design-walkthrough-carousel-slide_content {
-	width: 28rem;
+	width: 20rem;
 
 	.subheading {
 		font-size: 1.5em;
@@ -81,6 +102,15 @@ $design-walkthrough-carousel-width: 70rem;
 
 	p {
 		font-size: 1.25rem;
+	}
+
+	.testing-outcomes-card {
+		width: 20rem;
+	}
+
+	.testing-outcomes-icon-invalidation {
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 }
 
@@ -103,36 +133,35 @@ $design-walkthrough-carousel-width: 70rem;
 		transition: background-color 100ms linear;
 		justify-content: center;
 		align-items: center;
-		width: 2.5rem;
-		height: 2.5rem;
 		background-color: transparent;
-
-		img.play-button {
-			height: 1rem;
-			width: auto;
-			opacity: 1;
-		}
-
-		img.pause-button {
-			width: 2rem;
-			height: auto;
-		}
 	}
 
-	.play-pause-button:hover {
-		background-color: #d8d8d8;
+	.play-pause-button img.play-button,
+	.play-pause-button img.pause-button,
+	.reset-button img {
+		opacity: 1;
+		border-radius: 100%;
+		overflow: hidden;
+	}
 
+	.play-pause-button.hover:hover {
+		background-color: #d8d8d8;
 		img {
 			opacity: 0.75;
 		}
 	}
 
-	.play-pause-button {
-		background-color: #fff;
+	.reset-button.hover:hover {
+		background-color: #6f6f6f;
 	}
 
-	.reset-button:hover {
-		background-color: #d8d8d8;
+	.play-pause-button {
+		background-color: #fff;
+		border-radius: 100%;
+
+		.play-button {
+			height: 2.5rem;
+		}
 	}
 
 	.pagination-wrapper {

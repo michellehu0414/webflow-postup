@@ -73,5 +73,14 @@ module.exports = {
             ]
         })
     ],
-    mode: 'development'
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        open: true,
+        hot: true,
+        watchFiles: ['src/**/*', 'src/assets/svg/**/*'], // Ensure these directories are being watched
+    },
+    mode: 'development',
+    devtool: 'source-map'
 };

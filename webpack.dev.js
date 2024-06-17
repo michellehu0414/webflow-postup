@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -31,7 +32,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
@@ -40,6 +41,13 @@ module.exports = {
                 },
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
+                }
+            },
+            {
+                test: /\.svg$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/svg/[name][ext]',
                 }
             }
         ]
@@ -62,6 +70,11 @@ module.exports = {
             chunks: ['postup'],
             filename: 'postup.html',
             minify: false
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
+            ]
         })
     ],
     devServer: {
@@ -70,7 +83,7 @@ module.exports = {
         },
         open: true,
         hot: true,
-        watchFiles: ['src/**/*', 'dist/**/*'], // Watch these directories for changes
+        watchFiles: ['src/**/*', 'src/assets/svg/**/*'],
     },
     mode: 'development',
     devtool: 'source-map',

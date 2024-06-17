@@ -34,7 +34,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
@@ -43,25 +43,14 @@ module.exports = {
                 },
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
-                },
-                use: [
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            optipng: {
-                                enabled: true,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.90],
-                                speed: 4
-                            }
-                        }
-                    },
-                ],
+                }
+            },
+            {
+                test: /\.svg$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/svg/[name][ext]',
+                }
             }
         ]
     },
@@ -86,8 +75,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
             ]
         })
     ],
