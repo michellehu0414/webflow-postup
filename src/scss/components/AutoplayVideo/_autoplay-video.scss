@@ -3,11 +3,6 @@
 	display: inline-block;
 }
 
-.autoplay-video {
-	width: 100%;
-	height: auto;
-}
-
 .autoplay-video::-webkit-media-controls-mute-button,
 .autoplay-video::-webkit-media-controls-current-time-display,
 .autoplay-video::-webkit-media-controls-time-remaining-display {

@@ -20,10 +20,12 @@ $wireframe-max-height: 35rem;
 
 @import 'CardVertical/card-vertical';
 
-@import 'DesignWalkthroughGrid/design-walkthrough-grid';
+@import 'DesignWalkthrough/design-walkthrough';
 
 @import 'DesignWalkthroughOneColumnGrid/design-walkthrough-1-col-grid';
 
 @import 'HeadingHangingIcon/icon-heading';
 
 @import 'HeroHeader/hero-header';
+
+@import 'DesignWalkthroughCarousel/design-walkthrough-carousel';
