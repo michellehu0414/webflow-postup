@@ -1,0 +1,37 @@
+.video-container {
+	position: relative;
+	display: inline-block;
+}
+
+.autoplay-video::-webkit-media-controls-mute-button,
+.autoplay-video::-webkit-media-controls-current-time-display,
+.autoplay-video::-webkit-media-controls-time-remaining-display {
+	display: none !important;
+}
+
+/* Hide the mute and download button */
+.autoplay-video::-webkit-media-controls-mute-button,
+.autoplay-video::-webkit-media-controls-download-button,
+.autoplay-video::-webkit-media-controls-overlay-play-button,
+.autoplay-video::-webkit-media-controls-toggle-closed-captions-button {
+	display: none !important;
+}
+.custom-controls {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	display: flex;
+	gap: 10px;
+}
+
+.custom-controls button {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.custom-controls button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}

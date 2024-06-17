@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+<<<<<<< HEAD
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -24,6 +25,20 @@ module.exports = {
         filename: 'js/[name].bundle.js',
         path: paths.dist,
         publicPath: '/',
+=======
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+    entry: {
+        postup: './src/js/postup.js',
+        tastebuds: './src/js/tastebuds.js'
+    },
+    output: {
+        filename: 'js/[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+>>>>>>> 843e4fb3604a3b24014f7808edcf8c8cacb435bf
     },
     module: {
         rules: [
@@ -38,6 +53,7 @@ module.exports = {
                 use: [
                     isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
+<<<<<<< HEAD
                     {
                         loader: 'sass-loader',
                         options: {
@@ -48,6 +64,13 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
+=======
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+>>>>>>> 843e4fb3604a3b24014f7808edcf8c8cacb435bf
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
@@ -57,6 +80,7 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
                 },
+<<<<<<< HEAD
             },
             {
                 test: /\.(mp4)$/i,
@@ -80,6 +104,10 @@ module.exports = {
                 },
             },
         ],
+=======
+            }
+        ]
+>>>>>>> 843e4fb3604a3b24014f7808edcf8c8cacb435bf
     },
     plugins: [
         new CleanWebpackPlugin({
@@ -102,6 +130,7 @@ module.exports = {
             filename: 'tastebuds.html',
         }),
         new MiniCssExtractPlugin({
+<<<<<<< HEAD
             filename: 'css/[name].css',
         }),
         new CopyWebpackPlugin({
@@ -200,4 +229,40 @@ module.exports = {
         open: true,
         hot: true,
     },
+=======
+            filename: 'css/[name].css'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/tastebuds.html',
+            chunks: ['tastebuds'],
+            filename: 'tastebuds.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/tastebuds-sandbox.html',
+            chunks: ['tastebuds'],
+            filename: 'tastebuds-sandbox.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/postup.html',
+            chunks: ['postup'],
+            filename: 'postup.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
+            ]
+        })
+    ],
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        open: true,
+        hot: true,
+        watchFiles: ['src/**/*', 'src/assets/svg/**/*'], // Ensure these directories are being watched
+    },
+    mode: 'development',
+    devtool: 'source-map'
+>>>>>>> 843e4fb3604a3b24014f7808edcf8c8cacb435bf
 };
