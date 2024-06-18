@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, ReactNode } from 'react';
 import Image from 'next/image';
-import styles from './styles.module.scss';
-import chevron from "public/assets/svg/ic-chevron-arrow__down--white.svg";
+import styles from './Accordion.module.scss';
+import chevron from 'public/assets/svg/ic-chevron-arrow__down--white.svg';
 
 export type AccordionProps = {
 	open: boolean;
@@ -35,7 +35,7 @@ export default function Accordion({
 				<p className={styles.label}>{label}</p>
 				<Image
 					className={`${styles.icon} ${open ? styles.rotate : ''}`}
-          src={chevron}
+					src={chevron}
 					alt={`Chevron arrow pointing ${open ? 'up' : 'down'}`}
 					width={24}
 					height={24}

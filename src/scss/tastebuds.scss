@@ -3,10 +3,6 @@ $light-blue: #dee3f4;
 $bg-grey: #f0f0f0;
 $wireframe-max-height: 40rem;
 
-.bg-grey {
-	background-color: $bg-grey;
-}
-
 @import 'abstracts/all-abstracts';
 
 @import 'base/all-bases';

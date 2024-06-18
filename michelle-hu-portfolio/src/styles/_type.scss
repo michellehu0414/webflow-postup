@@ -50,7 +50,7 @@ h2 {
 }
 
 h3 {
-	color: $primary-color;
+	color: var(--primary-color);
 	letter-spacing: 0;
 	text-transform: none;
 	font-size: 1.728rem;
@@ -85,7 +85,7 @@ h5 {
 h6 {
 	font-size: 1.2rem; /* Smallest heading, specify if needed */
 	line-height: 120%;
-	color: $primary-color; /* Example, adjust as necessary */
+	color: var(--primary-color); /* Example, adjust as necessary */
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
@@ -146,7 +146,7 @@ h6 {
 .section-subheading {
 	@extend %subheading;
 	font-size: 1.5rem;
-	color: $primary-color;
+	color: var(--primary-color);
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 	width: 100%;

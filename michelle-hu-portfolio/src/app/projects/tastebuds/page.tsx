@@ -2,23 +2,30 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Accordion from '@/components/Accordion';
-import ContentContainer from '@/components/ContentContainer';
-import '../../../styles/globals.scss';
+import './tastebuds.module.scss';
+import '@/styles/globals.scss';
+import Accordion from '@/components/Accordion/Accordion';
+import ContentContainer from '@/components/ContentContainer/ContentContainer';
 
 export default function Home() {
 	const [open, setOpen] = useState(false);
 	return (
-		<main>
-			<Accordion
-				open={open}
-				setOpen={setOpen}
-				label="Header">
-				<p>Content</p>
-			</Accordion>
+		<main
+			style={
+				{
+					'--primary-color': '#4379df',
+				} as React.CSSProperties
+			}>
 			<ContentContainer size="medium">
 				<h1>Welcome to My Next.js App</h1>
 				<p>This is a content container with medium size.</p>
+				<Accordion
+					open={open}
+					setOpen={setOpen}
+					label="Header">
+					<p>Content</p>
+				</Accordion>
+				<h3>Hello</h3>
 			</ContentContainer>
 		</main>
 	);

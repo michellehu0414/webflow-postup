@@ -1,19 +1,32 @@
 hr {
-  box-sizing: content-box;
-  height: 0.5px;
-  background-color: $medium-light-grey;
-  border: none;
+	box-sizing: content-box;
+	height: 0.5px;
+	background-color: $medium-light-grey;
+	border: none;
 
-  &.dashed-blue {
-    border-style: dashed;
-    background-color: $light-blue;
-  }
+	&.dashed-blue {
+		border-style: dashed;
+		background-color: $light-blue;
+	}
 
-  &.solid-black {
-    background-color: $black;
-  }
-  
-  &.solid-grey {
-    background-color: $light-grey;
-  }
+	&.solid-black {
+		background-color: $black;
+	}
+
+	&.solid-grey {
+		background-color: $light-grey;
+	}
+}
+
+hr.dashed-blue {
+	border-style: dashed;
+	background-color: $light-blue;
+}
+
+hr.solid-black {
+	background-color: $black;
+}
+
+hr.solid-grey {
+	background-color: $light-grey;
 }

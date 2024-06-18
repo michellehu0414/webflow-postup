@@ -151,7 +151,7 @@
 }
 
 .primary-color {
-	color: $primary-color !important;
+	color: var(--primary-color) !important;
 }
 
 // Background colors
@@ -174,6 +174,10 @@
 
 	&black {
 		background-color: $black !important;
+	}
+
+	&grey {
+		background-color: $bg-grey;
 	}
 }
 

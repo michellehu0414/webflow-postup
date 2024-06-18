@@ -1,6 +1,6 @@
 // components/ContentContainer.tsx
 import React, { ReactNode } from 'react';
-import styles from './styles.module.scss';
+import styles from './ContentContainer.module.scss';
 
 type ContentContainerProps = {
 	size?: 'medium-small' | 'medium' | 'large' | 'xl' | 'xxl';

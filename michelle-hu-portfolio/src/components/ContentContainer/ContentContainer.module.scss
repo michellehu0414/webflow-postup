@@ -1,5 +1,4 @@
-@import '../../styles/abstracts';
-@import '../../styles/color-variables.scss';
+@use '../../styles/variables' as *;
 
 .container {
 	display: block;

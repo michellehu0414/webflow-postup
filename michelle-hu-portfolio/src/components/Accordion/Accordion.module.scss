@@ -53,6 +53,10 @@
 		color: white;
 		text-align: left;
 	}
+
+	p:last-child {
+		margin-bottom: 0.25rem;
+	}
 }
 
 .rotate {

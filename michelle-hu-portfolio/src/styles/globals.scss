@@ -1,5 +1,9 @@
-@import './type';
-@import './utilities';
+:root {
+	--primary-color: #076261;
+}
+@import 'variables';
+@import 'utilities';
+@import 'type';
 
 html {
 	text-size-adjust: none;
@@ -49,7 +53,8 @@ summary {
 
 hr {
 	box-sizing: content-box;
-	height: 0;
+	height: 0.5px;
+	background-color: $medium-light-grey;
 	border: none;
 }
 
@@ -326,9 +331,4 @@ template {
 
 [hidden] {
 	display: none;
-}
-
-// Material icons
-.material-icons {
-	vertical-align: -14%;
 }
