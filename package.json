@@ -3,26 +3,22 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
+		"dev": "bun dev",
+		"build": "bun build",
+		"start": "bun start",
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@eslint/config-array": "^0.16.0",
-		"@eslint/object-schema": "^2.1.4",
-		"bun": "^1.1.13",
-		"glob": "^10.4.1",
 		"next": "14.2.4",
 		"react": "^18",
 		"react-dom": "^18",
-		"rimraf": "^5.0.7",
 		"sass": "^1.77.6"
 	},
 	"devDependencies": {
 		"@types/node": "^20",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
+		"eslint": "^8.57.0",
 		"eslint-config-next": "^14.2.4",
 		"typescript": "^5.4.5"
 	}
