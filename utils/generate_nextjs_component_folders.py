@@ -5,30 +5,7 @@ import os
 
 # Step 1: Define the folder names for the components
 folder_names = [
-    "01_ProjectHero",
-    "02_ProjectOverview",
-    "03_TheProcess",
-    "04_SecondaryResearch",
-    "05_PrimaryResearch",
-    "06_UserInterviews",
-    "07_CompetitorAnalysis",
-    "08_NarrowingTheScope",
-    "09_UserPersonas",
-    "10_UserStories",
-    "11_UserFlows",
-    "12_InformationArchitecture",
-    "13_Sketches",
-    "14_GuerillaTest",
-    "15_LowFidelity",
-    "16_Branding",
-    "17_HighFidelity",
-    "18_UsabilityTest1",
-    "19_DesignIterations1",
-    "20_UsabilityTest2",
-    "21_Limitations",
-    "22_FinalPrototype",
-    "23_Reflection",
-    "24_NextSteps",
+"25_Conclusion",
 ]
 
 # Step 2: Define the template for the component files

@@ -14,96 +14,51 @@ import Image from "next/image";
 const ProjectProcess: React.FC = () => {
 	const [open, setOpen] = useState(false);
 	return (
-		<section className="overview">
-			<ContentContainer>
-				<h1>Welcome to My Next.js App</h1>
-				<p>This is a content container with medium size.</p>
-				<h3>Hello</h3>
-			</ContentContainer>
-			<div className="overview__content-wrapper">
-				<header className="overview__header">
-					<h1 className="overview__title">TasteBuds</h1>
-					<p className="overview__tagline">
-						Empowering diners to discover dining options with tastebuds
-						they trust.
-					</p>
-					<div className="overview__tags-wrapper overview__tags-wrapper--scrollable">
-						<div className="overview__tag overview__tag--tastebuds">
-							product design
-						</div>
-						<div className="overview__tag overview__tag--tastebuds">
-							interaction design
-						</div>
-						<div className="overview__tag overview__tag--tastebuds">
-							business strategy
-						</div>
-						<div className="overview__tag overview__tag--tastebuds">
-							competitive research
-						</div>
-						<div className="overview__tag overview__tag--tastebuds">
-							prototyping
-						</div>
-					</div>
-				</header>
-				<div className="overview__details-container">
-					<div className="overview__grid-item">
-						<div className="overview__details-list">
-							<p className="overview__details-headline">Timeline</p>
-							<ul>
-								<li>December 2022 - June 2023</li>
-							</ul>
-						</div>
-					</div>
-					<div className="overview__details-list">
-						<p className="overview__details-headline">Tools</p>
-						<div className="overview__tools-grid-container">
-							<div className="overview__tools-logo-wrapper overview__tools-logo-wrapper--figma">
-								<Image
-									fill={true}
-									loading="lazy"
-									src="/assets/images/toolbox-logos/logo-figma.png"
-									alt=""
-								/>
-							</div>
-							<div className="overview__tools-logo-wrapper overview__tools-logo-wrapper--general">
-								<Image
-									fill={true}
-									alt=""
-									loading="lazy"
-									src="/assets/images/tastebuds/logo-notion.png"
-								/>
-							</div>
-							<div className="overview__tools-logo-wrapper overview__tools-logo-wrapper--miro">
-								<Image
-									fill={true}
-									alt=""
-									loading="lazy"
-									src="/assets/images/tastebuds/logo-miro.png"
-								/>
-							</div>
-							<div className="overview__tools-logo-wrapper overview__tools-logo-wrapper--canva">
-								<Image
-									fill={true}
-									alt=""
-									loading="lazy"
-									src="/assets/images/tastebuds/logo-canva.png"
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="flex-row center">
+		<section
+			id="the-process"
+			className="section-container equal-padding">
+			<header className="header-container">
+				<h2>Process</h2>
+			</header>
+			<div className="content">
+				{/* <p>This was my capstone project for my Springboard UX Design course, marking my inaugural
+			venture into product design with formal UX training!</p> */}
+				<p>
+					"Why is it so hard to find a place to eat and trying new items?
+					Despite convenient crowdsourced review apps such as Yelp and
+					Google, why do diners struggle to make dining decisions
+					efficiently? "
+				</p>
+				<p>
+					These were the questions that guided me to explore the consumer
+					dining experience. After witnessing shared challenges among my
+					friends and family when it came to deciding where to eat and
+					exploring new restaurants and menu items. As someone who values
+					diverse culinary experiences and sees food as a gateway to
+					understanding different cultures, I was deeply motivated to
+					create a solution for the consumer dining space.
+				</p>
+				<p>
+					To address this problem, my research process followed the 5-stage
+					Design Thinking model proposed by the Hasso Plattner Institute of
+					Design at Stanford (the "d. school ").
+				</p>
 				<button
-					className="scroll-button hero"
-					data-scroll-target="the-problem"
-					aria-label="Scroll down">
-					<Image
-						fill={true}
-						src="/assets/svg/ic-arrowDown.svg"
-						alt="Chevron arrow pointing down, indicating to scroll down"
-					/>
+					className="scroll-button bg-transparent link-blue"
+					data-scroll-target="final-tastebuds-solution">
+					Jump to final prototype
+					<span className="material-symbols-outlined ic-arrow_jump-to-section material-symbols_lower">
+						arrow_downward
+					</span>
 				</button>
+			</div>
+			<div className="content medium">
+				<Image
+					fill={true}
+					alt=""
+					loading="lazy"
+					src="/assets/images/tastebuds/research-process.png"
+				/>
 			</div>
 		</section>
 	);

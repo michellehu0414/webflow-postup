@@ -1,15 +1,175 @@
-
-import React from 'react';
+import React from "react";
 import styles from "./SecondaryResearch.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
 const SecondaryResearch = () => {
-  return (
-    <div>
-      {/* Add your component content here */}
-    </div>
-  );
+	return (
+		<section
+			id="secondary-research"
+			className="section-container">
+			<header className="header-container">
+				<h2>
+					<span>secondary and market research</span>
+					<br />
+					Understanding the landscape
+				</h2>
+			</header>
+			<div className="content">
+				<p>
+					I began to explore the problem space through secondary and market
+					research, delving into the diverse experiences, emerging dining
+					habits, and the evolving preferences of diners.
+				</p>
+				<header>
+					<p className="section-subheading">research questions</p>
+				</header>
+				<ul
+					className="mb-32"
+					role="list">
+					<li>What are the latest dining out trends?</li>
+					<li>What motivate people to dine out?</li>
+					<li>What do diners enjoy about dining out?</li>
+					<li>What do diners struggle with dining out?</li>
+				</ul>
+				<div>
+					<p className="section-subheading">diner trends 2022</p>
+					{/* <p>
+First, I explored <span className="fw-medium">Google keywords</span> to identify any trends in
+dining keywords, which revealed a trend in dining out after a few
+months into the COVID-19 pandemic! This told me that
+</p> */}
+					<p>
+						To best address my research questions,{" "}
+						<span className="fw-medium">
+							I reviewed existing data from market reports
+						</span>
+						. Among the reports I read, TouchBistro's
+						<Link href="https://shorturl.at/2DzDk">
+							2022 Diner Trends Report on "What Diners Want
+						</Link>{" "}
+						and{" "}
+						<Link href="https://shorturl.at/W4tIw">
+							2020 Restaurant Insights Report on "How Diners Choose
+							Restaurants"
+						</Link>{" "}
+						provided the most comprehensive data. The first report surveyed
+						more than 2,600 diners from across the U.S. and Canada, and the
+						second report surveyed a total of 521 diners.
+						<br />
+						<br /> These reports were very helpful! Below are the
+						highlights of what I learned (only data on U.S. participants
+						are referenced):
+					</p>
+				</div>
+				<div className="diner-trends-grid">
+					<div className="item-1">
+						<p>
+							If the restaurant's food is good, then the service doesn't
+							matter to diners.
+						</p>
+					</div>
+					<div className="item-2">
+						<p>
+							Recommendations from friends and family outweigh online
+							reviews.
+						</p>
+					</div>
+					<div className="item-3">
+						<p>
+							Most diners would visit a restaurant for their promotions.
+						</p>
+					</div>
+					<div className="item-4">
+						<p>
+							Most diners visit a restaurant's online menu and websites
+							first.
+						</p>
+					</div>
+					<div className="item-5 text-center">
+						<p className="text-center">
+							Top 3 factors that influence dining decisions
+						</p>
+						<div className="dining-factors-grid">
+							<div>
+								<p className="dining-factors-number">#1</p>
+								<div>
+									<Image
+										fill={true}
+										alt=""
+										className="dining-factors-icon"
+										loading="lazy"
+										src="/assets/svg/tastebuds/dinner-tray.svg"
+									/>
+									<p>Type of food</p>
+								</div>
+							</div>
+							<div>
+								<p className="dining-factors-number">#2</p>
+								<div>
+									<Image
+										fill={true}
+										alt=""
+										className="ic-dining-factors-location"
+										loading="lazy"
+										src="/assets/svg/tastebuds/ic-location.svg"
+									/>
+									<p>Location</p>
+								</div>
+							</div>
+							<div>
+								<p className="dining-factors-number">#3</p>
+								<div>
+									<Image
+										fill={true}
+										alt=""
+										className="dining-factors-icon"
+										loading="lazy"
+										src="/assets/svg/tastebuds/word-of-mouth.svg"
+									/>
+									<p>Word-of-mouth</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="content">
+					<p>
+						Among my findings, this was the statistic I found most
+						intriguing:
+						<br />
+					</p>
+					<blockquote className="blockquote-statistic-highlight">
+						<div className="blockquote-content">
+							<p className="blockquote-text margin-0">
+								"While 73% of diners use online review sources, only 24%
+								say online reviews influence where they decide to eat...""
+							</p>
+						</div>
+					</blockquote>
+					<div className="content">
+						<p className="fw-medium">
+							This raised the following question for me:{" "}
+						</p>
+						<p>
+							What motivates diners to use this method to guide their
+							dining choices, despite often taking it that seriously?
+						</p>
+						<p className="fw-medium">
+							Based on my research findings, I hypothesized that diners may
+							lack trust in online reviews because:
+						</p>
+						<ol>
+							<li>They are generated by strangers.</li>
+							<li>
+								These reviews often focus on the service rather than food.
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default SecondaryResearch;
