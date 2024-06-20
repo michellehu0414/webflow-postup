@@ -73,7 +73,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
+                { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
             ]
         })
     ],
