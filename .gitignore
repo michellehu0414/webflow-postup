@@ -2,7 +2,6 @@ node_modules
 public/css
 .DS_Store
 .vscode/settings.json
-dist/css
 dist
 package.l
 .next
