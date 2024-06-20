@@ -2,13 +2,13 @@
 import '../scss/tastebuds.scss';
 
 // Import and initialize components specific to this page
-import '../scss/components/Accordion/accordion';
-import '../scss/components/AutoplayVideo/autoplay-video';
-import '../scss/components/ScrollButton/scroll-button';
-import '../scss/components/scrollable';
-import '../scss/components/Tabs/tabs';
-import '../scss/components/SequentialVideoPlayer/sequential-video-player';
-import '../scss/components/DesignWalkthroughCarousel/design-walkthrough-carousel';
+import '../components/Accordion/accordion';
+import '../components/AutoplayVideo/autoplay-video';
+import '../components/ScrollButton/scroll-button';
+import '../components/scrollable';
+import '../components/Tabs/tabs';
+import '../components/SequentialVideoPlayer/sequential-video-player';
+import '../components/DesignWalkthroughCarousel/design-walkthrough-carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main TasteBuds page loaded');

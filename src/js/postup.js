@@ -2,11 +2,11 @@
 import '../scss/tastebuds.scss';
 //
 // Import and initialize components specific to this page
-import '../scss/components/Accordion/accordion';
-import '../scss/components/AutoplayVideo/autoplay-video';
-import '../scss/components/ScrollButton/scroll-button';
-import '../scss/components/scrollable';
-import '../scss/components/Tabs/tabs';
+import '../components/Accordion/accordion';
+import '../components/AutoplayVideo/autoplay-video';
+import '../components/ScrollButton/scroll-button';
+import '../components/scrollable';
+import '../components/Tabs/tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main PostUp page loaded');
