@@ -7,17 +7,19 @@ $wireframe-max-height: 40rem;
 	background-color: $bg-grey;
 }
 
-@import 'abstracts/all-abstracts';
+@import "abstracts/all-abstracts";
 
-@import 'base/all-base';
+@import "base/all-base";
 
-@import 'sections/all-sections';
+@import "sections/all-sections";
 
-@import 'tastebuds/all-tastebuds';
+@import "../components/all-components";
 
-@import 'utilities/all-utilities';
+@import "tastebuds/all-tastebuds";
 
-@import 'tastebuds/sketches';
+@import "utilities/all-utilities";
+
+@import "tastebuds/sketches";
 
 .header-container.tastebuds {
 	margin-bottom: 1rem;

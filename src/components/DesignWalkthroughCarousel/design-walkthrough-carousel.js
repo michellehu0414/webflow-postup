@@ -187,4 +187,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     updateCarousel();
     playCurrentVideo();
 });
-s
