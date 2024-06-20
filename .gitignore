@@ -4,3 +4,8 @@ public/css
 .vscode/settings.json
 dist/css
 dist
+package.l
+.next
+next-env.d.ts
+package-lock.json
+yarn.lock
