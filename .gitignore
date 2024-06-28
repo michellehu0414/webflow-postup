@@ -6,3 +6,4 @@ dist
 package.l
 .next
 next-env.d.ts
+yarn.lock
