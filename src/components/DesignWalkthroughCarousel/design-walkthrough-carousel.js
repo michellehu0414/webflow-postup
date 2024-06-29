@@ -180,9 +180,22 @@ class DesignWalkthroughCarousel {
     }
 
     resetCarousel() {
+        // Reset the current index to 0
         this.state.currentIndex = 0;
+        // Set the playing state to true
+        this.state.isPlaying = true;
+        // Update the carousel to reflect the reset state
         this.updateCarousel();
-        this.playCurrentVideo();
+        // Explicitly reset and play the video on the first slide
+        const firstSlideVideo = this.elements.carouselSlides[0].querySelector('video');
+        if (firstSlideVideo) {
+            firstSlideVideo.currentTime = 0; // Reset video time to start
+            firstSlideVideo.play(); // Play the video
+        }
+        // Update the play/pause button to reflect the play state
+        this.elements.playPauseButton.classList.remove('paused');
+        this.elements.playIcon.style.display = 'none';
+        this.elements.pauseIcon.style.display = 'inline';
     }
 }
 
