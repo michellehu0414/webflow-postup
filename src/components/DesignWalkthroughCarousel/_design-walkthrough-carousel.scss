@@ -72,7 +72,7 @@ $side-content-width: 20rem;
 	margin-right: 4rem;
 	box-sizing: border-box;
 	background-color: #f0f0f0;
-	padding: 2.5rem 6rem;
+	padding: 2.5rem 4rem;
 	color: white;
 	border-radius: 2rem;
 	flex: 0 0 auto;
@@ -85,14 +85,14 @@ $side-content-width: 20rem;
 }
 
 .design-walkthrough-carousel-slide_content {
-	width: 25rem;
+	width: 30rem;
 
 	.subheading {
 		font-size: 1.5em;
 	}
 
 	p {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 
 	.testing-outcomes-card {
@@ -201,9 +201,8 @@ $side-content-width: 20rem;
 						overflow: hidden;
 						cursor: default;
 					}
-
 				}
-				
+
 				.progress-bar {
 					position: absolute;
 					top: 0;
