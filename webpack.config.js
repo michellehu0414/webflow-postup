@@ -44,6 +44,13 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name].[hash:6][ext]',
                 },
+            },
+            {
+                test: /\.(mp4)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/videos/[name][ext]',
+                }
             }
         ]
     },
@@ -69,7 +76,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
+                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' }
             ]
         })
     ],
@@ -79,7 +87,7 @@ module.exports = {
         },
         open: true,
         hot: true,
-        watchFiles: ['src/**/*', 'src/assets/svg/**/*'], // Ensure these directories are being watched
+        watchFiles: ['**/*'], // Watch everything in the project
     },
     mode: 'development',
     devtool: 'source-map'

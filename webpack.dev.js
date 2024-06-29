@@ -49,6 +49,16 @@ module.exports = {
                 generator: {
                     filename: 'assets/svg/[name][ext]',
                 }
+            },
+            {
+                test: /\.(mp4)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/videos/', // Output directory for videos
+                    },
+                },
             }
         ]
     },
@@ -74,7 +84,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'src/assets/images'), to: 'assets/images' },
-                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' }
+                { from: path.resolve(__dirname, 'src/assets/svg'), to: 'assets/svg' },
+                { from: path.resolve(__dirname, 'src/assets/videos'), to: 'assets/videos' }
             ]
         })
     ],
