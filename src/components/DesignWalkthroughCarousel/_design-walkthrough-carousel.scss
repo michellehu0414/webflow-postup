@@ -1,16 +1,13 @@
-$design-walkthrough-carousel-width: 55rem;
+$design-walkthrough-carousel-width: 60rem;
 
-.design-walkthrough-carousel_wrapper {
-	display: flex;
-	flex-direction: row;
+.design-walkthrough-carousel {
 	box-sizing: border-box;
-	margin: auto !important;
 	gap: 3rem !important;
 	align-items: center;
 	padding: 5rem 0;
+	padding-bottom: 3rem;
+	width: 100%;
 	overflow: hidden;
-	padding-bottom: 2.5rem;
-	width: 100vw;
 
 	header {
 		display: flex;
@@ -25,27 +22,26 @@ $design-walkthrough-carousel-width: 55rem;
 }
 
 .design-walkthrough-carousel_content-wrapper {
-	display: flex;
-	flex-direction: row;
-	gap: 2.5rem;
-	width: 70%;
-	max-width: calc($design-walkthrough-carousel-width + 10rem);
+	width: $design-walkthrough-carousel-width;
 	margin: auto;
 	justify-content: start;
-	align-items: center;
+	align-items: stretch;
+}
 
-	.side-content {
-		width: 20rem;
+$side-content-width: 20rem;
 
-		p {
-			color: white;
-		}
+.design-walkthrough-carousel_caption {
+	margin-top: 2rem;
+	p {
+		color: white;
+		text-align: center;
+		margin-bottom: 0;
 	}
 }
 
 .design-walkthrough-carousel_header {
 	width: 90%;
-	max-width: $design-walkthrough-carousel-width;
+	// max-width: $design-walkthrough-carousel-width;
 	margin: auto;
 	max-width: 90rem;
 }
@@ -55,17 +51,16 @@ $design-walkthrough-carousel-width: 55rem;
 	flex-direction: column;
 	position: relative;
 	margin: auto;
-	width: 100%;
 	align-items: center;
-	overflow: hidden;
-	max-width: calc($design-walkthrough-carousel-width + 10rem);
+	width: $design-walkthrough-carousel-width;
+
+	// max-width: calc($design-walkthrough-carousel-width + 10rem);
 }
 
 .design-walkthrough-carousel_track {
 	display: flex;
 	transition: transform 0.3s ease-in-out;
-	width: 100%;
-	max-width: $design-walkthrough-carousel-width;
+	width: $design-walkthrough-carousel-width;
 
 	&.grabbing {
 		cursor: grab;
@@ -75,18 +70,17 @@ $design-walkthrough-carousel-width: 55rem;
 .design-walkthrough-carousel_slide {
 	display: flex;
 	flex-direction: row;
-	gap: 3rem;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	margin-right: 4rem;
 	box-sizing: border-box;
 	background-color: #f0f0f0;
-	padding: 4rem 2.5rem;
+	padding: 2.5rem 6rem;
 	color: white;
 	border-radius: 2rem;
 	flex: 0 0 auto;
-	width: 100%;
-	max-width: $design-walkthrough-carousel-width;
+	width: $design-walkthrough-carousel-width;
+	// max-width: $design-walkthrough-carousel-width;
 
 	&.last-slide {
 		margin-right: 0 !important;
@@ -94,7 +88,7 @@ $design-walkthrough-carousel-width: 55rem;
 }
 
 .design-walkthrough-carousel-slide_content {
-	width: 20rem;
+	width: 25rem;
 
 	.subheading {
 		font-size: 1.5em;
@@ -120,7 +114,7 @@ $design-walkthrough-carousel-width: 55rem;
 	gap: 1rem;
 	align-items: center;
 	height: 4rem;
-	margin-top: 2.5rem;
+	margin-top: 2rem;
 	overflow: hidden;
 
 	.play-pause-button,
@@ -144,14 +138,24 @@ $design-walkthrough-carousel-width: 55rem;
 		overflow: hidden;
 	}
 
-	.play-pause-button.hover:hover {
+	.play-pause-button:hover {
 		background-color: #d8d8d8;
 		img {
 			opacity: 0.75;
 		}
 	}
 
-	.reset-button.hover:hover {
+	// .reset-button {
+	// 	border-radius: 50px;
+	// 	height: 2.5rem;
+	// 	width: 2.5rem;
+	// }
+
+	// .img-reset-button {
+	// 	width: 1.5rem;
+	// }
+
+	.reset-button:hover {
 		background-color: #6f6f6f;
 	}
 
@@ -159,8 +163,10 @@ $design-walkthrough-carousel-width: 55rem;
 		background-color: #fff;
 		border-radius: 100%;
 
-		.play-button {
+		.play-button,
+		.reset-button {
 			height: 2.5rem;
+			width: 2.5rem;
 		}
 	}
 
@@ -209,6 +215,14 @@ $design-walkthrough-carousel-width: 55rem;
 			}
 		}
 	}
+}
+
+.fz-24 {
+	font-size: 1.25rem;
+}
+
+.fz-48 {
+	font-size: 2.5rem;
 }
 
 .fz-3rem {
