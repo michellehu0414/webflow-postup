@@ -106,6 +106,30 @@ class DesignWalkthroughCarousel {
                 video.addEventListener('ended', this.handleVideoEnd.bind(this));
             }
         });
+
+        this.elements.carouselSlides.forEach((slide, index) => {
+            const video = slide.querySelector('video');
+            if (video) {
+                slide.addEventListener('click', () => {
+                    // If the clicked slide is the current slide, toggle play/pause.
+                    if (index === this.state.currentIndex) {
+                        if (this.state.isPlaying) {
+                            video.pause();
+                            this.elements.playPauseButton.classList.add('paused');
+                            this.elements.playIcon.style.display = 'inline';
+                            this.elements.pauseIcon.style.display = 'none';
+                            this.state.isPlaying = false;
+                        } else {
+                            video.play();
+                            this.elements.playPauseButton.classList.remove('paused');
+                            this.elements.playIcon.style.display = 'none';
+                            this.elements.pauseIcon.style.display = 'inline';
+                            this.state.isPlaying = true;
+                        }
+                    }
+                });
+            }
+        });
     }
 
     getSlideWidth() {
