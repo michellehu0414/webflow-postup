@@ -6,8 +6,8 @@ class DesignWalkthroughCarousel {
             dots: '.dot',
             playPauseButton: '.play-pause-button',
             resetButton: '.reset-button',
-            playIcon: 'img.play-button',
-            pauseIcon: 'img.pause-button'
+            playIcon: '.img-play-button',
+            pauseIcon: '.img-pause-button'
         };
 
         this.state = {
@@ -51,6 +51,7 @@ class DesignWalkthroughCarousel {
         this.setupEventListeners();
         this.updateCarousel();
         this.playCurrentVideo();
+        this.setupVideoProgressListener();
     }
 
     setupEventListeners() {
@@ -132,6 +133,57 @@ class DesignWalkthroughCarousel {
         });
     }
 
+    setupVideoProgressListener() {
+        const updateProgress = () => {
+            const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
+            const activeDot = this.elements.dots[this.state.currentIndex];
+            const progressBar = activeDot.querySelector('.progress-bar');
+
+            let animationFrameId;
+
+            const updateBar = () => {
+                if (!video.paused && !video.ended) {
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                    animationFrameId = requestAnimationFrame(updateBar);
+                }
+            };
+
+            if (video && progressBar) {
+                video.addEventListener('play', () => {
+                    animationFrameId = requestAnimationFrame(updateBar);
+                });
+
+                video.addEventListener('pause', () => {
+                    cancelAnimationFrame(animationFrameId);
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                });
+
+                video.addEventListener('ended', () => {
+                    cancelAnimationFrame(animationFrameId);
+                    progressBar.style.width = '0%'; // Optionally reset progress bar
+                });
+
+                video.addEventListener('timeupdate', () => {
+                    if (video.paused || video.ended) {
+                        const progress = (video.currentTime / video.duration) * 100;
+                        progressBar.style.width = `${progress}%`;
+                    }
+                });
+            }
+        };
+
+        // Call the function to set up the progress listener for the initial video
+        updateProgress();
+
+        // Update the progress listener when the current index changes
+        this.elements.dots.forEach(dot => {
+            dot.addEventListener('click', updateProgress);
+        });
+    }
+
+
     getSlideWidth() {
         const slide = this.elements.carouselSlides[0];
         return parseFloat(getComputedStyle(slide).width) + parseFloat(getComputedStyle(slide).marginRight);
@@ -153,6 +205,7 @@ class DesignWalkthroughCarousel {
         this.setSliderPosition();
         this.elements.dots.forEach(dot => dot.classList.remove('active'));
         this.elements.dots[this.state.currentIndex].classList.add('active');
+        this.setupVideoProgressListener();
     }
 
     playCurrentVideo() {

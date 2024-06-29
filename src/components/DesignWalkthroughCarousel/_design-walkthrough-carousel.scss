@@ -41,7 +41,6 @@ $side-content-width: 20rem;
 
 .design-walkthrough-carousel_header {
 	width: 90%;
-	// max-width: $design-walkthrough-carousel-width;
 	margin: auto;
 	max-width: 90rem;
 }
@@ -53,8 +52,6 @@ $side-content-width: 20rem;
 	margin: auto;
 	align-items: center;
 	width: $design-walkthrough-carousel-width;
-
-	// max-width: calc($design-walkthrough-carousel-width + 10rem);
 }
 
 .design-walkthrough-carousel_track {
@@ -113,7 +110,6 @@ $side-content-width: 20rem;
 	flex-direction: row;
 	gap: 1rem;
 	align-items: center;
-	height: 4rem;
 	margin-top: 2rem;
 	overflow: hidden;
 
@@ -130,8 +126,8 @@ $side-content-width: 20rem;
 		background-color: transparent;
 	}
 
-	.play-pause-button img.play-button,
-	.play-pause-button img.pause-button,
+	.play-pause-button .img-play-button,
+	.play-pause-button .img-pause-button,
 	.reset-button img {
 		opacity: 1;
 		border-radius: 100%;
@@ -145,72 +141,81 @@ $side-content-width: 20rem;
 		}
 	}
 
-	// .reset-button {
-	// 	border-radius: 50px;
-	// 	height: 2.5rem;
-	// 	width: 2.5rem;
-	// }
+	.reset-button {
+		border-radius: 50px;
+		height: 2.5rem;
+		width: 2.5rem;
+	}
 
-	// .img-reset-button {
-	// 	width: 1.5rem;
-	// }
+	.img-reset-button {
+		width: 1.5rem;
+	}
 
 	.reset-button:hover {
 		background-color: #6f6f6f;
 	}
 
 	.play-pause-button {
-		background-color: #fff;
+		background-color: #efefef;
 		border-radius: 100%;
-
-		.play-button,
-		.reset-button {
-			height: 2.5rem;
-			width: 2.5rem;
-		}
 	}
 
 	.pagination-wrapper {
 		border-radius: 2rem;
-		background-color: #fff;
+		background-color: #efefef;
 		width: min-content;
 		margin: 0;
 		padding: 0.5rem;
 
-		ul.dotnav-items {
+		.dotnav-items {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
-			justify-items: center;
 			list-style: none;
 			margin: 0;
 			gap: 0;
+			padding: 0;
+			text-align: center;
 
-			li.dotnav-item {
+			.dotnav-item {
 				display: inline-flex;
-				cursor: pointer;
 				padding: 0.5rem;
 				margin: 0;
 				transition: background-color 100ms linear;
+				cursor: pointer;
+				transform: none;
 
 				.dot {
+					position: relative; // Necessary for positioning the progress bar
 					width: 0.5rem;
 					height: 0.5rem;
 					background-color: #8e8e8e;
 					border-radius: 1rem;
 					transition: width 100ms linear;
+					overflow: hidden;
 
 					&.active {
-						background-color: #333;
+						background-color: #8e8e8e;
 						width: 2.5rem;
 						height: 0.5rem;
+						border-radius: 1rem;
+						overflow: hidden;
+						cursor: default;
 					}
+
+				}
+				
+				.progress-bar {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					background-color: #333; // Progress bar color
+					width: 0;
+					transition: width 0.1s linear;
 				}
 
-				&:hover {
-					.dot {
-						background-color: #565656;
-					}
+				&:hover .dot:not(.active) {
+					background-color: #565656;
 				}
 			}
 		}
