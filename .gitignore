@@ -3,7 +3,5 @@ public/css
 .DS_Store
 .vscode/settings.json
 dist
-package-lock.json
 .next
 next-env.d.ts
-yarn.lock
