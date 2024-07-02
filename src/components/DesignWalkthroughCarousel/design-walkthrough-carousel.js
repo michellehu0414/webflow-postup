@@ -1,7 +1,5 @@
 class DesignWalkthroughCarousel {
-    constructor(carouselElement) {
-        this.carouselElement = carouselElement;
-
+    constructor() {
         this.selectors = {
             track: '.design-walkthrough-carousel_track',
             slides: '.design-walkthrough-carousel_slide',
@@ -20,11 +18,7 @@ class DesignWalkthroughCarousel {
             endX: 0,
             currentTranslate: 0,
             prevTranslate: 0,
-            animationID: 0,
-            lastPausedTime: 0,
-            progress: {}, // Store progress state for each slide
-            wasPlayingBeforeOut: false, // Track if the video was playing before out of view
-            wasPausedManually: false // Track if the pause was manual
+            animationID: 0
         };
 
         this.elements = {
@@ -37,16 +31,19 @@ class DesignWalkthroughCarousel {
             pauseIcon: null
         };
 
-        this.initializeElements();
-        this.initializeIntersectionObserver();
+        this.init();
+    }
+
+    init() {
+        document.addEventListener('DOMContentLoaded', this.initializeElements.bind(this));
     }
 
     initializeElements() {
-        this.elements.carouselTrack = this.carouselElement.querySelector(this.selectors.track);
-        this.elements.carouselSlides = this.carouselElement.querySelectorAll(this.selectors.slides);
-        this.elements.dots = this.carouselElement.querySelectorAll(this.selectors.dots);
-        this.elements.playPauseButton = this.carouselElement.querySelector(this.selectors.playPauseButton);
-        this.elements.resetButton = this.carouselElement.querySelector(this.selectors.resetButton);
+        this.elements.carouselTrack = document.querySelector(this.selectors.track);
+        this.elements.carouselSlides = document.querySelectorAll(this.selectors.slides);
+        this.elements.dots = document.querySelectorAll(this.selectors.dots);
+        this.elements.playPauseButton = document.querySelector(this.selectors.playPauseButton);
+        this.elements.resetButton = document.querySelector(this.selectors.resetButton);
 
         this.elements.playIcon = this.elements.playPauseButton.querySelector(this.selectors.playIcon);
         this.elements.pauseIcon = this.elements.playPauseButton.querySelector(this.selectors.pauseIcon);
@@ -58,12 +55,31 @@ class DesignWalkthroughCarousel {
     }
 
     setupEventListeners() {
-        // Bind the methods to the instance
-        const handleStart = this.handleStart.bind(this);
-        const handleMove = this.handleMove.bind(this);
-        const handleEnd = this.handleEnd.bind(this);
+        const handleStart = (event) => {
+            this.state.isDragging = true;
+            this.state.startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+            this.state.animationID = requestAnimationFrame(this.animation.bind(this));
+            this.elements.carouselTrack.classList.add('grabbing');
+        };
 
-        // Use these bound methods in your event listeners
+        const handleMove = (event) => {
+            if (!this.state.isDragging) return;
+            this.state.endX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+            const currentPosition = this.state.endX - this.state.startX;
+            this.state.currentTranslate = this.state.prevTranslate + currentPosition;
+        };
+
+        const handleEnd = () => {
+            this.state.isDragging = false;
+            cancelAnimationFrame(this.state.animationID);
+            this.elements.carouselTrack.classList.remove('grabbing');
+            const movedBy = this.state.currentTranslate - this.state.prevTranslate;
+            if (movedBy < -100 && this.state.currentIndex < this.elements.carouselSlides.length - 1) this.state.currentIndex += 1;
+            if (movedBy > 100 && this.state.currentIndex > 0) this.state.currentIndex -= 1;
+            this.updateCarousel();
+            this.playCurrentVideo();
+        };
+
         this.elements.carouselTrack.addEventListener('touchstart', handleStart);
         this.elements.carouselTrack.addEventListener('touchmove', handleMove);
         this.elements.carouselTrack.addEventListener('touchend', handleEnd);
@@ -85,7 +101,7 @@ class DesignWalkthroughCarousel {
         this.elements.playPauseButton.addEventListener('click', this.playPauseVideos.bind(this));
         this.elements.resetButton.addEventListener('click', this.resetCarousel.bind(this));
 
-        this.elements.carouselSlides.forEach((slide, index) => {
+        this.elements.carouselSlides.forEach(slide => {
             const video = slide.querySelector('video');
             if (video) {
                 video.addEventListener('ended', this.handleVideoEnd.bind(this));
@@ -99,21 +115,17 @@ class DesignWalkthroughCarousel {
                     // If the clicked slide is the current slide, toggle play/pause.
                     if (index === this.state.currentIndex) {
                         if (this.state.isPlaying) {
-                            this.state.lastPausedTime = video.currentTime;
                             video.pause();
-                            this.state.progress[this.state.currentIndex] = video.currentTime; // Store the progress
                             this.elements.playPauseButton.classList.add('paused');
                             this.elements.playIcon.style.display = 'inline';
                             this.elements.pauseIcon.style.display = 'none';
                             this.state.isPlaying = false;
                         } else {
-                            video.currentTime = this.state.progress[this.state.currentIndex] || 0;
-                            video.play().then(() => {
-                                this.elements.playPauseButton.classList.remove('paused');
-                                this.elements.playIcon.style.display = 'none';
-                                this.elements.pauseIcon.style.display = 'inline';
-                                this.state.isPlaying = true;
-                            }).catch(error => console.error('Error playing video:', error));
+                            video.play();
+                            this.elements.playPauseButton.classList.remove('paused');
+                            this.elements.playIcon.style.display = 'none';
+                            this.elements.pauseIcon.style.display = 'inline';
+                            this.state.isPlaying = true;
                         }
                     }
                 });
@@ -121,57 +133,10 @@ class DesignWalkthroughCarousel {
         });
     }
 
-    handleStart(event) {
-        this.state.isDragging = true;
-        this.state.startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
-        this.state.animationID = requestAnimationFrame(this.animation.bind(this));
-        this.elements.carouselTrack.classList.add('grabbing');
-    }
-
-    handleMove(event) {
-        if (!this.state.isDragging) return;
-        this.state.endX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
-        const currentPosition = this.state.endX - this.state.startX;
-        this.state.currentTranslate = this.state.prevTranslate + currentPosition;
-    }
-
-    handleEnd() {
-        this.state.isDragging = false;
-        cancelAnimationFrame(this.state.animationID);
-        this.elements.carouselTrack.classList.remove('grabbing');
-        const movedBy = this.state.currentTranslate - this.state.prevTranslate;
-        if (movedBy < -100 && this.state.currentIndex < this.elements.carouselSlides.length - 1) this.state.currentIndex += 1;
-        if (movedBy > 100 && this.state.currentIndex > 0) this.state.currentIndex -= 1;
-        this.updateCarousel();
-        this.playCurrentVideo();
-    }
-
-    initializeIntersectionObserver() {
-        const options = {
-            root: null, // viewport
-            threshold: 0.5 // 50% of the item's visible area must be visible to trigger
-        };
-
-        new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Resume playing if it was playing before scrolling out of view
-                    if (this.state.wasPlayingBeforeOut) {
-                        this.playCurrentVideo();
-                    }
-                } else {
-                    // Pause the video and remember it was playing
-                    this.state.wasPlayingBeforeOut = this.state.isPlaying;
-                    this.pauseCurrentVideo();
-                }
-            });
-        }, options).observe(this.carouselElement);
-    }
-
     setupVideoProgressListener() {
-        this.elements.carouselSlides.forEach((slide, index) => {
-            const video = slide.querySelector('video');
-            const activeDot = this.elements.dots[index];
+        const updateProgress = () => {
+            const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
+            const activeDot = this.elements.dots[this.state.currentIndex];
             const progressBar = activeDot.querySelector('.progress-bar');
 
             let animationFrameId;
@@ -197,6 +162,7 @@ class DesignWalkthroughCarousel {
 
                 video.addEventListener('ended', () => {
                     cancelAnimationFrame(animationFrameId);
+                    progressBar.style.width = '0%'; // Optionally reset progress bar
                 });
 
                 video.addEventListener('timeupdate', () => {
@@ -206,8 +172,17 @@ class DesignWalkthroughCarousel {
                     }
                 });
             }
+        };
+
+        // Call the function to set up the progress listener for the initial video
+        updateProgress();
+
+        // Update the progress listener when the current index changes
+        this.elements.dots.forEach(dot => {
+            dot.addEventListener('click', updateProgress);
         });
     }
+
 
     getSlideWidth() {
         const slide = this.elements.carouselSlides[0];
@@ -233,23 +208,12 @@ class DesignWalkthroughCarousel {
         this.setupVideoProgressListener();
     }
 
-    pauseCurrentVideo(manualPause = false) {
-        const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
-        if (video && !video.paused) {
-            video.pause();
-            this.state.isPlaying = false;
-            this.state.wasPausedManually = manualPause; // Track if the pause was manual
-            // Update play/pause button visuals if necessary
-        }
-    }
-
     playCurrentVideo() {
-        if (!this.state.isPlaying || this.state.wasPausedManually) return; // Do not auto-play if paused manually
         this.elements.carouselSlides.forEach((slide, index) => {
             const video = slide.querySelector('video');
             if (video) {
                 if (index === this.state.currentIndex) {
-                    video.play();
+                    if (this.state.isPlaying) video.play();
                 } else {
                     video.pause();
                     video.currentTime = 0;
@@ -267,12 +231,10 @@ class DesignWalkthroughCarousel {
                 this.elements.playIcon.style.display = 'inline';
                 this.elements.pauseIcon.style.display = 'none';
             } else {
-                video.currentTime = this.state.progress[this.state.currentIndex] || 0;
-                video.play().then(() => {
-                    this.elements.playPauseButton.classList.remove('paused');
-                    this.elements.playIcon.style.display = 'none';
-                    this.elements.pauseIcon.style.display = 'inline';
-                }).catch(error => console.error('Error playing video:', error));
+                video.play();
+                this.elements.playPauseButton.classList.remove('paused');
+                this.elements.playIcon.style.display = 'none';
+                this.elements.pauseIcon.style.display = 'inline';
             }
             this.state.isPlaying = !this.state.isPlaying;
         }
@@ -284,7 +246,7 @@ class DesignWalkthroughCarousel {
                 this.state.currentIndex = (this.state.currentIndex + 1) % this.elements.carouselSlides.length;
                 this.updateCarousel();
                 this.playCurrentVideo();
-            }, 2000);
+            }, 5000);
         } else {
             // When the last slide is finished, change the pause button to the play button
             this.elements.playPauseButton.classList.add('paused');
@@ -305,7 +267,7 @@ class DesignWalkthroughCarousel {
         const firstSlideVideo = this.elements.carouselSlides[0].querySelector('video');
         if (firstSlideVideo) {
             firstSlideVideo.currentTime = 0; // Reset video time to start
-            firstSlideVideo.play().catch(error => console.error('Error playing video:', error)); // Play the video
+            firstSlideVideo.play(); // Play the video
         }
         // Update the play/pause button to reflect the play state
         this.elements.playPauseButton.classList.remove('paused');
@@ -314,9 +276,4 @@ class DesignWalkthroughCarousel {
     }
 }
 
-// Initialize multiple carousels
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.design-walkthrough-carousel').forEach(carouselElement => {
-        new DesignWalkthroughCarousel(carouselElement);
-    });
-});
+new DesignWalkthroughCarousel();
