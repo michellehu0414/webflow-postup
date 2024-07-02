@@ -1,13 +1,13 @@
-import { Dispatch, SetStateAction, ReactNode } from "react";
+import { Dispatch, SetStateAction, ReactNode, useState } from "react";
 import Image from "next/image";
 import styles from "./Accordion.module.scss";
 import chevron from "/public/assets/svg/ic-chevron-arrow__down--white.svg";
 
 export type AccordionProps = {
-	open: boolean;
-	setOpen: Dispatch<SetStateAction<boolean>>;
-	children: ReactNode;
-	label: string;
+  open?: boolean;
+  setOpen?: Dispatch<SetStateAction<boolean>>;
+  children: ReactNode;
+  label: string;
 };
 
 /**
@@ -19,29 +19,34 @@ export type AccordionProps = {
  * @returns Accordion component.
  */
 export default function Accordion({
-	open,
-	setOpen,
-	children,
-	label,
+  open,
+  setOpen,
+  children,
+  label,
 }: AccordionProps) {
-	const toggleOpen = () => setOpen((prev) => !prev);
+  const [localOpen, setLocalOpen] = useState(false);
+  const toggleOpen = () => {
+    if (setOpen) setOpen((p) => !p);
+    else if (open === undefined) setLocalOpen((p) => !p);
+  };
 
-	return (
-		<div className={styles.container}>
-			<button
-				className={styles.header}
-				onClick={toggleOpen}
-				aria-expanded={open}>
-				<p className={styles.label}>{label}</p>
-				<Image
-					className={`${styles.icon} ${open ? styles.rotate : ""}`}
-					src={chevron}
-					alt={`Chevron arrow pointing ${open ? "up" : "down"}`}
-					width={24}
-					height={24}
-				/>
-			</button>
-			{open && <div className={styles.content}>{children}</div>}
-		</div>
-	);
+  return (
+    <div className={styles.container}>
+      <button
+        className={styles.header}
+        onClick={toggleOpen}
+        aria-expanded={open ?? localOpen}
+      >
+        <p className={styles.label}>{label}</p>
+        <Image
+          className={`${styles.icon} ${open ? styles.rotate : ""}`}
+          src={chevron}
+          alt={`Chevron arrow pointing ${open ? "up" : "down"}`}
+          width={24}
+          height={24}
+        />
+      </button>
+      {open && <div className={styles.content}>{children}</div>}
+    </div>
+  );
 }
