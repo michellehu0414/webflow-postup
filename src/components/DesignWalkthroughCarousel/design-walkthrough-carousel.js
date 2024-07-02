@@ -63,7 +63,6 @@ class DesignWalkthroughCarousel {
         const handleMove = this.handleMove.bind(this);
         const handleEnd = this.handleEnd.bind(this);
 
-        // Use these bound methods in your event listeners
         this.elements.carouselTrack.addEventListener('touchstart', handleStart);
         this.elements.carouselTrack.addEventListener('touchmove', handleMove);
         this.elements.carouselTrack.addEventListener('touchend', handleEnd);
@@ -228,13 +227,48 @@ class DesignWalkthroughCarousel {
         this.state.prevTranslate = -this.state.currentIndex * slideWidth;
         this.state.currentTranslate = this.state.prevTranslate;
         this.setSliderPosition();
-        this.elements.dots.forEach(dot => dot.classList.remove('active'));
+        this.elements.dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            const progressBar = dot.querySelector('.progress-bar');
+            if (index === this.state.currentIndex) {
+                // If there's a video in the current slide, update its progress bar based on the video's current time
+                const video = this.elements.carouselSlides[index].querySelector('video');
+                if (video) {
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                }
+            } else {
+                // Reset progress bar for non-active slides
+                progressBar.style.width = '0%';
+            }
+        });
         this.elements.dots[this.state.currentIndex].classList.add('active');
         this.setupVideoProgressListener();
     }
 
-    pauseCurrentVideo(manualPause = false) {
+    playPauseVideos() {
         const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
+        if (video) {
+            if (this.state.isPlaying) {
+                video.pause();
+                this.elements.playPauseButton.classList.add('paused');
+                this.elements.playIcon.style.display = 'inline';
+                this.elements.pauseIcon.style.display = 'none';
+            } else {
+                video.currentTime = this.state.progress[this.state.currentIndex] || 0;
+                video.play().then(() => {
+                    this.elements.playPauseButton.classList.remove('paused');
+                    this.elements.playIcon.style.display = 'none';
+                    this.elements.pauseIcon.style.display = 'inline';
+                }).catch(error => console.error('Error playing video:', error));
+            }
+            this.state.isPlaying = !this.state.isPlaying;
+        }
+    }
+
+    pauseCurrentVideo(manualPause = false) {
+        const currentSlide = this.elements.carouselSlides[this.state.currentIndex];
+        const video = currentSlide.querySelector('video');
         if (video && !video.paused) {
             video.pause();
             this.state.isPlaying = false;
@@ -256,26 +290,6 @@ class DesignWalkthroughCarousel {
                 }
             }
         });
-    }
-
-    playPauseVideos() {
-        const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
-        if (video) {
-            if (this.state.isPlaying) {
-                video.pause();
-                this.elements.playPauseButton.classList.add('paused');
-                this.elements.playIcon.style.display = 'inline';
-                this.elements.pauseIcon.style.display = 'none';
-            } else {
-                video.currentTime = this.state.progress[this.state.currentIndex] || 0;
-                video.play().then(() => {
-                    this.elements.playPauseButton.classList.remove('paused');
-                    this.elements.playIcon.style.display = 'none';
-                    this.elements.pauseIcon.style.display = 'inline';
-                }).catch(error => console.error('Error playing video:', error));
-            }
-            this.state.isPlaying = !this.state.isPlaying;
-        }
     }
 
     handleVideoEnd() {
