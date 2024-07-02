@@ -1,0 +1,18 @@
+.header-container {
+	display: block;
+	max-width: $content-max-width;
+	width: 90vw;
+	margin: 0 auto;
+
+	span {
+		@extend .subheader;
+	}
+
+	h3 {
+		color: $primary-color;
+	}
+
+	.secondary-text {
+		margin: 0;
+	}
+}

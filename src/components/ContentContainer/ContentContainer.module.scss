@@ -1,6 +1,6 @@
 @use '../../styles/variables' as *;
-
-.container {
+// Currently .content and .content-wrapper in html. Need to change to .section-content-container!
+.section-content-container {
 	display: block;
 	max-width: $content-max-width;
 	width: 90vw;

@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, ReactNode, useState } from "react";
 import Image from "next/image";
-import styles from "./Accordion.module.scss";
+import styles from "./ProjectAccordion.module.scss";
 import chevron from "/public/assets/svg/ic-chevron-arrow__down--white.svg";
 
 export type AccordionProps = {
@@ -18,7 +18,7 @@ export type AccordionProps = {
  * @param label - Label for the accordion header.
  * @returns Accordion component.
  */
-export default function Accordion({
+export default function ProjectAccordion({
   open,
   setOpen,
   children,

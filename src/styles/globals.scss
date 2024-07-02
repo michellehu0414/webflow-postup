@@ -1,9 +1,9 @@
 :root {
 	--primary-color: #076261;
 }
-@import 'variables';
-@import 'utilities';
-@import 'type';
+@import "variables";
+@import "utilities";
+@import "type";
 
 html {
 	text-size-adjust: none;
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -34,6 +34,10 @@ body {
 main {
 	display: block;
 	background: white;
+}
+
+div > img:only-child {
+	margin: 0;
 }
 
 article,
@@ -173,9 +177,9 @@ select {
     */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
 	-webkit-appearance: button;
 	appearance: button;
 }
@@ -185,9 +189,9 @@ button,
     */
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
 }
@@ -197,9 +201,9 @@ button::-moz-focus-inner,
     */
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
 	outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +252,8 @@ textarea {
     * 2. Remove the padding in IE 10.
     */
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
 }
@@ -258,8 +262,8 @@ textarea {
     * Correct the cursor style of increment and decrement buttons in Chrome.
     */
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
@@ -268,7 +272,7 @@ textarea {
     * 2. Correct the outline style in Safari.
     */
 
-[type='search'] {
+[type="search"] {
 	-webkit-appearance: textfield; /* 1 */
 	appearance: textfield;
 	outline-offset: -2px; /* 2 */
@@ -278,7 +282,7 @@ textarea {
     * Remove the inner padding in Chrome and Safari on macOS.
     */
 
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
 	appearance: none;
 	-webkit-appearance: none; /* For Safari and Chrome */
 	-moz-appearance: none; /* For Firefox */
@@ -331,4 +335,36 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+.subsection,
+.section-container,
+.container-full-width {
+	.content,
+	.content-wrapper {
+		margin-bottom: 3rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.content,
+.content-wrapper,
+.subsection,
+.section-container,
+.container-full-width {
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child,
+	> :only-child {
+		margin-bottom: 0;
+	}
 }

@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { AppProps } from "next/app";
 import styles from "./tastebuds.module.scss";
 import "@/styles/globals.scss";
-import Accordion from "@/components/Accordion/Accordion";
+import Accordion from "@/components/ProjectAccordion/ProjectAccordion";
 import ProjectProcess from "./03_ProjectProcess/ProjectProcess";
 import type { Metadata } from "next";
 import Link from "next/link";
