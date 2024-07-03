@@ -2,7 +2,7 @@
 	background-color: #f6f6f6;
 }
 
-.design-walkthrough_wrapper {
+.designWalkthroughGrid_wrapper {
 	margin: auto;
 	margin-bottom: 3rem;
 	padding-bottom: 3rem;
@@ -17,14 +17,16 @@
 		margin: 0;
 		margin-bottom: 1rem;
 	}
+
 	> .subheading {
 		margin-bottom: 1rem;
 		font-size: 1.35rem;
 		font-weight: 500;
 	}
 }
+
 // Grid container with Gif and 'Features' Card
-.design-walkthrough {
+.designWalkthroughGrid_container {
 	&_grid-container {
 		display: grid;
 		grid-template-columns: 3fr 2fr;
@@ -36,7 +38,7 @@
 		margin-bottom: 2rem;
 	}
 
-	> .featured-media {
+	> .featuredMedia {
 		grid-area: b;
 		width: 15rem;
 	}
@@ -46,45 +48,45 @@
 	}
 }
 
-.design-walkthrough_content {
+.designWalkthroughGrid_content {
 	grid-area: a;
 	width: 24rem;
 
 	header > .subheading {
 		font-size: 1.35rem;
 	}
+}
 
-	.design-walkthrough_card {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.5rem;
-		padding: 1.5rem 3rem;
-		border-radius: 0.25rem;
-		height: fit-content;
-		background-color: $lightest-grey;
-		border-left: 0.5rem solid $emphasis-blue;
-		margin-top: 2rem;
-		max-width: 24rem;
-	}
+.designWalkthroughGrid_card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+	padding: 1.5rem 3rem;
+	border-radius: 0.25rem;
+	height: fit-content;
+	background-color: $lightest-grey;
+	border-left: 0.5rem solid $emphasis-blue;
+	margin-top: 2rem;
+	max-width: 24rem;
 
 	.card_list {
 		align-self: start;
+	}
 
-		.card_headline {
-			color: $emphasis-blue;
-			font-weight: 500;
-			margin-bottom: 0;
-			font-size: 1.25rem;
-		}
+	.card_headline {
+		color: $emphasis-blue;
+		font-weight: 500;
+		margin-bottom: 0;
+		font-size: 1.25rem;
+	}
 
-		li {
-			font-size: 1.125rem;
-		}
+	li {
+		font-size: 1.125rem;
 	}
 }
 
-.featured-media {
+.featuredMedia {
 	width: 18rem;
 	&.border {
 		border: 1px solid $black;
