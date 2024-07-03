@@ -1,4 +1,4 @@
-$design-walkthrough-carousel-width: 60rem;
+$design-walkthrough-carousel-width: 70rem;
 $side-content-width: 20rem;
 
 .AutoplayVideoCarousel_wrapper {
@@ -17,7 +17,7 @@ $side-content-width: 20rem;
 		overflow: visible;
 
 		.title {
-			width: 90%;
+			// width: 90%;
 			margin: auto;
 			max-width: 90rem;
 			padding: 0;
@@ -45,7 +45,7 @@ $side-content-width: 20rem;
 			display: flex;
 			transition: transform 0.3s ease-in-out;
 			width: $design-walkthrough-carousel-width;
-			cursor: grab;
+			cursor: pointer;
 		}
 
 		.slide {
@@ -56,7 +56,8 @@ $side-content-width: 20rem;
 			margin-right: 4rem;
 			box-sizing: border-box;
 			background-color: #f4f4f4;
-			padding: 2.5rem 4rem;
+			padding: 4rem 5rem;
+			gap: 4rem;
 			color: white;
 			border-radius: 2rem;
 			flex: 0 0 auto;
@@ -90,7 +91,7 @@ $side-content-width: 20rem;
 		}
 
 		.carouselContent {
-			width: 30rem;
+			width: 100%;
 
 			.headline {
 				font-family: "Inter", sans-serif;
@@ -100,7 +101,7 @@ $side-content-width: 20rem;
 				font-weight: 500;
 				letter-spacing: 0;
 				line-height: 130%;
-				margin-bottom: 0.5rem;
+				margin-bottom: 1rem;
 				color: #1e1e1e;
 				font-size: 1.5rem;
 			}
@@ -117,6 +118,12 @@ $side-content-width: 20rem;
 				width: 1.5rem;
 				height: 1.5rem;
 			}
+		}
+
+		.designWalkthroughGrid_card {
+			width: fit-content;
+			max-width: 33rem;
+			background-color: white;
 		}
 
 		.video {
