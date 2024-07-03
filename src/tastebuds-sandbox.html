@@ -44,8 +44,8 @@
       </ul>
     </div>
     <div class="AutoplayVideoCarousel_wrapper bg-black">
-      <div class="carousel">
-        <p class="title">Route 1: Diner joins</p>
+      <div id="carousel1" class="carousel">
+        <p class="title">Onboarding users</p>
         <div class="carouselContainer">
           <div class="track">
             <div class="slide">
@@ -73,7 +73,7 @@
             </div>
             <div class="slide">
               <div class="carouselContent">
-                <p class="headline">Enhanced introduction carousel</p>
+                <p class="headline">Introduction carousel</p>
                 <p>
                   My second solution to clarify the premise of TasteBuds was a revamped introduction
                   carousel. I designed new visual aids that continue my content strategy for the
@@ -88,9 +88,9 @@
                   type="video/mp4">
               </video>
             </div>
-            <div class="slide lastSlide">
+            <div class="slide">
               <div class="carouselContent">
-                <p class="subheading">Following friends, influencers, and restaurants</p>
+                <p class="headline">Food preferences: Diet and ingredients</p>
                 <p>
                   I restored this step to help diners learn more about TasteBuds and its social and
                   community-driven
@@ -106,6 +106,40 @@
                   type="video/mp4">
               </video>
             </div>
+            <div class="slide">
+              <div class="carouselContent">
+                <p class="headline">Food preferences</p>
+                <p>
+                  To ensure users noticed the header and instructional copy, I added visual cues and
+                  micro-animations and revised the instructional copy. I removed the step to input
+                  favorite dishes after realizing that this data
+                  can be generated over time and diners prefer aggregate results from their friends.
+                  Additionally, I added spacing between progress bar increments and changed the
+                  top navigation header color for better contrast and visibility.
+                </p>
+              </div>
+              <video class="video" muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-04-preferences-01.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="slide lastSlide">
+              <div class="carouselContent">
+                <p class="headline">Food preferences: Cuisines</p>
+                <p>
+                  Based on testing insights highlighting the value of exploration and discovery, I
+                  expanded the range of cuisines to include more options from other countries.
+                  Like the previous steps, these changes aim to help users learn about TasteBuds and
+                  its personalization feature.
+                </p>
+              </div>
+              <video class="video" muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-05-preferences-02.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
           </div>
           <div class="videoControls">
             <button class="resetButton">
@@ -114,6 +148,148 @@
             </button>
             <div class="pagination">
               <ul role="tablist" class="dotnavItems">
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot active">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot active">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <button class="playPauseButton">
+              <img class="imgPlayButton" src="assets/svg/ic-play-button.svg" alt="Play video"
+                style="display: none;">
+              <img class="imgPauseButton" src="assets/svg/ic-pause-button.svg" alt="Pause video">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="AutoplayVideoCarousel_wrapper bg-black">
+      <div id="carousel2" class="carousel">
+        <p class="title">Searching for dining options</p>
+        <div class="carouselContainer">
+          <div class="track">
+            <div class="slide">
+              <div class="carouselContent">
+                <p class="headline">Home page</p>
+                <p>Diners tend to explore the home page, so I rearchitected the page with new
+                  features that boost personalization and engagement. Since users tend to skip
+                  onboarding, I strategically placed new CTAs to guide them
+                  through the app. I relocated the search bar to its own dedicated page
+                  in the bottom navigation bar to maximize content above the
+                  fold (replaced Notifications).
+                  Lastly, I realized the potential issue of limited user content since they're
+                  generated exclusively by friends, so I added recommendations by influencers and
+                  new restaurant
+                  partners, aiding discovery without excess commercialization.</p>
+                <div class="designWalkthroughGrid_card">
+                  <ul class="card_list mt-0">
+                    <p class="card_headline">Key changes</p>
+                    <li>New CTAs and features to guide new users</li>
+                    <li>Additional recommendation lists, featuring new restaurant partners and
+                      influencers</li>
+                    <li>Option to reorganize and pin lists</li>
+                    <li>Relocated 'Search' features to bottom navigation</li>
+                    <li>Removed 'Notification' bottom navigation button</li>
+                  </ul>
+                </div>
+              </div>
+              <video class="video" muted>
+                <source <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-01-home.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="slide">
+              <div class="carouselContent">
+                <p class="headline">Search</p>
+                <p>
+                  Content
+                </p>
+                <div class="designWalkthroughGrid_card">
+                  <ul class="card_list mt-0">
+                    <p class="card_headline">Key changes</p>
+                    <li>Content</li>
+                  </ul>
+                </div>
+              </div>
+              <video class="video" muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-02-search.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="slide">
+              <div class="carouselContent">
+                <p class="headline">Search results</p>
+                <p>
+                  Content
+                </p>
+                <div class="designWalkthroughGrid_card">
+                  <ul class="card_list mt-0">
+                    <p class="card_headline">Key changes</p>
+                    <li>Content</li>
+                  </ul>
+                </div>
+              </div>
+              <video class="video" muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-03-search-results.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+            <div class="slide lastSlide">
+              <div class="carouselContent">
+                <p class="headline">Restaurant listing</p>
+                <p>
+                  Content
+                </p>
+                <div class="designWalkthroughGrid_card">
+                  <ul class="card_list mt-0">
+                    <p class="card_headline">Key changes</p>
+                    <li>Content</li>
+                  </ul>
+                </div>
+              </div>
+              <video class="video" muted>
+                <source
+                  src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-2-04-restaurant.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="videoControls">
+            <button class="resetButton">
+              <img class="imgResetButton center" src="assets/svg/ic-reset-button.svg"
+                alt="Reset video">
+            </button>
+            <div class="pagination">
+              <ul role="tablist" class="dotnavItems">
+                <li role="presentation" class="dotnavItem">
+                  <span class="dot active">
+                    <span class="progressBar"></span>
+                  </span>
+                </li>
                 <li role="presentation" class="dotnavItem">
                   <span class="dot active">
                     <span class="progressBar"></span>
@@ -159,7 +335,7 @@
               partnerships, so I enhanced social proof elements, added more
               engagement features, and developed the 'Redeem offer' screen.
             </p>
-            <div class="design-walkthrough_card">
+            <div class="designWalkthroughGrid_card">
               <ul class="card_list mt-0">
                 <p class="card_headline">New features</p>
                 <li>Share restaurant (button)</li>
@@ -179,53 +355,8 @@
           </div>
         </div>
       </div>
-      <div class="design-walkthrough_wrapper pb-0 mb-0 border-0">
-        <div class="design-walkthrough_grid-container bg-f6f6f6 small-grid pb-0 mb-0">
-          <div class="design-walkthrough_content">
-            <header class="design-walkthrough_header">
-              <p class="subheading">Cuisines</p>
-            </header>
-            <p>
-              I wanted to further amplify social engagement and conceptualize restaurant
-              partnerships, so I enhanced social proof elements, added more
-              engagement features, and developed the 'Redeem offer' screen.
-            </p>
-            <div class="designWalkthroughGrid_card">
-              <ul class="card_list mt-0">
-                <p class="card_headline">New features</p>
-                <li>Share restaurant (button)</li>
-                <li>Save restaurant (button)</li>
-                <li>Message restaurant (button)</li>
-                <li>Write review (button)</li>
-                <li>Offer redemption page</li>
-              </ul>
-            </div>
-          </div>
-          <div class="mp4-wrapper featured-media">
-            <video class="autoplay-video" controls loop muted>
-              <source
-                src="assets/videos/tastebuds/prototype-high-fidelity-v2-route-1-05-preferences-02.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="content-wrapper">
-      <ul>
-        <li>Welcome screens</li>
-        <li>Food preferences</li>
-        <li>Add friends</li>
-      </ul>
-      <h3 class="section-subheading mb-40">
-        Route 2: Diner searches for dining options
-      </h3>
-      <ul>
-        <li>New navigation bar</li>
-        <li>Home page</li>
-        <li>Search results</li>
-        <li>Restaurant profile</li>
-      </ul>
       <h3 class="section-subheading mb-40">
         Route 3: Diner reviews a dining experience
       </h3>
@@ -350,102 +481,6 @@
             I reduced it to 1-column and increased spacing between elements
             </span>.
           </p>
-        </div>
-        <div class="design-walkthrough_wrapper">
-          <header class="design-walkthrough_header">
-            <p class="subheading">Search results</p>
-          </header>
-          <div class="design-evolution_grid-container-3-col mb-40">
-            <p class="medium-grey hf-heading-01 hide">Previous</p>
-            <p class="black hf-heading-02 hide">Iteration</p>
-            <img alt="" class="img-1" loading="lazy"
-              src="assets/images/tastebuds/route-2-sketch-search-results-list.png">
-            <img alt="" class="img-2" loading="lazy"
-              src="assets/images/tastebuds/route-2-sketch-search-results-card-carousel.png">
-            <img alt="" class="img-design-evolution-arrow" loading="lazy"
-              src="assets/images/tastebuds/artwork-arrow-right-blue.png">
-            <video class="autoplay-video img-3" loop muted>
-              <source
-                src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-search-results.mp4"
-                type="video/mp4">
-            </video>
-          </div>
-          <p class="mb-0">I forfeited "Listing previews" since my test participants did not engaged
-            with
-            it. I also redesigned the bottom sheet to be more consistent with the list view.</p>
-        </div>
-        <div class="design-walkthrough_wrapper pb-0 mb-0 border-0">
-          <div class="design-walkthrough_grid-container pb-0 mb-0">
-            <video class="autoplay-video" loop muted>
-              <source src="assets/videos/tastebuds/prototype-route-2-high-fidelity-v1-listing.mp4"
-                type="video/mp4">
-            </video>
-            <div>
-              <header class="design-walkthrough_header">
-                <p class="subheading">Restaurant listing</p>
-              </header>
-              <p>
-                I wanted to further amplify social engagement and conceptualize restaurant
-                partnerships, so I enhanced social proof elements, added more
-                engagement features, and developed the 'Redeem offer' screen.
-              </p>
-              <div class="design-walkthrough_card">
-                <ul class="card_list mt-0">
-                  <p class="card_headline">New features</p>
-                  <li>Share restaurant (button)</li>
-                  <li>Save restaurant (button)</li>
-                  <li>Message restaurant (button)</li>
-                  <li>Write review (button)</li>
-                  <li>Offer redemption page</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="flex-block-14">
-        <div class="heading-with-divider">
-          <div class="w-layout-vflex">
-            <div class="header-with-icon">
-              <h2 class="p _1-125-rem _1-5-spacing">
-                01 WELCOME SCREENS
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img loading="lazy" src="/assets/images/tastebuds/pro.png">
-      <div class="tabs iterations w-tabs" data-current="Tab 2" data-duration-in="300"
-        data-duration-out="100" data-easing="ease">
-        <div class="tabs-menu _2-columns w-tab-menu" role="tablist">
-          <a aria-controls="w-tabs-6-data-w-pane-0" aria-selected="false"
-            class="container-tab _50 w-inline-block w-tab-link" data-w-tab="Tab 1"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-6-data-w-pane-0"
-            id="w-tabs-6-data-w-tab-0" role="tab" tabindex="-1">
-            <div>iterations</div>
-          </a><a aria-controls="w-tabs-6-data-w-pane-1" aria-selected="true"
-            class="container-tab w-inline-block w-tab-link w--current" data-w-tab="Tab 2"
-            href="https://michelle-portfolio-fc56f5.webflow.io/case-study-tastebuds-2#w-tabs-6-data-w-pane-1"
-            id="w-tabs-6-data-w-tab-1" role="tab">
-            <div class="text-block-5">previous</div>
-          </a>
-        </div>
-        <div class="w-tab-content">
-          <div aria-labelledby="w-tabs-6-data-w-tab-0" class="tab-pane-tab-1 w-tab-pane"
-            data-w-tab="Tab 1" id="w-tabs-6-data-w-pane-0" role="tabpanel">
-            <img loading="lazy"
-              src="/assets/images/tastebuds/route-1_high-fidelity-02_welcome-screens.png">
-          </div>
-          <div aria-labelledby="w-tabs-6-data-w-tab-1"
-            class="tab-pane-tab-3 w-tab-pane w--tab-active" data-w-tab="Tab 2"
-            id="w-tabs-6-data-w-pane-1" role="tabpanel">
-            <div class="div-block-154">
-              <img alt="" class="image-113" loading="lazy"
-                src="/assets/images/tastebuds/route-1_high-fi_intros.png">
-            </div>
-          </div>
         </div>
       </div>
     </div>
