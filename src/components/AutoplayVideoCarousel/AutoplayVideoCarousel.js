@@ -1,13 +1,13 @@
-class DesignWalkthroughCarousel {
+class AutoplayVideoCarousel {
     constructor() {
         this.selectors = {
-            track: '.design-walkthrough-carousel_track',
-            slides: '.design-walkthrough-carousel_slide',
+            track: '.track',
+            slides: '.slide',
             dots: '.dot',
-            playPauseButton: '.play-pause-button',
-            resetButton: '.reset-button',
-            playIcon: '.img-play-button',
-            pauseIcon: '.img-pause-button'
+            playPauseButton: '.playPauseButton',
+            resetButton: '.resetButton',
+            playIcon: '.imgPlayButton',
+            pauseIcon: '.imgPauseButton'
         };
 
         this.state = {
@@ -137,7 +137,7 @@ class DesignWalkthroughCarousel {
         const updateProgress = () => {
             const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
             const activeDot = this.elements.dots[this.state.currentIndex];
-            const progressBar = activeDot.querySelector('.progress-bar');
+            const progressBar = activeDot.querySelector('.progressBar');
 
             let animationFrameId;
 
@@ -276,4 +276,4 @@ class DesignWalkthroughCarousel {
     }
 }
 
-new DesignWalkthroughCarousel();
+new AutoplayVideoCarousel();
