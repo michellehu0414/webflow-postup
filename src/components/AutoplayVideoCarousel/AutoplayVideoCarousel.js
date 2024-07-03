@@ -1,7 +1,15 @@
 class AutoplayVideoCarousel {
-    constructor() {
+    constructor(selector) {
+        this.carouselElement = document.querySelector(selector);
+        this.initializeSelectors();
+        this.initializeState();
+        this.init();
+    }
+
+    initializeSelectors() {
         this.selectors = {
             track: '.track',
+            container: '.carouselContainer',
             slides: '.slide',
             dots: '.dot',
             playPauseButton: '.playPauseButton',
@@ -9,7 +17,9 @@ class AutoplayVideoCarousel {
             playIcon: '.imgPlayButton',
             pauseIcon: '.imgPauseButton'
         };
+    }
 
+    initializeState() {
         this.state = {
             currentIndex: 0,
             isDragging: false,
@@ -20,33 +30,25 @@ class AutoplayVideoCarousel {
             prevTranslate: 0,
             animationID: 0
         };
-
-        this.elements = {
-            carouselTrack: null,
-            carouselSlides: null,
-            dots: null,
-            playPauseButton: null,
-            resetButton: null,
-            playIcon: null,
-            pauseIcon: null
-        };
-
-        this.init();
     }
 
     init() {
-        document.addEventListener('DOMContentLoaded', this.initializeElements.bind(this));
+        this.initializeCarouselElement();
+        this.setupVisibilityChange();
+        this.setupIntersectionObserver();
     }
 
-    initializeElements() {
-        this.elements.carouselTrack = document.querySelector(this.selectors.track);
-        this.elements.carouselSlides = document.querySelectorAll(this.selectors.slides);
-        this.elements.dots = document.querySelectorAll(this.selectors.dots);
-        this.elements.playPauseButton = document.querySelector(this.selectors.playPauseButton);
-        this.elements.resetButton = document.querySelector(this.selectors.resetButton);
+    initializeCarouselElement() {
+        this.carouselElement = this.carouselElement || {};
+        this.carouselElement.carouselTrack = this.carouselElement.querySelector(this.selectors.track);
+        this.carouselElement.carouselSlides = this.carouselElement.querySelectorAll(this.selectors.slides);
+        this.carouselElement.carouselContainer = this.carouselElement.querySelectorAll(this.selectors.carouselContainer);
+        this.carouselElement.dots = this.carouselElement.querySelectorAll(this.selectors.dots);
+        this.carouselElement.playPauseButton = this.carouselElement.querySelector(this.selectors.playPauseButton);
+        this.carouselElement.resetButton = this.carouselElement.querySelector(this.selectors.resetButton);
 
-        this.elements.playIcon = this.elements.playPauseButton.querySelector(this.selectors.playIcon);
-        this.elements.pauseIcon = this.elements.playPauseButton.querySelector(this.selectors.pauseIcon);
+        this.carouselElement.playIcon = this.carouselElement.playPauseButton.querySelector(this.selectors.playIcon);
+        this.carouselElement.pauseIcon = this.carouselElement.playPauseButton.querySelector(this.selectors.pauseIcon);
 
         this.setupEventListeners();
         this.updateCarousel();
@@ -54,89 +56,162 @@ class AutoplayVideoCarousel {
         this.setupVideoProgressListener();
     }
 
-    setupEventListeners() {
-        const handleStart = (event) => {
-            this.state.isDragging = true;
-            this.state.startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
-            this.state.animationID = requestAnimationFrame(this.animation.bind(this));
-            this.elements.carouselTrack.classList.add('grabbing');
-        };
-
-        const handleMove = (event) => {
-            if (!this.state.isDragging) return;
-            this.state.endX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
-            const currentPosition = this.state.endX - this.state.startX;
-            this.state.currentTranslate = this.state.prevTranslate + currentPosition;
-        };
-
-        const handleEnd = () => {
-            this.state.isDragging = false;
-            cancelAnimationFrame(this.state.animationID);
-            this.elements.carouselTrack.classList.remove('grabbing');
-            const movedBy = this.state.currentTranslate - this.state.prevTranslate;
-            if (movedBy < -100 && this.state.currentIndex < this.elements.carouselSlides.length - 1) this.state.currentIndex += 1;
-            if (movedBy > 100 && this.state.currentIndex > 0) this.state.currentIndex -= 1;
-            this.updateCarousel();
-            this.playCurrentVideo();
-        };
-
-        this.elements.carouselTrack.addEventListener('touchstart', handleStart);
-        this.elements.carouselTrack.addEventListener('touchmove', handleMove);
-        this.elements.carouselTrack.addEventListener('touchend', handleEnd);
-        this.elements.carouselTrack.addEventListener('mousedown', handleStart);
-        this.elements.carouselTrack.addEventListener('mousemove', handleMove);
-        this.elements.carouselTrack.addEventListener('mouseup', handleEnd);
-        this.elements.carouselTrack.addEventListener('mouseleave', () => {
-            if (this.state.isDragging) handleEnd();
-        });
-
-        this.elements.dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                this.state.currentIndex = index;
-                this.updateCarousel();
-                this.playCurrentVideo();
-            });
-        });
-
-        this.elements.playPauseButton.addEventListener('click', this.playPauseVideos.bind(this));
-        this.elements.resetButton.addEventListener('click', this.resetCarousel.bind(this));
-
-        this.elements.carouselSlides.forEach(slide => {
-            const video = slide.querySelector('video');
-            if (video) {
-                video.addEventListener('ended', this.handleVideoEnd.bind(this));
-            }
-        });
-
-        this.elements.carouselSlides.forEach((slide, index) => {
-            const video = slide.querySelector('video');
-            if (video) {
-                slide.addEventListener('click', () => {
-                    // If the clicked slide is the current slide, toggle play/pause.
-                    if (index === this.state.currentIndex) {
-                        if (this.state.isPlaying) {
-                            video.pause();
-                            this.elements.playPauseButton.classList.add('paused');
-                            this.elements.playIcon.style.display = 'inline';
-                            this.elements.pauseIcon.style.display = 'none';
-                            this.state.isPlaying = false;
-                        } else {
-                            video.play();
-                            this.elements.playPauseButton.classList.remove('paused');
-                            this.elements.playIcon.style.display = 'none';
-                            this.elements.pauseIcon.style.display = 'inline';
-                            this.state.isPlaying = true;
-                        }
-                    }
-                });
+    setupVisibilityChange() {
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.pauseCurrentVideo();
+            } else {
+                this.playVideoIfInView();
             }
         });
     }
 
+    setupIntersectionObserver() {
+        const options = {
+            root: null,
+            threshold: 0.5,
+        };
+        new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.playCurrentVideo();
+                } else {
+                    this.pauseCurrentVideo();
+                }
+            });
+        }, options).observe(this.carouselElement);
+    }
+
+    playVideoIfInView() {
+        const video = this.getCurrentVideo();
+        if (video && !video.paused) {
+            this.playCurrentVideo();
+        }
+    }
+
+    pauseCurrentVideo() {
+        const video = this.getCurrentVideo();
+        if (video && !video.paused) {
+            video.pause();
+            this.updatePlayPauseButtonState(false);
+        }
+    }
+
+    getCurrentVideo() {
+        return this.carouselElement.carouselSlides[this.state.currentIndex].querySelector('video');
+    }
+
+    setupEventListeners() {
+        const handleStart = (event) => this.handleDragStart(event);
+        const handleMove = (event) => this.handleDragMove(event);
+        const handleEnd = () => {
+            this.handleDragEnd();
+            document.removeEventListener('mousemove', handleMove);
+            document.removeEventListener('mouseup', handleEnd);
+        };
+
+        ['touchstart', 'mousedown'].forEach(event => {
+            this.carouselElement.carouselTrack.addEventListener(event, (event) => {
+                handleStart(event);
+                document.addEventListener('mousemove', handleMove);
+                document.addEventListener('mouseup', handleEnd);
+            });
+        });
+
+        ['touchmove'].forEach(event => {
+            this.carouselElement.carouselTrack.addEventListener(event, handleMove);
+        });
+
+        ['touchend', 'mouseleave'].forEach(event => {
+            this.carouselElement.carouselTrack.addEventListener(event, handleEnd);
+        });
+
+        this.carouselElement.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.handleDotClick(index));
+        });
+
+        this.carouselElement.playPauseButton.addEventListener('click', () => this.playPauseVideos());
+        this.carouselElement.resetButton.addEventListener('click', () => this.resetCarousel());
+        this.carouselElement.carouselSlides.forEach((slide, index) => {
+            slide.addEventListener('click', () => this.handleSlideClick(slide, index));
+        });
+
+        // Removed the slide click event listener for toggling video play state
+    }
+
+    handleDragStart(event) {
+        this.state.isDragging = true;
+        this.state.startX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+        this.state.animationID = requestAnimationFrame(this.animation.bind(this));
+        this.carouselElement.carouselTrack.classList.add('grabbing');
+    }
+
+    handleDragMove(event) {
+        if (!this.state.isDragging) return;
+        this.state.endX = event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+        const currentPosition = this.state.endX - this.state.startX;
+        this.state.currentTranslate = this.state.prevTranslate + currentPosition;
+    }
+
+    handleDragEnd() {
+        this.state.isDragging = false;
+        cancelAnimationFrame(this.state.animationID);
+        this.carouselElement.carouselTrack.classList.remove('grabbing');
+        this.updateSlidePositionByDrag();
+    }
+
+    updateSlidePositionByDrag() {
+        const movedBy = this.state.currentTranslate - this.state.prevTranslate;
+        if (movedBy < -100 && this.state.currentIndex < this.carouselElement.carouselSlides.length - 1) this.state.currentIndex += 1;
+        if (movedBy > 100 && this.state.currentIndex > 0) this.state.currentIndex -= 1;
+        this.updateCarousel();
+        this.playCurrentVideo();
+    }
+
+    handleDotClick(index) {
+        this.state.currentIndex = index;
+        this.updateCarousel();
+        this.playCurrentVideo();
+    }
+
+    /**
+     * Toggles the play state of the video.
+     * @param {HTMLVideoElement} video - The video element to toggle the play state for.
+     */
+    toggleVideoPlayState(video) {
+        // Toggle the play state based on the current isPlaying state
+        if (this.state.isPlaying) {
+            video.pause();
+            this.updatePlayPauseButtonState(false); // Update button to show play icon
+        } else {
+            video.play();
+            this.updatePlayPauseButtonState(true); // Update button to show pause icon
+        }
+        // Toggle the isPlaying state to reflect the change
+        this.state.isPlaying = !this.state.isPlaying;
+    }
+
+    /**
+     * Updates the state of the play/pause button based on the provided `isPlaying` value.
+     * @param {boolean} isPlaying - Indicates whether the video is currently playing or not.
+     */
+    updatePlayPauseButtonState(isPlaying) {
+        this.state.isPlaying = isPlaying;
+        if (isPlaying) {
+            this.carouselElement.playPauseButton.classList.add('paused');
+            this.carouselElement.playIcon.style.display = 'none';
+            this.carouselElement.pauseIcon.style.display = 'inline';
+        } else {
+            this.carouselElement.playPauseButton.classList.remove('paused');
+            this.carouselElement.playIcon.style.display = 'inline';
+            this.carouselElement.pauseIcon.style.display = 'none';
+        }
+    }
+
     setupVideoProgressListener() {
         const updateProgress = () => {
-            const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
-            const activeDot = this.elements.dots[this.state.currentIndex];
+            const video = this.carouselElement.carouselSlides[this.state.currentIndex].querySelector('video');
+            const activeDot = this.carouselElement.dots[this.state.currentIndex];
             const progressBar = activeDot.querySelector('.progressBar');
 
             let animationFrameId;
@@ -162,7 +237,7 @@ class AutoplayVideoCarousel {
 
                 video.addEventListener('ended', () => {
                     cancelAnimationFrame(animationFrameId);
-                    progressBar.style.width = '0%'; // Optionally reset progress bar
+                    // progressBar.style.width = '0%'; // Optionally reset progress bar
                 });
 
                 video.addEventListener('timeupdate', () => {
@@ -174,23 +249,20 @@ class AutoplayVideoCarousel {
             }
         };
 
-        // Call the function to set up the progress listener for the initial video
         updateProgress();
 
-        // Update the progress listener when the current index changes
-        this.elements.dots.forEach(dot => {
+        this.carouselElement.dots.forEach(dot => {
             dot.addEventListener('click', updateProgress);
         });
     }
 
-
     getSlideWidth() {
-        const slide = this.elements.carouselSlides[0];
+        const slide = this.carouselElement.carouselSlides[0];
         return parseFloat(getComputedStyle(slide).width) + parseFloat(getComputedStyle(slide).marginRight);
     }
 
     setSliderPosition() {
-        this.elements.carouselTrack.style.transform = `translateX(${this.state.currentTranslate}px)`;
+        this.carouselElement.carouselTrack.style.transform = `translateX(${this.state.currentTranslate}px)`;
     }
 
     animation() {
@@ -203,17 +275,28 @@ class AutoplayVideoCarousel {
         this.state.prevTranslate = -this.state.currentIndex * slideWidth;
         this.state.currentTranslate = this.state.prevTranslate;
         this.setSliderPosition();
-        this.elements.dots.forEach(dot => dot.classList.remove('active'));
-        this.elements.dots[this.state.currentIndex].classList.add('active');
+        // Ensure dots are initialized and not empty
+        if (this.carouselElement.dots && this.carouselElement.dots.length > 0) {
+            this.carouselElement.dots.forEach(dot => dot.classList.remove('active'));
+            // Safely access classList for the active dot
+            if (this.carouselElement.dots[this.state.currentIndex]) {
+                this.carouselElement.dots[this.state.currentIndex].classList.add('active');
+            }
+        }
         this.setupVideoProgressListener();
     }
 
     playCurrentVideo() {
-        this.elements.carouselSlides.forEach((slide, index) => {
+        this.carouselElement.carouselSlides.forEach((slide, index) => {
             const video = slide.querySelector('video');
             if (video) {
+                video.removeEventListener('ended', this.handleVideoEnd.bind(this));
                 if (index === this.state.currentIndex) {
-                    if (this.state.isPlaying) video.play();
+                    if (this.state.isPlaying) {
+                        video.play();
+                        video.addEventListener('ended', this.handleVideoEnd.bind(this));
+                        this.updatePlayPauseButtonState(true);
+                    }
                 } else {
                     video.pause();
                     video.currentTime = 0;
@@ -223,57 +306,76 @@ class AutoplayVideoCarousel {
     }
 
     playPauseVideos() {
-        const video = this.elements.carouselSlides[this.state.currentIndex].querySelector('video');
+        const video = this.carouselElement.carouselSlides[this.state.currentIndex].querySelector('video');
         if (video) {
             if (this.state.isPlaying) {
                 video.pause();
-                this.elements.playPauseButton.classList.add('paused');
-                this.elements.playIcon.style.display = 'inline';
-                this.elements.pauseIcon.style.display = 'none';
+                this.carouselElement.playPauseButton.classList.add('paused');
+                this.carouselElement.playIcon.style.display = 'inline';
+                this.carouselElement.pauseIcon.style.display = 'none';
             } else {
                 video.play();
-                this.elements.playPauseButton.classList.remove('paused');
-                this.elements.playIcon.style.display = 'none';
-                this.elements.pauseIcon.style.display = 'inline';
+                this.carouselElement.playPauseButton.classList.remove('paused');
+                this.carouselElement.playIcon.style.display = 'none';
+                this.carouselElement.pauseIcon.style.display = 'inline';
             }
             this.state.isPlaying = !this.state.isPlaying;
         }
     }
 
+    /**
+ * Handles the click event on a slide in the carousel.
+ *
+ * @param {HTMLElement} slide - The slide element that was clicked.
+ * @param {number} index - The index of the clicked slide.
+ */
+    handleSlideClick() {
+        const video = this.carouselElement.carouselSlides[this.state.currentIndex].querySelector('video');
+        if (video) {
+            if (this.state.isPlaying) {
+                video.pause();
+                this.carouselElement.playPauseButton.classList.add('paused');
+                this.carouselElement.playIcon.style.display = 'inline';
+                this.carouselElement.pauseIcon.style.display = 'none';
+            } else {
+                video.play();
+                this.carouselElement.playPauseButton.classList.remove('paused');
+                this.carouselElement.playIcon.style.display = 'none';
+                this.carouselElement.pauseIcon.style.display = 'inline';
+            }
+            this.state.isPlaying = !this.state.isPlaying;
+            this.toggleVideoPlayState(video);
+        }
+    }
+
     handleVideoEnd() {
-        if (this.state.currentIndex < this.elements.carouselSlides.length - 1) {
+        if (this.state.currentIndex < this.carouselElement.carouselSlides.length - 1) {
             setTimeout(() => {
-                this.state.currentIndex = (this.state.currentIndex + 1) % this.elements.carouselSlides.length;
+                this.state.currentIndex += 1;
                 this.updateCarousel();
                 this.playCurrentVideo();
-            }, 5000);
+            }, 1000); // Wait for 1000ms before moving to the next slide
         } else {
-            // When the last slide is finished, change the pause button to the play button
-            this.elements.playPauseButton.classList.add('paused');
-            this.elements.playIcon.style.display = 'inline';
-            this.elements.pauseIcon.style.display = 'none';
-            this.state.isPlaying = false;
+            this.resetCarousel();
         }
     }
 
     resetCarousel() {
-        // Reset the current index to 0
         this.state.currentIndex = 0;
-        // Set the playing state to true
         this.state.isPlaying = true;
-        // Update the carousel to reflect the reset state
         this.updateCarousel();
-        // Explicitly reset and play the video on the first slide
-        const firstSlideVideo = this.elements.carouselSlides[0].querySelector('video');
+        const firstSlideVideo = this.carouselElement.carouselSlides[0].querySelector('video');
         if (firstSlideVideo) {
-            firstSlideVideo.currentTime = 0; // Reset video time to start
-            firstSlideVideo.play(); // Play the video
+            firstSlideVideo.currentTime = 0;
+            firstSlideVideo.play();
         }
-        // Update the play/pause button to reflect the play state
-        this.elements.playPauseButton.classList.remove('paused');
-        this.elements.playIcon.style.display = 'none';
-        this.elements.pauseIcon.style.display = 'inline';
+        this.carouselElement.playPauseButton.classList.remove('paused');
+        this.carouselElement.playIcon.style.display = 'none';
+        this.carouselElement.pauseIcon.style.display = 'inline';
     }
 }
 
-new AutoplayVideoCarousel();
+document.addEventListener('DOMContentLoaded', () => {
+    new AutoplayVideoCarousel('#carousel1');
+    new AutoplayVideoCarousel('#carousel2');
+});
