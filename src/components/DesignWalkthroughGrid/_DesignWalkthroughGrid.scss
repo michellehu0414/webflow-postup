@@ -26,8 +26,8 @@
 }
 
 // Grid container with Gif and 'Features' Card
-.designWalkthroughGrid_container {
-	&_grid-container {
+.designWalkthroughGrid {
+	&_container {
 		display: grid;
 		grid-template-columns: 3fr 2fr;
 		grid-template-rows: auto;
@@ -36,6 +36,7 @@
 		// align-items: center;
 		grid-template-areas: "a b";
 		margin-bottom: 2rem;
+		width: $content-max-width;
 	}
 
 	> .featuredMedia {
@@ -46,14 +47,14 @@
 	p:last-child {
 		margin-bottom: 0;
 	}
-}
 
-.designWalkthroughGrid_content {
-	grid-area: a;
-	width: 24rem;
+	&_content {
+		grid-area: a;
+		width: 100%;
 
-	header > .subheading {
-		font-size: 1.35rem;
+		header > .subheading {
+			font-size: 1.35rem;
+		}
 	}
 }
 
