@@ -34,6 +34,13 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/, // Match CSS files
+                use: [
+                    'style-loader', // Injects styles into DOM
+                    'css-loader',   // Turns CSS into CommonJS
+                ],
+            },
+            {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset',
                 parser: {
@@ -58,6 +65,16 @@ module.exports = {
                 generator: {
                     filename: 'assets/videos/[name][ext]',
                 }
+            },
+            {
+                test: /\.jsx?$/, // Match JS and JSX files
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react'], // Preset for React
+                    },
+                },
             }
         ]
     },

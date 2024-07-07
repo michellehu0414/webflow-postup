@@ -32,6 +32,13 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/, // Match CSS files
+                use: [
+                    'style-loader', // Injects styles into DOM
+                    'css-loader',   // Turns CSS into CommonJS
+                ],
+            },
+            {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset',
                 parser: {
@@ -59,7 +66,7 @@ module.exports = {
                         outputPath: 'assets/videos/', // Output directory for videos
                     },
                 },
-            }
+            },
         ]
     },
     plugins: [

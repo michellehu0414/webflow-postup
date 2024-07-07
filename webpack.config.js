@@ -30,8 +30,16 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
+                    'style-loader',
                 ]
+            },
+            {
+                test: /\.css$/, // Match CSS files
+                use: [
+                    'style-loader', // Injects styles into DOM
+                    'css-loader',   // Turns CSS into CommonJS
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,
@@ -51,7 +59,17 @@ module.exports = {
                 generator: {
                     filename: 'assets/videos/[name][ext]',
                 }
-            }
+            },
+            {
+                test: /\.jsx?$/, // Match JS and JSX files
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react'], // Preset for React
+                    },
+                },
+            },
         ]
     },
     plugins: [
@@ -81,6 +99,9 @@ module.exports = {
             ]
         })
     ],
+    resolve: {
+        extensions: ['.js', '.jsx'], // File extensions to resolve
+    },
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
