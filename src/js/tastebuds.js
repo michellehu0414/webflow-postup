@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Assuming you have two carousels with IDs `carousel-01` and `carousel-02`
     const carousel1 = new MediaCarousel('#carousel-01');
     const carousel2 = new MediaCarousel('#carousel-02');
+    const carousel3 = new MediaCarousel('#carousel-03');
 
     // If you have more carousels, continue creating instances similarly
     // const carousel3 = new MediaCarousel('#carousel-03');
