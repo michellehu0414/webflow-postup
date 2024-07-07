@@ -7,7 +7,7 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: inherit;
 	margin-top: 0;
@@ -19,7 +19,7 @@ h6 {
 	color: $dark-grey;
 	line-height: 145%;
 	margin-bottom: 1.125rem;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 p {
@@ -64,9 +64,7 @@ h4 {
 	font-weight: 600;
 	letter-spacing: 0;
 	line-height: 120%;
-	color: var(
-		--black
-	); /* CSS variable, ensure it's defined in your styles */
+	color: var(--black); /* CSS variable, ensure it's defined in your styles */
 	font-size: 1.44rem;
 	margin-top: 2rem;
 	margin-bottom: 1rem;
@@ -92,14 +90,14 @@ h6 {
 
 .noto-serif {
 	color: $black;
-	font-family: 'Noto Serif', serif;
+	font-family: "Noto Serif", serif;
 	font-size: 1.125rem;
 	font-weight: 500;
 	line-height: 160%; // 28.8px
 }
 
 .quote-text {
-	font-family: 'Noto Serif', serif;
+	font-family: "Noto Serif", serif;
 	font-size: 1.25rem;
 	font-style: normal;
 	font-weight: 400;
@@ -185,7 +183,7 @@ h6 {
 .notes {
 	color: #00bdd6;
 	font-size: 1.125rem;
-	font-family: 'Noto Serif', sans-serif;
+	font-family: "Noto Serif", sans-serif;
 }
 
 .text-small {
@@ -210,7 +208,7 @@ h6 {
 }
 
 .subheader {
-	font-family: 'Source Code Pro', monospace;
+	font-family: "Source Code Pro", monospace;
 	color: $medium-grey;
 	font-size: 1rem;
 	font-weight: 400;
@@ -224,7 +222,7 @@ h6 {
 
 // Fonts
 .source-code-pro {
-	font-family: 'Source Code Pro', monospace !important;
+	font-family: "Source Code Pro", monospace !important;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
