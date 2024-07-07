@@ -1,10 +1,11 @@
 $primary-color: #076261;
+$wireframe-max-height: 40rem;
 
 @import "abstracts/all-abstracts";
 
 @import "base/all-base";
 
-@import "components/all-components";
+@import "../components/global-components";
 
 @import "postup/all-postup";
 
