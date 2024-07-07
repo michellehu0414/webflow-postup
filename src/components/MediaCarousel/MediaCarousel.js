@@ -121,18 +121,34 @@ export default class MediaCarousel {
   }
 
   observeResize() {
-    const resizeObserver = new ResizeObserver(() => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      // Disconnect the observer to prevent infinite loop
       resizeObserver.disconnect();
-      const newItemWidth = this.items[0].getBoundingClientRect().width;
-      if (this.itemWidth !== newItemWidth)
+
+      // Check if the item width has actually changed
+      const newItemWidth = entries[0].contentRect.width;
+      if (this.itemWidth !== newItemWidth) {
         requestAnimationFrame(() => {
+          // Update the item width
           this.itemWidth = newItemWidth;
+
+          // Update the carousel's position based on the new item width
           this.setPositionByIndex();
+
+          // Reconnect the observer at the next animation frame to ensure changes are settled
+          requestAnimationFrame(() => {
+            resizeObserver.observe(this.itemsContainer);
+          });
+        });
+      } else {
+        // If the width hasn't changed, simply re-observe without making any adjustments
+        requestAnimationFrame(() => {
           resizeObserver.observe(this.itemsContainer);
         });
-      else resizeObserver.observe(this.itemsContainer);
+      }
     });
 
+    // Start observing
     resizeObserver.observe(this.itemsContainer);
   }
 }
