@@ -1,5 +1,5 @@
 $design-walkthrough-carousel-width: 90%;
-$design-walkthrough-carousel-max-width: 72rem;
+$design-walkthrough-carousel-max-width: 80rem;
 $side-content-width: 20rem;
 
 .media-carousel-wrapper {
@@ -17,7 +17,7 @@ $side-content-width: 20rem;
 		font-size: 2.5rem;
 		color: #1e1e1e !important;
 		text-align: center;
-		margin-bottom: 2.5rem !important;
+		margin-bottom: 1rem !important;
 	}
 }
 
@@ -27,8 +27,10 @@ $side-content-width: 20rem;
 	align-items: center;
 	margin: auto;
 	overflow: visible;
-	width: 100vw;
 	gap: 2rem;
+	width: 100vw;
+	padding-left: 4rem;
+	padding-right: 4rem;
 
 	.media-carousel-items {
 		display: flex;
@@ -41,55 +43,68 @@ $side-content-width: 20rem;
 
 	.media-carousel-item {
 		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		margin-right: 4rem;
-		background-color: #f4f4f4;
-		padding: 4rem 4rem;
-		gap: 3rem;
-		color: white;
-		border-radius: 2rem;
 		width: 90vw;
-		max-width: $design-walkthrough-carousel-max-width;
+		padding-right: 4rem;
 
-		.carousel-content {
-			width: 40rem;
+		.carousel-item-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #f4f4f4;
+			padding: 4rem 4rem;
+			gap: 3rem;
+			color: white;
+			border-radius: 2rem;
+			width: 90vw;
+			max-width: $design-walkthrough-carousel-max-width;
 
-			.headline {
-				font-family: "Inter", sans-serif;
-				text-align: left;
-				padding: 0;
-				margin-top: 0;
-				font-weight: 500;
-				letter-spacing: 0;
-				line-height: 130%;
-				margin-bottom: 1rem;
-				color: #1e1e1e;
-				font-size: 1.5rem;
+			.carousel-content {
+				width: 40rem;
+
+				.headline {
+					font-family: "Inter", sans-serif;
+					text-align: left;
+					padding: 0;
+					margin-top: 0;
+					font-weight: 500;
+					letter-spacing: 0;
+					line-height: 130%;
+					margin-bottom: 1rem;
+					color: #1e1e1e;
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1.125rem;
+				}
+
+				.design-walkthrough-grid_card {
+					width: fit-content;
+					max-width: 33rem;
+					background-color: white;
+				}
+
+				.subheading {
+					line-height: 130%;
+				}
 			}
 
-			p {
-				font-size: 1.125rem;
-			}
+			video,
+			img {
+				width: 18rem;
+				max-height: 35rem;
 
-			.design-walkthrough-grid_card {
-				width: fit-content;
-				max-width: 33rem;
-				background-color: white;
-			}
-		}
-
-		video,
-		img {
-			width: 18rem;
-			max-height: 35rem;
-
-			&.border {
-				border: 1px solid $black;
+				&.border {
+					border: 1px solid $black;
+				}
 			}
 		}
 	}
+
+	// .media-carousel-item:last-child {
+	// 	margin-right: 4rem;
+	// }
 
 	.caption {
 		margin-top: 2rem;
