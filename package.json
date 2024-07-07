@@ -35,5 +35,8 @@
 	},
 	"resolutions": {
 		"lodash": "^4.17.21"
+	},
+	"dependencies": {
+		"swiper": "^11.1.4"
 	}
 }
