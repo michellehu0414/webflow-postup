@@ -96,10 +96,15 @@ export default class MediaCarousel {
 
     observeResize() {
         const resizeObserver = new ResizeObserver(() => {
-            this.itemWidth = this.items[0].getBoundingClientRect().width;
-            this.setPositionByIndex();
+            const newItemWidth = this.items[0].getBoundingClientRect().width;
+            if (this.itemWidth !== newItemWidth) {
+                requestAnimationFrame(() => {
+                    this.itemWidth = newItemWidth;
+                    this.setPositionByIndex();
+                });
+            }
         });
-
+    
         resizeObserver.observe(this.itemsContainer);
     }
 }
