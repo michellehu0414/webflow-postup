@@ -22,12 +22,8 @@
 		height: 100%;
 	}
 
-	&__gif {
+	&-postup-video {
 		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		align-items: start;
-		justify-content: start;
 		margin: auto auto 0 auto;
 		width: 60%;
 		max-width: 15rem;
@@ -70,10 +66,10 @@
 		padding-top: 4rem;
 		max-height: none;
 
-		&__gif {
-			margin: auto auto 0 auto;
-			width: 55%;
-			max-width: 60rem;
+		&-postup-video {
+			height: auto;
+			max-width: 18rem;
+			transform: translateY(5rem);
 		}
 
 		&__image {
