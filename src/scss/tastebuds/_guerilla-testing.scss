@@ -59,7 +59,7 @@
 		gap: 1rem;
 		background-color: white;
 		margin-top: -1.5rem;
-		padding: 2.5rem 1rem 1rem 1rem;
+		padding: 3.5rem 1rem 2.5rem 1rem;
 		border-radius: 1rem;
 		height: 100%;
 
@@ -85,6 +85,7 @@
 	height: auto;
 	opacity: 0.5;
 	align-self: center;
+	display: none;
 }
 
 .testing-outcomes_grid {
@@ -97,7 +98,7 @@
 
 	@include breakpoint(med) {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		max-width: $content-max-width;
 	}
 }
