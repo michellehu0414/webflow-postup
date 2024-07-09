@@ -3,8 +3,12 @@
 	justify-content: center;
 }
 
-.align-self-center {
+.align-self-start {
 	align-self: center;
+}
+
+.align-self-left {
+	align-self: flex-start;
 }
 
 .space-between {
@@ -34,6 +38,10 @@
 
 .text-center {
 	text-align: center;
+}
+
+.text-left {
+	text-align: left;
 }
 
 .items-center {
