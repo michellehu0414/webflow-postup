@@ -6,6 +6,7 @@ import '../components/Accordion/accordion';
 // import '../components/Carousel/carousel';
 import '../components/AutoplayVideo/autoplay-video';
 import '../components/AutoplayVideoCarousel/AutoplayVideoCarousel'
+import '../components/ImageZoom/ImageZoom';
 import '../components/ScrollButton/scroll-button';
 import '../components/SequentialVideoPlayer/sequential-video-player';
 import '../components/Tabs/tabs';
