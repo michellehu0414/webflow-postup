@@ -1,13 +1,13 @@
-// Import SCSS file for this page
 import '../scss/postup.scss';
-//
-// Import and initialize components specific to this page
+
 import '../components/Accordion/accordion';
 import '../components/AutoplayVideo/autoplay-video';
 import '../components/Carousel/carousel';
 import '../components/ScrollButton/scroll-button';
-import '../components/scrollable';
+import '../components/Scrollable/scrollable';
 import '../components/Tabs/tabs';
+
+import '../components/NavBar/NavBar';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main PostUp page loaded');

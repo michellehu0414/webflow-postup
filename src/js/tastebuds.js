@@ -11,6 +11,8 @@ import '../components/ScrollButton/scroll-button';
 import '../components/SequentialVideoPlayer/sequential-video-player';
 import '../components/Tabs/tabs';
 
+import '../components/NavBar/NavBar';
+
 import MediaCarousel from '../components/MediaCarousel/MediaCarousel';
 document.addEventListener('DOMContentLoaded', () => {
     // Assuming you have two carousels with IDs `carousel-01` and `carousel-02`
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // const carousel3 = new MediaCarousel('#carousel-03');
 });
 
-import '../components/scrollable';
+import '../components/Scrollable/scrollable';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Main TasteBuds page loaded');
