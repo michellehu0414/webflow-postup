@@ -1,29 +1,39 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
   const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
 
   // Function to play the GIF
-  window.playGif = function(element) {
+  window.playGif = function (element) {
     const gif = element.querySelector('.project-gif');
     const staticImg = element.querySelector('.project-static-img');
-    const originalGifSrc = gif.src; // Store the original GIF source if not already stored
 
-    gif.style.display = 'block'; // Show the GIF
-    staticImg.style.display = 'none'; // Hide the static image
-    gif.src = ''; // Force restart of GIF
-    gif.src = originalGifSrc; // Restart the GIF by resetting the source
+    if (gif && staticImg) {
+      const originalGifSrc = gif.src; // Store the original GIF source if not already stored
+
+      gif.style.display = 'block'; // Show the GIF
+      staticImg.style.display = 'none'; // Hide the static image
+      gif.src = ''; // Force restart of GIF
+      gif.src = originalGifSrc; // Restart the GIF by resetting the source
+    } else {
+      console.error('GIF or static image not found within:', element);
+    }
   };
 
   // Function to reset the GIF
-  window.resetGif = function(element) {
+  window.resetGif = function (element) {
     const gif = element.querySelector('.project-gif');
     const staticImg = element.querySelector('.project-static-img');
-    const originalGifSrc = gif.src;
 
-    gif.style.display = 'none'; // Hide the GIF
-    staticImg.style.display = 'block'; // Show the static image
-    gif.src = ''; // Resetting the src attribute helps stop the GIF
-    gif.src = originalGifSrc; // Reassign the original GIF source
+    if (gif && staticImg) {
+      const originalGifSrc = gif.src;
+
+      gif.style.display = 'none'; // Hide the GIF
+      staticImg.style.display = 'block'; // Show the static image
+      gif.src = ''; // Resetting the src attribute helps stop the GIF
+      gif.src = originalGifSrc; // Reassign the original GIF source
+    } else {
+      console.error('GIF or static image not found within:', element);
+    }
   };
 
   // IntersectionObserver to auto-play GIF on smaller screens
@@ -47,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Handle window resize events
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     document.querySelectorAll('.project-gif-wrapper').forEach(wrapper => {
       if (window.innerWidth < 768) {
         observer.observe(wrapper);

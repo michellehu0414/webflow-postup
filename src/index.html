@@ -39,21 +39,80 @@
                 });
             });
         });</script>
+    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
+            const gifs = document.querySelectorAll('.project-gif'); // Select all GIFs
+            const staticImgs = document.querySelectorAll('.project-static-img'); // Select all static images
+
+            // Function to play the GIF
+            window.playGif = function (element) {
+                const gif = element.querySelector('.project-gif');
+                const staticImg = element.querySelector('.project-static-img');
+                const originalGifSrc = gif.src; // Store the original GIF source if not already stored
+
+                gif.style.display = 'block'; // Show the GIF
+                staticImg.style.display = 'none'; // Hide the static image
+                gif.src = ''; // Force restart of GIF
+                gif.src = originalGifSrc; // Restart the GIF by resetting the source
+            };
+
+            // Function to reset the GIF
+            window.resetGif = function (element) {
+                const gif = element.querySelector('.project-gif');
+                const staticImg = element.querySelector('.project-static-img');
+                const originalGifSrc = gif.src;
+
+                gif.style.display = 'none'; // Hide the GIF
+                staticImg.style.display = 'block'; // Show the static image
+                gif.src = ''; // Resetting the src attribute helps stop the GIF
+                gif.src = originalGifSrc; // Reassign the original GIF source
+            };
+
+            // IntersectionObserver to auto-play GIF on smaller screens
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && window.innerWidth < 768) {
+                        playGif(entry.target);
+                    } else {
+                        resetGif(entry.target);
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // Trigger when 50% of the element is in view
+            });
+
+            // Observe all GIF wrappers
+            document.querySelectorAll('.project-gif-wrapper').forEach(wrapper => {
+                observer.observe(wrapper);
+            });
+
+            // Handle window resize events
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.project-gif-wrapper').forEach(wrapper => {
+                    if (window.innerWidth < 768) {
+                        observer.observe(wrapper);
+                    } else {
+                        observer.unobserve(wrapper);
+                    }
+                });
+            });
+        });
+    </script> -->
 </head>
 
 <body>
     <nav>
         <div class="navbar-wrapper">
             <div class="navbar-logo">
-                <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu" alt="Logo" />
+                <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu mobile-only"
+                    alt="Logo" />
             </div>
             <div class="navbar-menu-toggle" onclick="toggleMenu()">
                 <img src="assets/svg/home/ic-menu.svg" class="ic-menu" alt="" />
             </div>
             <ul class="navbar-menu" id="menu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
@@ -66,101 +125,116 @@
         </section>
         <div class="wrapper">
             <section class="hero">
-                <div class="wrapper">
-                    <img class="heroBG"></img>
-                    <div class="heroContent">
-                        <div class="wrapper">
-                            <div class="textWrapper">
-                                <h1>Hello, I'm Michelle!<br> Product designer with frontend skills
-                                    and a knack at organized chaos.</h1>
-                                <p id="tagline">My mission? Digitally revolutionize impact through
+                <div class="navbar-logo">
+                    <img src="assets/svg/home/logo-mhu-black.svg" class="logo-mhu" alt="Logo" />
+                </div>
+                <div class="hero-wrapper">
+                    <div class="hero-image-wrapper"><img class="img-hero"
+                            src="assets/images/michelle-portrait-bw.png"></div>
+                    <div class="hero-content">
+                        <div class="hero-content-wrapper">
+                            <div class="hero-content-text-wrapper">
+                                <h1 class="hero-headline">I’m Michelle Hu (she/they), a <br> product
+                                    designer with
+                                    frontend
+                                    development skills.</h1>
+                                <p class="hero-tagline">My mission? Digitally revolutionize impact
+                                    through
                                     data-driven, accessible, engaging solutions.
                                 </p>
-                                <div id="workAndLocation">
-                                    <span>
+                                <div id="work-location-wrapper">
+                                    <div class="work-availability-wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10"
                                             height="10" viewBox="0 0 10 10" fill="none">
                                             <circle cx="4.51715" cy="5.00006" r="4.51715"
                                                 fill="#1FD974" />
                                         </svg>
-                                    </span>
-                                    <span id="availableForWork">Available for work</span>
-                                    <span id="basedInLA">/ Based in Los Angeles</span>
+                                        <p class="work-availability">Available for work</p>
+                                    </div>
+                                    <p class="current-location">/ Based in Los Angeles</p>
                                 </div>
                             </div>
-                            <div id="heroButtons">
+                            <div id="hero-buttons">
                                 <div>
                                     <button class="btn-primary">See my work</button>
                                     <button class="btn-secondary">View my resume</button>
                                 </div>
                                 <div>
                                     <button class="iconButton">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                            height="32" viewBox="0 0 32 32" fill="none">
-                                            <g filter="url(#filter0_i_1103_6962)">
-                                                <rect width="32" height="32" rx="5"
-                                                    fill="#1E1E1E" />
-                                                <path
-                                                    d="M24.75 10.1523C24.75 10.2213 24.7145 10.2853 24.6561 10.3219L17.0602 15.0727C16.4116 15.4784 15.5884 15.4785 14.9396 15.073L7.34466 10.3259C7.28619 10.2893 7.25067 10.2252 7.25067 10.1563V9.79249C7.25067 9.65442 7.36259 9.5425 7.50066 9.54249L24.5 9.542C24.6381 9.542 24.75 9.65393 24.75 9.792V10.1523ZM24.75 21.9581C24.75 22.2342 24.5261 22.4581 24.25 22.4581H7.75C7.47386 22.4581 7.25 22.2342 7.25 21.9581V12.4807C7.25 12.3236 7.42279 12.2279 7.556 12.3111L14.94 16.9261C15.5885 17.3315 16.4115 17.3315 17.06 16.9261L24.444 12.3111C24.5772 12.2279 24.75 12.3236 24.75 12.4807V21.9581Z"
-                                                    fill="white" />
-                                            </g>
-                                            <defs>
-                                                <filter id="filter0_i_1103_6962" x="0" y="0"
-                                                    width="33.5" height="33.5"
-                                                    filterUnits="userSpaceOnUse"
-                                                    color-interpolation-filters="sRGB">
-                                                    <feFlood flood-opacity="0"
-                                                        result="BackgroundImageFix" />
-                                                    <feBlend mode="normal" in="SourceGraphic"
-                                                        in2="BackgroundImageFix" result="shape" />
-                                                    <feColorMatrix in="SourceAlpha" type="matrix"
-                                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                        result="hardAlpha" />
-                                                    <feOffset dx="1.5" dy="1.5" />
-                                                    <feGaussianBlur stdDeviation="2" />
-                                                    <feComposite in2="hardAlpha"
-                                                        operator="arithmetic" k2="-1" k3="1" />
-                                                    <feColorMatrix type="matrix"
-                                                        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0" />
-                                                    <feBlend mode="normal" in2="shape"
-                                                        result="effect1_innerShadow_1103_6962" />
-                                                </filter>
-                                            </defs>
-                                        </svg>
+                                        <a href="mailto:mhu.contact@gmail.com">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                height="32" viewBox="0 0 32 32" fill="none">
+                                                <g filter="url(#filter0_i_1103_6962)">
+                                                    <rect width="32" height="32" rx="5"
+                                                        fill="#1E1E1E" />
+                                                    <path
+                                                        d="M24.75 10.1523C24.75 10.2213 24.7145 10.2853 24.6561 10.3219L17.0602 15.0727C16.4116 15.4784 15.5884 15.4785 14.9396 15.073L7.34466 10.3259C7.28619 10.2893 7.25067 10.2252 7.25067 10.1563V9.79249C7.25067 9.65442 7.36259 9.5425 7.50066 9.54249L24.5 9.542C24.6381 9.542 24.75 9.65393 24.75 9.792V10.1523ZM24.75 21.9581C24.75 22.2342 24.5261 22.4581 24.25 22.4581H7.75C7.47386 22.4581 7.25 22.2342 7.25 21.9581V12.4807C7.25 12.3236 7.42279 12.2279 7.556 12.3111L14.94 16.9261C15.5885 17.3315 16.4115 17.3315 17.06 16.9261L24.444 12.3111C24.5772 12.2279 24.75 12.3236 24.75 12.4807V21.9581Z"
+                                                        fill="white" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_i_1103_6962" x="0" y="0"
+                                                        width="33.5" height="33.5"
+                                                        filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0"
+                                                            result="BackgroundImageFix" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="BackgroundImageFix"
+                                                            result="shape" />
+                                                        <feColorMatrix in="SourceAlpha"
+                                                            type="matrix"
+                                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                            result="hardAlpha" />
+                                                        <feOffset dx="1.5" dy="1.5" />
+                                                        <feGaussianBlur stdDeviation="2" />
+                                                        <feComposite in2="hardAlpha"
+                                                            operator="arithmetic" k2="-1" k3="1" />
+                                                        <feColorMatrix type="matrix"
+                                                            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0" />
+                                                        <feBlend mode="normal" in2="shape"
+                                                            result="effect1_innerShadow_1103_6962" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </a>
                                     </button>
                                     <button class="iconButton">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                            height="32" viewBox="0 0 32 32" fill="none">
-                                            <g filter="url(#filter0_i_1103_6963)">
-                                                <rect width="32" height="32" rx="5"
-                                                    fill="#1E1E1E" />
-                                                <path
-                                                    d="M24.75 24.7499V17.7814C24.75 16.6446 24.2984 15.5544 23.4946 14.7506C22.6908 13.9468 21.6005 13.4952 20.4637 13.4952C19.3462 13.4952 18.0445 14.1789 17.4134 15.2044V13.745H13.7451V24.7499H17.4134V18.2679C17.4134 17.2555 18.2286 16.4272 19.241 16.4272C19.7292 16.4272 20.1974 16.6211 20.5426 16.9663C20.8878 17.3115 21.0817 17.7797 21.0817 18.2679V24.7499H24.75ZM9.47201 11.6808C10.0578 11.6808 10.6197 11.448 11.0339 11.0338C11.4482 10.6196 11.6809 10.0577 11.6809 9.47189C11.6809 8.24913 10.6948 7.24988 9.47201 7.24988C8.8827 7.24988 8.31752 7.48398 7.90081 7.90069C7.4841 8.3174 7.25 8.88258 7.25 9.47189C7.25 10.6947 8.24925 11.6808 9.47201 11.6808ZM11.2996 24.7499V13.745H7.65759V24.7499H11.2996Z"
-                                                    fill="white" />
-                                            </g>
-                                            <defs>
-                                                <filter id="filter0_i_1103_6963" x="0" y="0"
-                                                    width="33.5" height="33.5"
-                                                    filterUnits="userSpaceOnUse"
-                                                    color-interpolation-filters="sRGB">
-                                                    <feFlood flood-opacity="0"
-                                                        result="BackgroundImageFix" />
-                                                    <feBlend mode="normal" in="SourceGraphic"
-                                                        in2="BackgroundImageFix" result="shape" />
-                                                    <feColorMatrix in="SourceAlpha" type="matrix"
-                                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                        result="hardAlpha" />
-                                                    <feOffset dx="1.5" dy="1.5" />
-                                                    <feGaussianBlur stdDeviation="2" />
-                                                    <feComposite in2="hardAlpha"
-                                                        operator="arithmetic" k2="-1" k3="1" />
-                                                    <feColorMatrix type="matrix"
-                                                        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0" />
-                                                    <feBlend mode="normal" in2="shape"
-                                                        result="effect1_innerShadow_1103_6963" />
-                                                </filter>
-                                            </defs>
-                                        </svg>
+                                        <a href="https://www.linkedin.com/in/itsmichellehu">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                                height="32" viewBox="0 0 32 32" fill="none">
+                                                <g filter="url(#filter0_i_1103_6963)">
+                                                    <rect width="32" height="32" rx="5"
+                                                        fill="#1E1E1E" />
+                                                    <path
+                                                        d="M24.75 24.7499V17.7814C24.75 16.6446 24.2984 15.5544 23.4946 14.7506C22.6908 13.9468 21.6005 13.4952 20.4637 13.4952C19.3462 13.4952 18.0445 14.1789 17.4134 15.2044V13.745H13.7451V24.7499H17.4134V18.2679C17.4134 17.2555 18.2286 16.4272 19.241 16.4272C19.7292 16.4272 20.1974 16.6211 20.5426 16.9663C20.8878 17.3115 21.0817 17.7797 21.0817 18.2679V24.7499H24.75ZM9.47201 11.6808C10.0578 11.6808 10.6197 11.448 11.0339 11.0338C11.4482 10.6196 11.6809 10.0577 11.6809 9.47189C11.6809 8.24913 10.6948 7.24988 9.47201 7.24988C8.8827 7.24988 8.31752 7.48398 7.90081 7.90069C7.4841 8.3174 7.25 8.88258 7.25 9.47189C7.25 10.6947 8.24925 11.6808 9.47201 11.6808ZM11.2996 24.7499V13.745H7.65759V24.7499H11.2996Z"
+                                                        fill="white" />
+                                                </g>
+                                                <defs>
+                                                    <filter id="filter0_i_1103_6963" x="0" y="0"
+                                                        width="33.5" height="33.5"
+                                                        filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB">
+                                                        <feFlood flood-opacity="0"
+                                                            result="BackgroundImageFix" />
+                                                        <feBlend mode="normal" in="SourceGraphic"
+                                                            in2="BackgroundImageFix"
+                                                            result="shape" />
+                                                        <feColorMatrix in="SourceAlpha"
+                                                            type="matrix"
+                                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                            result="hardAlpha" />
+                                                        <feOffset dx="1.5" dy="1.5" />
+                                                        <feGaussianBlur stdDeviation="2" />
+                                                        <feComposite in2="hardAlpha"
+                                                            operator="arithmetic" k2="-1" k3="1" />
+                                                        <feColorMatrix type="matrix"
+                                                            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0" />
+                                                        <feBlend mode="normal" in2="shape"
+                                                            result="effect1_innerShadow_1103_6963" />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </a>
                                     </button>
                                 </div>
                             </div>
@@ -168,21 +242,22 @@
                     </div>
                 </div>
             </section>
-            <section id="projects">
-                <div class="wrapper">
-                    <h2 class="section-heading">Product<br />design projects</h2>
-                    <div class="projectCard">
+            <section class="projects">
+                <div class="projects-wrapper">
+                    <h2 class="section-heading hide">Product<br />design projects</h2>
+                    <div class="project-card">
                         <p class="number-label">01</p>
-                        <div id="postupBG" class="project-gif-wrapper" onmouseenter="playGif(this)"
+                        <div class="project-gif-wrapper  pt-0" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
-                            <div class="project-gif-container" id="postupBG">
+                            <div class="project-gif-container mb-auto" style="margin-bottom: auto">
                                 <img src="assets/images/thumbs/thumb-boardspace.png"
-                                    alt="Static Image" class="project-static-img" />
+                                    alt="Static Image"
+                                    class="thumb-boardspace project-static-img" />
                                 <img src="assets/images/thumbs/thumb-boardspace.gif" alt="Your GIF"
-                                    class="project-gif" />
+                                    class="thumb-boardspace project-gif" />
                             </div>
                         </div>
-                        <div class="details-wrapper">
+                        <div class="project-details">
                             <div class="text-wrapper">
                                 <p class="subheader-project">BoardSpace</p>
                                 <h3>Empowering board directors to streamline decision-making</h3>
@@ -193,56 +268,58 @@
                                 </p>
                             </div>
                             <div class="tags-wrapper scrollable">
-                                <div class="project-tag">usability testing</div>
-                                <div class="project-tag">atomic design system</div>
-                                <div class="project-tag">information architecture</div>
-                                <div class="project-tag">accessibility design</div>
-                                <div class="project-tag">prototyping</div>
-                                <div class="project-tag">interaction design</div>
+                                <div class="boardspace-tag project-tag">usability testing</div>
+                                <div class="boardspace-tag project-tag">atomic design system</div>
+                                <div class="boardspace-tag project-tag">accessibility design</div>
+                                <div class="boardspace-tag project-tag">prototyping</div>
+                                <div class="boardspace-tag project-tag">interaction design</div>
                             </div>
                         </div>
                     </div>
-                    <div class="projectCard">
+                    <div class="project-card">
                         <p class="number-label">02</p>
-                        <div id="postupBG" class="project-gif-wrapper" onmouseenter="playGif(this)"
+                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
-                            <div class="project-gif-container" id="postupBG">
-                                <img src="assets/images/thumbs/thumb-postup.png" alt="Static Image"
-                                    class="project-static-img" />
-                                <img src="assets/images/thumbs/thumb-postup.gif" alt="Your GIF"
-                                    class="project-gif" />
+                            <div class="project-gif-container">
+                                <img src="assets/images/tastebuds/hero-image.png" alt="Static Image"
+                                    class="thumb-tastebuds project-static-img" />
+                                <img src="assets/images/tastebuds/hero-image.png" alt="Your GIF"
+                                    class="thumb-tastebuds project-gif" />
                             </div>
                         </div>
-                        <div class="details-wrapper">
+                        <div class="project-details">
                             <div class="text-wrapper">
                                 <p class="subheader-project">tastebuds</p>
                                 <h3>
-                                    Helping diners to discover dining options with tastebuds they
+                                    Helping diners discover dining options with tastebuds they
                                     trust.
                                 </h3>
-                                <p class="project-description">Designing a prototype of a</p>
+                                <p class="project-description">Creating an end-to-end prototype of a
+                                    social
+                                    dining recommendation mobile-app
+                                    that uses AI and machine-learning to deliver personalized
+                                    recommendations.</p>
                             </div>
                             <div class="tags-wrapper scrollable">
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
+                                <div class="tastebuds-tag project-tag">product design</div>
+                                <div class="tastebuds-tag project-tag">interaction design</div>
+                                <div class="tastebuds-tag project-tag">monetization strategy</div>
+                                <div class="tastebuds-tag project-tag">prototyping</div>
                             </div>
                         </div>
                     </div>
-                    <div class="projectCard">
+                    <div class="project-card">
                         <p class="number-label">03</p>
-                        <div id="postupBG" class="project-gif-wrapper" onmouseenter="playGif(this)"
+                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
                             <div class="project-gif-container" id="postupBG">
                                 <img src="assets/images/thumbs/thumb-postup.png" alt="Static Image"
-                                    class="project-static-img" />
+                                    class="img-postup project-static-img" />
                                 <img src="assets/images/thumbs/thumb-postup.gif" alt="Your GIF"
-                                    class="project-gif" />
+                                    class="postup-gif project-gif" />
                             </div>
                         </div>
-                        <div class="details-wrapper">
+                        <div class="project-details">
                             <div class="text-wrapper">
                                 <p class="subheader-project">Postup</p>
                                 <h3>Connecting remote workers to ideal public workspaces</h3>
@@ -252,17 +329,16 @@
                                 </p>
                             </div>
                             <div class="tags-wrapper scrollable">
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
-                                <div class="project-tag">tag</div>
+                                <div class="postup-tag project-tag">product design</div>
+                                <div class="postup-tag project-tag">monetization strategy</div>
+                                <div class="postup-tag project-tag">interaction design</div>
+                                <div class="postup-tag project-tag">prototypiong</div>
                             </div>
                         </div>
                     </div>
-                    <div class="projectCard">
+                    <div class="project-card hide">
                         <p class="number-label">04</p>
-                        <div id="postupBG" class="project-gif-wrapper" onmouseenter="playGif(this)"
+                        <div class="project-gif-wrapper" onmouseenter="playGif(this)"
                             onmouseleave="resetGif(this)">
                             <div class="project-gif-container" id="postupBG">
                                 <img src="assets/images/thumbs/thumb-boardspace.png"
@@ -271,7 +347,7 @@
                                     class="project-gif" />
                             </div>
                         </div>
-                        <div class="details-wrapper">
+                        <div class="project-details">
                             <div class="text-wrapper">
                                 <p class="subheader-project">boardspace atomic design system</p>
                                 <h3>Bridging the gap between designers and developers</h3>
