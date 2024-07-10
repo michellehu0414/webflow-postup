@@ -1,100 +1,11 @@
-@charset "utf-8";
+$primary-color: #1e1e1e;
 
-$outline-stroke: 1.25px;
-$container-width: 90%;
-$container-maxWidth: 936px;
-$teal: #45b5aa;
-$yellow: #f0c05a;
-$red-orange: #e2583e;
-$tan: #decdbd;
-$dark-grey: #565656;
-$off-black: #4a4a4a;
-$emphasis-blue: #4479df;
-$medium-grey: #757575;
-$lightest-grey: #f9f9f9;
-$invalid-red: #dc1d25;
-$white: #ffffff;
-$medium-light-grey: #dbdbdb;
-$light-grey: #f0f0f0;
-$light-blue: #e7ecff;
-$black: #1e1e1e;
-$sub-grey: #cfcfcf;
-$emphasis: #e2583e;
+@import "abstracts/all-abstracts";
 
-//Media breakpoints
-$breakpoints: (
-	mobile-sm: 320px,
-	mobile-med: 375px,
-	mobile-lg: 425px,
-	sm: 576px,
-	med: 768px,
-	lg: 992px,
-	xl: 1200px,
-);
+@import "base/all-base";
 
-@mixin breakpoint($name) {
-	@if map-has-key($breakpoints, $name) {
-		@media (min-width: map-get($breakpoints, $name)) {
-			@content;
-		}
-	} @else {
-		@error "Unknown breakpoint: #{$name}. Please use one of: #{map-keys($breakpoints)}.";
-	}
-}
+@import "utilities/all-utilities";
 
-@mixin iconSize($size) {
-	@if $size == "xs" {
-		width: 24px;
-		height: 24px;
-	} @else if $size == "sm" {
-		width: 32px;
-		height: 32px;
-	} @else if $size == "med" {
-		width: 40px;
-		height: 40px;
-	} @else if $size == "lg" {
-		width: 56px;
-		height: 56px;
-	} @else if $size == "xl" {
-		width: 64px;
-		height: 64px;
-	}
-}
-
-.iconSize {
-	&-xs {
-		width: 24px;
-		height: 24px;
-	}
-
-	&-sm {
-		width: 32px;
-		height: 32px;
-	}
-
-	&-med {
-		width: 40px;
-		height: 40px;
-	}
-
-	&-lg {
-		width: 64px;
-		height: 64px;
-	}
-
-	&-xl {
-		width: 80px;
-		height: 80px;
-	}
-}
-
-html {
-	text-size-adjust: none;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	overflow-x: hidden;
-}
 @import "../components/global-components";
 
 * {
