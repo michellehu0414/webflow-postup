@@ -5,16 +5,16 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 var swiper = new Swiper(".hmuSwiper", {
-effect: "cards",
-grabCursor: true,
+  effect: "cards",
+  grabCursor: true,
 });
 
 var swiper = new Swiper(".hmuSwiper", {
-effect: "cards",
-grabCursor: true,
-loop: false // Ensure loop is false for proper direction handling
+  effect: "cards",
+  grabCursor: true,
+  loop: false // Ensure loop is false for proper direction handling
 });
 
-document.getElementById('resetSwiper').addEventListener('click', function() {
-swiper.slideTo(0, swiper.params.speed, true); // Use the default speed and enable a runCallback if needed
-}); 
+document.getElementById('resetSwiper').addEventListener('click', function () {
+  swiper.slideTo(0, swiper.params.speed, true); // Use the default speed and enable a runCallback if needed
+});
