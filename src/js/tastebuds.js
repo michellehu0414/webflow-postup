@@ -2,7 +2,6 @@
 import '../scss/tastebuds.scss';
 
 // Import and initialize components specific to this page
-import '../components/Accordion/accordion';
 // import '../components/Carousel/carousel';
 import '../components/AutoplayVideo/autoplay-video';
 import '../components/AutoplayVideoCarousel/AutoplayVideoCarousel'

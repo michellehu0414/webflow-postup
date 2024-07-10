@@ -1,6 +1,5 @@
 import '../scss/postup.scss';
 
-import '../components/Accordion/accordion';
 import '../components/AutoplayVideo/autoplay-video';
 import '../components/Carousel/carousel';
 import '../components/ScrollButton/scroll-button';

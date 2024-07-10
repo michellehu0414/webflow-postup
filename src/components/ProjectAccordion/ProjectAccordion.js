@@ -1,4 +1,3 @@
-// Function to toggle accordion state
 function toggleAscripton(button) {
   const content = button.querySelector('.accordion__content');
   const icon = button.querySelector('.accordion__icon');
