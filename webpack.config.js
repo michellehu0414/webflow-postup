@@ -94,9 +94,9 @@ module.exports = {
             filename: 'tastebuds.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-sandbox.html',
-            chunks: ['tastebuds'],
-            filename: 'tastebuds-sandbox.html'
+            template: './src/sandbox.html',
+            chunks: ['sandbox'],
+            filename: 'sandbox.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/postup.html',

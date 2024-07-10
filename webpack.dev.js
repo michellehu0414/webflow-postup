@@ -89,9 +89,9 @@ module.exports = {
             minify: false
         }),
         new HtmlWebpackPlugin({
-            template: './src/tastebuds-sandbox.html',
-            chunks: ['tastebuds'],
-            filename: 'tastebuds-sandbox.html',
+            template: './src/sandbox.html',
+            chunks: ['sandbox'],
+            filename: 'sandbox.html',
             minify: false
         }),
         new HtmlWebpackPlugin({
@@ -114,7 +114,7 @@ module.exports = {
         },
         open: true,
         hot: true,
-        watchFiles: ['src/**/*', 'src/assets/svg/**/*'],
+        watchFiles: ['**/*'], // Watch everything in the project
     },
     mode: 'development',
     devtool: 'source-map',
