@@ -4,8 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
+        index: './src/js/index.js',
+        // boardspace: './src/js/boardspace.js',
         postup: './src/js/postup.js',
-        tastebuds: './src/js/tastebuds.js'
+        tastebuds: './src/js/tastebuds.js',
     },
     output: {
         filename: 'js/[name].js',
@@ -70,6 +72,16 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            chunks: ['index'],
+            filename: 'index.html'
+        }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/boardspace.html',
+        //     chunks: ['boardspace'],
+        //     filename: 'boardspace.html'
+        // }),
         new HtmlWebpackPlugin({
             template: './src/tastebuds.html',
             chunks: ['tastebuds'],
